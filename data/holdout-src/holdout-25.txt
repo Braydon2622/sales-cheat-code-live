@@ -1,0 +1,27 @@
+# id: holdout-25
+# title: Self-employed designer ready for cash-out to buy a studio
+# scenario: Self-employed graphic designer wants a cash-out refinance to buy a small studio space. She is organized and ready to start; the rep handles her questions carefully.
+# synthetic: true
+REP: Hi, is this Rosalind? This is Emeka with Copperleaf Home Loans.
+CLIENT: Yes, hi! I've been waiting for your call, I've got my coffee and my folder ready.
+REP: Ha, I love a prepared client. So you're looking at a cash-out refinance?
+CLIENT: Yes. I run my own design studio out of my spare bedroom and I want to buy a little commercial unit downtown.
+REP: That's exciting. How long have you been self-employed?
+CLIENT: Five years this January. Before that I was at an agency.
+REP: Great. And how much cash are you hoping to take out?
+CLIENT: About eighty thousand. The house was appraised at four-seventy last year for my insurance, and I owe about two-thirty.
+REP: Okay, that's solid equity. Do you have your last two years of tax returns handy?
+CLIENT: Right here. Does it matter that I write off a lot of expenses? My accountant is very aggressive.  [question]
+REP: It can, because we usually look at net income after deductions. I'd want to review the returns before telling you how it'll work out.
+CLIENT: Okay, that's fair. What else do you need from me to get started?  [buying_signal]
+REP: Your returns, a year-to-date profit and loss, two months of business and personal bank statements, and your mortgage statement.
+CLIENT: I have all of that. How long does the whole thing usually take, start to finish?  [question]
+REP: It varies with the appraisal and how quickly underwriting reviews the self-employment docs. Once I see your file, I'll give you a realistic timeline.
+CLIENT: Got it. Can I sign something today to get the ball rolling?  [buying_signal]
+REP: Yes, I can send you the application right now, and you can upload documents through the same link.
+CLIENT: Perfect. Send it over.
+REP: Sent. You should see it in your email in a minute.
+CLIENT: Got it! Oh, this is exciting.
+REP: It is. I'll call you Thursday once I've reviewed everything.
+CLIENT: Thursday's great. Thanks, Emeka.
+REP: Thank you, Rosalind. Talk then.

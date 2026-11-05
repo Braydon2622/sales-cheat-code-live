@@ -1,0 +1,2846 @@
+[
+  {
+    "callId": "call-01",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I'm actually in the middle of making lunch, so...",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 2790.069709,
+    "draft": {
+      "read": "Bad timing, not disinterest; she remembers the form.",
+      "sendThis": "No problem at all, I'll be quick. I'd love to set a short call when you're free so I can learn what you're hoping to do with your home.",
+      "backup": "Totally understand, I just need two minutes later to see what makes sense for you.",
+      "nextStep": "Book a callback: \"Does this afternoon at 3 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't pitch over lunch; lock the time and hang up."
+    },
+    "shown": {
+      "read": "Bad timing, not disinterest; she remembers the form.",
+      "sendThis": "No problem at all, I'll be quick. I'd love to set a short call when you're free so I can learn what you're hoping to do with your home.",
+      "backup": "Totally understand, I just need two minutes later to see what makes sense for you.",
+      "nextStep": "Book a callback: \"Does this afternoon at 3 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't pitch over lunch; lock the time and hang up."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4633.2065,
+    "firstLineMs": 4776.508250000001,
+    "fullCardMs": 6596.394,
+    "guardMs": 7787.098250000001
+  },
+  {
+    "callId": "call-01",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "it was right around six percent, and that just feels way too high",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "detectedMs": 833.3334999999997,
+    "draft": {
+      "read": "Rate-anchored at six; frustrated, but still engaged and shopping.",
+      "sendThis": "I hear you, nobody wants to refinance for a number that doesn't feel worth it. The rate's only one piece, though. Term, costs, and your goals all change what makes sense, and I can't know that until I look at your full picture.",
+      "backup": "What would make refinancing worth it for you: lower payment, cash out, or paying off sooner?",
+      "nextStep": "Book a 15-minute review after lunch: \"Does today at 3 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't repeat \"six,\" promise to beat it, or knock that lender."
+    },
+    "shown": {
+      "read": "Rate-anchored at six; frustrated, but still engaged and shopping.",
+      "sendThis": "I hear you, nobody wants to refinance for a number that doesn't feel worth it. The rate's only one piece, though. Term, costs, and your goals all change what makes sense, and I can't know that until I look at your full picture.",
+      "backup": "What would make refinancing worth it for you: lower payment, cash out, or paying off sooner?",
+      "nextStep": "Book a 15-minute review after lunch: \"Does today at 3 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't repeat \"six,\" promise to beat it, or knock that lender."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "sendThis",
+        "quote": "refinance",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 3051.6959590000006,
+    "firstLineMs": 3258.448875,
+    "fullCardMs": 5220.117458999999,
+    "guardMs": 6643.112708999999
+  },
+  {
+    "callId": "call-01",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what would you need from me to do that",
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "detectedMs": 950.4905420000014,
+    "draft": {
+      "read": "Buying signal: they're ready to move forward.",
+      "sendThis": "Easy: a quick consent to pull credit, your last two pay stubs, last year's W-2, and that ARM letter so we can compare apples to apples.",
+      "backup": "Simplest start is a 15-minute call where we gather it together.",
+      "nextStep": "Lock the review: \"Does today at 4 or tomorrow at 10 work better to go through it?\"",
+      "watchOut": "Stop selling; don't imply approval or estimate savings."
+    },
+    "shown": {
+      "read": "Buying signal: they're ready to move forward.",
+      "sendThis": "Easy: a quick consent to pull credit, your last two pay stubs, last year's W-2, and that ARM letter so we can compare apples to apples.",
+      "backup": "Simplest start is a 15-minute call where we gather it together.",
+      "nextStep": "Lock the review: \"Does today at 4 or tomorrow at 10 work better to go through it?\"",
+      "watchOut": "Stop selling; don't imply approval or estimate savings."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3301.367375,
+    "firstLineMs": 3483.3737500000007,
+    "fullCardMs": 4899.559792000002,
+    "guardMs": 6213.562792000002
+  },
+  {
+    "callId": "call-01",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Tomorrow at ten works. I'll dig up that ARM letter too.",
+      "utteranceIndex": 19
+    },
+    "kind": "coach",
+    "detectedMs": 2030.1899580000027,
+    "draft": {
+      "read": "Booked and engaged; ARM letter hints a rate reset is driving this.",
+      "sendThis": "Perfect, tomorrow at ten it is. Bring the ARM letter, mortgage statement, and I'll get your OK for the credit check, and we'll go through it all together.",
+      "backup": "Is that ARM letter about your rate adjusting soon, or just the annual notice?",
+      "nextStep": "Confirm best number and text a reminder: \"Looking forward to our chat about your home tomorrow at 10.\"",
+      "watchOut": "Stop selling; don't guess the reset payment or promise approval."
+    },
+    "shown": {
+      "read": "Booked and engaged; ARM letter hints a rate reset is driving this.",
+      "sendThis": "Perfect, tomorrow at ten it is. Bring the ARM letter, mortgage statement, and I'll get your OK for the credit check, and we'll go through it all together.",
+      "backup": "Is that ARM letter about your rate adjusting soon, or just the annual notice?",
+      "nextStep": "Confirm best number and text a reminder: \"Looking forward to our chat about your home tomorrow at 10.\"",
+      "watchOut": "Stop selling; don't guess the reset payment or promise approval."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "two_option_close",
+        "severity": "style",
+        "where": "nextStep",
+        "quote": "Confirm best number and text a reminder: \"Looking forward to our chat about your home tomorrow at 10.\"",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 5055.74725,
+    "firstLineMs": 5452.696458000002,
+    "fullCardMs": 7009.6505,
+    "guardMs": 7732.081333000002
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "way more than I want to pay every month",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "detectedMs": 1002.8744169999991,
+    "draft": {
+      "read": "Payment sticker shock and offer fatigue; she's still actively buying.",
+      "sendThis": "I hear you, it's been a brutal market. Online calculators use generic numbers, so let's look at your actual picture and see what options fit the monthly payment you're comfortable with.",
+      "backup": "What monthly payment would feel comfortable for you and your household?",
+      "nextStep": "Book a 20-minute review, partner included: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "No payment numbers, no promises it'll come in lower."
+    },
+    "shown": {
+      "read": "Payment sticker shock and offer fatigue; she's still actively buying.",
+      "sendThis": "I hear you, it's been a brutal market. Online calculators use generic numbers, so let's look at your actual picture and see what options fit the monthly payment you're comfortable with.",
+      "backup": "What monthly payment would feel comfortable for you and your household?",
+      "nextStep": "Book a 20-minute review, partner included: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "No payment numbers, no promises it'll come in lower."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5206.578750000001,
+    "firstLineMs": 5561.226458999998,
+    "fullCardMs": 7106.093874999999,
+    "guardMs": 8845.217292000001
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "my credit union already pre-approved me. I'll probably just go with them since I've banked there forever",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 2109.2569170000024,
+    "draft": {
+      "read": "Loyal to credit union; payment worry is the real pain.",
+      "sendThis": "That's great you're already pre-approved, and loyalty makes sense. With offers moving this fast, a second look can help make sure you're getting the best option, wherever you land."
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "approval_promise",
+        "severity": "block",
+        "quote": "you're already pre-approved",
+        "where": "sendThis",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 3854.308667000001,
+    "firstLineMs": 4069.583416999998,
+    "fullCardMs": 4882.544707999998
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "How long does it usually take you guys to close?",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 1959.9653749999998,
+    "draft": {
+      "read": "Buying signal; also walk back the credit union knock.",
+      "sendThis": "Good question. It depends on the condo, appraisal, and how fast docs come in, so let me walk you through our exact steps. Your credit union's clearly treated you well, so comparing both side by side is smart.",
+      "backup": "What's your target closing date on the condo?",
+      "nextStep": "Book a 15-minute timeline and docs walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't promise a close date or knock the credit union."
+    },
+    "shown": {
+      "read": "Buying signal; also walk back the credit union knock.",
+      "sendThis": "Good question. It depends on the condo, appraisal, and how fast docs come in, so let me walk you through our exact steps. Your credit union's clearly treated you well, so comparing both side by side is smart.",
+      "backup": "What's your target closing date on the condo?",
+      "nextStep": "Book a 15-minute timeline and docs walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't promise a close date or knock the credit union."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 6938.574915999998,
+    "firstLineMs": 7131.028458000001,
+    "fullCardMs": 8801.485583000001,
+    "guardMs": 10347.823624999997
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "the rates right now are too high. I think I'll just wait until they come down",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "detectedMs": 1251.6819590000014,
+    "draft": {
+      "read": "Wants the kitchen; rate fear is stalling the project.",
+      "sendThis": "Totally fair, nobody wants to lock in at the wrong time. The rate's only one piece, though; depending on your situation there may be a way to fund the kitchen that fits your goals, and I can't tell until I look at the full picture.",
+      "backup": "What's the plan if rates don't move for another couple of years?",
+      "nextStep": "Book a 15-minute review with his wife: \"Does tomorrow at 10 or Thursday at 6 work better for you both?\"",
+      "watchOut": "No rate predictions, no \"rates will drop,\" no numbers."
+    },
+    "shown": {
+      "read": "Wants the kitchen; rate fear is stalling the project.",
+      "sendThis": "Totally fair, nobody wants to lock in at the wrong time. The rate's only one piece, though; depending on your situation there may be a way to fund the kitchen that fits your goals, and I can't tell until I look at the full picture.",
+      "backup": "What's the plan if rates don't move for another couple of years?",
+      "nextStep": "Book a 15-minute review with his wife: \"Does tomorrow at 10 or Thursday at 6 work better for you both?\"",
+      "watchOut": "No rate predictions, no \"rates will drop,\" no numbers."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3980.264584000004,
+    "firstLineMs": 4263.975167000004,
+    "fullCardMs": 6217.321959000001,
+    "guardMs": 6913.694292
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Contractor said he could start in February",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 1713.3704579999976,
+    "draft": {
+      "read": "Real deadline: February contractor slot, or the kitchen waits till fall.",
+      "sendThis": "So February's your window. Let's look at your full picture now so you know your options before you have to give him an answer.",
+      "backup": "Waiting on rates could also mean waiting on the kitchen till fall, so let's at least see where you stand.",
+      "nextStep": "15-minute review with Walt and his wife: \"Does today at 4 or tomorrow at 10 work better for you both?\"",
+      "watchOut": "Don't predict rate moves, promise savings, or imply approval."
+    },
+    "shown": {
+      "read": "Real deadline: February contractor slot, or the kitchen waits till fall.",
+      "sendThis": "So February's your window. Let's look at your full picture now so you know your options before you have to give him an answer.",
+      "backup": "Waiting on rates could also mean waiting on the kitchen till fall, so let's at least see where you stand.",
+      "nextStep": "15-minute review with Walt and his wife: \"Does today at 4 or tomorrow at 10 work better for you both?\"",
+      "watchOut": "Don't predict rate moves, promise savings, or imply approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5826.384458,
+    "firstLineMs": 6077.201374999997,
+    "fullCardMs": 7470.119749999998,
+    "guardMs": 8106.512166
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "What would a home equity line even run me right now?",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 1545.8837500000009,
+    "draft": {
+      "read": "Curious about HELOC cost; February deadline now matters to him.",
+      "sendThis": "Great question. A home equity line depends on your credit, income, and home value, so let me run your real numbers instead of guessing.",
+      "backup": "Once I see your full picture, I can lay a home equity line side by side with a cash-out so you can compare.",
+      "nextStep": "Book a 15-minute review before February: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rate, payment, or ballpark numbers; wife may need to join."
+    },
+    "shown": {
+      "read": "Curious about HELOC cost; February deadline now matters to him.",
+      "sendThis": "Great question. A home equity line depends on your credit, income, and home value, so let me run your real numbers instead of guessing.",
+      "backup": "Once I see your full picture, I can lay a home equity line side by side with a cash-out so you can compare.",
+      "nextStep": "Book a 15-minute review before February: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rate, payment, or ballpark numbers; wife may need to join."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3294.8703749999986,
+    "firstLineMs": 3626.5253749999974,
+    "fullCardMs": 5199.914292000001,
+    "guardMs": 6210.185458
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "Martha keeps all that",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 885.0805839999957,
+    "draft": {
+      "read": "Martha holds the paperwork, likely a co-decider too.",
+      "sendThis": "That's perfect, let's include Martha then. A quick call with both of you, statements nearby, and you'll both see the options firsthand.",
+      "backup": "Would Martha want to be part of this decision anyway?",
+      "nextStep": "Joint call: \"Does tomorrow at 10 or Thursday at 4 work better for you and Martha?\"",
+      "watchOut": "Don't quote HELOC costs; February timing isn't pressure."
+    },
+    "shown": {
+      "read": "Martha holds the paperwork, likely a co-decider too.",
+      "sendThis": "That's perfect, let's include Martha then. A quick call with both of you, statements nearby, and you'll both see the options firsthand.",
+      "backup": "Would Martha want to be part of this decision anyway?",
+      "nextStep": "Joint call: \"Does tomorrow at 10 or Thursday at 4 work better for you and Martha?\"",
+      "watchOut": "Don't quote HELOC costs; February timing isn't pressure."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2124.970499999996,
+    "firstLineMs": 2301.932084,
+    "fullCardMs": 3939.779834000001,
+    "guardMs": 5174.978167000001
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "I'm really just looking, I'm not buying anything right now",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 2196.1410000000033,
+    "draft": {
+      "read": "Early-stage browser; not ready, but curious enough to click.",
+      "sendThis": "Totally fair, looking first is the smart move. A lot of first-time buyers like a quick review early so they know where they stand before they shop.",
+      "backup": "When you picture buying, is it more like this year or further out?",
+      "nextStep": "Offer a short no-pressure review: \"Does tomorrow at 12 or Thursday at 5 work better?\"",
+      "watchOut": "Don't imply pre-approval or hint at rates or payments."
+    },
+    "shown": {
+      "read": "Early-stage browser; not ready, but curious enough to click.",
+      "sendThis": "Totally fair, looking first is the smart move. A lot of first-time buyers like a quick review early so they know where they stand before they shop.",
+      "backup": "When you picture buying, is it more like this year or further out?",
+      "nextStep": "Offer a short no-pressure review: \"Does tomorrow at 12 or Thursday at 5 work better?\"",
+      "watchOut": "Don't imply pre-approval or hint at rates or payments."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3489.568167000005,
+    "firstLineMs": 3769.128874999995,
+    "fullCardMs": 5267.6264999999985,
+    "guardMs": 5935.189083000005
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "evidence": "I figured I needed like twenty percent, which, yeah, that's not happening.",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 1553.8252079999947,
+    "draft": {
+      "read": "Down payment myth is blocking them; still interested, August deadline.",
+      "sendThis": "You're definitely not alone, a lot of people think that. There are options that take less down depending on your situation, so let's see what fits you before August sneaks up.",
+      "backup": "Would it help to see what's actually possible for you, no commitment?",
+      "nextStep": "Book a 15-minute review: \"Does Thursday at 5 or Saturday at 11 work better?\"",
+      "watchOut": "No specific down payment figures or promises they'll qualify."
+    },
+    "shown": {
+      "read": "Down payment myth is blocking them; still interested, August deadline.",
+      "sendThis": "You're definitely not alone, a lot of people think that. There are options that take less down depending on your situation, so let's see what fits you before August sneaks up.",
+      "backup": "Would it help to see what's actually possible for you, no commitment?",
+      "nextStep": "Book a 15-minute review: \"Does Thursday at 5 or Saturday at 11 work better?\"",
+      "watchOut": "No specific down payment figures or promises they'll qualify."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4862.993875,
+    "firstLineMs": 5208.051290999996,
+    "fullCardMs": 6848.331832999989,
+    "guardMs": 7596.855125000002
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Yeah, that would actually be helpful.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 1002.8940419999999,
+    "draft": {
+      "read": "Real buying signal; \"few weeks\" is too slow, lock it now.",
+      "sendThis": "Great, I'll text you the checklist right now. Let's book a quick call once you've had a look, so we can see what you qualify for and which down payment options fit.",
+      "backup": "Most people have these docs handy; want to tackle it this week while it's fresh?",
+      "nextStep": "Send checklist now, then book: \"Does Thursday at 5 or Saturday at 10 work better?\"",
+      "watchOut": "Text says \"home,\" not \"loan\"; never imply pre-approval."
+    },
+    "shown": {
+      "read": "Real buying signal; \"few weeks\" is too slow, lock it now.",
+      "sendThis": "Great, I'll text you the checklist right now. Let's book a quick call once you've had a look, so we can see what you qualify for and which down payment options fit.",
+      "backup": "Most people have these docs handy; want to tackle it this week while it's fresh?",
+      "nextStep": "Send checklist now, then book: \"Does Thursday at 5 or Saturday at 10 work better?\"",
+      "watchOut": "Text says \"home,\" not \"loan\"; never imply pre-approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2837.6291670000064,
+    "firstLineMs": 2838.6461249999993,
+    "fullCardMs": 4658.038333999997,
+    "guardMs": 6141.549625
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what would I even need to get pre-approved",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 3624.2138750000013,
+    "draft": {
+      "read": "Real interest; asking how to start pre-approval.",
+      "sendThis": "Great question. It's pretty simple: recent pay stubs, W-2s, a couple months of bank statements, and your OK to check credit, and then we see what you qualify for.",
+      "backup": "Want me to text you a short checklist so you can pull it together?",
+      "nextStep": "Book a 20-minute application call: \"Does tomorrow at 5 or Thursday at noon work better?\"",
+      "watchOut": "Don't imply they'll be pre-approved; no down payment percentages."
+    },
+    "shown": {
+      "read": "Real interest; asking how to start pre-approval.",
+      "sendThis": "Great question. It's pretty simple: recent pay stubs, W-2s, a couple months of bank statements, and your OK to check credit, and then we see what you qualify for.",
+      "backup": "Want me to text you a short checklist so you can pull it together?",
+      "nextStep": "Book a 20-minute application call: \"Does tomorrow at 5 or Thursday at noon work better?\"",
+      "watchOut": "Don't imply they'll be pre-approved; no down payment percentages."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4891.369667000006,
+    "firstLineMs": 5081.825084000011,
+    "fullCardMs": 6524.394292000012,
+    "guardMs": 7924.653917000003
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "I'm just comparing right now",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 1221.237208999999,
+    "draft": {
+      "read": "Comparison shopping, open to talking; not an objection.",
+      "sendThis": "That's smart, you should compare. Let me be one of your three so you've got a clear side-by-side.",
+      "backup": "What's most important to you in picking a lender: cost, speed, or service?",
+      "nextStep": "Book a short review: \"Does today at 3 or tomorrow at 11 work better?\"",
+      "watchOut": "Don't knock other lenders or promise to beat them."
+    },
+    "shown": {
+      "read": "Comparison shopping, open to talking; not an objection.",
+      "sendThis": "That's smart, you should compare. Let me be one of your three so you've got a clear side-by-side.",
+      "backup": "What's most important to you in picking a lender: cost, speed, or service?",
+      "nextStep": "Book a short review: \"Does today at 3 or tomorrow at 11 work better?\"",
+      "watchOut": "Don't knock other lenders or promise to beat them."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2791.490749999997,
+    "firstLineMs": 3070.957249999992,
+    "fullCardMs": 4311.021833999999,
+    "guardMs": 5286.513333999988
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "question",
+      "evidence": "Does that include points or whatever?",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 952.8201249999984,
+    "draft": {
+      "read": "Rep quoted a rate; walk it back before it becomes a promise.",
+      "sendThis": "Good question, and honestly I jumped ahead there; I can't give you a real number until I see your credit, income, and the home, since points and fees change everything. Let me run it properly so you can compare all three side by side.",
+      "backup": "Points, costs, and your spring closing date all shape the real number, so let's get it right.",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No more rate numbers or \"sharper than the builder\" talk."
+    },
+    "shown": {
+      "read": "Rep quoted a rate; walk it back before it becomes a promise.",
+      "sendThis": "Good question, and honestly I jumped ahead there; I can't give you a real number until I see your credit, income, and the home, since points and fees change everything. Let me run it properly so you can compare all three side by side.",
+      "backup": "Points, costs, and your spring closing date all shape the real number, so let's get it right.",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No more rate numbers or \"sharper than the builder\" talk."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3824.2964999999967,
+    "firstLineMs": 3824.3685419999965,
+    "fullCardMs": 5590.337499999994,
+    "guardMs": 6279.662375
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "So what's your rate today?",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 2787.7934160000004,
+    "draft": {
+      "read": "Comparing three lenders, including the builder's; wants a rate number.",
+      "sendThis": "Fair question, and I'd rather give you a real number than a teaser. Rate depends on your credit, down payment, and timeline, so let me run your actual scenario to compare apples to apples.",
+      "backup": "With a spring close, how long you lock matters as much as the rate itself.",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rate hints, and don't knock the builder's lender."
+    },
+    "shown": {
+      "read": "Comparing three lenders, including the builder's; wants a rate number.",
+      "sendThis": "Fair question, and I'd rather give you a real number than a teaser. Rate depends on your credit, down payment, and timeline, so let me run your actual scenario to compare apples to apples.",
+      "backup": "With a spring close, how long you lock matters as much as the rate itself.",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rate hints, and don't knock the builder's lender."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5914.9235409999965,
+    "firstLineMs": 6154.858875000005,
+    "fullCardMs": 7836.232250000001,
+    "guardMs": 9127.666540999999
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "it's not really six and an eighth then",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1378.3263330000045,
+    "draft": {
+      "read": "Client caught the rate quote; trust is slipping. Walk it back honestly.",
+      "sendThis": "You're right to call that out, I jumped ahead and shouldn't have thrown a number out. The real answer depends on your credit, down payment, and points, so let me run it properly and show you exactly what's included.",
+      "backup": "Let's compare full offers side by side, including the builder's lender's, so you see every cost.",
+      "nextStep": "Book a 15-minute full-picture review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't defend or repeat that rate; don't knock the builder's lender."
+    },
+    "shown": {
+      "read": "Client caught the rate quote; trust is slipping. Walk it back honestly.",
+      "sendThis": "You're right to call that out, I jumped ahead and shouldn't have thrown a number out. The real answer depends on your credit, down payment, and points, so let me run it properly and show you exactly what's included.",
+      "backup": "Let's compare full offers side by side, including the builder's lender's, so you see every cost.",
+      "nextStep": "Book a 15-minute full-picture review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't defend or repeat that rate; don't knock the builder's lender."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3360.8830000000016,
+    "firstLineMs": 3727.988000000012,
+    "fullCardMs": 5423.058208000002,
+    "guardMs": 6606.856917000012
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I've got a meeting in a few, so I'm going to have to go.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 2445.412958000001,
+    "draft": {
+      "read": "Trust dipped after the rate quote; client is politely exiting.",
+      "sendThis": "Totally understand, I'll be quick. Honestly, I shouldn't have tossed out a number before seeing your full picture, so let's do a short review and get you a real answer to compare with the builder's lender.",
+      "backup": "Can I text you so we can lock a quick time to go over your home?",
+      "nextStep": "Book a 15-minute review: \"Does tomorrow at 10 or tomorrow at 4 work better?\"",
+      "watchOut": "Never repeat any rate; walk back the earlier quote."
+    },
+    "shown": {
+      "read": "Trust dipped after the rate quote; client is politely exiting.",
+      "sendThis": "Totally understand, I'll be quick. Honestly, I shouldn't have tossed out a number before seeing your full picture, so let's do a short review and get you a real answer to compare with the builder's lender.",
+      "backup": "Can I text you so we can lock a quick time to go over your home?",
+      "nextStep": "Book a 15-minute review: \"Does tomorrow at 10 or tomorrow at 4 work better?\"",
+      "watchOut": "Never repeat any rate; walk back the earlier quote."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 8322.20195799999,
+    "firstLineMs": 8521.32633299999,
+    "fullCardMs": 10207.048666999995,
+    "guardMs": 12065.927291999993
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "I'm not ready to buy or anything, I was just curious",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 1567.0355420000124,
+    "draft": {
+      "read": "Early-stage, curious, self-employed; low pressure needed.",
+      "sendThis": "Totally fine, curious is the perfect time to look into it. Self-employed income gets reviewed a bit differently, so knowing early helps you plan.",
+      "backup": "What got you curious about it in the first place?",
+      "nextStep": "Book a 15-minute no-pressure review: \"Does tomorrow at 11 or Thursday at 4 work better?\"",
+      "watchOut": "Don't push buying or imply they'd qualify."
+    },
+    "shown": {
+      "read": "Early-stage, curious, self-employed; low pressure needed.",
+      "sendThis": "Totally fine, curious is the perfect time to look into it. Self-employed income gets reviewed a bit differently, so knowing early helps you plan.",
+      "backup": "What got you curious about it in the first place?",
+      "nextStep": "Book a 15-minute no-pressure review: \"Does tomorrow at 11 or Thursday at 4 work better?\"",
+      "watchOut": "Don't push buying or imply they'd qualify."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4422.721917000003,
+    "firstLineMs": 4657.706208000003,
+    "fullCardMs": 6071.146292000005,
+    "guardMs": 6884.267500000002
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "question",
+      "evidence": "Is that true? Would I even get approved?",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 1251.2138750000013,
+    "draft": {
+      "read": "Rent pain plus fear; wants hope, not a pitch.",
+      "sendThis": "That's a common myth. Self-employed folks buy homes all the time, and three years in is a solid starting point. Whether you'd qualify depends on your income docs and credit, so let's take a real look.",
+      "backup": "Lenders usually look at your tax returns, so a quick review tells you exactly where you stand.",
+      "nextStep": "Book a 15-minute no-pressure review: \"Does tomorrow at noon or Thursday at 5 work better?\"",
+      "watchOut": "Don't say he'll get approved; no rates or numbers."
+    },
+    "shown": {
+      "read": "Rent pain plus fear; wants hope, not a pitch.",
+      "sendThis": "That's a common myth. Self-employed folks buy homes all the time, and three years in is a solid starting point. Whether you'd qualify depends on your income docs and credit, so let's take a real look.",
+      "backup": "Lenders usually look at your tax returns, so a quick review tells you exactly where you stand.",
+      "nextStep": "Book a 15-minute no-pressure review: \"Does tomorrow at noon or Thursday at 5 work better?\"",
+      "watchOut": "Don't say he'll get approved; no rates or numbers."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4306.851167000001,
+    "firstLineMs": 4624.996916999997,
+    "fullCardMs": 6715.576457999996,
+    "guardMs": 7692.746750000006
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Would you need anything else?",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1618.0510420000064,
+    "draft": {
+      "read": "Buying signal: agreed to share returns, asking about documents.",
+      "sendThis": "Great, let's start with your last two years of returns, and I'll tell you if anything else is needed after a first look. Then we'll walk through it together on a quick call.",
+      "backup": "If it's easier, your accountant can send the returns straight to me.",
+      "nextStep": "Book the review: \"Does Thursday at 11 or Friday at 2 work better to go over them?\"",
+      "watchOut": "Stop selling; don't imply approval or tell them to change filings."
+    },
+    "shown": {
+      "read": "Buying signal: agreed to share returns, asking about documents.",
+      "sendThis": "Great, let's start with your last two years of returns, and I'll tell you if anything else is needed after a first look. Then we'll walk through it together on a quick call.",
+      "backup": "If it's easier, your accountant can send the returns straight to me.",
+      "nextStep": "Book the review: \"Does Thursday at 11 or Friday at 2 work better to go over them?\"",
+      "watchOut": "Stop selling; don't imply approval or tell them to change filings."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2245.0242080000025,
+    "firstLineMs": 2754.8882920000033,
+    "fullCardMs": 4269.877417000011,
+    "guardMs": 5797.515875000012
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "objection",
+      "evidence": "my accountant writes off basically everything",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 4733.357207999987,
+    "draft": {
+      "read": "Worried write-offs shrink qualifying income; still curious, not committed.",
+      "sendThis": "That's really common for self-employed folks, and it's exactly why it's worth looking early. If you send me your last two years of returns, I can see where you stand and what options fit.",
+      "backup": "Knowing now gives you time to plan with your accountant before you're ready to buy.",
+      "nextStep": "Book a 15-minute returns review: \"Does tomorrow at 11 or Thursday at 3 work better?\"",
+      "watchOut": "Don't promise approval or say write-offs won't matter."
+    },
+    "shown": {
+      "read": "Worried write-offs shrink qualifying income; still curious, not committed.",
+      "sendThis": "That's really common for self-employed folks, and it's exactly why it's worth looking early. If you send me your last two years of returns, I can see where you stand and what options fit.",
+      "backup": "Knowing now gives you time to plan with your accountant before you're ready to buy.",
+      "nextStep": "Book a 15-minute returns review: \"Does tomorrow at 11 or Thursday at 3 work better?\"",
+      "watchOut": "Don't promise approval or say write-offs won't matter."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 7729.434415999989,
+    "firstLineMs": 7985.006165999992,
+    "fullCardMs": 9578.946582999997,
+    "guardMs": 13293.468415999989
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "This week. I'll ask my accountant to send them.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 899.5570000000007,
+    "draft": {
+      "read": "Committed; returns coming this week. Lock the details.",
+      "sendThis": "Perfect. I'll text you a secure upload link now, and once your returns are in, we'll walk through where you stand together.",
+      "backup": "Want me to send the link straight to your accountant to save you a step?",
+      "nextStep": "Book the review call: \"Does Thursday at 4 or Friday at 10 work better?\"",
+      "watchOut": "Don't imply approval or give tax advice; let the accountant handle filing."
+    },
+    "shown": {
+      "read": "Committed; returns coming this week. Lock the details.",
+      "sendThis": "Perfect. I'll text you a secure upload link now, and once your returns are in, we'll walk through where you stand together.",
+      "backup": "Want me to send the link straight to your accountant to save you a step?",
+      "nextStep": "Book the review call: \"Does Thursday at 4 or Friday at 10 work better?\"",
+      "watchOut": "Don't imply approval or give tax advice; let the accountant handle filing."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 6721.239000000001,
+    "firstLineMs": 6942.2697079999925,
+    "fullCardMs": 8184.927792000002,
+    "guardMs": 9933.364124999993
+  },
+  {
+    "callId": "call-07",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "I really need to talk to him before I say anything",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 1396.6837499999965,
+    "draft": {
+      "read": "Warm and motivated; husband handles finances, needs him included.",
+      "sendThis": "That makes total sense, and honestly it's better with both of you. Let's set a quick call together so he can walk through the numbers side with me.",
+      "backup": "Is evening or weekend usually easier for him to hop on?",
+      "nextStep": "Book a three-way call: \"Does tomorrow at 7 pm or Saturday at 10 work better for you both?\"",
+      "watchOut": "Don't push her for budget numbers or promise approval."
+    },
+    "shown": {
+      "read": "Warm and motivated; husband handles finances, needs him included.",
+      "sendThis": "That makes total sense, and honestly it's better with both of you. Let's set a quick call together so he can walk through the numbers side with me.",
+      "backup": "Is evening or weekend usually easier for him to hop on?",
+      "nextStep": "Book a three-way call: \"Does tomorrow at 7 pm or Saturday at 10 work better for you both?\"",
+      "watchOut": "Don't push her for budget numbers or promise approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3319.5005840000085,
+    "firstLineMs": 3746.534999999989,
+    "fullCardMs": 5315.929292000001,
+    "guardMs": 7021.350041999991
+  },
+  {
+    "callId": "call-07",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "He works pretty long days though.",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 1947.1010829999868,
+    "draft": {
+      "read": "Open to a joint call; his long hours are the real hurdle.",
+      "sendThis": "Totally get it, so let's make it easy on him: just 15 minutes, evening or weekend, so you can keep the house search moving before the baby comes.",
+      "backup": "Would a quick call on his lunch break be easier for him?",
+      "nextStep": "Book the joint call: \"Does Thursday at 8pm or Saturday at 10am work better for you both?\"",
+      "watchOut": "Don't discuss budget or qualifying until he's on."
+    },
+    "shown": {
+      "read": "Open to a joint call; his long hours are the real hurdle.",
+      "sendThis": "Totally get it, so let's make it easy on him: just 15 minutes, evening or weekend, so you can keep the house search moving before the baby comes.",
+      "backup": "Would a quick call on his lunch break be easier for him?",
+      "nextStep": "Book the joint call: \"Does Thursday at 8pm or Saturday at 10am work better for you both?\"",
+      "watchOut": "Don't discuss budget or qualifying until he's on."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4317.900792,
+    "firstLineMs": 4682.351208000007,
+    "fullCardMs": 6156.10379199998,
+    "guardMs": 7921.006124999985
+  },
+  {
+    "callId": "call-07",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "Do we have to sell our house before we can buy the new one?",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 974.0882500000007,
+    "draft": {
+      "read": "Buying signal; worried about timing the sale and purchase together.",
+      "sendThis": "Great question, and it depends on your full picture: income, equity in your current home, and what you'd carry during the overlap. That's exactly what we'll map out Saturday with both of you.",
+      "backup": "Some families buy first and some sell first; we'll see which fits you best.",
+      "nextStep": "Confirm Saturday at 10; add \"rough idea of your home's value\" to the prep list.",
+      "watchOut": "Don't promise they can buy before selling or will qualify."
+    },
+    "shown": {
+      "read": "Buying signal; worried about timing the sale and purchase together.",
+      "sendThis": "Great question, and it depends on your full picture: income, equity in your current home, and what you'd carry during the overlap. That's exactly what we'll map out Saturday with both of you.",
+      "backup": "Some families buy first and some sell first; we'll see which fits you best.",
+      "nextStep": "Confirm Saturday at 10; add \"rough idea of your home's value\" to the prep list.",
+      "watchOut": "Don't promise they can buy before selling or will qualify."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "two_option_close",
+        "severity": "style",
+        "where": "nextStep",
+        "quote": "Confirm Saturday at 10; add \"rough idea of your home's value\" to the prep list.",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 4050.2794579999754,
+    "firstLineMs": 4450.699332999997,
+    "fullCardMs": 6195.674916999997,
+    "guardMs": 7257.228207999986
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "Tasha's the co-borrower and she's way more cautious than me. I can't move on anything until she's on board.",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 1427.227165999997,
+    "draft": {
+      "read": "Jamal's warm; Tasha's the cautious co-borrower who must agree.",
+      "sendThis": "That's smart, a duplex is a big move and you two should decide together. Let's set a quick call with both of you so Tasha can ask her questions directly.",
+      "backup": "What do you think Tasha will want to know about Maple first?",
+      "nextStep": "Joint call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "watchOut": "Don't recruit Jamal to sell Tasha or promise approval."
+    },
+    "shown": {
+      "read": "Jamal's warm; Tasha's the cautious co-borrower who must agree.",
+      "sendThis": "That's smart, a duplex is a big move and you two should decide together. Let's set a quick call with both of you so Tasha can ask her questions directly.",
+      "backup": "What do you think Tasha will want to know about Maple first?",
+      "nextStep": "Joint call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "watchOut": "Don't recruit Jamal to sell Tasha or promise approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2813.128250000009,
+    "firstLineMs": 3215.259665999998,
+    "fullCardMs": 4679.098375000001,
+    "guardMs": 6875.771665999986
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "question",
+      "evidence": "whether we can actually afford it if the rental side sits empty",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 3407.1193750000093,
+    "draft": {
+      "read": "Tasha's real concern is vacancy risk; she needs to be on the call.",
+      "sendThis": "That's a really smart question, and it's exactly what we should map out together. Let's get Tasha on a quick call and look at whether it works even with the rental side empty.",
+      "backup": "Would it help Tasha to see a plan for covering a few vacant months?",
+      "nextStep": "Book a call with both: \"Does tonight at 7 or tomorrow at noon work better for you and Tasha?\"",
+      "watchOut": "Don't say \"you'll be fine\" or estimate payments or rental income."
+    },
+    "shown": {
+      "read": "Tasha's real concern is vacancy risk; she needs to be on the call.",
+      "sendThis": "That's a really smart question, and it's exactly what we should map out together. Let's get Tasha on a quick call and look at whether it works even with the rental side empty.",
+      "backup": "Would it help Tasha to see a plan for covering a few vacant months?",
+      "nextStep": "Book a call with both: \"Does tonight at 7 or tomorrow at noon work better for you and Tasha?\"",
+      "watchOut": "Don't say \"you'll be fine\" or estimate payments or rental income."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5782.7159159999865,
+    "firstLineMs": 5782.817375000013,
+    "fullCardMs": 7403.053707999992,
+    "guardMs": 8593.767625000008
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "Can you count the rent?",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 2912.0002919999824,
+    "draft": {
+      "read": "Genuine question about rental income; also Tasha's affordability worry.",
+      "sendThis": "Often part of the rent can be considered, but it depends on the property, leases, and your full picture. Let's walk through it with Tasha so she sees the numbers with and without the rent.",
+      "backup": "Do you have the current lease or rent amount for the upstairs unit?",
+      "nextStep": "Joint review with Tasha: \"Does tonight at 7 or tomorrow at noon work better for you both?\"",
+      "watchOut": "Don't promise rent will count or quote any amounts."
+    },
+    "shown": {
+      "read": "Genuine question about rental income; also Tasha's affordability worry.",
+      "sendThis": "Often part of the rent can be considered, but it depends on the property, leases, and your full picture. Let's walk through it with Tasha so she sees the numbers with and without the rent.",
+      "backup": "Do you have the current lease or rent amount for the upstairs unit?",
+      "nextStep": "Joint review with Tasha: \"Does tonight at 7 or tomorrow at noon work better for you both?\"",
+      "watchOut": "Don't promise rent will count or quote any amounts."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5650.904542000004,
+    "firstLineMs": 6004.168707999983,
+    "fullCardMs": 7635.108332999982,
+    "guardMs": 9370.465041999996
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Thursday evening, like six-thirty.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 3392.6100840000145,
+    "draft": {
+      "read": "Locked in; co-borrower call Thursday 6:30. Stop selling.",
+      "sendThis": "Perfect, Thursday at 6:30 it is. I'll send an invite to you both, and we'll walk through the rental question so Tasha gets real answers.",
+      "backup": "What's the best number or email to include Tasha on the invite?",
+      "nextStep": "Confirm Tasha's contact; send invite; text \"Quick question about your home\": \"Should I text you or Tasha the reminder, or both?\"",
+      "watchOut": "Don't promise rent will count or that they'll qualify."
+    },
+    "shown": {
+      "read": "Locked in; co-borrower call Thursday 6:30. Stop selling.",
+      "sendThis": "Perfect, Thursday at 6:30 it is. I'll send an invite to you both, and we'll walk through the rental question so Tasha gets real answers.",
+      "backup": "What's the best number or email to include Tasha on the invite?",
+      "nextStep": "Confirm Tasha's contact; send invite; text \"Quick question about your home\": \"Should I text you or Tasha the reminder, or both?\"",
+      "watchOut": "Don't promise rent will count or that they'll qualify."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4710.687334000017,
+    "firstLineMs": 5009.961542000005,
+    "fullCardMs": 6698.466249999998,
+    "guardMs": 8870.967541999999
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "We need to find a place before then, ideally.",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "detectedMs": 2083.6230410000135,
+    "draft": {
+      "read": "Real timeline: January move, needs home lined up soon.",
+      "sendThis": "Congrats on the new job! With January coming, let's get your numbers reviewed now so you can shop with confidence.",
+      "backup": "Have you looked into your VA home loan benefit yet?",
+      "nextStep": "Book a 20-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't promise approval or VA eligibility; \"let's see what you qualify for.\""
+    },
+    "shown": {
+      "read": "Real timeline: January move, needs home lined up soon.",
+      "sendThis": "Congrats on the new job! With January coming, let's get your numbers reviewed now so you can shop with confidence.",
+      "backup": "Have you looked into your VA home loan benefit yet?",
+      "nextStep": "Book a 20-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't promise approval or VA eligibility; \"let's see what you qualify for.\""
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "backup",
+        "quote": "loan",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 4394.678791000013,
+    "firstLineMs": 4628.180541000009,
+    "fullCardMs": 5962.839000000007,
+    "guardMs": 7309.463290999993
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "What do I need to get that?",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 867.1529169999994,
+    "draft": {
+      "read": "Buying signal; he's ready to start. Answer simply, lock time.",
+      "sendThis": "Usually just your DD-214, and I can often request the certificate for you online. Let's set a quick call to grab your info and get it started.",
+      "backup": "Send me your DD-214 and I'll handle the request from there.",
+      "nextStep": "Book a 20-minute intake call: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "Don't promise full entitlement is restored or he'll qualify."
+    },
+    "shown": {
+      "read": "Buying signal; he's ready to start. Answer simply, lock time.",
+      "sendThis": "Usually just your DD-214, and I can often request the certificate for you online. Let's set a quick call to grab your info and get it started.",
+      "backup": "Send me your DD-214 and I'll handle the request from there.",
+      "nextStep": "Book a 20-minute intake call: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "Don't promise full entitlement is restored or he'll qualify."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5438.916208999988,
+    "firstLineMs": 5785.000541999994,
+    "fullCardMs": 7211.169583999988,
+    "guardMs": 8952.64850000001
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "my wife really should be on this",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 1254.0357080000103,
+    "draft": {
+      "read": "Engaged buyer; wife holds the research and must join.",
+      "sendThis": "Absolutely, she should be part of this, especially with her spreadsheet on schools and neighborhoods. Let's set a quick call with both of you so we plan around January together.",
+      "backup": "Want to dig out the DD-214 before then so we can request your certificate?",
+      "nextStep": "Joint call: \"Does tonight at 7 or tomorrow at 6 work better for you both?\"",
+      "watchOut": "Don't imply VA eligibility or approval is guaranteed."
+    },
+    "shown": {
+      "read": "Engaged buyer; wife holds the research and must join.",
+      "sendThis": "Absolutely, she should be part of this, especially with her spreadsheet on schools and neighborhoods. Let's set a quick call with both of you so we plan around January together.",
+      "backup": "Want to dig out the DD-214 before then so we can request your certificate?",
+      "nextStep": "Joint call: \"Does tonight at 7 or tomorrow at 6 work better for you both?\"",
+      "watchOut": "Don't imply VA eligibility or approval is guaranteed."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2571.109833000024,
+    "firstLineMs": 2870.012458000012,
+    "fullCardMs": 4384.022541000013,
+    "guardMs": 6288.024000000005
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "how fast can you close a VA loan, realistically? We're kind of on a clock",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 975.6787909999839,
+    "draft": {
+      "read": "Ready to move; timeline is the real pressure point.",
+      "sendThis": "Great question. Speed mostly depends on getting your eligibility, income docs, and appraisal moving early, so what date are you working toward?",
+      "backup": "Tell me your deadline and I'll map out exactly what happens each step to hit it.",
+      "nextStep": "Get their target date, confirm tomorrow at noon, and ask, \"Should I text or email you the document checklist tonight?\"",
+      "watchOut": "Don't promise a closing date or imply approval."
+    },
+    "shown": {
+      "read": "Ready to move; timeline is the real pressure point.",
+      "sendThis": "Great question. Speed mostly depends on getting your eligibility, income docs, and appraisal moving early, so what date are you working toward?",
+      "backup": "Tell me your deadline and I'll map out exactly what happens each step to hit it.",
+      "nextStep": "Get their target date, confirm tomorrow at noon, and ask, \"Should I text or email you the document checklist tonight?\"",
+      "watchOut": "Don't promise a closing date or imply approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3355.4239579999994,
+    "firstLineMs": 3464.1669999999867,
+    "fullCardMs": 5205.311082999979,
+    "guardMs": 7844.885874999978
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I've just been super busy. Work's been crazy.",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 1639.4065419999824,
+    "draft": {
+      "read": "Genuine busy stall; started app, interest likely still there.",
+      "sendThis": "Totally get it, sounds like a crazy stretch. I'll keep it easy: a quick 10 minutes and I can pick up right where we left off so it doesn't drag on for you.",
+      "backup": "Want me to just text you a couple of time options so it's one less thing on your plate?",
+      "nextStep": "Book a short catch-up: \"Does tomorrow at 8 before work or Thursday at 6 work better?\"",
+      "watchOut": "Don't pressure or hint at rates or approval to create urgency."
+    },
+    "shown": {
+      "read": "Genuine busy stall; started app, interest likely still there.",
+      "sendThis": "Totally get it, sounds like a crazy stretch. I'll keep it easy: a quick 10 minutes and I can pick up right where we left off so it doesn't drag on for you.",
+      "backup": "Want me to just text you a couple of time options so it's one less thing on your plate?",
+      "nextStep": "Book a short catch-up: \"Does tomorrow at 8 before work or Thursday at 6 work better?\"",
+      "watchOut": "Don't pressure or hint at rates or approval to create urgency."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2785.4148749999877,
+    "firstLineMs": 3231.0026249999937,
+    "fullCardMs": 5336.579749999975,
+    "guardMs": 6852.300416999991
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I've just been super busy. Work's been crazy.",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "detectedMs": 1243.8374579999945,
+    "draft": {
+      "read": "Genuinely swamped, not uninterested; stalling till January.",
+      "sendThis": "Peak season sounds brutal, so I'll keep this easy on you. A quick 10 minutes now gets your file current, so January isn't starting from scratch.",
+      "backup": "Want me to handle the legwork so all you do is a short call?",
+      "nextStep": "Book a 10-minute check-in: \"Does tomorrow at 7am or Saturday at 9 work better?\"",
+      "watchOut": "No rate or savings hints to create urgency."
+    },
+    "shown": {
+      "read": "Genuinely swamped, not uninterested; stalling till January.",
+      "sendThis": "Peak season sounds brutal, so I'll keep this easy on you. A quick 10 minutes now gets your file current, so January isn't starting from scratch.",
+      "backup": "Want me to handle the legwork so all you do is a short call?",
+      "nextStep": "Book a 10-minute check-in: \"Does tomorrow at 7am or Saturday at 9 work better?\"",
+      "watchOut": "No rate or savings hints to create urgency."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2667.032791000005,
+    "firstLineMs": 2911.5500410000095,
+    "fullCardMs": 5051.999125000002,
+    "guardMs": 6264.869375000009
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "Can you just send me something in an email and I'll look at it when I get a chance?",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 2633.325959000009,
+    "draft": {
+      "read": "Swamped, not uninterested; email is a polite brush-off.",
+      "sendThis": "Happy to, Tyler. The catch is an email can't show your real options until we update a couple details, so can we grab ten minutes on your schedule to keep your file from going stale?",
+      "backup": "How about I text you a quick note so you have it, and we pick a ten-minute slot now?",
+      "nextStep": "Book 10 minutes: \"Does 7:30 tomorrow morning or Thursday on your lunch work better?\"",
+      "watchOut": "No payment numbers in writing; email subject says \"home,\" not \"refinance.\""
+    },
+    "shown": {
+      "read": "Swamped, not uninterested; email is a polite brush-off.",
+      "sendThis": "Happy to, Tyler. The catch is an email can't show your real options until we update a couple details, so can we grab ten minutes on your schedule to keep your file from going stale?",
+      "backup": "How about I text you a quick note so you have it, and we pick a ten-minute slot now?",
+      "nextStep": "Book 10 minutes: \"Does 7:30 tomorrow morning or Thursday on your lunch work better?\"",
+      "watchOut": "No payment numbers in writing; email subject says \"home,\" not \"refinance.\""
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 6344.659083999984,
+    "firstLineMs": 6554.769834000006,
+    "fullCardMs": 8478.497375000006,
+    "guardMs": 9173.025292000006
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "I can do that. Where do I send them?",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1535.069833000016,
+    "draft": {
+      "read": "Buying signal; relieved it's easy. Make sending effortless, then stop.",
+      "sendThis": "I'll text you a secure upload link right now. Just snap both and tap send, takes two minutes.",
+      "backup": "Want me to stay on while you check the text comes through?",
+      "nextStep": "Text \"Quick link for your home docs,\" then: \"Want a 5-minute review tomorrow at 8 a.m. or 6 p.m.?\"",
+      "watchOut": "No \"you're approved\" once docs arrive; keep it short."
+    },
+    "shown": {
+      "read": "Buying signal; relieved it's easy. Make sending effortless, then stop.",
+      "sendThis": "I'll text you a secure upload link right now. Just snap both and tap send, takes two minutes.",
+      "backup": "Want me to stay on while you check the text comes through?",
+      "nextStep": "Text \"Quick link for your home docs,\" then: \"Want a 5-minute review tomorrow at 8 a.m. or 6 p.m.?\"",
+      "watchOut": "No \"you're approved\" once docs arrive; keep it short."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3510.265208000026,
+    "firstLineMs": 3995.2143750000105,
+    "fullCardMs": 5605.2612500000105,
+    "guardMs": 6448.488291000016
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Tomorrow morning, before my shift.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 1739.338374999992,
+    "draft": {
+      "read": "Committed; just lock the upload and next touchpoint.",
+      "sendThis": "Perfect, I'll text the secure link right after we hang up. Once both are in, I'll review them and call you with next steps.",
+      "backup": "If anything's tricky to find, just text me and I'll walk you through it.",
+      "nextStep": "Book follow-up: \"Should I call tomorrow at noon or at 5 to confirm I got them?\"",
+      "watchOut": "Stop selling; don't imply approval or mention rates."
+    },
+    "shown": {
+      "read": "Committed; just lock the upload and next touchpoint.",
+      "sendThis": "Perfect, I'll text the secure link right after we hang up. Once both are in, I'll review them and call you with next steps.",
+      "backup": "If anything's tricky to find, just text me and I'll walk you through it.",
+      "nextStep": "Book follow-up: \"Should I call tomorrow at noon or at 5 to confirm I got them?\"",
+      "watchOut": "Stop selling; don't imply approval or mention rates."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2931.2843749999884,
+    "firstLineMs": 3180.7507909999986,
+    "fullCardMs": 4629.500790999999,
+    "guardMs": 5575.38162499998
+  },
+  {
+    "callId": "call-11",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "can you just call me next month? Things are a lot right now.",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 874.9689999999828,
+    "draft": {
+      "read": "Still interested, just overwhelmed with the new grandson.",
+      "sendThis": "Absolutely, you've got your hands full with the best kind of busy. Let's pencil in a quick call next month so you're not chasing me down.",
+      "backup": "If it helps, I can send a short checklist now so you're ready whenever you are.",
+      "nextStep": "Lock the callback: \"Does the first week of next month or the second work better, mornings or afternoons?\"",
+      "watchOut": "Don't push now; respect her pace or lose trust."
+    },
+    "shown": {
+      "read": "Still interested, just overwhelmed with the new grandson.",
+      "sendThis": "Absolutely, you've got your hands full with the best kind of busy. Let's pencil in a quick call next month so you're not chasing me down.",
+      "backup": "If it helps, I can send a short checklist now so you're ready whenever you are.",
+      "nextStep": "Lock the callback: \"Does the first week of next month or the second work better, mornings or afternoons?\"",
+      "watchOut": "Don't push now; respect her pace or lose trust."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3616.2976250000065,
+    "firstLineMs": 3845.949332999997,
+    "fullCardMs": 5576.4998749999795,
+    "guardMs": 7103.8299579999875
+  },
+  {
+    "callId": "call-11",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "can you just call me next month? Things are a lot right now.",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 902.9694580000069,
+    "draft": {
+      "read": "Real objection is credit fear, not timing; she wants reassurance.",
+      "sendThis": "Thank you for telling me, and medical bills happen to a lot of people. I can't say yes or no without your full picture, but a short review would show exactly where you stand and your options.",
+      "backup": "Even if it's not ready today, we can map out what would get you there.",
+      "nextStep": "Book a 15-minute credit review: \"Does Thursday at 11 or Saturday at 10 work better?\"",
+      "watchOut": "Never say she'll get approved; keep pressure low."
+    },
+    "shown": {
+      "read": "Real objection is credit fear, not timing; she wants reassurance.",
+      "sendThis": "Thank you for telling me, and medical bills happen to a lot of people. I can't say yes or no without your full picture, but a short review would show exactly where you stand and your options.",
+      "backup": "Even if it's not ready today, we can map out what would get you there.",
+      "nextStep": "Book a 15-minute credit review: \"Does Thursday at 11 or Saturday at 10 work better?\"",
+      "watchOut": "Never say she'll get approved; keep pressure low."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3699.4949170000036,
+    "firstLineMs": 4002.269333000004,
+    "fullCardMs": 5502.885667000024,
+    "guardMs": 6242.146458000003
+  },
+  {
+    "callId": "call-11",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I'd still want to wait until things settle down with the baby",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 4430.786291000026,
+    "draft": {
+      "read": "Overwhelmed new mom; rep wrongly promised approval, so correct it.",
+      "sendThis": "Totally fair, the baby comes first. I also want to correct myself: I can't promise approval until we review everything, but a quick look now shows what to work on before you move.",
+      "backup": "No application needed yet, just 15 minutes to see where your credit stands.",
+      "nextStep": "Short credit check-in: \"Would next Tuesday at 1 or Thursday at 10 be easier with the baby?\"",
+      "watchOut": "Retract \"definitely qualify\" now; never imply approval again."
+    },
+    "shown": {
+      "read": "Overwhelmed new mom; rep wrongly promised approval, so correct it.",
+      "sendThis": "Totally fair, the baby comes first. I also want to correct myself: I can't promise approval until we review everything, but a quick look now shows what to work on before you move.",
+      "backup": "No application needed yet, just 15 minutes to see where your credit stands.",
+      "nextStep": "Short credit check-in: \"Would next Tuesday at 1 or Thursday at 10 be easier with the baby?\"",
+      "watchOut": "Retract \"definitely qualify\" now; never imply approval again."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 10153.855875000008,
+    "firstLineMs": 10551.302166000009,
+    "fullCardMs": 12296.387833000015,
+    "guardMs": 13884.066875000019
+  },
+  {
+    "callId": "call-12",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I think I just need to think about it some more.",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "detectedMs": 1826.8120840000047,
+    "draft": {
+      "read": "Overwhelmed or unsure; hasn't really reviewed the estimate yet.",
+      "sendThis": "Totally fair, these estimates are a lot to digest. How about a quick 10-minute walkthrough together so you can think it over with the full picture?",
+      "backup": "Is there one section, costs or terms, you'd want explained first?",
+      "nextStep": "Book a short walkthrough: \"Does today at 5 or tomorrow at noon work better?\"",
+      "watchOut": "Don't pressure, cite figures, or imply she's approved."
+    },
+    "shown": {
+      "read": "Overwhelmed or unsure; hasn't really reviewed the estimate yet.",
+      "sendThis": "Totally fair, these estimates are a lot to digest. How about a quick 10-minute walkthrough together so you can think it over with the full picture?",
+      "backup": "Is there one section, costs or terms, you'd want explained first?",
+      "nextStep": "Book a short walkthrough: \"Does today at 5 or tomorrow at noon work better?\"",
+      "watchOut": "Don't pressure, cite figures, or imply she's approved."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5475.496499999979,
+    "firstLineMs": 5774.714584000001,
+    "fullCardMs": 7235.165374999982,
+    "guardMs": 8788.688541999989
+  },
+  {
+    "callId": "call-12",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I think I just need to think about it some more",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "detectedMs": 807.4044170000125,
+    "draft": {
+      "read": "Real fear: bigger mortgage feels risky, even consolidating cards.",
+      "sendThis": "That's a completely fair feeling; a bigger mortgage is a real commitment. Let's walk through the estimate together so you can see the full picture and decide if it's right for you.",
+      "backup": "What would you need to see to feel comfortable either way?",
+      "nextStep": "Book a 15-minute estimate walkthrough: \"Does tomorrow at noon or Thursday at 5 work better?\"",
+      "watchOut": "Don't brush off her fear or promise savings."
+    },
+    "shown": {
+      "read": "Real fear: bigger mortgage feels risky, even consolidating cards.",
+      "sendThis": "That's a completely fair feeling; a bigger mortgage is a real commitment. Let's walk through the estimate together so you can see the full picture and decide if it's right for you.",
+      "backup": "What would you need to see to feel comfortable either way?",
+      "nextStep": "Book a 15-minute estimate walkthrough: \"Does tomorrow at noon or Thursday at 5 work better?\"",
+      "watchOut": "Don't brush off her fear or promise savings."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2766.767292000004,
+    "firstLineMs": 3241.7368750000023,
+    "fullCardMs": 4541.939917000011,
+    "guardMs": 5351.650417000026
+  },
+  {
+    "callId": "call-12",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Thursday after five",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1203.0952079999843,
+    "draft": {
+      "read": "Committed to Thursday; just needs an exact post-walk time.",
+      "sendThis": "Perfect, go enjoy the walk first. Should I call at 6 or 6:30?",
+      "backup": "If it's easier, grab your four card and car loan statements beforehand so we can add it all up together.",
+      "nextStep": "Lock the slot: \"6 or 6:30 Thursday?\" Then text a confirmation saying \"home,\" not \"loan.\"",
+      "watchOut": "Stop selling; no savings promises or qualifying talk."
+    },
+    "shown": {
+      "read": "Committed to Thursday; just needs an exact post-walk time.",
+      "sendThis": "Perfect, go enjoy the walk first. Should I call at 6 or 6:30?",
+      "backup": "If it's easier, grab your four card and car loan statements beforehand so we can add it all up together.",
+      "nextStep": "Lock the slot: \"6 or 6:30 Thursday?\" Then text a confirmation saying \"home,\" not \"loan.\"",
+      "watchOut": "Stop selling; no savings promises or qualifying talk."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "backup",
+        "quote": "loan",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 4402.286957999982,
+    "firstLineMs": 4745.807874999999,
+    "fullCardMs": 6319.108416000003,
+    "guardMs": 7596.3637499999895
+  },
+  {
+    "callId": "call-12",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Maybe a call. I'll have questions.",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 4953.079792000004,
+    "draft": {
+      "read": "Buying signal; wants a call, still nervous about bigger mortgage.",
+      "sendThis": "Perfect, questions are exactly what that call is for. We'll lay it all out side by side so you can see it clearly.",
+      "backup": "Jot down your questions as they come up and we'll go through every one.",
+      "nextStep": "Have card and car loan statements handy: \"Does tomorrow at 10 or Thursday at 4 work better?\"",
+      "watchOut": "No savings or payment numbers; don't promise it's cheaper."
+    },
+    "shown": {
+      "read": "Buying signal; wants a call, still nervous about bigger mortgage.",
+      "sendThis": "Perfect, questions are exactly what that call is for. We'll lay it all out side by side so you can see it clearly.",
+      "backup": "Jot down your questions as they come up and we'll go through every one.",
+      "nextStep": "Have card and car loan statements handy: \"Does tomorrow at 10 or Thursday at 4 work better?\"",
+      "watchOut": "No savings or payment numbers; don't promise it's cheaper."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5702.137208,
+    "firstLineMs": 6201.404707999987,
+    "fullCardMs": 7735.308916999988,
+    "guardMs": 8410.825167000003
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "So what do I do now? What are the next steps?",
+      "utteranceIndex": 2
+    },
+    "kind": "coach",
+    "detectedMs": 1481.928041999985,
+    "draft": {
+      "read": "Offer accepted, excited but anxious; she's ready to move.",
+      "sendThis": "You've got this, and I'll walk you through every step. First, send me the purchase contract, then we'll do a quick call to go over documents and get your application moving.",
+      "backup": "Do you have the signed contract handy, and do you know your closing date?",
+      "nextStep": "Book a 20-minute document review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't say she's approved or quote rates; stop selling."
+    },
+    "shown": {
+      "read": "Offer accepted, excited but anxious; she's ready to move.",
+      "sendThis": "You've got this, and I'll walk you through every step. First, send me the purchase contract, then we'll do a quick call to go over documents and get your application moving.",
+      "backup": "Do you have the signed contract handy, and do you know your closing date?",
+      "nextStep": "Book a 20-minute document review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't say she's approved or quote rates; stop selling."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2604.205082999979,
+    "firstLineMs": 3039.9693329999864,
+    "fullCardMs": 4739.837707999977,
+    "guardMs": 5840.821333
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Do you need it today?",
+      "utteranceIndex": 6
+    },
+    "kind": "coach",
+    "detectedMs": 1035.3792499999981,
+    "draft": {
+      "read": "Ready to move; wants a clear deadline, not a pitch.",
+      "sendThis": "Today would be great, since your contract has deadlines and the sooner I have everything, the sooner I can get your file moving. I'll send you a secure upload link right now.",
+      "backup": "If today's tight, tomorrow morning still keeps us comfortably on track.",
+      "nextStep": "Send upload link, book a docs review: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "Stop selling; don't imply approval or quote any rate."
+    },
+    "shown": {
+      "read": "Ready to move; wants a clear deadline, not a pitch.",
+      "sendThis": "Today would be great, since your contract has deadlines and the sooner I have everything, the sooner I can get your file moving. I'll send you a secure upload link right now.",
+      "backup": "If today's tight, tomorrow morning still keeps us comfortably on track.",
+      "nextStep": "Send upload link, book a docs review: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "Stop selling; don't imply approval or quote any rate."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2760.2522089999984,
+    "firstLineMs": 2965.1221249999944,
+    "fullCardMs": 4559.314375000016,
+    "guardMs": 6061.479374999995
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "Is that enough time? How fast can you close?",
+      "utteranceIndex": 8
+    },
+    "kind": "coach",
+    "detectedMs": 1608.5769999999902,
+    "draft": {
+      "read": "Strong buying signal; anxious about timeline, needs a clear plan.",
+      "sendThis": "That's a workable timeline if we move quickly. Getting your docs in today is the biggest thing you can do to keep us on track.",
+      "backup": "Once I have your contract and docs, I'll map out every deadline to December twelfth for you.",
+      "nextStep": "Lock doc upload and walkthrough: \"Can you send everything by 3 today, or would 6 tonight be easier?\"",
+      "watchOut": "Don't guarantee closing by the 12th or imply approval."
+    },
+    "shown": {
+      "read": "Strong buying signal; anxious about timeline, needs a clear plan.",
+      "sendThis": "That's a workable timeline if we move quickly. Getting your docs in today is the biggest thing you can do to keep us on track.",
+      "backup": "Once I have your contract and docs, I'll map out every deadline to December twelfth for you.",
+      "nextStep": "Lock doc upload and walkthrough: \"Can you send everything by 3 today, or would 6 tonight be easier?\"",
+      "watchOut": "Don't guarantee closing by the 12th or imply approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4149.2407079999975,
+    "firstLineMs": 4676.53012499999,
+    "fullCardMs": 6180.890207999997,
+    "guardMs": 8233.153082999983
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "question",
+      "evidence": "do I lock my rate now? What's the rate going to be?",
+      "utteranceIndex": 10
+    },
+    "kind": "coach",
+    "detectedMs": 2268.8826249999984,
+    "draft": {
+      "read": "Strong buying signal; nervous, wants certainty on rate and lock.",
+      "sendThis": "Great question. Your exact rate depends on your full file, so once your documents come in tonight I'll review everything and walk you through your lock options together.",
+      "backup": "Locking is a timing decision, and I'll help you pick the right moment once your file's reviewed.",
+      "nextStep": "Book the lock-review call: \"Does tomorrow at noon or tomorrow at 5 work better?\"",
+      "watchOut": "No rate numbers; don't imply approval or guaranteed closing date."
+    },
+    "shown": {
+      "read": "Strong buying signal; nervous, wants certainty on rate and lock.",
+      "sendThis": "Great question. Your exact rate depends on your full file, so once your documents come in tonight I'll review everything and walk you through your lock options together.",
+      "backup": "Locking is a timing decision, and I'll help you pick the right moment once your file's reviewed.",
+      "nextStep": "Book the lock-review call: \"Does tomorrow at noon or tomorrow at 5 work better?\"",
+      "watchOut": "No rate numbers; don't imply approval or guaranteed closing date."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3301.179165999987,
+    "firstLineMs": 3742.7679580000113,
+    "fullCardMs": 5267.953707999986,
+    "guardMs": 5998.376749999996
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "we want to go ahead",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 2260.6830420000188,
+    "draft": {
+      "read": "Both decided to proceed; ready to move, stop selling.",
+      "sendThis": "That's great to hear, Paul, thanks for talking it over together. Next step is a short application call where I gather income, credit, and home details so we can see what you qualify for.",
+      "backup": "Would you both like to be on that call so your wife hears it too?",
+      "nextStep": "Book the application call with both: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't imply approval or quote any rate or payment."
+    },
+    "shown": {
+      "read": "Both decided to proceed; ready to move, stop selling.",
+      "sendThis": "That's great to hear, Paul, thanks for talking it over together. Next step is a short application call where I gather income, credit, and home details so we can see what you qualify for.",
+      "backup": "Would you both like to be on that call so your wife hears it too?",
+      "nextStep": "Book the application call with both: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Don't imply approval or quote any rate or payment."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3626.583083000005,
+    "firstLineMs": 3867.785499999998,
+    "fullCardMs": 5246.025708000001,
+    "guardMs": 6481.49229200001
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "we're in. So what do you need from me?",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "detectedMs": 1581.4189169999736,
+    "draft": {
+      "read": "Ready to proceed; both decided. Stop selling, guide next steps.",
+      "sendThis": "Love it, Paul. Next I'll send a secure link for a short application plus recent pay stubs, W-2s, bank statements, and your mortgage statement, then we review it together.",
+      "backup": "Easiest is a quick 20-minute call with you both to walk through the application together.",
+      "nextStep": "Lock the review: \"Does tomorrow at 10 or Thursday at 5 work better for you and your wife?\"",
+      "watchOut": "Don't imply approval or quote rates; say \"let's see what you qualify for.\""
+    },
+    "shown": {
+      "read": "Ready to proceed; both decided. Stop selling, guide next steps.",
+      "sendThis": "Love it, Paul. Next I'll send a secure link for a short application plus recent pay stubs, W-2s, bank statements, and your mortgage statement, then we review it together.",
+      "backup": "Easiest is a quick 20-minute call with you both to walk through the application together.",
+      "nextStep": "Lock the review: \"Does tomorrow at 10 or Thursday at 5 work better for you and your wife?\"",
+      "watchOut": "Don't imply approval or quote rates; say \"let's see what you qualify for.\""
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3500.2501249999914,
+    "firstLineMs": 3678.304959000001,
+    "fullCardMs": 5290.6862919999985,
+    "guardMs": 6227.125416999974
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Will you need to do an appraisal?",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 1372.6871670000255,
+    "draft": {
+      "read": "Fully committed; asking about process, not objecting.",
+      "sendThis": "Likely yes, but it depends on your loan, and I'll confirm once we review your file. If one's needed, we'll schedule it and walk you through it.",
+      "backup": "Good question, I'll know for sure once I see your file and the home details.",
+      "nextStep": "Lock a doc review with both: \"Does tomorrow at 10 or Thursday at 6 work better?\"",
+      "watchOut": "Don't quote appraisal cost or imply approval; stop selling."
+    },
+    "shown": {
+      "read": "Fully committed; asking about process, not objecting.",
+      "sendThis": "Likely yes, but it depends on your loan, and I'll confirm once we review your file. If one's needed, we'll schedule it and walk you through it.",
+      "backup": "Good question, I'll know for sure once I see your file and the home details.",
+      "nextStep": "Lock a doc review with both: \"Does tomorrow at 10 or Thursday at 6 work better?\"",
+      "watchOut": "Don't quote appraisal cost or imply approval; stop selling."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "sendThis",
+        "quote": "loan",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 2876.044667000009,
+    "firstLineMs": 3111.931917000009,
+    "fullCardMs": 4737.339042000007,
+    "guardMs": 6084.043792000011
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "how long does the whole thing usually take, start to finish?",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 2359.739499999996,
+    "draft": {
+      "read": "Committed buyer; wants the roadmap. Stop selling, lay out steps.",
+      "sendThis": "It depends mostly on how fast docs come in and the appraisal, so the quicker we get your paperwork, the quicker we move. I'll walk you both through each step so there are no surprises.",
+      "backup": "The biggest speed factor is your bonus history, so let's grab that first.",
+      "nextStep": "Book the application session with both of them: \"Does tonight at 7 or tomorrow at noon work better for you and your wife?\"",
+      "watchOut": "Don't promise a closing date or imply approval."
+    },
+    "shown": {
+      "read": "Committed buyer; wants the roadmap. Stop selling, lay out steps.",
+      "sendThis": "It depends mostly on how fast docs come in and the appraisal, so the quicker we get your paperwork, the quicker we move. I'll walk you both through each step so there are no surprises.",
+      "backup": "The biggest speed factor is your bonus history, so let's grab that first.",
+      "nextStep": "Book the application session with both of them: \"Does tonight at 7 or tomorrow at noon work better for you and your wife?\"",
+      "watchOut": "Don't promise a closing date or imply approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 7559.159791999991,
+    "firstLineMs": 7902.325749999989,
+    "fullCardMs": 9310.963707999967,
+    "guardMs": 10885.362916999962
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "question",
+      "evidence": "what will my new payment end up being?",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 1222.0335420000192,
+    "draft": {
+      "read": "Committed buyer; wants payment certainty before starting.",
+      "sendThis": "Great question. Your payment depends on the final rate, term, and costs, and I'll have real numbers once your application and docs are in. Let's get that started so I can show you exactly what it looks like.",
+      "backup": "What payment range would make this feel like a clear win for you both?",
+      "nextStep": "Schedule a payment review with both spouses: \"Does tomorrow at 6 or Thursday at 7 work better for you both?\"",
+      "watchOut": "No payment estimate; don't imply approval."
+    },
+    "shown": {
+      "read": "Committed buyer; wants payment certainty before starting.",
+      "sendThis": "Great question. Your payment depends on the final rate, term, and costs, and I'll have real numbers once your application and docs are in. Let's get that started so I can show you exactly what it looks like.",
+      "backup": "What payment range would make this feel like a clear win for you both?",
+      "nextStep": "Schedule a payment review with both spouses: \"Does tomorrow at 6 or Thursday at 7 work better for you both?\"",
+      "watchOut": "No payment estimate; don't imply approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2972.484958999994,
+    "firstLineMs": 3155.353792000009,
+    "fullCardMs": 4680.117667000013,
+    "guardMs": 6533.882084000012
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 6,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Tomorrow at lunch, if that works. Then we can both ask questions.",
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "detectedMs": 1113.4328749999986,
+    "draft": {
+      "read": "Ready to move; wants both on tomorrow's walkthrough.",
+      "sendThis": "Perfect, tomorrow at lunch it is. I'll send the link to both of you tonight, and we'll go through it together so you can both ask anything.",
+      "backup": "Should I send a calendar invite to both of your emails so it's on your schedules?",
+      "nextStep": "Lock exact time with both attending: \"Does 12:00 or 12:30 work better for you both?\"",
+      "watchOut": "Stop selling; no payment numbers or approval talk."
+    },
+    "shown": {
+      "read": "Ready to move; wants both on tomorrow's walkthrough.",
+      "sendThis": "Perfect, tomorrow at lunch it is. I'll send the link to both of you tonight, and we'll go through it together so you can both ask anything.",
+      "backup": "Should I send a calendar invite to both of your emails so it's on your schedules?",
+      "nextStep": "Lock exact time with both attending: \"Does 12:00 or 12:30 work better for you both?\"",
+      "watchOut": "Stop selling; no payment numbers or approval talk."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3787.3406250000116,
+    "firstLineMs": 4186.48333399999,
+    "fullCardMs": 5567.224792000023,
+    "guardMs": 7041.2699589999975
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "The seller wants to close before the end of the year.",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 974.2207920000073,
+    "draft": {
+      "read": "Hot buyer, found the property, seller has a deadline.",
+      "sendThis": "That's awesome, congrats! Let's get you moving so you're ready for the seller's timeline. First step is a quick review of your income, credit, and the property.",
+      "backup": "Do you have a purchase price and an accepted offer yet?",
+      "nextStep": "Book the full review today: \"Does today at 3 or tonight at 6 work better?\"",
+      "watchOut": "Don't promise approval or closing by year-end."
+    },
+    "shown": {
+      "read": "Hot buyer, found the property, seller has a deadline.",
+      "sendThis": "That's awesome, congrats! Let's get you moving so you're ready for the seller's timeline. First step is a quick review of your income, credit, and the property.",
+      "backup": "Do you have a purchase price and an accepted offer yet?",
+      "nextStep": "Book the full review today: \"Does today at 3 or tonight at 6 work better?\"",
+      "watchOut": "Don't promise approval or closing by year-end."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2237.2898750000168,
+    "firstLineMs": 2515.198875000002,
+    "fullCardMs": 4038.286334000004,
+    "guardMs": 5078.652209000022
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "What do you need from me to get this going?",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "detectedMs": 1241.1031250000233,
+    "draft": {
+      "read": "Ready to move; tight year-end closing deadline drives urgency.",
+      "sendThis": "Love it, let's get moving. I'll text you a short list: recent pay stubs, two years of W-2s, two months of bank statements, and your ID. Then we'll sit down and see what you qualify for.",
+      "backup": "Do you have the purchase contract yet, or is the offer still in the works?",
+      "nextStep": "Lock an application call: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "Don't promise approval or a year-end close; acreage needs review."
+    },
+    "shown": {
+      "read": "Ready to move; tight year-end closing deadline drives urgency.",
+      "sendThis": "Love it, let's get moving. I'll text you a short list: recent pay stubs, two years of W-2s, two months of bank statements, and your ID. Then we'll sit down and see what you qualify for.",
+      "backup": "Do you have the purchase contract yet, or is the offer still in the works?",
+      "nextStep": "Lock an application call: \"Does today at 5 or tomorrow at 9 work better?\"",
+      "watchOut": "Don't promise approval or a year-end close; acreage needs review."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4282.592208000016,
+    "firstLineMs": 4282.728125000023,
+    "fullCardMs": 5948.581500000029,
+    "guardMs": 6774.442708000017
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "I can have her send it today. Can she email it straight to you?",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 1559.0467920000083,
+    "draft": {
+      "read": "Strong buying signal; ready to send docs today.",
+      "sendThis": "Perfect, yes, have her send them straight to me today. I'll text you my email and a secure upload link right after this call.",
+      "backup": "If it's easier, I can reach out to your CPA directly; what's her name and email?",
+      "nextStep": "Book a doc review call: \"Does tomorrow at 10 or 2 work better to go over everything?\"",
+      "watchOut": "Stop selling; don't imply approval or promise year-end close."
+    },
+    "shown": {
+      "read": "Strong buying signal; ready to send docs today.",
+      "sendThis": "Perfect, yes, have her send them straight to me today. I'll text you my email and a secure upload link right after this call.",
+      "backup": "If it's easier, I can reach out to your CPA directly; what's her name and email?",
+      "nextStep": "Book a doc review call: \"Does tomorrow at 10 or 2 work better to go over everything?\"",
+      "watchOut": "Stop selling; don't imply approval or promise year-end close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2859.4910839999793,
+    "firstLineMs": 3015.2955000000075,
+    "fullCardMs": 4683.361374999979,
+    "guardMs": 6248.083416999958
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "question",
+      "evidence": "Am I going to have trouble getting approved since I'm self-employed?",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 1519.7605420000036,
+    "draft": {
+      "read": "Buying signal; nervous about self-employed approval, wants reassurance.",
+      "sendThis": "Self-employed buyers get approved all the time; it just comes down to what your returns show, so I can't say yet. Once your CPA uploads them, I'll review and tell you exactly where you stand.",
+      "backup": "The docs you're sending are exactly what underwriting needs to answer that properly.",
+      "nextStep": "Send upload link now, book review: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't say he'll be approved; no promises before underwriting."
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "Great question. The honest answer depends on your full picture, and that's exactly what I'd check for you.",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "retracted_by_model",
+    "violations": [
+      {
+        "rule": "approval_promise",
+        "quote": "Self-employed buyers get approved all the time",
+        "where": "sendThis",
+        "source": "model",
+        "severity": "block"
+      }
+    ],
+    "firstTokenMs": 3053.5114579999936,
+    "firstLineMs": 3299.594999999972,
+    "fullCardMs": 5109.540791999956,
+    "guardMs": 6902.41741699999
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "question",
+      "evidence": "does five acres change anything",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 1513.1968329999945,
+    "draft": {
+      "read": "Strong buying signal; acreage question, wants a straight answer.",
+      "sendThis": "Good question. Acreage can affect which loan options fit and how the appraisal's done, so I'll factor the five acres in when I review everything.",
+      "backup": "Is it mostly yard, or is any of it used for business or farming?",
+      "nextStep": "Send the upload link now, then book the review: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't promise five acres is fine or imply approval."
+    },
+    "shown": {
+      "read": "Strong buying signal; acreage question, wants a straight answer.",
+      "sendThis": "Good question. Acreage can affect which loan options fit and how the appraisal's done, so I'll factor the five acres in when I review everything.",
+      "backup": "Is it mostly yard, or is any of it used for business or farming?",
+      "nextStep": "Send the upload link now, then book the review: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't promise five acres is fine or imply approval."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "sendThis",
+        "quote": "loan",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 3311.6194999999716,
+    "firstLineMs": 3510.9420829999726,
+    "fullCardMs": 4980.113540999999,
+    "guardMs": 6298.322082999977
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 6,
+    "moment": {
+      "type": "question",
+      "evidence": "Can you hit that?",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 887.8935829999973,
+    "draft": {
+      "read": "Strong buying signal; needs confidence on the timeline, not a promise.",
+      "sendThis": "December twentieth is workable if we move now. The biggest drivers are getting your returns in today and ordering the appraisal early, so I'll map out every step back from that date.",
+      "backup": "Can you send me the purchase contract today so I can build the timeline right away?",
+      "nextStep": "Send the upload link now, then a timeline call: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't guarantee the closing date; acreage and the barn affect appraisal."
+    },
+    "shown": {
+      "read": "Strong buying signal; needs confidence on the timeline, not a promise.",
+      "sendThis": "December twentieth is workable if we move now. The biggest drivers are getting your returns in today and ordering the appraisal early, so I'll map out every step back from that date.",
+      "backup": "Can you send me the purchase contract today so I can build the timeline right away?",
+      "nextStep": "Send the upload link now, then a timeline call: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't guarantee the closing date; acreage and the barn affect appraisal."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2582.1017499999725,
+    "firstLineMs": 2973.2205829999875,
+    "fullCardMs": 4864.435375000001,
+    "guardMs": 5624.169915999984
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 7,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Do I need to do anything else today?",
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "detectedMs": 1522.3089579999796,
+    "draft": {
+      "read": "Ready to act; wants a clear to-do list today.",
+      "sendThis": "Yes, two things: ask your CPA to send your last two years of returns, and send me the purchase contract so I can order the appraisal fast.",
+      "backup": "Just get me the returns and contract; I'll handle the rest tonight.",
+      "nextStep": "Lock a document check-in: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't promise approval or guarantee the December twentieth close."
+    },
+    "shown": {
+      "read": "Ready to act; wants a clear to-do list today.",
+      "sendThis": "Yes, two things: ask your CPA to send your last two years of returns, and send me the purchase contract so I can order the appraisal fast.",
+      "backup": "Just get me the returns and contract; I'll handle the rest tonight.",
+      "nextStep": "Lock a document check-in: \"Does tomorrow at 10 or 2 work better?\"",
+      "watchOut": "Don't promise approval or guarantee the December twentieth close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 2235.9029580000206,
+    "firstLineMs": 2767.188167000015,
+    "fullCardMs": 4123.392583000008,
+    "guardMs": 5446.12820799998
+  },
+  {
+    "callId": "call-16",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "question",
+      "evidence": "Was it like a quiz thing?",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "detectedMs": 1198.947542000038,
+    "draft": {
+      "read": "Doesn't recall the form; needs gentle context, not a pitch.",
+      "sendThis": "Could've been, a lot of people find us through a quick online form. You'd asked about options on your home, so I wanted to see if that's still on your radar.",
+      "backup": "No worries if it's not a priority now, is lowering costs or tapping equity something you'd consider?",
+      "nextStep": "If interested, book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "If she says remove me, stop and mark Do Not Contact."
+    },
+    "shown": {
+      "read": "Doesn't recall the form; needs gentle context, not a pitch.",
+      "sendThis": "Could've been, a lot of people find us through a quick online form. You'd asked about options on your home, so I wanted to see if that's still on your radar.",
+      "backup": "No worries if it's not a priority now, is lowering costs or tapping equity something you'd consider?",
+      "nextStep": "If interested, book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "If she says remove me, stop and mark Do Not Contact."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3530.103084000002,
+    "firstLineMs": 3786.472542000003,
+    "fullCardMs": 5763.22329200001,
+    "guardMs": 6594.577749999997
+  },
+  {
+    "callId": "call-16",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "Please take me off your list and don't call again.",
+      "utteranceIndex": 9
+    },
+    "kind": "fixed_opt_out",
+    "detectedMs": 1762.0807500000228,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark Do Not Contact in the CRM.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "guardMs": 1762.096292000031,
+    "fullCardMs": 1762.096292000031,
+    "firstLineMs": 1762.096292000031,
+    "firstTokenMs": 1762.096292000031
+  },
+  {
+    "callId": "call-17",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I've gotten about forty calls since then",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "detectedMs": 1676.469958999951,
+    "draft": {
+      "read": "Call fatigue and annoyance, but he hasn't opted out.",
+      "sendThis": "Forty calls, that's a lot, and I'm sorry you've been buried. I'll keep this short: are you still thinking about tapping your home's equity, or has that changed?",
+      "backup": "If the timing's off, just tell me and I'll respect that.",
+      "nextStep": "If still interested, book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "If he says stop calling, apologize, remove him, end call."
+    },
+    "shown": {
+      "read": "Call fatigue and annoyance, but he hasn't opted out.",
+      "sendThis": "Forty calls, that's a lot, and I'm sorry you've been buried. I'll keep this short: are you still thinking about tapping your home's equity, or has that changed?",
+      "backup": "If the timing's off, just tell me and I'll respect that.",
+      "nextStep": "If still interested, book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "If he says stop calling, apologize, remove him, end call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4269.350166999968,
+    "firstLineMs": 4678.26324999996,
+    "fullCardMs": 6208.380208999966,
+    "guardMs": 8061.791083999968
+  },
+  {
+    "callId": "call-17",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "Stop calling me. Take my number off your list.",
+      "utteranceIndex": 7
+    },
+    "kind": "fixed_opt_out",
+    "detectedMs": 1024.365374999994,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark Do Not Contact in the CRM.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "guardMs": 1024.4074169999803,
+    "fullCardMs": 1024.4074169999803,
+    "firstLineMs": 1024.4074169999803,
+    "firstTokenMs": 1024.4074169999803
+  },
+  {
+    "callId": "call-17",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "Stop calling me. Take my number off your list.",
+      "utteranceIndex": 9
+    },
+    "kind": "fixed_opt_out",
+    "detectedMs": 1643.9869999999646,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark Do Not Contact in the CRM.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "guardMs": 1644.0172080000048,
+    "fullCardMs": 1644.0172080000048,
+    "firstLineMs": 1644.0172080000048,
+    "firstTokenMs": 1644.0172080000048
+  },
+  {
+    "callId": "call-17",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "I asked you to stop calling",
+      "utteranceIndex": 11
+    },
+    "kind": "fixed_opt_out",
+    "detectedMs": 1223.328709000023,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark Do Not Contact in the CRM.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "guardMs": 1223.3729170000297,
+    "fullCardMs": 1223.3729170000297,
+    "firstLineMs": 1223.3729170000297,
+    "firstTokenMs": 1223.3729170000297
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "question",
+      "evidence": "what kind of rate would I get",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 916.1177920000046,
+    "draft": {
+      "read": "Tired after a shift, wants a rate number, genuinely interested buyer.",
+      "sendThis": "Great question. Your rate depends on your credit, income, and the loan type, so I'd rather run it properly than guess. It takes about 15 minutes and you'll see real options.",
+      "backup": "Since you just got off shift, want to do this when you're rested so we can see what you qualify for?",
+      "nextStep": "Book a 15-minute review: \"Does tomorrow at 2 or Thursday at 10 work better?\"",
+      "watchOut": "No rate, payment, or \"you'd qualify\" talk."
+    },
+    "shown": {
+      "read": "Tired after a shift, wants a rate number, genuinely interested buyer.",
+      "sendThis": "Great question. Your rate depends on your credit, income, and the loan type, so I'd rather run it properly than guess. It takes about 15 minutes and you'll see real options.",
+      "backup": "Since you just got off shift, want to do this when you're rested so we can see what you qualify for?",
+      "nextStep": "Book a 15-minute review: \"Does tomorrow at 2 or Thursday at 10 work better?\"",
+      "watchOut": "No rate, payment, or \"you'd qualify\" talk."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "sendThis",
+        "quote": "loan",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 3681.772083000047,
+    "firstLineMs": 4091.9602920000325,
+    "fullCardMs": 5762.783750000002,
+    "guardMs": 7260.578957999998
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "question",
+      "evidence": "is that going to be a problem? Will I get approved?",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 801.9360829999787,
+    "draft": {
+      "read": "Real buyer worried about credit; rep wrongly quoted a rate.",
+      "sendThis": "Quick correction: I shouldn't have tossed out a rate, since it depends on your full picture. A 680 gives us real options to look at, so let's see what you qualify for.",
+      "backup": "The only way to give you a real answer is a quick review of income, credit, and your goals.",
+      "nextStep": "Book a 15-minute review after she's rested: \"Does tomorrow at 2 or Thursday at 10 work better?\"",
+      "watchOut": "Retract the rate; never say \"you'll get approved.\""
+    },
+    "shown": {
+      "read": "Real buyer worried about credit; rep wrongly quoted a rate.",
+      "sendThis": "Quick correction: I shouldn't have tossed out a rate, since it depends on your full picture. A 680 gives us real options to look at, so let's see what you qualify for.",
+      "backup": "The only way to give you a real answer is a quick review of income, credit, and your goals.",
+      "nextStep": "Book a 15-minute review after she's rested: \"Does tomorrow at 2 or Thursday at 10 work better?\"",
+      "watchOut": "Retract the rate; never say \"you'll get approved.\""
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5416.096749999968,
+    "firstLineMs": 5689.62374999997,
+    "fullCardMs": 7127.247250000015,
+    "guardMs": 7926.533457999991
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what's the next step, do I fill something out?",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1499.3854999999749,
+    "draft": {
+      "read": "Ready to apply, but you over-promised a rate and approval.",
+      "sendThis": "Yes, next is a quick application, and I need to correct myself: I can't give a rate or say you're approved until we review your full picture and underwriting signs off. You're a solid place to start, so let's see what you qualify for."
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "approval_promise",
+        "severity": "block",
+        "quote": "you're approved",
+        "where": "sendThis",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 5463.671792000008,
+    "firstLineMs": 5764.914792000025,
+    "fullCardMs": 6319.030958999996
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I don't need the whole song and dance",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "detectedMs": 2808.819084000017,
+    "draft": {
+      "read": "Experienced investor; wants efficiency, not a sales pitch.",
+      "sendThis": "Love it, then I'll skip the basics. Tell me your goal on the primary and I'll run real options instead of a pitch.",
+      "backup": "Are you after cash out, a lower payment, or a shorter term?",
+      "nextStep": "Book a quick numbers review: \"Does today at 3 or tomorrow at 9 work better?\"",
+      "watchOut": "Don't over-explain or toss out rates to sound fast."
+    },
+    "shown": {
+      "read": "Experienced investor; wants efficiency, not a sales pitch.",
+      "sendThis": "Love it, then I'll skip the basics. Tell me your goal on the primary and I'll run real options instead of a pitch.",
+      "backup": "Are you after cash out, a lower payment, or a shorter term?",
+      "nextStep": "Book a quick numbers review: \"Does today at 3 or tomorrow at 9 work better?\"",
+      "watchOut": "Don't over-explain or toss out rates to sound fast."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4050.175292,
+    "firstLineMs": 4516.805500000017,
+    "fullCardMs": 5700.2435000000405,
+    "guardMs": 6614.514250000007
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "question",
+      "evidence": "just give me a number. What rate can you do?",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 1308.2353339999681,
+    "draft": {
+      "read": "Experienced investor wants speed; rate question is a buying signal.",
+      "sendThis": "I'll keep it quick. The real number depends on your credit, income, and that it's a rental, so give me ten minutes to run it properly and I'll come back with options.",
+      "backup": "Is lowest payment the only goal, or does total cost matter too?",
+      "nextStep": "Book a rate review: \"Does today at 4 or tomorrow at 10 work better?\""
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "Great question. The honest answer depends on your full picture, and that's exactly what I'd check for you.",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "rate_quote",
+        "severity": "block",
+        "quote": "rate review: \"Does today at 4",
+        "where": "nextStep",
+        "source": "rules"
+      }
+    ],
+    "firstTokenMs": 5735.293499999971,
+    "firstLineMs": 6176.942166999972,
+    "fullCardMs": 7405.236709000019
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "what's that make my payment, principal and interest?",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 897.3772499999614,
+    "draft": {
+      "read": "Wants a payment number; rep's rate quote needs walking back.",
+      "sendThis": "Honestly, I jumped ahead quoting a rate. Your real rate and payment depend on income, credit, and whether this is a rental, so let me run it properly.",
+      "backup": "Give me 15 minutes with your numbers and you'll have a real figure, not a guess.",
+      "nextStep": "Book a full review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No payment figure; correct the rate quote now."
+    },
+    "shown": {
+      "read": "Wants a payment number; rep's rate quote needs walking back.",
+      "sendThis": "Honestly, I jumped ahead quoting a rate. Your real rate and payment depend on income, credit, and whether this is a rental, so let me run it properly.",
+      "backup": "Give me 15 minutes with your numbers and you'll have a real figure, not a guess.",
+      "nextStep": "Book a full review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No payment figure; correct the rate quote now."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4377.434915999998,
+    "firstLineMs": 4620.689541,
+    "fullCardMs": 6140.900332999998,
+    "guardMs": 6888.036874999991
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "My bank said they'd match whatever anyone offers. I'll probably just run it through them.",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1247.6442920000409,
+    "draft": {
+      "read": "Bank-loyal and anchored on the rate and payment you just quoted.",
+      "sendThis": "Smart to run it through your bank, and I'll be a second set of eyes either way. I jumped ahead earlier; those weren't real quotes, so let me run your actual numbers properly.",
+      "backup": "When you compare, look at terms and costs side by side, not just the rate.",
+      "nextStep": "Book a 15-minute full review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Retract the numbers already given; no more figures, no bank-bashing."
+    },
+    "shown": {
+      "read": "Bank-loyal and anchored on the rate and payment you just quoted.",
+      "sendThis": "Smart to run it through your bank, and I'll be a second set of eyes either way. I jumped ahead earlier; those weren't real quotes, so let me run your actual numbers properly.",
+      "backup": "When you compare, look at terms and costs side by side, not just the rate.",
+      "nextStep": "Book a 15-minute full review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Retract the numbers already given; no more figures, no bank-bashing."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5159.241417000012,
+    "firstLineMs": 5159.290042000008,
+    "fullCardMs": 6434.443000000028,
+    "guardMs": 7866.877542000031
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "I've used them for my last two refis and they were fine.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 1198.3273749999935,
+    "draft": {
+      "read": "Loyal to his bank; rep's bank-bashing and quoted numbers backfired.",
+      "sendThis": "That's fair, and I shouldn't have knocked them; two good refis says a lot. I also jumped ahead on numbers, so let me review your full picture properly and give you a real second look to compare.",
+      "backup": "Since this is a rental, what matters most to you: lower payment or pulling cash out?",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Walk back the rate and payment; never repeat them or criticize the bank."
+    },
+    "shown": {
+      "read": "Loyal to his bank; rep's bank-bashing and quoted numbers backfired.",
+      "sendThis": "That's fair, and I shouldn't have knocked them; two good refis says a lot. I also jumped ahead on numbers, so let me review your full picture properly and give you a real second look to compare.",
+      "backup": "Since this is a rental, what matters most to you: lower payment or pulling cash out?",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "Walk back the rate and payment; never repeat them or criticize the bank."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3903.6017920000013,
+    "firstLineMs": 4200.167292000027,
+    "fullCardMs": 5657.015042000043,
+    "guardMs": 7031.611250000016
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 6,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I'll look at it when I look at it",
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "detectedMs": 802.132666999998,
+    "draft": {
+      "read": "Cooling off after the bank knock; loyal to his bank.",
+      "sendThis": "Will do, and your bank's clearly treated you well, so I'll just be a second set of eyes. Any figure I mentioned isn't real until we review your full picture together.",
+      "backup": "If your bank comes out ahead after a proper look, that's a win for you too.",
+      "nextStep": "Text \"Quick follow-up about your home,\" then: \"Does tomorrow at 10 or Thursday at 4 work for a 10-minute review?\"",
+      "watchOut": "No more rates or payments, no bank-bashing, and say \"home\" in writing."
+    },
+    "shown": {
+      "read": "Cooling off after the bank knock; loyal to his bank.",
+      "sendThis": "Will do, and your bank's clearly treated you well, so I'll just be a second set of eyes. Any figure I mentioned isn't real until we review your full picture together.",
+      "backup": "If your bank comes out ahead after a proper look, that's a win for you too.",
+      "nextStep": "Text \"Quick follow-up about your home,\" then: \"Does tomorrow at 10 or Thursday at 4 work for a 10-minute review?\"",
+      "watchOut": "No more rates or payments, no bank-bashing, and say \"home\" in writing."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5732.579458999971,
+    "firstLineMs": 5928.12283399998,
+    "fullCardMs": 7792.760167,
+    "guardMs": 8716.700791999989
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 1,
+    "moment": {
+      "type": "question",
+      "evidence": "how much would my payment be on a two-fifty house",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "detectedMs": 872.977583000029,
+    "draft": {
+      "read": "First-time buyer wants a number; your approval guarantee needs walking back.",
+      "sendThis": "Honestly, I got ahead of myself: approval comes from underwriting, so let's see what you qualify for. Your payment depends on your full picture, so let me run real numbers instead of guessing.",
+      "backup": "Once I see your income, credit, and down payment, I can show you real payment options on a two-fifty home.",
+      "nextStep": "Book a 20-minute review: \"Does today at 5 or tomorrow at noon work better?\"",
+      "watchOut": "No payment estimate; retract \"guarantee approved\" now."
+    },
+    "shown": {
+      "read": "First-time buyer wants a number; your approval guarantee needs walking back.",
+      "sendThis": "Honestly, I got ahead of myself: approval comes from underwriting, so let's see what you qualify for. Your payment depends on your full picture, so let me run real numbers instead of guessing.",
+      "backup": "Once I see your income, credit, and down payment, I can show you real payment options on a two-fifty home.",
+      "nextStep": "Book a 20-minute review: \"Does today at 5 or tomorrow at noon work better?\"",
+      "watchOut": "No payment estimate; retract \"guarantee approved\" now."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 3629.831375000009,
+    "firstLineMs": 3629.951832999999,
+    "fullCardMs": 5236.568625000014,
+    "guardMs": 5943.315250000043
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 2,
+    "moment": {
+      "type": "question",
+      "evidence": "Really? Every other place made it sound iffy.",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "detectedMs": 1744.7418339999858,
+    "draft": {
+      "read": "Rep just guaranteed approval; walk it back now, gently.",
+      "sendThis": "Let me correct myself: I can't promise approval, only underwriting decides that. But a six-forty is a real starting point, so let's see what you qualify for.",
+      "backup": "Other places weren't wrong; the full picture is income, debts, savings, and credit together.",
+      "nextStep": "Start the application while the kids practice, or book a review: \"Want to knock it out now, or tomorrow at 10?\"",
+      "watchOut": "No guarantees, no rate or payment numbers, no knocking other lenders."
+    },
+    "shown": {
+      "read": "Rep just guaranteed approval; walk it back now, gently.",
+      "sendThis": "Let me correct myself: I can't promise approval, only underwriting decides that. But a six-forty is a real starting point, so let's see what you qualify for.",
+      "backup": "Other places weren't wrong; the full picture is income, debts, savings, and credit together.",
+      "nextStep": "Start the application while the kids practice, or book a review: \"Want to knock it out now, or tomorrow at 10?\"",
+      "watchOut": "No guarantees, no rate or payment numbers, no knocking other lenders."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4916.687458999979,
+    "firstLineMs": 5257.152791999979,
+    "fullCardMs": 7041.263333999959,
+    "guardMs": 8211.881124999956
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "Will I get approved with a six-forty?",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "detectedMs": 3489.992541000014,
+    "draft": {
+      "read": "Nervous first-time buyer; credit worry is the real question.",
+      "sendThis": "Great question. Credit is one piece; income, debts, and savings matter too, so let's look at your full picture and see what you qualify for.",
+      "backup": "Lots of first-time buyers start right where you are, so let's get you real answers instead of guessing.",
+      "nextStep": "Start the review: \"Want to walk through it now while the kids are at practice, or tomorrow at 10?\"",
+      "watchOut": "Don't say she'll get approved or call her score \"fine.\""
+    },
+    "shown": {
+      "read": "Nervous first-time buyer; credit worry is the real question.",
+      "sendThis": "Great question. Credit is one piece; income, debts, and savings matter too, so let's look at your full picture and see what you qualify for.",
+      "backup": "Lots of first-time buyers start right where you are, so let's get you real answers instead of guessing.",
+      "nextStep": "Start the review: \"Want to walk through it now while the kids are at practice, or tomorrow at 10?\"",
+      "watchOut": "Don't say she'll get approved or call her score \"fine.\""
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 6620.093082999985,
+    "firstLineMs": 6866.692875000008,
+    "fullCardMs": 8569.771000000008,
+    "guardMs": 10032.387665999995
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 4,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "that's more than my rent... I don't know if I can do that",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "detectedMs": 1548.7701250000391,
+    "draft": {
+      "read": "Payment shock from an improper quote; rep also guaranteed approval.",
+      "sendThis": "Let me correct myself: that payment was a guess I shouldn't have given, and approval is underwriting's call, not mine. Let's run your real picture so you see an option you're comfortable with.",
+      "backup": "What monthly payment would feel comfortable, so we can see what fits around that?",
+      "nextStep": "Book a 20-minute review of income, credit, and goals: \"Does today at 5 or tomorrow at 11 work better?\"",
+      "watchOut": "Retract the guarantee and payment; quote no new numbers."
+    },
+    "shown": {
+      "read": "Payment shock from an improper quote; rep also guaranteed approval.",
+      "sendThis": "Let me correct myself: that payment was a guess I shouldn't have given, and approval is underwriting's call, not mine. Let's run your real picture so you see an option you're comfortable with.",
+      "backup": "What monthly payment would feel comfortable, so we can see what fits around that?",
+      "nextStep": "Book a 20-minute review of income, credit, and goals: \"Does today at 5 or tomorrow at 11 work better?\"",
+      "watchOut": "Retract the guarantee and payment; quote no new numbers."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5225.393750000047,
+    "firstLineMs": 5618.522583000013,
+    "fullCardMs": 7354.229749999999,
+    "guardMs": 8656.903541000036
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I need to think about it.",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "detectedMs": 918.3720420000027,
+    "draft": {
+      "read": "Payment shock plus a stall; earlier approval promise and payment estimate need correcting.",
+      "sendThis": "Totally fair, and I misspoke earlier: I can't promise approval or that payment, since underwriting decides and real numbers depend on your full picture. Let's run it properly so you see options that fit your budget before deciding anything.",
+      "backup": "What monthly amount would feel comfortable compared to your rent today?",
+      "nextStep": "Book a 15-minute review of income and credit: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No more approval promises or payment figures; don't push past the stall."
+    },
+    "shown": {
+      "read": "Payment shock plus a stall; earlier approval promise and payment estimate need correcting.",
+      "sendThis": "Totally fair, and I misspoke earlier: I can't promise approval or that payment, since underwriting decides and real numbers depend on your full picture. Let's run it properly so you see options that fit your budget before deciding anything.",
+      "backup": "What monthly amount would feel comfortable compared to your rent today?",
+      "nextStep": "Book a 15-minute review of income and credit: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "watchOut": "No more approval promises or payment figures; don't push past the stall."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 4426.439500000037,
+    "firstLineMs": 4916.500417000032,
+    "fullCardMs": 6534.935541999992,
+    "guardMs": 7178.405207999982
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-opus-5-5@low",
+    "id": 6,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "What would I need to send you?",
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "detectedMs": 1279.4360420000157,
+    "draft": {
+      "read": "Buying signal, but your payment guess and \"iffy\" reassurance need correcting.",
+      "sendThis": "Great question. Recent pay stubs, two years of W-2s, two months of bank statements, and your ID. And that payment I mentioned was a rough guess, so we'll get your real numbers once we see your full picture.",
+      "backup": "Once I have those, we'll see what you qualify for and find a payment you're comfortable with.",
+      "nextStep": "Book a 20-minute document walkthrough: \"Does today at 5 or tomorrow at noon work better?\"",
+      "watchOut": "Walk back the payment estimate; never imply approval or guaranteed qualifying."
+    },
+    "shown": {
+      "read": "Buying signal, but your payment guess and \"iffy\" reassurance need correcting.",
+      "sendThis": "Great question. Recent pay stubs, two years of W-2s, two months of bank statements, and your ID. And that payment I mentioned was a rough guess, so we'll get your real numbers once we see your full picture.",
+      "backup": "Once I have those, we'll see what you qualify for and find a payment you're comfortable with.",
+      "nextStep": "Book a 20-minute document walkthrough: \"Does today at 5 or tomorrow at noon work better?\"",
+      "watchOut": "Walk back the payment estimate; never imply approval or guaranteed qualifying."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstTokenMs": 5064.374792000046,
+    "firstLineMs": 5406.409333000018,
+    "fullCardMs": 7284.957208000007,
+    "guardMs": 8997.762917000044
+  }
+]

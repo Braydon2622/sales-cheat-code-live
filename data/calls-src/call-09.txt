@@ -1,0 +1,24 @@
+# id: call-09
+# title: Veteran wants to loop in his wife on a VA loan
+# scenario: Ray is a Navy veteran relocating for a new job, interested in a VA purchase loan. He wants his wife on the call before going further; the rep uses a two-option close to get both.
+# synthetic: true
+REP: Hi Ray, this is Nina with Copperleaf Home Loans. Thank you for your service, by the way, I saw on the form you're a veteran.
+CLIENT: Appreciate that. Navy, twelve years.
+REP: Twelve years, wow. Where were you stationed?
+CLIENT: All over. Norfolk, San Diego, a couple years in Japan. Kids still talk about Japan.
+REP: I bet. So you're relocating for a new job?
+CLIENT: Yep, starting in January. We need to find a place before then, ideally.
+REP: Have you used your VA benefit before?
+CLIENT: Once, about eight years ago, but we sold that house.
+REP: Okay, good to know. That's something we'd verify with your certificate of eligibility.
+CLIENT: What do I need to get that?  [buying_signal]
+REP: Usually we can request it for you directly with some basic info and your DD-214. Do you have that handy?
+CLIENT: Somewhere. Look, before we go too much further, my wife really should be on this. She's the one keeping the spreadsheet on schools and neighborhoods.  [objection:spouse]
+REP: Totally, I'd much rather talk to you both. Would tonight after dinner, say seven-thirty, or tomorrow at noon work better for the two of you?
+CLIENT: Tomorrow at noon. She's off tomorrow.
+REP: Perfect. I'll send an invite. If you can find that DD-214 by then, we can get the eligibility piece started right away.
+CLIENT: Will do. And how fast can you close a VA loan, realistically? We're kind of on a clock.  [buying_signal]
+REP: It depends on the appraisal and how quickly we get documents, but VA loans close on normal timelines when everything's organized. We'll map out a timeline tomorrow based on your start date.
+CLIENT: Good. That's what I needed to hear.
+REP: Talk to you both tomorrow at noon, Ray.
+CLIENT: Sounds good. Thanks Nina.

@@ -1,0 +1,18 @@
+# Runs the full test suite on every push. No API key needed: tests use the
+# mock pipeline, so CI never spends money or sees real data.
+name: tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test

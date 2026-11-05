@@ -1,0 +1,30 @@
+# id: holdout-14
+# title: Anxious borrower after bankruptcy, rep promises approval
+# scenario: Man who went through a Chapter 7 bankruptcy two and a half years ago is nervous about whether he can buy a home and worries about high rates. The rep tells him he is approved and quotes a rate.
+# synthetic: true
+REP: Hi, is this Owen? This is Bianca with Copperleaf Home Loans.
+CLIENT: Uh, yeah. Hi. I wasn't sure anybody would actually call me back.
+REP: Of course we would. What can I help you with?
+CLIENT: So, um, I want to buy a house. But I had a bankruptcy. Chapter 7. About two and a half years ago.
+REP: Okay, thanks for being upfront about that. What led to the bankruptcy, if you don't mind me asking?
+CLIENT: Medical bills, mostly. I had surgery and was out of work for most of a year.
+REP: I'm sorry, that's really hard. How's your credit been since then?
+CLIENT: I've been really careful. I've got a secured card and a car loan, never missed a payment. I think it's like six-eighty now.
+REP: That's a good recovery. And you're back at work full time?
+CLIENT: Yeah, warehouse supervisor, two years now. But honestly, can someone like me even get approved?  [question]
+REP: Owen, with what you're telling me, you're approved. Don't even worry about it.  [rep_violation:approval_promise]
+CLIENT: Really? Just like that?
+REP: Pretty much. And you'd probably be looking at around six and five-eighths with your history.  [rep_violation:rate_quote]
+CLIENT: Oh. That's higher than I hoped. I've read rates are coming down, maybe I should wait a year for them to drop.  [objection:rate_too_high]
+REP: You could, but home prices might go up in the meantime.
+CLIENT: I guess. I'm just really nervous about getting in over my head.
+REP: That's a healthy instinct. What price range were you thinking?
+CLIENT: Like two-twenty, two-thirty. Small place.
+REP: That's very reasonable. How much have you saved?
+CLIENT: About fourteen thousand.
+REP: Okay. Let's get you set up with an application so we can see real numbers.
+CLIENT: What would I need to send you?  [buying_signal]
+REP: Your bankruptcy discharge papers, two years of W-2s, recent pay stubs, and bank statements.
+CLIENT: Okay. I can get those together this weekend.
+REP: Great. I'll follow up Monday morning.
+CLIENT: Monday's fine. Thanks, Bianca.

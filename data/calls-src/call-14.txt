@@ -1,0 +1,24 @@
+# id: call-14
+# title: Ready-to-move rate-and-term refinance
+# scenario: Paul and his wife already decided to refinance and Paul calls back to get moving. He asks about documents, appraisal and closing timeline; the rep stays compliant on payment questions.
+# synthetic: true
+REP: Copperleaf Home Loans, this is Lauren.
+CLIENT: Hi Lauren, it's Paul. We spoke last week about refinancing. My wife and I talked it over and we want to go ahead.
+REP: Great to hear from you, Paul. Glad you two had a chance to talk.
+CLIENT: Yeah, we went back and forth, but we're in. So what do you need from me?  [buying_signal]
+REP: Let's start the application. I'll need your current mortgage statement, two recent pay stubs for each of you, and your last two years of W-2s.
+CLIENT: Easy. My wife's a teacher, so hers are pretty simple. Mine might be messier, I get quarterly bonuses.
+REP: That's fine, we'll just want your year-end pay stub or the bonus history so it's documented.
+CLIENT: Okay. Will you need to do an appraisal?  [question]
+REP: Most likely yes, though occasionally it can be waived depending on the loan. We'll know once the application's in.
+CLIENT: Got it. And how long does the whole thing usually take, start to finish?  [buying_signal]
+REP: Typically somewhere around thirty to forty-five days, depending mostly on the appraisal scheduling and how fast documents come in.
+CLIENT: Okay. And what will my new payment end up being?  [question]
+REP: I want to give you a real number, not a guess, so I'll have that in your official loan estimate once we pull credit and verify everything. You'll get it in writing within a few days of applying.
+CLIENT: Fair enough.
+REP: By the way, how was the anniversary trip? You mentioned you were heading up to the lake.
+CLIENT: Oh, it was great. Cold, but great. We didn't catch a single fish.
+REP: Ha, that's still a good trip. Okay, I'll send the application link to both of your emails. Would you rather go through it together tonight, or should I walk you through it tomorrow at lunch?
+CLIENT: Tomorrow at lunch, if that works. Then we can both ask questions.
+REP: Tomorrow at twelve-fifteen. Talk to you both then.
+CLIENT: Thanks Lauren.

@@ -1,0 +1,178 @@
+{
+  "id": "holdout-22",
+  "title": "Partner co-borrower and payment anxiety",
+  "scenario": "Same-sex couple buying a starter home; one partner calls but says the other is the co-borrower and must weigh in. He also worries the payment will be too high. Rep stays compliant.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Nikolai? This is Tamsin with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 8.2,
+      "text": "Hey Tamsin, yes. Good timing, I just got home.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8.8,
+      "end": 12.3,
+      "text": "Great. You and your partner are looking to buy?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 13,
+      "end": 17.6,
+      "text": "Yeah, me and Sam. We've been renting a duplex for four years.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 18.4,
+      "end": 21.1,
+      "text": "Exciting. What area are you looking in?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 22,
+      "end": 25.8,
+      "text": "East side, near the brewery district. Little bungalows over there.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 26.8,
+      "end": 29.1,
+      "text": "Love that neighborhood. What price range?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 30.2,
+      "end": 38.7,
+      "text": "Like three-twenty to three-fifty. But honestly, with rates where they are, I'm worried the payment would just be too much for us.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 39.9,
+      "end": 48.7,
+      "text": "That's a really fair concern. The best way to know what's comfortable is to look at your full budget together rather than guess.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 49.1,
+      "end": 57.2,
+      "text": "Yeah. And Sam's going to be the co-borrower, so I really need him in on this before we go any further.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 57.7,
+      "end": 62.7,
+      "text": "Absolutely. Would it help to set up a call with both of you?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 63.3,
+      "end": 65.2,
+      "text": "Yeah. He works nights though.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 65.9,
+      "end": 68.2,
+      "text": "How about a weekend? Saturday morning?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 69,
+      "end": 70.5,
+      "text": "Saturday at ten works.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 71.4,
+      "end": 79.1,
+      "text": "Perfect. Before then, could you each pull together a rough monthly budget? That'll help us talk about a comfortable payment.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 80.1,
+      "end": 83.6,
+      "text": "Sure. I'm still nervous it'll be too high, though.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 84.7,
+      "end": 89.7,
+      "text": "Totally understood. We'll go at your pace and look at different price points.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 90.9,
+      "end": 92.4,
+      "text": "Okay. Thanks, that helps.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 92.8,
+      "end": 94.7,
+      "text": "Talk to you both Saturday.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 95.2,
+      "end": 96,
+      "text": "Sounds good.",
+      "labels": []
+    }
+  ]
+}

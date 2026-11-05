@@ -1,0 +1,18 @@
+# id: holdout-23
+# title: Curt stall turns into opt-out
+# scenario: Busy small-business owner first tries to brush the rep off, then flatly asks not to be contacted again. Rep complies right away.
+# synthetic: true
+REP: Hi, is this Quinn? This is Harriet with Copperleaf Home Loans.
+CLIENT: Yeah.
+REP: Hi Quinn, I'm following up on a home equity inquiry from last month.
+CLIENT: Oh. Let me think about it. I'm swamped.  [objection:stall]
+REP: Understood. Would a quick call later this week be easier?
+CLIENT: No. Actually, don't contact me anymore. I'm not interested.  [opt_out]
+REP: Understood, Quinn. I'll remove your number from our list today.
+CLIENT: Thanks.
+REP: You won't hear from us again. Have a good afternoon.
+CLIENT: Yep.
+REP: Take care.
+CLIENT: Bye.
+REP: Bye now.
+CLIENT: Mm-hm.

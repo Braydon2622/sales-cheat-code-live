@@ -1,0 +1,125 @@
+{
+  "id": "holdout-13",
+  "title": "Nurse between shifts, has to run",
+  "scenario": "ER nurse interested in a first home purchase answers between shifts and has to cut the call short. Rep gets minimal discovery and books a callback.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 3.8,
+      "text": "Hi, is this Marisol? It's Gideon with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.3,
+      "end": 7.4,
+      "text": "Yeah, hi. Sorry, I've got like two minutes.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8,
+      "end": 13,
+      "text": "No problem, I'll be brief. You were interested in buying your first place?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 13.7,
+      "end": 17.5,
+      "text": "Yeah. I've been renting forever and I'm sick of it.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 18.3,
+      "end": 22.1,
+      "text": "I hear you. Are you working full time right now?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 23,
+      "end": 27.6,
+      "text": "Yeah, I'm an ER nurse. Three twelves a week, plus some overtime.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 28.6,
+      "end": 32.8,
+      "text": "Great, that's helpful. Do you know roughly where your credit is?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 33.9,
+      "end": 41.2,
+      "text": "Somewhere in the seven hundreds, I think. Oh, shoot, they're paging me. I have to run, call me later?",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 42.4,
+      "end": 44.7,
+      "text": "Of course. What's a better time?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 45.1,
+      "end": 47.4,
+      "text": "I don't know, I'm off Saturday.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 47.9,
+      "end": 49.8,
+      "text": "How about Saturday at noon?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 50.4,
+      "end": 51.2,
+      "text": "Noon's fine.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 51.9,
+      "end": 55.4,
+      "text": "Perfect. I'll call you then. Go save some lives.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 56.2,
+      "end": 57.4,
+      "text": "Ha, thanks. Bye.",
+      "labels": []
+    }
+  ]
+}

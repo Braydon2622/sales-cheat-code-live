@@ -1,0 +1,177 @@
+{
+  "id": "call-04",
+  "title": "First-time buyer just looking",
+  "scenario": "Kevin, a first-time buyer, clicked an ad and insists he's just looking. The rep stays low-pressure, educates, and sets a soft next step without quoting numbers.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 6.9,
+      "text": "Hey, is this Kevin? This is Alyssa with Copperleaf Home Loans, you'd clicked on our first-time buyer guide?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 7.4,
+      "end": 13.6,
+      "text": "Oh, uh, yeah. I did. But I'm really just looking, I'm not buying anything right now.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "just_shopping"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 14.2,
+      "end": 26.1,
+      "text": "Totally get it, most people I talk to are at the looking stage. Is it okay if I ask a couple questions just so the guide is actually useful to you?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 26.8,
+      "end": 28,
+      "text": "I guess, sure.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 28.8,
+      "end": 30.7,
+      "text": "Are you renting right now?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 31.6,
+      "end": 35.4,
+      "text": "Yeah, with a roommate. Lease is up in like August.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 36.4,
+      "end": 42.2,
+      "text": "Okay, so there's kind of a natural window there. What area are you looking at?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 43.3,
+      "end": 46.8,
+      "text": "Probably near downtown, close to work. I bike in.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 48,
+      "end": 50.7,
+      "text": "Love that. Do you ride all year?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 51.1,
+      "end": 56.5,
+      "text": "Pretty much, unless it's icy. Then I take the bus and complain about it.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 57,
+      "end": 67.4,
+      "text": "Ha, fair. So one thing a lot of first-time buyers don't realize is how much the down payment options vary. Have you looked into that at all?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 68,
+      "end": 72.6,
+      "text": "I figured I needed like twenty percent, which, yeah, that's not happening.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 73.3,
+      "end": 84.8,
+      "text": "A lot of people think that. There are programs with much lower down payment requirements, depending on your situation. That's something we'd go over if and when you want to.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 85.6,
+      "end": 89.8,
+      "text": "Huh. Okay, so what would I even need to get pre-approved?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 90.7,
+      "end": 103.8,
+      "text": "Usually a couple pay stubs, W-2s, bank statements and a credit check. No pressure on timing though. Would it help if I sent you a checklist and we talked again in a few weeks?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 104.8,
+      "end": 107.1,
+      "text": "Yeah, that would actually be helpful.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 108.2,
+      "end": 113.2,
+      "text": "Great. Early next week or later in the month better for a follow-up?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 114.4,
+      "end": 116.7,
+      "text": "Later in the month I guess.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 117.1,
+      "end": 120.2,
+      "text": "Perfect. I'll email the checklist today. Thanks Kevin.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 120.7,
+      "end": 121.5,
+      "text": "Cool, thanks.",
+      "labels": []
+    }
+  ]
+}

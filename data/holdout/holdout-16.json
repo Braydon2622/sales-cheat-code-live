@@ -1,0 +1,191 @@
+{
+  "id": "holdout-16",
+  "title": "Credit union member, rep guarantees savings",
+  "scenario": "Teacher refinancing with her credit union is reluctant to switch. The rep guarantees she will save money and quotes a closing cost figure.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Fiona? This is Brandt with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 8.9,
+      "text": "Hi. Yes. I think I filled something out by accident, maybe?",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 9.5,
+      "end": 13.7,
+      "text": "Ha, could be. It looks like you were checking refinance options?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 14.4,
+      "end": 22.9,
+      "text": "Oh, right. I was. But my credit union already sent me a refinance offer, so I'll probably just do it with them.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "bank_loyalty"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 23.7,
+      "end": 29.1,
+      "text": "Got it. Can I ask what you're hoping to get out of a refi?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 30,
+      "end": 34.2,
+      "text": "Lower payment, mostly. I teach fourth grade, so every dollar counts.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 35.2,
+      "end": 37.5,
+      "text": "Totally. What's your current rate, roughly?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 38.6,
+      "end": 42.1,
+      "text": "Seven and a half, I think. Something like that.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 43.3,
+      "end": 49.5,
+      "text": "Okay. Here's the thing, I guarantee you'll save more with us than with your credit union.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 49.9,
+      "end": 53.4,
+      "text": "You guarantee it? How can you know that already?",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 53.9,
+      "end": 60.1,
+      "text": "We just have better pricing. And our closing costs usually run about thirty-two hundred all in.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 60.7,
+      "end": 66.9,
+      "text": "Hm. My credit union said theirs were pretty low too. I've been with them since college.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 67.6,
+      "end": 73,
+      "text": "Sure, but would you be open to comparing a written estimate side by side?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 73.8,
+      "end": 80,
+      "text": "I guess I wouldn't mind seeing it. What would I need to give you for that?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 80.9,
+      "end": 86.3,
+      "text": "Just your current mortgage statement, a pay stub, and permission to run your credit.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 87.3,
+      "end": 90,
+      "text": "Will running my credit hurt my score?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 91.1,
+      "end": 98.4,
+      "text": "There can be a small impact from a hard inquiry, and I'll explain the options before we pull anything.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 99.6,
+      "end": 104.2,
+      "text": "Okay. Honestly I'm still leaning toward the credit union. They know me.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 104.6,
+      "end": 108.4,
+      "text": "Understood. I'll send over a list and you can decide.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 108.9,
+      "end": 109.7,
+      "text": "Okay. Thanks.",
+      "labels": []
+    }
+  ]
+}

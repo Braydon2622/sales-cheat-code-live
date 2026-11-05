@@ -1,0 +1,92 @@
+{
+  "C01": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-19",
+    "cardId": 4,
+    "outcome": "shown"
+  },
+  "C02": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-20",
+    "cardId": 4,
+    "outcome": "shown"
+  },
+  "C03": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-14",
+    "cardId": 5,
+    "outcome": "shown"
+  },
+  "C04": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-10",
+    "cardId": 2,
+    "outcome": "shown"
+  },
+  "C05": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-06",
+    "cardId": 1,
+    "outcome": "shown"
+  },
+  "C06": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-15",
+    "cardId": 1,
+    "outcome": "shown"
+  },
+  "C07": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-03",
+    "cardId": 1,
+    "outcome": "shown"
+  },
+  "C08": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-08",
+    "cardId": 1,
+    "outcome": "shown"
+  },
+  "C09": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-19",
+    "cardId": 1,
+    "outcome": "shown"
+  },
+  "C10": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-09",
+    "cardId": 4,
+    "outcome": "shown"
+  },
+  "C11": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-06",
+    "cardId": 4,
+    "outcome": "shown"
+  },
+  "C12": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-05",
+    "cardId": 3,
+    "outcome": "shown"
+  },
+  "C13": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-19",
+    "cardId": 5,
+    "outcome": "shown"
+  },
+  "C14": {
+    "coach": "claude:claude-sonnet-5-5@low",
+    "callId": "call-11",
+    "cardId": 3,
+    "outcome": "shown"
+  },
+  "C15": {
+    "coach": "claude:claude-opus-5-5@low",
+    "callId": "call-07",
+    "cardId": 1,
+    "outcome": "shown"
+  }
+}

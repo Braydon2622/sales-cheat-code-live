@@ -1,0 +1,193 @@
+{
+  "id": "holdout-18",
+  "title": "Engineer with a spreadsheet of lenders",
+  "scenario": "Analytical engineer is comparing lenders for a purchase in the spring and wants a breakdown of costs. He is polite but makes clear he is only gathering data.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Viktor? This is Celeste with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 6.6,
+      "text": "Yes, hello. Thanks for calling.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 7.2,
+      "end": 10.7,
+      "text": "Of course. I see you're looking at a purchase?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 11.4,
+      "end": 18.7,
+      "text": "Eventually. I'm building a spreadsheet of lenders right now, comparing fees and terms. Just collecting data, nothing serious yet.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "just_shopping"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 19.5,
+      "end": 23.7,
+      "text": "Love that you're doing your homework. What's your timeline looking like?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 24.6,
+      "end": 28.1,
+      "text": "Probably April or May. Our lease ends in June.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 29.1,
+      "end": 31,
+      "text": "Okay. And what price range?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 32.1,
+      "end": 33.6,
+      "text": "Five hundred to five-fifty.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 34.8,
+      "end": 37.9,
+      "text": "Got it. Do you know your credit score?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 38.3,
+      "end": 39.8,
+      "text": "Seven-ninety-something, last I checked.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 40.3,
+      "end": 43.4,
+      "text": "Excellent. Are you planning on twenty percent down?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 44,
+      "end": 49.4,
+      "text": "Yes. So what are your lender fees, specifically? Origination, underwriting, that kind of thing?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 50.1,
+      "end": 62.8,
+      "text": "Those depend on the loan program and whether you choose to buy down a rate, so the cleanest comparison is an official Loan Estimate. I can explain each line once you have it.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 63.6,
+      "end": 65.1,
+      "text": "Every lender says that.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 66,
+      "end": 73.7,
+      "text": "It's because the estimate is the only apples-to-apples document. You can line them up line by line in your spreadsheet.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 74.7,
+      "end": 77,
+      "text": "Hm. That's actually a good point.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 78.1,
+      "end": 84.6,
+      "text": "Would you like me to send you a short guide on how to read a Loan Estimate?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 85.8,
+      "end": 90.8,
+      "text": "Sure. But again, I'm just gathering info. I won't decide anything until spring.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 91.2,
+      "end": 94.7,
+      "text": "Totally understood. Mind if I check back in February?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 95.2,
+      "end": 96,
+      "text": "February's okay.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 96.6,
+      "end": 99.7,
+      "text": "Great. I'll send that guide today. Thanks, Viktor.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 100.4,
+      "end": 101.2,
+      "text": "Thank you.",
+      "labels": []
+    }
+  ]
+}

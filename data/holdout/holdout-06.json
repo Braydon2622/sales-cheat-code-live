@@ -1,0 +1,208 @@
+{
+  "id": "holdout-06",
+  "title": "Loyal bank customer, rep trashes the bank",
+  "scenario": "Long-time customer of a regional bank plans to get her purchase loan there. The rep disparages the bank and quotes a rate to win her over.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Mireille? This is Kofi from Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 6.2,
+      "text": "Speaking. What's this about?",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 6.8,
+      "end": 12.6,
+      "text": "You requested info on a purchase loan, I think you're under contract on a condo?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 13.3,
+      "end": 17.5,
+      "text": "Not under contract yet, but close. We made an offer yesterday.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 18.3,
+      "end": 21,
+      "text": "Exciting. Have you gotten pre-approved anywhere yet?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 21.9,
+      "end": 28.8,
+      "text": "Not formally. To be honest I'll probably just go with my bank. I've been with them twenty years.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "bank_loyalty"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 29.8,
+      "end": 39.4,
+      "text": "I get it, but honestly, banks like that are slow and they bury you in fees. Most of my clients regret going with their bank.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 40.5,
+      "end": 43.6,
+      "text": "Hm. I've never had a problem with them.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 44.8,
+      "end": 51.7,
+      "text": "Sure, for checking accounts. Mortgages are a different animal. We could probably get you around five and seven-eighths.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 52.1,
+      "end": 55.2,
+      "text": "Is that a real number or a teaser?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 55.7,
+      "end": 59.2,
+      "text": "It would depend on your full file, of course.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 59.8,
+      "end": 65.6,
+      "text": "Right. Well, my bank gives me a relationship discount, so I'm inclined to stay put.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 66.3,
+      "end": 69.4,
+      "text": "Understood. What's the purchase price on the condo?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 70.2,
+      "end": 71,
+      "text": "Two-eighty-five.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 71.9,
+      "end": 74.6,
+      "text": "And how much are you putting down?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 75.6,
+      "end": 76.4,
+      "text": "Twenty percent.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 77.5,
+      "end": 87.5,
+      "text": "That's a great position to be in. Would you be open to letting us put a competing estimate together so you can compare side by side?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 88.7,
+      "end": 93.3,
+      "text": "Maybe. Just email me something in writing and I'll look at it.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 93.7,
+      "end": 96.8,
+      "text": "I can do that. What's the best email?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 97.3,
+      "end": 100,
+      "text": "The one on the form is fine.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 100.6,
+      "end": 102.9,
+      "text": "Perfect. I'll get that over today.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 103.6,
+      "end": 104.4,
+      "text": "Okay. Thanks.",
+      "labels": []
+    }
+  ]
+}

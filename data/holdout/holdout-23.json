@@ -1,0 +1,129 @@
+{
+  "id": "holdout-23",
+  "title": "Curt stall turns into opt-out",
+  "scenario": "Busy small-business owner first tries to brush the rep off, then flatly asks not to be contacted again. Rep complies right away.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Quinn? This is Harriet with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 5.5,
+      "text": "Yeah.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 6.1,
+      "end": 11.1,
+      "text": "Hi Quinn, I'm following up on a home equity inquiry from last month.",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 11.8,
+      "end": 14.9,
+      "text": "Oh. Let me think about it. I'm swamped.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 15.7,
+      "end": 19.5,
+      "text": "Understood. Would a quick call later this week be easier?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 20.4,
+      "end": 23.9,
+      "text": "No. Actually, don't contact me anymore. I'm not interested.",
+      "labels": [
+        {
+          "type": "opt_out"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 24.9,
+      "end": 28.7,
+      "text": "Understood, Quinn. I'll remove your number from our list today.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 29.8,
+      "end": 30.6,
+      "text": "Thanks.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 31.8,
+      "end": 35.6,
+      "text": "You won't hear from us again. Have a good afternoon.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 36,
+      "end": 36.8,
+      "text": "Yep.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 37.3,
+      "end": 38.1,
+      "text": "Take care.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 38.7,
+      "end": 39.5,
+      "text": "Bye.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 40.2,
+      "end": 41,
+      "text": "Bye now.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 41.8,
+      "end": 42.6,
+      "text": "Mm-hm.",
+      "labels": []
+    }
+  ]
+}

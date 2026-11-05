@@ -1,0 +1,26 @@
+# id: call-02
+# title: Payment too high plus my bank already offered
+# scenario: Priya is buying her first condo and thinks the payment she was shown is too high; she also says her credit union already pre-approved her. The rep slips by trashing the credit union.
+# synthetic: true
+REP: Hi Priya, it's Jordan from Copperleaf Home Loans. You were looking at condos over on the east side, right?
+CLIENT: Yeah, hey Jordan. Yeah, we put in an offer on one actually, we're waiting to hear back.
+REP: Oh exciting! How many offers have you put in so far?
+CLIENT: This is the third. The first two went way over asking. It's been kind of brutal.
+REP: That market is no joke. So where are you at on the financing side?
+CLIENT: Well, I got a payment estimate from the online calculator and it's just way more than I want to pay every month. Like, I don't know how anyone affords this.  [objection:rate_too_high]
+REP: I hear that a lot. A lot of that calculator stuff uses generic assumptions, taxes, insurance, HOA. Did you put your actual HOA in?
+CLIENT: No, I think I just used the defaults.
+REP: Okay, so that number could be off in either direction. That's worth checking with real numbers.
+CLIENT: Also, to be honest, my credit union already pre-approved me. I'll probably just go with them since I've banked there forever.  [objection:bank_loyalty]
+REP: Look, credit unions are fine for checking accounts, but they're slow and they're going to bury you in fees. You'll lose this condo waiting on them.  [rep_violation:other]
+CLIENT: Hm. I mean, they've been pretty good to me so far.
+REP: Fair enough. What I'd really like to do is just be a second look. Do you have their loan estimate yet?
+CLIENT: I have the pre-approval letter, not like a full estimate.
+REP: Got it. Once your offer's accepted you'll get a formal loan estimate from them. If you want, send me the details and I can show you what ours looks like side by side.
+CLIENT: Maybe. How long does it usually take you guys to close?  [buying_signal]
+REP: Typically we can close within the contract window, usually around thirty days, depending on the appraisal and how fast we get documents.
+CLIENT: Okay. Let me see if the offer even gets accepted first.
+REP: Totally makes sense. Can I check back in with you Thursday afternoon or Friday morning?
+CLIENT: Friday's fine.
+REP: Great, talk to you Friday, fingers crossed on the offer.
+CLIENT: Thanks, bye.

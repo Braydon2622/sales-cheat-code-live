@@ -1,0 +1,26 @@
+# id: holdout-15
+# title: Engaged couple, partner not on the call
+# scenario: First-time buyer engaged to be married wants to buy together but his fiancee is the higher earner and isn't on the call. He warms up and asks how to start.
+# synthetic: true
+REP: Hi, is this Declan? This is Yusuf with Copperleaf Home Loans.
+CLIENT: Hey, yeah. What's up, man.
+REP: Not much. I saw you were looking into buying your first home?
+CLIENT: Yeah, me and my fiancee. We're getting married in May and we're tired of paying rent.
+REP: Congrats! That's exciting. Would you both be on the loan?
+CLIENT: Yeah, definitely. Honestly she makes more than me, so I can't really go much further without her.  [objection:spouse]
+REP: Makes sense. We can absolutely loop her in. Can I ask a few general questions in the meantime?
+CLIENT: Sure, go for it.
+REP: Where are you two looking?
+CLIENT: Out in the suburbs, closer to her parents. They're going to babysit someday, ha.
+REP: Smart planning. Do you know roughly what you've saved for a down payment?
+CLIENT: Like thirty grand between us. Her parents might help too.
+REP: Okay, gift funds are pretty common. We'd just need a gift letter for those.
+CLIENT: Oh, cool. So how do we actually get started on this?  [buying_signal]
+REP: The first step is an application for both of you, then we review income and credit and go from there.
+CLIENT: Okay. But yeah, she's going to want to be part of that. She's the spreadsheet person.
+REP: Totally. When could we get both of you on a call?
+CLIENT: She's off Fridays.
+REP: How about Friday at one?
+CLIENT: Friday at one works.
+REP: Great, I'll send an invite to you both. Talk Friday.
+CLIENT: Sounds good, thanks man.

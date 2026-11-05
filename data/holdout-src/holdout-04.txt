@@ -1,0 +1,24 @@
+# id: holdout-04
+# title: Busy self-employed contractor brushes off the call
+# scenario: Self-employed electrician interested in refinancing to consolidate debt keeps saying he is too busy. Rep tries discovery and settles for a callback.
+# synthetic: true
+REP: Hi, is this Rusty? This is Ingrid with Copperleaf Home Loans.
+CLIENT: Yeah. Who?
+REP: Ingrid, with Copperleaf Home Loans. You'd asked about a refinance to pay down some debt?
+CLIENT: Oh, right, right. Look, I'm on a job site. It's been a crazy busy few weeks.  [objection:stall]
+REP: Understood, I'll be quick. Are you still thinking about consolidating that debt?
+CLIENT: Yeah, I got a truck loan and some cards that are killing me.
+REP: Got it. And you're self-employed, is that right?
+CLIENT: Yep. Own my own electrical outfit, eight years now.
+REP: Nice. Do you file a Schedule C or do you run it through an S-corp?
+CLIENT: S-corp, I think. My accountant does all that.
+REP: That's helpful. We'd probably want your last two years of returns at some point.
+CLIENT: Yeah, yeah. Like I said, it's nuts out here right now.
+REP: Totally get it. When's a better time to go through it properly?
+CLIENT: I don't know, maybe after five some day.
+REP: How about Thursday at five-thirty?
+CLIENT: Thursday's fine.
+REP: Great. I'll call you then. Should I use this same number?
+CLIENT: Yep, this number.
+REP: Perfect. Be safe up there, Rusty.
+CLIENT: Will do. Later.

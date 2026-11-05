@@ -1,0 +1,32 @@
+[
+  {
+    "file": "nurse-rate-and-approval.json",
+    "title": "Nurse fishes for a rate and approval",
+    "format": "Dialpad JSON",
+    "note": "rep quotes a rate and promises approval"
+  },
+  {
+    "file": "credit-union-loyalist.json",
+    "title": "Payment too high, credit union already approved her",
+    "format": "Dialpad JSON",
+    "note": "rep talks down the credit union"
+  },
+  {
+    "file": "opt-out-ignored.json",
+    "title": "Client opts out, rep keeps pitching",
+    "format": "Dialpad JSON",
+    "note": "opt-out handling"
+  },
+  {
+    "file": "contractor-ready-to-buy.txt",
+    "title": "Self-employed contractor ready to buy",
+    "format": "text with names",
+    "note": "asks which speaker is the loan officer"
+  },
+  {
+    "file": "wife-handles-the-money.txt",
+    "title": "Needs to talk to her husband first",
+    "format": "text, REP/CLIENT",
+    "note": "spouse objection, clean rep"
+  }
+]

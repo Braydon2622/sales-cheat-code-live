@@ -1,0 +1,23 @@
+# id: call-19
+# title: Refi client pushes for a payment number and gets two
+# scenario: Greg a landlord with a few rentals, wants to refinance his primary home and keeps asking for an exact rate and payment. The rep quotes both, and later disparages the client's bank.
+# synthetic: true
+REP: Hey Greg, it's Melissa with Copperleaf Home Loans. You'd asked about refinancing your primary home?
+CLIENT: Yeah. Look, I've done this a bunch of times, I own a few rentals. I don't need the whole song and dance.
+REP: Ha, fair enough, I'll skip the song and dance. What's the main goal on this one?
+CLIENT: Lower payment. Simple. I owe about two-sixty on it.
+REP: Got it. And roughly what's the house worth?
+CLIENT: Around four-fifty. Bought it in twenty-nineteen.
+REP: Great equity. How are the rentals doing, by the way?
+CLIENT: Fine. One tenant just put a hot tub on the deck without asking, so that's fun.
+REP: Oh no. That's a new one.
+CLIENT: Yeah. Anyway, just give me a number. What rate can you do?  [question]
+REP: For you, with that equity, I can do five point eight seven five.  [rep_violation:rate_quote]
+CLIENT: And what's that make my payment, principal and interest?  [question]
+REP: On two-sixty over thirty years, you'd be right around fifteen-forty a month.  [rep_violation:rate_quote]
+CLIENT: Hm. My bank said they'd match whatever anyone offers. I'll probably just run it through them.  [objection:bank_loyalty]
+REP: Honestly, banks say that and then hit you with junk fees at closing. They're not on your side.  [rep_violation:other]
+CLIENT: I've used them for my last two refis and they were fine.
+REP: Okay, well, at least let me send you something to compare.
+CLIENT: Send it. I'll look at it when I look at it.  [objection:stall]
+REP: Will do. Thanks Greg.

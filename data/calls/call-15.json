@@ -1,0 +1,192 @@
+{
+  "id": "call-15",
+  "title": "Self-employed contractor ready to buy fast",
+  "scenario": "Dominic, a self-employed electrician, has found land with a house on it and wants to move quickly. He asks lots of next-step and document questions; the rep is careful about approval and rate questions.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 6.2,
+      "text": "Hey Dominic, it's Chris from Copperleaf Home Loans. Got your message, sounds like you found something?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 6.7,
+      "end": 16.3,
+      "text": "Yeah man, five acres with a little ranch house. It's exactly what I want. The seller wants to close before the end of the year.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 16.9,
+      "end": 22.3,
+      "text": "That's awesome. Five acres, what are you going to do with all that room?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 23,
+      "end": 28,
+      "text": "Shop for my trucks, finally. Right now everything's crammed in my mom's garage.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 28.8,
+      "end": 31.9,
+      "text": "Ha, I bet she'll be happy about that.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 32.8,
+      "end": 39,
+      "text": "She's thrilled. So, look, I'm ready. What do you need from me to get this going?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 40,
+      "end": 51.5,
+      "text": "Since you're self-employed, the big one is your last two years of personal and business tax returns. Plus a year-to-date profit and loss and a couple months of bank statements.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 52.6,
+      "end": 59.9,
+      "text": "My CPA has all that. I can have her send it today. Can she email it straight to you?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 61.1,
+      "end": 67.6,
+      "text": "Yes, I'll give you a secure upload link she can use, better than email for tax documents.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 68,
+      "end": 72.6,
+      "text": "Perfect. Am I going to have trouble getting approved since I'm self-employed?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 73.1,
+      "end": 88.1,
+      "text": "Being self-employed doesn't disqualify you, it just means the income review is based on your returns. I can't say yes or no until I see them, but once your CPA sends them I'll give you a straight answer quickly.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 88.7,
+      "end": 92.5,
+      "text": "Okay, cool. And the land, does five acres change anything?",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 93.2,
+      "end": 100.5,
+      "text": "It can, depending on the property and how it appraises. Do you know if there's a well and septic?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 101.3,
+      "end": 104.8,
+      "text": "Both. And a pole barn that's half falling down.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 105.7,
+      "end": 112.6,
+      "text": "Good to know, the appraiser will note all of that. What's the closing date the seller's asking for?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 113.6,
+      "end": 115.9,
+      "text": "December twentieth. Can you hit that?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 117,
+      "end": 128.5,
+      "text": "That's tight but workable if we get documents this week and get the appraisal ordered fast. I'll build a timeline backwards from that date and send it to you tonight.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 129.7,
+      "end": 133.2,
+      "text": "Great. Do I need to do anything else today?",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 133.6,
+      "end": 144.4,
+      "text": "Just get your CPA the link and send me the listing. Can we touch base tomorrow at eight before you're on a job, or would five work better?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 144.9,
+      "end": 148,
+      "text": "Eight. I'm on a job site by nine.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 148.6,
+      "end": 150.5,
+      "text": "Eight it is. Talk then.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "holdout-15",
+  "title": "Engaged couple, partner not on the call",
+  "scenario": "First-time buyer engaged to be married wants to buy together but his fiancee is the higher earner and isn't on the call. He warms up and asks how to start.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Declan? This is Yusuf with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 6.6,
+      "text": "Hey, yeah. What's up, man.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 7.2,
+      "end": 11.8,
+      "text": "Not much. I saw you were looking into buying your first home?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.5,
+      "end": 18.7,
+      "text": "Yeah, me and my fiancee. We're getting married in May and we're tired of paying rent.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 19.5,
+      "end": 23.3,
+      "text": "Congrats! That's exciting. Would you both be on the loan?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 24.2,
+      "end": 30.7,
+      "text": "Yeah, definitely. Honestly she makes more than me, so I can't really go much further without her.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 31.7,
+      "end": 38.6,
+      "text": "Makes sense. We can absolutely loop her in. Can I ask a few general questions in the meantime?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 39.7,
+      "end": 41.2,
+      "text": "Sure, go for it.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 42.4,
+      "end": 44.3,
+      "text": "Where are you two looking?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 44.7,
+      "end": 50.1,
+      "text": "Out in the suburbs, closer to her parents. They're going to babysit someday, ha.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 50.6,
+      "end": 55.6,
+      "text": "Smart planning. Do you know roughly what you've saved for a down payment?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 56.2,
+      "end": 60,
+      "text": "Like thirty grand between us. Her parents might help too.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 60.7,
+      "end": 66.1,
+      "text": "Okay, gift funds are pretty common. We'd just need a gift letter for those.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 66.9,
+      "end": 71.1,
+      "text": "Oh, cool. So how do we actually get started on this?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 72,
+      "end": 79.7,
+      "text": "The first step is an application for both of you, then we review income and credit and go from there.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 80.7,
+      "end": 86.9,
+      "text": "Okay. But yeah, she's going to want to be part of that. She's the spreadsheet person.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 88,
+      "end": 92.2,
+      "text": "Totally. When could we get both of you on a call?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 93.4,
+      "end": 94.6,
+      "text": "She's off Fridays.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 95,
+      "end": 96.9,
+      "text": "How about Friday at one?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 97.4,
+      "end": 98.9,
+      "text": "Friday at one works.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 99.5,
+      "end": 103.3,
+      "text": "Great, I'll send an invite to you both. Talk Friday.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 104,
+      "end": 105.5,
+      "text": "Sounds good, thanks man.",
+      "labels": []
+    }
+  ]
+}

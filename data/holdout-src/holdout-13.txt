@@ -1,0 +1,18 @@
+# id: holdout-13
+# title: Nurse between shifts, has to run
+# scenario: ER nurse interested in a first home purchase answers between shifts and has to cut the call short. Rep gets minimal discovery and books a callback.
+# synthetic: true
+REP: Hi, is this Marisol? It's Gideon with Copperleaf Home Loans.
+CLIENT: Yeah, hi. Sorry, I've got like two minutes.
+REP: No problem, I'll be brief. You were interested in buying your first place?
+CLIENT: Yeah. I've been renting forever and I'm sick of it.
+REP: I hear you. Are you working full time right now?
+CLIENT: Yeah, I'm an ER nurse. Three twelves a week, plus some overtime.
+REP: Great, that's helpful. Do you know roughly where your credit is?
+CLIENT: Somewhere in the seven hundreds, I think. Oh, shoot, they're paging me. I have to run, call me later?  [objection:stall]
+REP: Of course. What's a better time?
+CLIENT: I don't know, I'm off Saturday.
+REP: How about Saturday at noon?
+CLIENT: Noon's fine.
+REP: Perfect. I'll call you then. Go save some lives.
+CLIENT: Ha, thanks. Bye.

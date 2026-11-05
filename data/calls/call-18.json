@@ -1,0 +1,190 @@
+{
+  "id": "call-18",
+  "title": "Client fishes for rate and approval, rep slips on both",
+  "scenario": "Alex, a nurse buying her first home with a modest down payment, keeps pressing for a specific rate and whether she'll be approved. The rep caves on both.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi Alex, Shawn with Copperleaf Home Loans. Thanks for calling back.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 8.5,
+      "text": "Hi, yeah, sorry, I just got off a twelve-hour shift.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 9.1,
+      "end": 11.4,
+      "text": "Oh wow, where do you work?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.1,
+      "end": 15.2,
+      "text": "I'm a nurse at the regional hospital. ICU.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 16,
+      "end": 18.7,
+      "text": "That's intense. Thank you for doing that.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 19.6,
+      "end": 26.9,
+      "text": "Ha, thanks. Okay so I've been looking at houses around three hundred thousand. I've got maybe five percent down.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 27.9,
+      "end": 32.5,
+      "text": "Great, that's a very doable starting point for a lot of buyers.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 33.6,
+      "end": 37.4,
+      "text": "So what kind of rate would I get with that?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 38.6,
+      "end": 44.8,
+      "text": "With five down and a nurse's income, you're probably looking at about six and a quarter.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 45.2,
+      "end": 51.7,
+      "text": "Okay. And my credit's like six-eighty, is that going to be a problem? Will I get approved?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 52.2,
+      "end": 56.8,
+      "text": "Six-eighty with your job? Oh, you're approved, don't even worry about it.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "approval_promise"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 57.4,
+      "end": 60.1,
+      "text": "Seriously? That's way easier than I thought.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 60.8,
+      "end": 63.5,
+      "text": "Yeah, nurses are great borrowers. Stable job.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 64.3,
+      "end": 68.1,
+      "text": "So what's the next step, do I fill something out?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 69,
+      "end": 73.6,
+      "text": "Yep, I'll send you the application. Pay stubs, W-2s and bank statements.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 74.6,
+      "end": 79.2,
+      "text": "Okay. I work nights so I'll do it on my day off.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 80.3,
+      "end": 84.9,
+      "text": "Works for me. Would Wednesday or Thursday be better for a follow-up?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 86.1,
+      "end": 86.9,
+      "text": "Thursday.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 87.3,
+      "end": 89.6,
+      "text": "Thursday then. Get some sleep, Alex.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 90.1,
+      "end": 91.6,
+      "text": "Ha, I'll try. Bye.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "id": "holdout-25",
+  "title": "Self-employed designer ready for cash-out to buy a studio",
+  "scenario": "Self-employed graphic designer wants a cash-out refinance to buy a small studio space. She is organized and ready to start; the rep handles her questions carefully.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Rosalind? This is Emeka with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 10.9,
+      "text": "Yes, hi! I've been waiting for your call, I've got my coffee and my folder ready.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 11.5,
+      "end": 16.5,
+      "text": "Ha, I love a prepared client. So you're looking at a cash-out refinance?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 17.2,
+      "end": 25.7,
+      "text": "Yes. I run my own design studio out of my spare bedroom and I want to buy a little commercial unit downtown.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 26.5,
+      "end": 29.6,
+      "text": "That's exciting. How long have you been self-employed?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 30.5,
+      "end": 34.7,
+      "text": "Five years this January. Before that I was at an agency.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 35.7,
+      "end": 39.9,
+      "text": "Great. And how much cash are you hoping to take out?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 41,
+      "end": 48.3,
+      "text": "About eighty thousand. The house was appraised at four-seventy last year for my insurance, and I owe about two-thirty.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 49.5,
+      "end": 55.3,
+      "text": "Okay, that's solid equity. Do you have your last two years of tax returns handy?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 55.7,
+      "end": 62.6,
+      "text": "Right here. Does it matter that I write off a lot of expenses? My accountant is very aggressive.",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 63.1,
+      "end": 72.3,
+      "text": "It can, because we usually look at net income after deductions. I'd want to review the returns before telling you how it'll work out.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 72.9,
+      "end": 77.9,
+      "text": "Okay, that's fair. What else do you need from me to get started?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 78.6,
+      "end": 85.9,
+      "text": "Your returns, a year-to-date profit and loss, two months of business and personal bank statements, and your mortgage statement.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 86.7,
+      "end": 92.9,
+      "text": "I have all of that. How long does the whole thing usually take, start to finish?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 93.8,
+      "end": 103,
+      "text": "It varies with the appraisal and how quickly underwriting reviews the self-employment docs. Once I see your file, I'll give you a realistic timeline.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 104,
+      "end": 108.6,
+      "text": "Got it. Can I sign something today to get the ball rolling?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 109.7,
+      "end": 116.6,
+      "text": "Yes, I can send you the application right now, and you can upload documents through the same link.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 117.8,
+      "end": 119.3,
+      "text": "Perfect. Send it over.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 119.7,
+      "end": 123.9,
+      "text": "Sent. You should see it in your email in a minute.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 124.4,
+      "end": 126.7,
+      "text": "Got it! Oh, this is exciting.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 127.3,
+      "end": 131.1,
+      "text": "It is. I'll call you Thursday once I've reviewed everything.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 131.8,
+      "end": 133.3,
+      "text": "Thursday's great. Thanks, Emeka.",
+      "labels": []
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 134.1,
+      "end": 136,
+      "text": "Thank you, Rosalind. Talk then.",
+      "labels": []
+    }
+  ]
+}

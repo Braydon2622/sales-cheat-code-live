@@ -1,0 +1,177 @@
+{
+  "id": "holdout-20",
+  "title": "Waiting for rates to drop before refinancing",
+  "scenario": "Mid-career accountant tracks rate news obsessively and insists on waiting for a lower rate. Rep stays compliant, offers education and a check-in, and the client repeats his objection.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Haruto? This is Delia with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 8.2,
+      "text": "Yes, hi. I was wondering when someone would call.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8.8,
+      "end": 12.6,
+      "text": "Sorry for the wait. You were asking about a refinance?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 13.3,
+      "end": 23.7,
+      "text": "Yeah, but to be honest, I'm going to wait for rates to drop. I read every Fed announcement and I think they'll come down more next year.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 24.5,
+      "end": 29.5,
+      "text": "That's a thoughtful approach. What's your current situation, if you don't mind sharing?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 30.4,
+      "end": 33.9,
+      "text": "Thirty-year fixed, bought in 2024. Balance is around four-twenty.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 34.9,
+      "end": 39.5,
+      "text": "Okay. And what's your main goal, lower payment or shortening the term?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 40.6,
+      "end": 44.8,
+      "text": "Lower payment, definitely. We have twins in daycare and it's brutal.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 46,
+      "end": 50.2,
+      "text": "Oh, I can only imagine. Is your credit in good shape?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 50.6,
+      "end": 54.8,
+      "text": "Around seven-sixty. I'm an accountant, I watch it like a hawk.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 55.3,
+      "end": 66.5,
+      "text": "Ha, of course you do. Would you want me to do a break-even analysis so you know exactly what kind of drop would make it worth it for you?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 67.1,
+      "end": 71.3,
+      "text": "What would it cost me to refinance, roughly? Like closing costs?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 72,
+      "end": 82.4,
+      "text": "It depends on your loan amount, title fees, and whether you pay points, so I'd want to run your actual scenario rather than toss out a number.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 83.2,
+      "end": 89,
+      "text": "Fair. But honestly, the rates right now just aren't low enough. I'm going to wait.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 89.9,
+      "end": 96.8,
+      "text": "Totally understand. If I set up a rate alert and do that break-even calc, would that be useful?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 97.8,
+      "end": 101.3,
+      "text": "Yeah, that would actually be useful. Send it over.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 102.4,
+      "end": 106.6,
+      "text": "Will do. And I'll check in after the next Fed meeting?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 107.8,
+      "end": 108.6,
+      "text": "That's fine.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 109,
+      "end": 111.7,
+      "text": "Great. Hang in there with the twins.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 112.2,
+      "end": 113.4,
+      "text": "Ha, thanks. Bye.",
+      "labels": []
+    }
+  ]
+}

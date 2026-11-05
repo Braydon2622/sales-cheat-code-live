@@ -1,0 +1,173 @@
+{
+  "id": "holdout-04",
+  "title": "Busy self-employed contractor brushes off the call",
+  "scenario": "Self-employed electrician interested in refinancing to consolidate debt keeps saying he is too busy. Rep tries discovery and settles for a callback.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Rusty? This is Ingrid with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 5.5,
+      "text": "Yeah. Who?",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 6.1,
+      "end": 11.9,
+      "text": "Ingrid, with Copperleaf Home Loans. You'd asked about a refinance to pay down some debt?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.6,
+      "end": 18.8,
+      "text": "Oh, right, right. Look, I'm on a job site. It's been a crazy busy few weeks.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 19.6,
+      "end": 24.2,
+      "text": "Understood, I'll be quick. Are you still thinking about consolidating that debt?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 25.1,
+      "end": 30.1,
+      "text": "Yeah, I got a truck loan and some cards that are killing me.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 31.1,
+      "end": 34.2,
+      "text": "Got it. And you're self-employed, is that right?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 35.3,
+      "end": 38.8,
+      "text": "Yep. Own my own electrical outfit, eight years now.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 40,
+      "end": 45.8,
+      "text": "Nice. Do you file a Schedule C or do you run it through an S-corp?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 46.2,
+      "end": 49.3,
+      "text": "S-corp, I think. My accountant does all that.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 49.8,
+      "end": 55.2,
+      "text": "That's helpful. We'd probably want your last two years of returns at some point.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 55.8,
+      "end": 60,
+      "text": "Yeah, yeah. Like I said, it's nuts out here right now.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 60.7,
+      "end": 65.3,
+      "text": "Totally get it. When's a better time to go through it properly?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 66.1,
+      "end": 69.2,
+      "text": "I don't know, maybe after five some day.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 70.1,
+      "end": 72,
+      "text": "How about Thursday at five-thirty?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 73,
+      "end": 73.8,
+      "text": "Thursday's fine.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 74.9,
+      "end": 79.1,
+      "text": "Great. I'll call you then. Should I use this same number?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 80.3,
+      "end": 81.5,
+      "text": "Yep, this number.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 81.9,
+      "end": 84.2,
+      "text": "Perfect. Be safe up there, Rusty.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 84.7,
+      "end": 85.9,
+      "text": "Will do. Later.",
+      "labels": []
+    }
+  ]
+}

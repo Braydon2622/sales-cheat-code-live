@@ -1,0 +1,157 @@
+{
+  "id": "call-12",
+  "title": "Let me think about it, from a lead that went cold",
+  "scenario": "Hannah got a loan estimate for a cash-out refinance to consolidate debt, then stopped responding. The rep reaches her, uncovers the real hesitation behind \"let me think about it,\" and stays compliant.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 10,
+      "text": "Hi Hannah, it's Omar from Copperleaf Home Loans. I sent over your loan estimate a couple weeks ago and wanted to make sure you got it.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 10.5,
+      "end": 17,
+      "text": "Oh, hi. Yeah, I got it. I just haven't had a chance to really look at it.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 17.6,
+      "end": 22.2,
+      "text": "That's fine. Did anything jump out at you when you skimmed it?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 22.9,
+      "end": 27.9,
+      "text": "Not really. I think I just need to think about it some more.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 28.7,
+      "end": 40.2,
+      "text": "Of course, it's a big decision. Usually when people want to think about it, there's one specific part that's bugging them. Is it the cost, the timing, or something else?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 41.1,
+      "end": 49.6,
+      "text": "I guess, um, it's that I'd be taking on a bigger mortgage. That feels scary even if it pays off the cards.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 50.6,
+      "end": 57.9,
+      "text": "That's a really honest answer, and a totally normal feeling. Can I ask how many cards we're talking about?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 59,
+      "end": 60.9,
+      "text": "Four. And a car loan.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 62.1,
+      "end": 74.4,
+      "text": "Okay. One thing I'd suggest is we look at the total you're paying each month across all of those, versus after. Not a promise of savings, just an honest side by side.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 74.8,
+      "end": 79,
+      "text": "Yeah, that would help. I've never actually added it all up.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 79.5,
+      "end": 89.5,
+      "text": "Most people haven't. Do you want to do that together on a quick call, or would you rather I just put it in a one-page sheet?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 90.1,
+      "end": 92.4,
+      "text": "Maybe a call. I'll have questions.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 93.1,
+      "end": 97.7,
+      "text": "Sounds good. Would Wednesday at noon or Thursday after five be better?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 98.5,
+      "end": 104.7,
+      "text": "Thursday after five. I'm usually walking the dog around then, but I can do it after.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 105.6,
+      "end": 107.1,
+      "text": "What kind of dog?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 108.1,
+      "end": 110.4,
+      "text": "A very old beagle named Pickles.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 111.5,
+      "end": 116.9,
+      "text": "Ha, great name. Okay, Thursday at five-thirty. Grab your card statements if you can.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 118.1,
+      "end": 119.3,
+      "text": "Okay. Thanks Omar.",
+      "labels": []
+    }
+  ]
+}

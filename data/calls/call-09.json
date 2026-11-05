@@ -1,0 +1,181 @@
+{
+  "id": "call-09",
+  "title": "Veteran wants to loop in his wife on a VA loan",
+  "scenario": "Ray is a Navy veteran relocating for a new job, interested in a VA purchase loan. He wants his wife on the call before going further; the rep uses a two-option close to get both.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 9.6,
+      "text": "Hi Ray, this is Nina with Copperleaf Home Loans. Thank you for your service, by the way, I saw on the form you're a veteran.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 10.1,
+      "end": 12,
+      "text": "Appreciate that. Navy, twelve years.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 12.6,
+      "end": 15.3,
+      "text": "Twelve years, wow. Where were you stationed?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 16,
+      "end": 21.8,
+      "text": "All over. Norfolk, San Diego, a couple years in Japan. Kids still talk about Japan.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 22.6,
+      "end": 26.1,
+      "text": "I bet. So you're relocating for a new job?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 27,
+      "end": 32,
+      "text": "Yep, starting in January. We need to find a place before then, ideally.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 33,
+      "end": 35.7,
+      "text": "Have you used your VA benefit before?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 36.8,
+      "end": 40.6,
+      "text": "Once, about eight years ago, but we sold that house.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 41.8,
+      "end": 46.8,
+      "text": "Okay, good to know. That's something we'd verify with your certificate of eligibility.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 47.2,
+      "end": 49.9,
+      "text": "What do I need to get that?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 50.4,
+      "end": 58.1,
+      "text": "Usually we can request it for you directly with some basic info and your DD-214. Do you have that handy?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 58.7,
+      "end": 68.3,
+      "text": "Somewhere. Look, before we go too much further, my wife really should be on this. She's the one keeping the spreadsheet on schools and neighborhoods.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 69,
+      "end": 78.6,
+      "text": "Totally, I'd much rather talk to you both. Would tonight after dinner, say seven-thirty, or tomorrow at noon work better for the two of you?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 79.4,
+      "end": 81.7,
+      "text": "Tomorrow at noon. She's off tomorrow.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 82.6,
+      "end": 91.1,
+      "text": "Perfect. I'll send an invite. If you can find that DD-214 by then, we can get the eligibility piece started right away.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 92.1,
+      "end": 99,
+      "text": "Will do. And how fast can you close a VA loan, realistically? We're kind of on a clock.",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 100.1,
+      "end": 112.4,
+      "text": "It depends on the appraisal and how quickly we get documents, but VA loans close on normal timelines when everything's organized. We'll map out a timeline tomorrow based on your start date.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 113.6,
+      "end": 116.3,
+      "text": "Good. That's what I needed to hear.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 116.7,
+      "end": 119.8,
+      "text": "Talk to you both tomorrow at noon, Ray.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 120.3,
+      "end": 121.8,
+      "text": "Sounds good. Thanks Nina.",
+      "labels": []
+    }
+  ]
+}

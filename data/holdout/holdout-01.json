@@ -1,0 +1,227 @@
+{
+  "id": "holdout-01",
+  "title": "Skeptical refi shopper pushes on rate, rep quotes numbers",
+  "scenario": "Homeowner who bought in 2023 at a high rate is curious about refinancing but thinks everything is still too expensive. The rep slips and quotes a rate and a payment.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 8.8,
+      "text": "Hi, is this Corinne? This is Desmond with Copperleaf Home Loans, you'd filled out a little refinance form on our site last week.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 9.3,
+      "end": 13.5,
+      "text": "Oh. Yeah, I did. I kind of forgot about that, honestly.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 14.1,
+      "end": 22.6,
+      "text": "No worries at all, happens to everybody. Do you have a few minutes to chat about what you were hoping to accomplish?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 23.3,
+      "end": 26.4,
+      "text": "I mean, a few minutes. I'm making dinner.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 27.2,
+      "end": 32.6,
+      "text": "Totally fair. So what got you looking at a refinance in the first place?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 33.5,
+      "end": 45.8,
+      "text": "We bought in late 2023 and our rate is just, ugh, it's painful. I keep seeing ads saying refinance now, but every time I look it seems like it's barely any better.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 46.8,
+      "end": 50.3,
+      "text": "Got it. And roughly what's your current balance, ballpark?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 51.4,
+      "end": 53.7,
+      "text": "Around three-ten, I think. Maybe three-oh-five.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 54.9,
+      "end": 58.4,
+      "text": "Okay. And is it a thirty-year fixed right now?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 58.8,
+      "end": 66.9,
+      "text": "Yeah. Look, honestly, I think rates are still way too high to bother. I'd rather wait till they come down more.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 67.4,
+      "end": 77.8,
+      "text": "I hear that a lot, and it's a reasonable instinct. Right now we're seeing folks in your range land around six and an eighth on a thirty-year.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 78.4,
+      "end": 83.4,
+      "text": "Six and an eighth? That's not that much lower than what I've got.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 84.1,
+      "end": 89.5,
+      "text": "Well, on three-ten that'd put your principal and interest at about eighteen-eighty a month.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 90.3,
+      "end": 94.9,
+      "text": "Hm. What would the closing costs be on something like that, though?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 95.8,
+      "end": 105.8,
+      "text": "That really depends on your credit, the title work, and whether you buy down the rate, so I wouldn't want to guess without running it properly.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 106.8,
+      "end": 113,
+      "text": "See, this is the thing. It always ends up being too expensive to be worth it.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 114.1,
+      "end": 117.9,
+      "text": "Can I ask what your credit's looking like, just roughly?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 119.1,
+      "end": 121.8,
+      "text": "Last I checked it was like seven-forty.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 122.2,
+      "end": 130.3,
+      "text": "That's strong. What I'd suggest is letting me do a soft review so we can see real numbers instead of guessing.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 130.8,
+      "end": 136.2,
+      "text": "I don't know. I still think I'm going to wait for rates to drop.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 136.8,
+      "end": 144.1,
+      "text": "That's okay. Would it help if I set up a rate watch and called you if things move meaningfully?",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 144.8,
+      "end": 146.7,
+      "text": "Sure, that's fine, I guess.",
+      "labels": []
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 147.5,
+      "end": 154.4,
+      "text": "Great. I'll note seven-forty, about three-ten balance, thirty-year fixed. I'll reach out if we see a real change.",
+      "labels": []
+    },
+    {
+      "index": 23,
+      "speaker": "client",
+      "start": 155.3,
+      "end": 159.1,
+      "text": "Okay. Thanks. I really gotta get back to the stove.",
+      "labels": []
+    },
+    {
+      "index": 24,
+      "speaker": "rep",
+      "start": 160.1,
+      "end": 162.4,
+      "text": "Of course. Enjoy your dinner, Corinne.",
+      "labels": []
+    }
+  ]
+}

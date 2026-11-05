@@ -1,0 +1,25 @@
+# id: holdout-17
+# title: Weekend offer, needs pre-approval letter fast
+# scenario: Software tester and her husband found a townhouse with multiple offers expected by Sunday. She is decisive and asks about speed, documents and rate; the rep stays compliant.
+# synthetic: true
+REP: Hi, is this Keiko? This is Marlon with Copperleaf Home Loans.
+CLIENT: Yes! Thank you for calling. We're kind of in a rush.
+REP: Happy to help. What's going on?
+CLIENT: We found a townhouse yesterday and our agent says offers are due Sunday at noon. We need a pre-approval letter.
+REP: Okay, let's move. Have you been pre-approved anywhere else?
+CLIENT: No. We've been renting and saving. What do you need from us to get the letter by Saturday?  [buying_signal]
+REP: Both your last two pay stubs, last two years of W-2s, two months of bank statements, and IDs. Then I'll run credit with your permission.
+CLIENT: Done, I can upload all of that tonight. Can we start the application right now?  [buying_signal]
+REP: Absolutely. I'll text you the link as soon as we hang up. What's the list price?
+CLIENT: Three-sixty-five. We'd go up to maybe three-eighty.
+REP: And how much are you putting down?
+CLIENT: Fifteen percent. What rate would we get with that?  [question]
+REP: I can't give you a real number until I see credit and the full file, but once I do I'll walk you through the options the same day.
+CLIENT: Okay, fair. Is fifteen percent enough to avoid mortgage insurance?  [question]
+REP: With less than twenty percent down on a conventional loan there's usually some mortgage insurance, but the cost varies, and I'll show it to you clearly.
+CLIENT: Got it. And if they accept, how quickly can we close?  [question]
+REP: That depends on the appraisal and the contract terms. I'll give you a realistic date once we have a signed contract.
+CLIENT: Okay. Can you talk to our agent directly?
+REP: Sure, send me her contact and I'll reach out.
+CLIENT: I'll text it to you. Thank you so much, Marlon.
+REP: You bet. Let's get you this house.

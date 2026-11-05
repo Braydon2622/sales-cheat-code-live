@@ -1,0 +1,173 @@
+{
+  "id": "holdout-12",
+  "title": "Chatty empty-nester curious about downsizing",
+  "scenario": "Talkative woman whose kids moved out is curious whether downsizing to a condo makes sense. She is clearly just curious and drifts into small talk.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Lorraine? This is Felix with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 11.2,
+      "text": "Felix! Yes, hi, hello. Oh, I'm so glad it's a real person. I hate those robot calls.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 11.8,
+      "end": 14.5,
+      "text": "Ha, me too. How's your day going?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 15.2,
+      "end": 22.9,
+      "text": "Oh, it's lovely. I just got back from water aerobics. Have you ever tried it? It's wonderful for the knees.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 23.7,
+      "end": 29.9,
+      "text": "I haven't, but now I'm tempted. So I saw you were asking about a condo purchase?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 30.8,
+      "end": 42,
+      "text": "Well, I was curious, that's all. My youngest just moved to Denver and the house feels enormous. I'm not ready to do anything, I'm just wondering what's out there.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "just_shopping"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 43,
+      "end": 49.5,
+      "text": "That's a great reason to start thinking about it. How long have you been in the house?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 50.6,
+      "end": 53.7,
+      "text": "Twenty-six years. We raised all four kids there.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 54.9,
+      "end": 58,
+      "text": "Wow. Is there still a mortgage on it?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 58.4,
+      "end": 61.1,
+      "text": "A tiny one. Maybe forty thousand left.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 61.6,
+      "end": 67,
+      "text": "So you'd likely have quite a bit of equity to put toward a condo.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 67.6,
+      "end": 76.4,
+      "text": "I'd think so. My friend Dot sold hers and bought a place by the lake. She has a balcony. I'm a little jealous.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 77.1,
+      "end": 83.3,
+      "text": "Ha, a balcony is hard to beat. Would you plan to sell first and then buy?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 84.1,
+      "end": 91.4,
+      "text": "I suppose I'd have to. But honestly, I'm only curious at this point. My daughter thinks I'm being impulsive.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 92.3,
+      "end": 101.9,
+      "text": "Totally fair, it's a big decision. Would it help if I put together a simple overview of how a sell-then-buy usually works, no strings attached?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 102.9,
+      "end": 107.5,
+      "text": "Oh, that would be nice. Could you mail it? My printer's broken.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 108.6,
+      "end": 114,
+      "text": "Of course. And would you like me to check back in a couple months?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 115.2,
+      "end": 116.7,
+      "text": "That would be fine.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 117.1,
+      "end": 120.2,
+      "text": "Great. Enjoy the rest of your day, Lorraine.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 120.7,
+      "end": 123.4,
+      "text": "You too, Felix. Try the water aerobics!",
+      "labels": []
+    }
+  ]
+}

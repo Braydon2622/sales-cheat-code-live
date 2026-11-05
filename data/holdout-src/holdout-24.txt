@@ -1,0 +1,25 @@
+# id: holdout-24
+# title: Current servicer loyalty plus "call me next month"
+# scenario: Friendly mechanic whose current lender has offered him a streamline refinance says he will probably stick with them and asks to be called next month. Rep respects it and stays compliant.
+# synthetic: true
+REP: Hi, is this Lucho? This is Annika with Copperleaf Home Loans.
+CLIENT: Hey, yeah, this is Lucho. How you doing?
+REP: Doing well, thanks! How about you?
+CLIENT: Can't complain. Covered in grease, but can't complain, ha.
+REP: Ha, sounds like a good honest day. You'd asked about refinancing?
+CLIENT: Yeah, I did, but my current lender just sent me a letter saying they can do a streamline. I'll probably just stay with them, it seems easier.  [objection:bank_loyalty]
+REP: That's a reasonable option to consider. Is your current loan FHA?
+CLIENT: Yeah, FHA. Bought about three years ago.
+REP: Okay. Did their letter mention any costs or a new rate?
+CLIENT: Not really, just said I could lower my payment.
+REP: It's worth getting their offer in writing so you can see the full picture. And if you'd like, I can put together an estimate so you have something to compare.
+CLIENT: Maybe. Honestly, call me next month. Things are hectic at the shop right now.  [objection:stall]
+REP: No problem at all. Any particular week?
+CLIENT: Early December's good.
+REP: How about Tuesday, December second, around lunch?
+CLIENT: Yeah, December second works.
+REP: Great. In the meantime, if their offer comes through, keep it handy and we can look at it together.
+CLIENT: Will do. Though like I said, I'll probably just go with them.
+REP: Totally fair. Either way, you'll make a more informed decision.
+CLIENT: Sounds good. Thanks, Annika.
+REP: Talk soon, Lucho.

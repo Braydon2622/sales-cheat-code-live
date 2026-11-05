@@ -1,0 +1,152 @@
+{
+  "call_id": "9000000101",
+  "lines": [
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Hi Alex, Shawn with Copperleaf Home Loans. Thanks for calling back.",
+      "time": "2026-11-03T15:00:02.000000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Hi, yeah, sorry, I just got off a twelve-hour shift.",
+      "time": "2026-11-03T15:00:04.700000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Oh wow, where do you work?",
+      "time": "2026-11-03T15:00:09.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "I'm a nurse at the regional hospital. ICU.",
+      "time": "2026-11-03T15:00:12.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "If you need it my cell is (555) 010-0142 and my social is 078-05-1120.",
+      "time": "2026-11-03T15:00:14.100000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "That's intense. Thank you for doing that.",
+      "time": "2026-11-03T15:00:16.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Ha, thanks. Okay so I've been looking at houses around three hundred thousand. I've got maybe five percent down.",
+      "time": "2026-11-03T15:00:19.600000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Great, that's a very doable starting point for a lot of buyers.",
+      "time": "2026-11-03T15:00:27.900000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "So what kind of rate would I get with that?",
+      "time": "2026-11-03T15:00:33.600000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "With five down and a nurse's income, you're probably looking at about six and a quarter.",
+      "time": "2026-11-03T15:00:38.600000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Okay. And my credit's like six-eighty, is that going to be a problem? Will I get approved?",
+      "time": "2026-11-03T15:00:45.200000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Six-eighty with your job? Oh, you're approved, don't even worry about it.",
+      "time": "2026-11-03T15:00:52.200000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Seriously? That's way easier than I thought.",
+      "time": "2026-11-03T15:00:57.400000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Yeah, nurses are great borrowers. Stable job.",
+      "time": "2026-11-03T15:01:00.800000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "So what's the next step, do I fill something out?",
+      "time": "2026-11-03T15:01:04.300000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Yep, I'll send you the application. Pay stubs, W-2s and bank statements.",
+      "time": "2026-11-03T15:01:09.000000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Okay. I work nights so I'll do it on my day off.",
+      "time": "2026-11-03T15:01:14.600000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Works for me. Would Wednesday or Thursday be better for a follow-up?",
+      "time": "2026-11-03T15:01:20.300000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Thursday.",
+      "time": "2026-11-03T15:01:26.100000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Thursday then. Get some sleep, Alex.",
+      "time": "2026-11-03T15:01:28.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Ha, I'll try. Bye.",
+      "time": "2026-11-03T15:01:30.100000",
+      "type": "transcript"
+    }
+  ]
+}

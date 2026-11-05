@@ -1,0 +1,103 @@
+{
+  "call_id": "9000000103",
+  "lines": [
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Hi, is this Dale? This is Trent with Copperleaf Home Loans.",
+      "time": "2026-11-03T15:00:02.000000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Who?",
+      "time": "2026-11-03T15:00:04.700000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Trent, with Copperleaf Home Loans. I'm calling about refinancing your home.",
+      "time": "2026-11-03T15:00:06.700000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "I didn't ask about any refinance.",
+      "time": "2026-11-03T15:00:11.000000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "I understand. Do you currently have a mortgage on your home?",
+      "time": "2026-11-03T15:00:14.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "That's none of your business. Take me off your list. Do not call me again.",
+      "time": "2026-11-03T15:00:19.200000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Totally, I just want to mention we're doing some amazing things right now, folks are cutting their payments by hundreds.",
+      "time": "2026-11-03T15:00:26.000000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Did you hear me? I said take me off your list.",
+      "time": "2026-11-03T15:00:34.800000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "I hear you, Dale. Just one quick thing, rates are down to around five and three-quarters for people like you.",
+      "time": "2026-11-03T15:00:40.200000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "I don't care. Stop calling me.",
+      "time": "2026-11-03T15:00:48.300000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Okay, but if you change your mind, it only takes fifteen minutes to apply.",
+      "time": "2026-11-03T15:00:51.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "I'm hanging up now.",
+      "time": "2026-11-03T15:00:57.100000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Understood. Have a good day.",
+      "time": "2026-11-03T15:00:59.300000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Unbelievable.",
+      "time": "2026-11-03T15:01:02.000000",
+      "type": "transcript"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "call-17",
+  "title": "Rep keeps pitching after the opt-out",
+  "scenario": "Frank, a homeowner who's been getting lots of lender calls, tells the rep to stop calling. The rep ignores it and keeps pitching a cash-out refinance.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 5.4,
+      "text": "Hey, is this Frank? It's Tony from Copperleaf Home Loans, how you doing today?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 5.9,
+      "end": 7.1,
+      "text": "Who is this?",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 7.7,
+      "end": 12.7,
+      "text": "Tony, Copperleaf Home Loans. You'd looked into a cash-out refinance on your home.",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 13.4,
+      "end": 18,
+      "text": "Yeah, like six months ago. I've gotten about forty calls since then.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 18.8,
+      "end": 22.6,
+      "text": "Ha, I bet. Well, I promise I'm the good one.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 23.5,
+      "end": 24.7,
+      "text": "Everyone says that.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 25.7,
+      "end": 35.3,
+      "text": "Fair. So are you still thinking about pulling some equity out? A lot of folks are using it for home projects or paying down cards.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 36.4,
+      "end": 42.2,
+      "text": "No. Look, I'm done with this. Stop calling me. Take my number off your list.",
+      "labels": [
+        {
+          "type": "opt_out"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 43.4,
+      "end": 56.5,
+      "text": "Totally hear you, but before I go, with the equity you've probably got, you could pull out a good chunk and pay off everything in one shot. It'll only take five minutes to see.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 56.9,
+      "end": 59.6,
+      "text": "Did you hear what I just said?",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 60.1,
+      "end": 64.7,
+      "text": "I did, I did. I just don't want you to miss out.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 65.3,
+      "end": 69.1,
+      "text": "I'm not missing anything. I asked you to stop calling.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 69.8,
+      "end": 72.9,
+      "text": "Okay, okay. I'll take you off the list.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 73.7,
+      "end": 74.5,
+      "text": "Thank you.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 75.4,
+      "end": 77.7,
+      "text": "Sorry about that, Frank. Take care.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 78.7,
+      "end": 79.5,
+      "text": "Bye.",
+      "labels": []
+    }
+  ]
+}

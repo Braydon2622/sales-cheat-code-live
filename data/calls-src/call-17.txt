@@ -1,0 +1,20 @@
+# id: call-17
+# title: Rep keeps pitching after the opt-out
+# scenario: Frank, a homeowner who's been getting lots of lender calls, tells the rep to stop calling. The rep ignores it and keeps pitching a cash-out refinance.
+# synthetic: true
+REP: Hey, is this Frank? It's Tony from Copperleaf Home Loans, how you doing today?
+CLIENT: Who is this?
+REP: Tony, Copperleaf Home Loans. You'd looked into a cash-out refinance on your home.
+CLIENT: Yeah, like six months ago. I've gotten about forty calls since then.
+REP: Ha, I bet. Well, I promise I'm the good one.
+CLIENT: Everyone says that.
+REP: Fair. So are you still thinking about pulling some equity out? A lot of folks are using it for home projects or paying down cards.
+CLIENT: No. Look, I'm done with this. Stop calling me. Take my number off your list.  [opt_out]
+REP: Totally hear you, but before I go, with the equity you've probably got, you could pull out a good chunk and pay off everything in one shot. It'll only take five minutes to see.  [rep_violation:other]
+CLIENT: Did you hear what I just said?
+REP: I did, I did. I just don't want you to miss out.
+CLIENT: I'm not missing anything. I asked you to stop calling.
+REP: Okay, okay. I'll take you off the list.
+CLIENT: Thank you.
+REP: Sorry about that, Frank. Take care.
+CLIENT: Bye.

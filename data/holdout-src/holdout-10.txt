@@ -1,0 +1,20 @@
+# id: holdout-10
+# title: Relocating family engages, then opts out mid-call
+# scenario: Mom relocating for her husband's job starts out friendly, gives details, then gets overwhelmed by other lenders' calls and asks to be removed. The rep honors it immediately.
+# synthetic: true
+REP: Hi, is this Shauna? It's Paolo with Copperleaf Home Loans.
+CLIENT: Hi, yes. Oh gosh, another call. Sorry, go ahead.
+REP: No worries. You'd mentioned you're relocating and looking at buying?
+CLIENT: Yeah, my husband's company is moving us to Raleigh in January. Two kids, a dog, the whole circus.
+REP: That's a big move. Are you selling your current house?
+CLIENT: We're renting it out, actually. We want to keep it.
+REP: Smart. And for the new place, are you thinking a similar price range?
+CLIENT: Probably a little more. Things are pricier there. Maybe four-fifty?
+REP: Okay. And is your husband's employer offering any relocation assistance?
+CLIENT: Some, I think. Honestly, I've had like nine lenders call me today. My phone hasn't stopped since I filled out that form.
+REP: I'm sorry, that sounds exhausting.
+CLIENT: It is. You know what, I'm sorry, but please just take me off your list. Don't call me again.  [opt_out]
+REP: Absolutely, I understand. I'll remove you from our call list right now.
+CLIENT: Thank you. It's nothing personal.
+REP: None taken at all. Good luck with the move, Shauna.
+CLIENT: Thanks. Bye.

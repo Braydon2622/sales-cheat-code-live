@@ -1,0 +1,24 @@
+# id: holdout-16
+# title: Credit union member, rep guarantees savings
+# scenario: Teacher refinancing with her credit union is reluctant to switch. The rep guarantees she will save money and quotes a closing cost figure.
+# synthetic: true
+REP: Hi, is this Fiona? This is Brandt with Copperleaf Home Loans.
+CLIENT: Hi. Yes. I think I filled something out by accident, maybe?
+REP: Ha, could be. It looks like you were checking refinance options?
+CLIENT: Oh, right. I was. But my credit union already sent me a refinance offer, so I'll probably just do it with them.  [objection:bank_loyalty]
+REP: Got it. Can I ask what you're hoping to get out of a refi?
+CLIENT: Lower payment, mostly. I teach fourth grade, so every dollar counts.
+REP: Totally. What's your current rate, roughly?
+CLIENT: Seven and a half, I think. Something like that.
+REP: Okay. Here's the thing, I guarantee you'll save more with us than with your credit union.  [rep_violation:other]
+CLIENT: You guarantee it? How can you know that already?
+REP: We just have better pricing. And our closing costs usually run about thirty-two hundred all in.  [rep_violation:rate_quote]
+CLIENT: Hm. My credit union said theirs were pretty low too. I've been with them since college.
+REP: Sure, but would you be open to comparing a written estimate side by side?
+CLIENT: I guess I wouldn't mind seeing it. What would I need to give you for that?  [buying_signal]
+REP: Just your current mortgage statement, a pay stub, and permission to run your credit.
+CLIENT: Will running my credit hurt my score?  [question]
+REP: There can be a small impact from a hard inquiry, and I'll explain the options before we pull anything.
+CLIENT: Okay. Honestly I'm still leaning toward the credit union. They know me.
+REP: Understood. I'll send over a list and you can decide.
+CLIENT: Okay. Thanks.

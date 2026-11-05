@@ -1,0 +1,174 @@
+{
+  "id": "call-11",
+  "title": "Call me next month, and the rep promises approval",
+  "scenario": "Gloria went quiet after a pre-qualification call. She tells the rep to call back next month and worries about her credit; the rep makes an approval promise to try to keep her engaged.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 8.8,
+      "text": "Hi Gloria, this is Brent with Copperleaf Home Loans. We talked a few weeks ago about buying a place closer to your daughter?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 9.3,
+      "end": 13.5,
+      "text": "Oh, yes, hello Brent. I'm sorry I didn't call you back.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 14.1,
+      "end": 17.2,
+      "text": "No worries at all. How's your daughter doing?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 17.9,
+      "end": 24.8,
+      "text": "She's good, she just had the baby, so I've been over there a lot. That's my first grandson.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 25.6,
+      "end": 27.1,
+      "text": "Oh congratulations! That's wonderful.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 28,
+      "end": 31.1,
+      "text": "Thank you. He's perfect. Doesn't sleep, but perfect.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 32.1,
+      "end": 37.9,
+      "text": "Ha, that's the deal with babies. So, are you still thinking about moving out there?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 39,
+      "end": 45.5,
+      "text": "I am, but honestly, can you just call me next month? Things are a lot right now.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 46.7,
+      "end": 52.9,
+      "text": "I understand. Can I ask, is it mostly timing, or is something else making you hesitate?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 53.3,
+      "end": 64.1,
+      "text": "Well, my credit took a hit last year when I had some medical bills. I'm worried I'm not going to qualify. Do you think I'd still get approved?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 64.6,
+      "end": 70.4,
+      "text": "Don't worry about that at all, Gloria. You'll definitely qualify, I do these all day.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "approval_promise"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 71,
+      "end": 73.3,
+      "text": "Really? Oh, well, that's a relief.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 74,
+      "end": 77.8,
+      "text": "Yeah. So we could get the application going this week.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 78.6,
+      "end": 83.2,
+      "text": "I'd still want to wait until things settle down with the baby.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 84.1,
+      "end": 91,
+      "text": "Sure. Would the first week of next month or the second week be better for me to call?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 92,
+      "end": 94.3,
+      "text": "The second week. Maybe a Tuesday.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 95.4,
+      "end": 100,
+      "text": "Tuesday the second week it is. I'll put it in my calendar.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 101.2,
+      "end": 102.4,
+      "text": "Thank you, Brent.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 102.8,
+      "end": 104,
+      "text": "Enjoy that grandson.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "holdout-10",
+  "title": "Relocating family engages, then opts out mid-call",
+  "scenario": "Mom relocating for her husband's job starts out friendly, gives details, then gets overwhelmed by other lenders' calls and asks to be removed. The rep honors it immediately.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 3.8,
+      "text": "Hi, is this Shauna? It's Paolo with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.3,
+      "end": 7.8,
+      "text": "Hi, yes. Oh gosh, another call. Sorry, go ahead.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8.4,
+      "end": 12.2,
+      "text": "No worries. You'd mentioned you're relocating and looking at buying?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.9,
+      "end": 19.8,
+      "text": "Yeah, my husband's company is moving us to Raleigh in January. Two kids, a dog, the whole circus.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 20.6,
+      "end": 24.4,
+      "text": "That's a big move. Are you selling your current house?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 25.3,
+      "end": 29.1,
+      "text": "We're renting it out, actually. We want to keep it.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 30.1,
+      "end": 35.1,
+      "text": "Smart. And for the new place, are you thinking a similar price range?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 36.2,
+      "end": 40,
+      "text": "Probably a little more. Things are pricier there. Maybe four-fifty?",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 41.2,
+      "end": 45,
+      "text": "Okay. And is your husband's employer offering any relocation assistance?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 45.4,
+      "end": 53.9,
+      "text": "Some, I think. Honestly, I've had like nine lenders call me today. My phone hasn't stopped since I filled out that form.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 54.4,
+      "end": 56.3,
+      "text": "I'm sorry, that sounds exhausting.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 56.9,
+      "end": 64.2,
+      "text": "It is. You know what, I'm sorry, but please just take me off your list. Don't call me again.",
+      "labels": [
+        {
+          "type": "opt_out"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 64.9,
+      "end": 69.5,
+      "text": "Absolutely, I understand. I'll remove you from our call list right now.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 70.3,
+      "end": 72.2,
+      "text": "Thank you. It's nothing personal.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 73.1,
+      "end": 76.9,
+      "text": "None taken at all. Good luck with the move, Shauna.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 77.9,
+      "end": 78.7,
+      "text": "Thanks. Bye.",
+      "labels": []
+    }
+  ]
+}

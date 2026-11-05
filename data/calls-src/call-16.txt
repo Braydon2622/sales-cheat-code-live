@@ -1,0 +1,18 @@
+# id: call-16
+# title: Early opt-out honored immediately
+# scenario: Rep calls a lead from an old web form; after a bit of confusion the client says she is not interested and asks to be taken off the list. The rep honors it immediately and ends the call without pitching.
+# synthetic: true
+REP: Hi, is this Carla? This is Ben with Copperleaf Home Loans.
+CLIENT: Sorry, who?
+REP: Ben, with Copperleaf Home Loans. You'd filled out a form on our site about refinancing earlier this year.
+CLIENT: Hm. I don't really remember that. Was it like a quiz thing?
+REP: It might have been, there was a home savings quiz on the site for a while.
+CLIENT: Oh, maybe. My sister sends me those links all the time.
+REP: Ha, that happens a lot. I'm actually at a stoplight so I'm going to be brief, but is now an okay time?
+CLIENT: I'm at work right now, actually.
+REP: Sorry to catch you at work.
+CLIENT: It's fine. Honestly though, I'm not interested. Please take me off your list and don't call again.  [opt_out]
+REP: Absolutely, I'll remove you right now and make sure you're not contacted again. Sorry for the interruption, Carla.
+CLIENT: Okay. Thank you.
+REP: Have a good rest of your day.
+CLIENT: You too. Bye.

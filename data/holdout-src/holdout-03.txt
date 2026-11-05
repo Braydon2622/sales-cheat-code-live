@@ -1,0 +1,26 @@
+# id: holdout-03
+# title: Move-up buyer won't proceed without wife
+# scenario: Father of three wants a bigger house but repeatedly defers to his wife, who handles the family finances. The rep schedules a joint call.
+# synthetic: true
+REP: Hey, is this Graham? This is Leon calling from Copperleaf Home Loans.
+CLIENT: Yep, that's me. Hey Leon.
+REP: Thanks for picking up. I saw you were asking about a purchase loan for a bigger place?
+CLIENT: Yeah, we've got three kids in a three-bedroom ranch. It's, uh, getting tight. Real tight.
+REP: I bet. Are you planning to sell the current home first, or buy before you sell?
+CLIENT: That's the million-dollar question. Probably sell first? I don't know.
+REP: Okay. Do you know roughly what you owe on the current place?
+CLIENT: Maybe one-sixty. We've been there nine years.
+REP: So likely some good equity there. What price range are you looking at for the next house?
+CLIENT: Honestly, my wife Renata handles all the money stuff. I really can't go further without her on the call.  [objection:spouse]
+REP: That makes total sense, it's a big family decision. Would it work to set up a time when you're both available?
+CLIENT: Yeah, I think so. She'd kill me if I did this without her, ha.
+REP: Ha, we definitely don't want that. Are evenings better for you two?
+CLIENT: Yeah, after the kids are down. Like eight-thirty?
+REP: I can do eight-thirty. How about Tuesday?
+CLIENT: Tuesday at eight-thirty works.
+REP: Great. In the meantime, is there anything you're curious about that I can help with now?
+CLIENT: Not really, I'd rather wait till Renata's on. She's going to have all the questions anyway.
+REP: Fair enough. I'll send a calendar invite to the email on the form. Does that go to you or both of you?
+CLIENT: Just me, but I'll forward it.
+REP: Perfect. Talk to you both Tuesday, Graham.
+CLIENT: Sounds good. Thanks, Leon.

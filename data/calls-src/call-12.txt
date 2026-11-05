@@ -1,0 +1,22 @@
+# id: call-12
+# title: Let me think about it, from a lead that went cold
+# scenario: Hannah got a loan estimate for a cash-out refinance to consolidate debt, then stopped responding. The rep reaches her, uncovers the real hesitation behind "let me think about it," and stays compliant.
+# synthetic: true
+REP: Hi Hannah, it's Omar from Copperleaf Home Loans. I sent over your loan estimate a couple weeks ago and wanted to make sure you got it.
+CLIENT: Oh, hi. Yeah, I got it. I just haven't had a chance to really look at it.
+REP: That's fine. Did anything jump out at you when you skimmed it?
+CLIENT: Not really. I think I just need to think about it some more.  [objection:stall]
+REP: Of course, it's a big decision. Usually when people want to think about it, there's one specific part that's bugging them. Is it the cost, the timing, or something else?
+CLIENT: I guess, um, it's that I'd be taking on a bigger mortgage. That feels scary even if it pays off the cards.
+REP: That's a really honest answer, and a totally normal feeling. Can I ask how many cards we're talking about?
+CLIENT: Four. And a car loan.
+REP: Okay. One thing I'd suggest is we look at the total you're paying each month across all of those, versus after. Not a promise of savings, just an honest side by side.
+CLIENT: Yeah, that would help. I've never actually added it all up.
+REP: Most people haven't. Do you want to do that together on a quick call, or would you rather I just put it in a one-page sheet?
+CLIENT: Maybe a call. I'll have questions.
+REP: Sounds good. Would Wednesday at noon or Thursday after five be better?
+CLIENT: Thursday after five. I'm usually walking the dog around then, but I can do it after.
+REP: What kind of dog?
+CLIENT: A very old beagle named Pickles.
+REP: Ha, great name. Okay, Thursday at five-thirty. Grab your card statements if you can.
+CLIENT: Okay. Thanks Omar.

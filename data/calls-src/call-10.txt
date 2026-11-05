@@ -1,0 +1,22 @@
+# id: call-10
+# title: Ghosted lead says been busy, send me an email
+# scenario: Tyler started a refinance application three weeks ago and stopped responding. The rep calls back; Tyler brushes it off as busy and asks for an email, and the rep tries to secure a specific next step.
+# synthetic: true
+REP: Hi Tyler, it's Grace with Copperleaf Home Loans. We started your refinance application a few weeks back, I just wanted to check in.
+CLIENT: Oh, hey. Yeah, sorry, I've just been super busy. Work's been crazy.  [objection:stall]
+REP: Totally understand. What do you do again?
+CLIENT: Logistics. It's peak season, everything's on fire until like January.
+REP: Oh, that tracks. Holidays must be wild.
+CLIENT: You have no idea. I've eaten dinner in my car four nights this week.
+REP: Oof. Okay, I'll be quick then. Last time we talked you were hoping to lower your monthly payment. Is that still the goal?
+CLIENT: Yeah, I mean, eventually. Can you just send me something in an email and I'll look at it when I get a chance?  [objection:stall]
+REP: Happy to send an email. The only thing is, the application's just missing two items, so an email probably won't move it forward on its own. Can I tell you what they are? Thirty seconds.
+CLIENT: Sure, go ahead.
+REP: Your most recent pay stub and your homeowners insurance declarations page. That's it.
+CLIENT: Oh. That's it? I thought it was a whole thing.
+REP: That's it. You could probably snap photos of both on your phone.
+CLIENT: Okay, yeah, I can do that. Where do I send them?  [buying_signal]
+REP: I'll text you a secure upload link right after this call. Would tonight or tomorrow morning be easier for you to send them?
+CLIENT: Tomorrow morning, before my shift.
+REP: Perfect. I'll text you a reminder at seven. Thanks Tyler, hang in there.
+CLIENT: Thanks, appreciate it.

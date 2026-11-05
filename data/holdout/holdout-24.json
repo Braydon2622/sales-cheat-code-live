@@ -1,0 +1,186 @@
+{
+  "id": "holdout-24",
+  "title": "Current servicer loyalty plus \"call me next month\"",
+  "scenario": "Friendly mechanic whose current lender has offered him a streamline refinance says he will probably stick with them and asks to be called next month. Rep respects it and stays compliant.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Lucho? This is Annika with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 7.8,
+      "text": "Hey, yeah, this is Lucho. How you doing?",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8.4,
+      "end": 10.7,
+      "text": "Doing well, thanks! How about you?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 11.4,
+      "end": 14.9,
+      "text": "Can't complain. Covered in grease, but can't complain, ha.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 15.7,
+      "end": 19.9,
+      "text": "Ha, sounds like a good honest day. You'd asked about refinancing?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 20.8,
+      "end": 31.2,
+      "text": "Yeah, I did, but my current lender just sent me a letter saying they can do a streamline. I'll probably just stay with them, it seems easier.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "bank_loyalty"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 32.2,
+      "end": 36.4,
+      "text": "That's a reasonable option to consider. Is your current loan FHA?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 37.5,
+      "end": 40.2,
+      "text": "Yeah, FHA. Bought about three years ago.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 41.4,
+      "end": 45.6,
+      "text": "Okay. Did their letter mention any costs or a new rate?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 46,
+      "end": 49.5,
+      "text": "Not really, just said I could lower my payment.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 50,
+      "end": 61.5,
+      "text": "It's worth getting their offer in writing so you can see the full picture. And if you'd like, I can put together an estimate so you have something to compare.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 62.1,
+      "end": 67.5,
+      "text": "Maybe. Honestly, call me next month. Things are hectic at the shop right now.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 68.2,
+      "end": 70.9,
+      "text": "No problem at all. Any particular week?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 71.7,
+      "end": 72.9,
+      "text": "Early December's good.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 73.8,
+      "end": 76.5,
+      "text": "How about Tuesday, December second, around lunch?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 77.5,
+      "end": 79,
+      "text": "Yeah, December second works.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 80.1,
+      "end": 87.4,
+      "text": "Great. In the meantime, if their offer comes through, keep it handy and we can look at it together.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 88.6,
+      "end": 93.2,
+      "text": "Will do. Though like I said, I'll probably just go with them.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 93.6,
+      "end": 97.4,
+      "text": "Totally fair. Either way, you'll make a more informed decision.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 97.9,
+      "end": 99.4,
+      "text": "Sounds good. Thanks, Annika.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 100,
+      "end": 101.2,
+      "text": "Talk soon, Lucho.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# id: holdout-19
+# title: Rep keeps pitching after opt-out
+# scenario: Irritated homeowner says he never asked for a call and wants to be removed. The rep keeps pushing a refinance pitch and quotes a rate after the opt-out.
+# synthetic: true
+REP: Hi, is this Dale? This is Trent with Copperleaf Home Loans.
+CLIENT: Who?
+REP: Trent, with Copperleaf Home Loans. I'm calling about refinancing your home.
+CLIENT: I didn't ask about any refinance.
+REP: I understand. Do you currently have a mortgage on your home?
+CLIENT: That's none of your business. Take me off your list. Do not call me again.  [opt_out]
+REP: Totally, I just want to mention we're doing some amazing things right now, folks are cutting their payments by hundreds.  [rep_violation:other]
+CLIENT: Did you hear me? I said take me off your list.
+REP: I hear you, Dale. Just one quick thing, rates are down to around five and three-quarters for people like you.  [rep_violation:other, rep_violation:rate_quote]
+CLIENT: I don't care. Stop calling me.
+REP: Okay, but if you change your mind, it only takes fifteen minutes to apply.  [rep_violation:other]
+CLIENT: I'm hanging up now.
+REP: Understood. Have a good day.
+CLIENT: Unbelievable.

@@ -1,0 +1,239 @@
+{
+  "id": "holdout-14",
+  "title": "Anxious borrower after bankruptcy, rep promises approval",
+  "scenario": "Man who went through a Chapter 7 bankruptcy two and a half years ago is nervous about whether he can buy a home and worries about high rates. The rep tells him he is approved and quotes a rate.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Owen? This is Bianca with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 9.3,
+      "text": "Uh, yeah. Hi. I wasn't sure anybody would actually call me back.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 9.9,
+      "end": 13.7,
+      "text": "Of course we would. What can I help you with?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 14.4,
+      "end": 22.9,
+      "text": "So, um, I want to buy a house. But I had a bankruptcy. Chapter 7. About two and a half years ago.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 23.7,
+      "end": 30.6,
+      "text": "Okay, thanks for being upfront about that. What led to the bankruptcy, if you don't mind me asking?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 31.5,
+      "end": 37.7,
+      "text": "Medical bills, mostly. I had surgery and was out of work for most of a year.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 38.7,
+      "end": 42.9,
+      "text": "I'm sorry, that's really hard. How's your credit been since then?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 44,
+      "end": 52.8,
+      "text": "I've been really careful. I've got a secured card and a car loan, never missed a payment. I think it's like six-eighty now.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 54,
+      "end": 58.2,
+      "text": "That's a good recovery. And you're back at work full time?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 58.6,
+      "end": 64.4,
+      "text": "Yeah, warehouse supervisor, two years now. But honestly, can someone like me even get approved?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 64.9,
+      "end": 69.9,
+      "text": "Owen, with what you're telling me, you're approved. Don't even worry about it.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "approval_promise"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 70.5,
+      "end": 72,
+      "text": "Really? Just like that?",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 72.7,
+      "end": 78.5,
+      "text": "Pretty much. And you'd probably be looking at around six and five-eighths with your history.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 79.3,
+      "end": 87.8,
+      "text": "Oh. That's higher than I hoped. I've read rates are coming down, maybe I should wait a year for them to drop.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 88.7,
+      "end": 92.9,
+      "text": "You could, but home prices might go up in the meantime.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 93.9,
+      "end": 98.5,
+      "text": "I guess. I'm just really nervous about getting in over my head.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 99.6,
+      "end": 103.4,
+      "text": "That's a healthy instinct. What price range were you thinking?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 104.6,
+      "end": 106.5,
+      "text": "Like two-twenty, two-thirty. Small place.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 106.9,
+      "end": 110,
+      "text": "That's very reasonable. How much have you saved?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 110.5,
+      "end": 111.7,
+      "text": "About fourteen thousand.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 112.3,
+      "end": 118.1,
+      "text": "Okay. Let's get you set up with an application so we can see real numbers.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 118.8,
+      "end": 121.5,
+      "text": "What would I need to send you?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 122.3,
+      "end": 127.7,
+      "text": "Your bankruptcy discharge papers, two years of W-2s, recent pay stubs, and bank statements.",
+      "labels": []
+    },
+    {
+      "index": 23,
+      "speaker": "client",
+      "start": 128.6,
+      "end": 131.7,
+      "text": "Okay. I can get those together this weekend.",
+      "labels": []
+    },
+    {
+      "index": 24,
+      "speaker": "rep",
+      "start": 132.7,
+      "end": 135,
+      "text": "Great. I'll follow up Monday morning.",
+      "labels": []
+    },
+    {
+      "index": 25,
+      "speaker": "client",
+      "start": 136.1,
+      "end": 137.6,
+      "text": "Monday's fine. Thanks, Bianca.",
+      "labels": []
+    }
+  ]
+}

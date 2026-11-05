@@ -1,0 +1,28 @@
+# id: holdout-08
+# title: Divorced co-owner needs ex to sign off
+# scenario: Recently divorced woman wants to refinance her ex-husband off the title and keep the house, but needs his cooperation. Rep stays careful and compliant.
+# synthetic: true
+REP: Hi, is this Noelle? It's Ezra with Copperleaf Home Loans.
+CLIENT: Yes, hi. Sorry, I'm a little frazzled today.
+REP: No problem at all. Is now still an okay time?
+CLIENT: Yeah. It's fine. It's about the house.
+REP: Sure. I understand you're looking to refinance as part of a divorce?
+CLIENT: Right. The divorce was final in September. I'm keeping the house, but both our names are on the loan.
+REP: Okay. So the goal is to refinance into just your name?
+CLIENT: Yes. But honestly, I can't do anything until my ex agrees to sign the quitclaim, and he's dragging his feet.  [objection:spouse]
+REP: That's really common, and it's something your attorney can help push along. Does the divorce decree say anything about the refinance timeline?
+CLIENT: It says within six months. I think.
+REP: That's helpful. Is your income enough to carry the house on your own, do you think?
+CLIENT: I think so. I'm a dental hygienist, full time. Plus I'm getting some support.
+REP: Okay. Is the support documented in the decree?
+CLIENT: Yes. Would that count as income?  [question]
+REP: It can, depending on how long it's set to continue and whether it's been received consistently. I'd want to review the decree before telling you how it'll be treated.
+CLIENT: Okay. But again, without his signature this is all kind of moot.
+REP: Understood. We can do all the prep on your side so you're ready the moment he signs. Would that help?
+CLIENT: Yeah, that would actually make me feel better.
+REP: Could you send me the decree when you have a minute?
+CLIENT: Sure, I can scan it tonight.
+REP: Perfect. And let's touch base again next Wednesday.
+CLIENT: Wednesday's good.
+REP: Hang in there, Noelle. Talk soon.
+CLIENT: Thank you, Ezra.

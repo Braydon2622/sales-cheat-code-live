@@ -1,0 +1,25 @@
+# id: holdout-21
+# title: Eager rate-and-term refi, rep promises approval
+# scenario: Pharmacist with an adjustable-rate loan about to reset wants to lock into a fixed rate quickly. She is ready to go, and the rep promises approval and quotes a rate and payment.
+# synthetic: true
+REP: Hi, is this Adaeze? This is Colby with Copperleaf Home Loans.
+CLIENT: Hi Colby, yes. Thanks for getting back to me. My ARM resets in February and I want out.
+REP: Totally understandable. What's the balance on it now?
+CLIENT: About two-ninety-five. The house is probably worth around five hundred.
+REP: Great equity. And your income situation?
+CLIENT: I'm a pharmacist at the hospital, W-2, been there six years.
+REP: Perfect. Credit score?
+CLIENT: Around seven-seventy.
+REP: Honestly, with those numbers you're approved, this is an easy file.  [rep_violation:approval_promise]
+CLIENT: Oh good. So what's the next step? I want to get this going this week.  [buying_signal]
+REP: We'll get the application started. You'd probably land right around six percent on a thirty-year fixed.  [rep_violation:rate_quote]
+CLIENT: And what would my payment be on that?  [question]
+REP: Principal and interest would be about seventeen-seventy a month.  [rep_violation:rate_quote]
+CLIENT: Okay. That's close to what I pay now before the reset. How fast can we close?  [question]
+REP: Usually we can close within about a month, depending on the appraisal.
+CLIENT: Great. What documents do you need from me?  [buying_signal]
+REP: Two pay stubs, two years of W-2s, your current mortgage statement, and homeowners insurance info.
+CLIENT: I'll have those to you tomorrow morning.
+REP: Perfect. I'll send the application link now.
+CLIENT: Thanks so much, Colby.
+REP: My pleasure, Adaeze. Talk tomorrow.

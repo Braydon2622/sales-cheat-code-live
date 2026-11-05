@@ -1,0 +1,24 @@
+# id: holdout-20
+# title: Waiting for rates to drop before refinancing
+# scenario: Mid-career accountant tracks rate news obsessively and insists on waiting for a lower rate. Rep stays compliant, offers education and a check-in, and the client repeats his objection.
+# synthetic: true
+REP: Hi, is this Haruto? This is Delia with Copperleaf Home Loans.
+CLIENT: Yes, hi. I was wondering when someone would call.
+REP: Sorry for the wait. You were asking about a refinance?
+CLIENT: Yeah, but to be honest, I'm going to wait for rates to drop. I read every Fed announcement and I think they'll come down more next year.  [objection:rate_too_high]
+REP: That's a thoughtful approach. What's your current situation, if you don't mind sharing?
+CLIENT: Thirty-year fixed, bought in 2024. Balance is around four-twenty.
+REP: Okay. And what's your main goal, lower payment or shortening the term?
+CLIENT: Lower payment, definitely. We have twins in daycare and it's brutal.
+REP: Oh, I can only imagine. Is your credit in good shape?
+CLIENT: Around seven-sixty. I'm an accountant, I watch it like a hawk.
+REP: Ha, of course you do. Would you want me to do a break-even analysis so you know exactly what kind of drop would make it worth it for you?
+CLIENT: What would it cost me to refinance, roughly? Like closing costs?  [question]
+REP: It depends on your loan amount, title fees, and whether you pay points, so I'd want to run your actual scenario rather than toss out a number.
+CLIENT: Fair. But honestly, the rates right now just aren't low enough. I'm going to wait.
+REP: Totally understand. If I set up a rate alert and do that break-even calc, would that be useful?
+CLIENT: Yeah, that would actually be useful. Send it over.
+REP: Will do. And I'll check in after the next Fed meeting?
+CLIENT: That's fine.
+REP: Great. Hang in there with the twins.
+CLIENT: Ha, thanks. Bye.

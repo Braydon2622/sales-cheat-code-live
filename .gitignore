@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+reports/runs/
+*.log
+.DS_Store
+
+# Real call data never goes in git: imported transcripts and their reviews.
+data/private/
+reports/reviews/
+# Third-party test transcripts are downloaded locally, not committed (see docs/EXTERNAL_TEST_CALLS.md).
+data/external/

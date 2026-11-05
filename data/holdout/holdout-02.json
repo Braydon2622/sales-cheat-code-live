@@ -1,0 +1,193 @@
+{
+  "id": "holdout-02",
+  "title": "First-time buyer just browsing listings",
+  "scenario": "Young renter who has been scrolling listing apps calls in to understand the basics. She is clear she is only looking and not ready to buy this year.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Copperleaf Home Loans, this is Priya speaking, how can I help?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 12.4,
+      "text": "Hi, um, I'm Talia. I'm not really sure I'm calling the right place. I've just been looking at houses online.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 13,
+      "end": 18.4,
+      "text": "You're absolutely in the right place. Are you thinking about buying your first home?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 19.1,
+      "end": 24.9,
+      "text": "Maybe? Like, eventually. I'm honestly just looking right now, I'm not ready to do anything.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "just_shopping"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 25.7,
+      "end": 31.9,
+      "text": "That's a perfect time to call, actually. No pressure here, we can just get you oriented.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 32.8,
+      "end": 38.2,
+      "text": "Okay, cool, because I feel like I don't even know the words people use.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 39.2,
+      "end": 42.7,
+      "text": "Ha, that's really common. Are you renting right now?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 43.8,
+      "end": 47.3,
+      "text": "Yeah, a one-bedroom. My lease is up next August.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 48.5,
+      "end": 54.3,
+      "text": "Okay, so you've got some runway. And are you thinking you'd buy on your own?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 54.7,
+      "end": 57,
+      "text": "Yeah, just me. And my cat.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 57.5,
+      "end": 64,
+      "text": "The cat gets a vote, obviously. Do you have a sense of what area you're looking in?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 64.6,
+      "end": 68.4,
+      "text": "Kind of the north side, near my job. Townhouses mostly.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 69.1,
+      "end": 72.9,
+      "text": "Nice. Have you started saving anything toward a down payment?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 73.7,
+      "end": 78.7,
+      "text": "A little. Like eleven thousand-ish. Is that even enough to do anything with?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 79.6,
+      "end": 95,
+      "text": "It can be a real start. There are programs with smaller down payment requirements, and some first-time buyer assistance, but what fits depends on your income, your credit, and the property. That's exactly what a pre-qualification conversation would sort out.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 96,
+      "end": 99.8,
+      "text": "Okay. I mean, I'm really just browsing for now, though.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 100.9,
+      "end": 110.1,
+      "text": "Totally understood. Would it be helpful if I emailed you a short first-time buyer guide so you can read up at your own pace?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 111.3,
+      "end": 113.2,
+      "text": "Yeah, that'd actually be great.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 113.6,
+      "end": 118.2,
+      "text": "And maybe we check back in around spring, before your lease decision?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 118.7,
+      "end": 119.5,
+      "text": "Spring works.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 120.1,
+      "end": 124.3,
+      "text": "Perfect. I'll send that guide over today. Thanks for calling, Talia.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 125,
+      "end": 126.2,
+      "text": "Thanks, Priya. Bye.",
+      "labels": []
+    }
+  ]
+}

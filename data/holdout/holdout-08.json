@@ -1,0 +1,209 @@
+{
+  "id": "holdout-08",
+  "title": "Divorced co-owner needs ex to sign off",
+  "scenario": "Recently divorced woman wants to refinance her ex-husband off the title and keep the house, but needs his cooperation. Rep stays careful and compliant.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 3.8,
+      "text": "Hi, is this Noelle? It's Ezra with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.3,
+      "end": 7.4,
+      "text": "Yes, hi. Sorry, I'm a little frazzled today.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8,
+      "end": 11.8,
+      "text": "No problem at all. Is now still an okay time?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.5,
+      "end": 15.2,
+      "text": "Yeah. It's fine. It's about the house.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 16,
+      "end": 20.6,
+      "text": "Sure. I understand you're looking to refinance as part of a divorce?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 21.5,
+      "end": 28.8,
+      "text": "Right. The divorce was final in September. I'm keeping the house, but both our names are on the loan.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 29.8,
+      "end": 34,
+      "text": "Okay. So the goal is to refinance into just your name?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 35.1,
+      "end": 42.8,
+      "text": "Yes. But honestly, I can't do anything until my ex agrees to sign the quitclaim, and he's dragging his feet.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 44,
+      "end": 52.5,
+      "text": "That's really common, and it's something your attorney can help push along. Does the divorce decree say anything about the refinance timeline?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 52.9,
+      "end": 55.6,
+      "text": "It says within six months. I think.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 56.1,
+      "end": 62.3,
+      "text": "That's helpful. Is your income enough to carry the house on your own, do you think?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 62.9,
+      "end": 68.3,
+      "text": "I think so. I'm a dental hygienist, full time. Plus I'm getting some support.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 69,
+      "end": 72.1,
+      "text": "Okay. Is the support documented in the decree?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 72.9,
+      "end": 75.2,
+      "text": "Yes. Would that count as income?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 76.1,
+      "end": 87.3,
+      "text": "It can, depending on how long it's set to continue and whether it's been received consistently. I'd want to review the decree before telling you how it'll be treated.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 88.3,
+      "end": 92.9,
+      "text": "Okay. But again, without his signature this is all kind of moot.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 94,
+      "end": 101.7,
+      "text": "Understood. We can do all the prep on your side so you're ready the moment he signs. Would that help?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 102.9,
+      "end": 106,
+      "text": "Yeah, that would actually make me feel better.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 106.4,
+      "end": 110.6,
+      "text": "Could you send me the decree when you have a minute?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 111.1,
+      "end": 113.4,
+      "text": "Sure, I can scan it tonight.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 114,
+      "end": 117.1,
+      "text": "Perfect. And let's touch base again next Wednesday.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 117.8,
+      "end": 118.6,
+      "text": "Wednesday's good.",
+      "labels": []
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 119.4,
+      "end": 121.7,
+      "text": "Hang in there, Noelle. Talk soon.",
+      "labels": []
+    },
+    {
+      "index": 23,
+      "speaker": "client",
+      "start": 122.6,
+      "end": 123.8,
+      "text": "Thank you, Ezra.",
+      "labels": []
+    }
+  ]
+}

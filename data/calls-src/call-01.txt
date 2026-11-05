@@ -1,0 +1,26 @@
+# id: call-01
+# title: Rate shopper who thinks 6% is too high
+# scenario: Dana submitted an online refinance inquiry and already has a competing quote around 6%. She opens by saying rates are too high; the rep stays compliant and works discovery instead of quoting numbers.
+# synthetic: true
+REP: Hi, is this Dana? This is Marcus with Copperleaf Home Loans, you'd filled out a form about refinancing your home a couple days ago?
+CLIENT: Oh, yeah, hi. I remember. I'm actually in the middle of making lunch, so...
+REP: No problem, I'll keep it quick. Is now still okay for like five minutes?
+CLIENT: Sure, five minutes is fine.
+REP: Great. So what got you looking into a refinance right now?
+CLIENT: Honestly I already got a quote from another lender and it was right around six percent, and that just feels way too high. I'm not refinancing at six.  [objection:rate_too_high]
+REP: That's totally fair, nobody wants to pay more than they have to. Can I ask what your current rate is on the loan you have now?
+CLIENT: It's an ARM, it's about to adjust next spring. That's kind of why I'm even looking.
+REP: Got it, so part of this is about getting ahead of that adjustment, not just chasing a number. Do you know roughly what it adjusts to?
+CLIENT: Something like, uh, they said it could go up a couple points. I'd have to check the letter.
+REP: Okay. So the comparison isn't really six versus some magic lower number, it's six-ish versus wherever that ARM lands. Does that make sense?
+CLIENT: I mean, yeah, when you put it that way.
+REP: I'm not going to throw a rate at you on the phone, because honestly rates depend on your full picture, credit, equity, loan size, and that's exactly what I'd check. Do you have a sense of what the house is worth today?
+CLIENT: Zillow says something like four-ten? We bought for three-forty.
+REP: Nice, that's good equity. And how's the weather out there today, are you guys getting that rain?
+CLIENT: Ugh, it's been pouring all morning. The dog refuses to go outside.
+REP: Ha, mine too. Okay, so here's what I'd suggest. Let me run an actual review with your real numbers and put it side by side with the quote you got. If theirs is better, I'll tell you.
+CLIENT: So what would you need from me to do that?  [buying_signal]
+REP: Just a couple of things, a recent mortgage statement and permission to do a credit check. Would it be easier to go over that this afternoon at three, or tomorrow morning around ten?
+CLIENT: Tomorrow at ten works. I'll dig up that ARM letter too.
+REP: Perfect, I'll send a calendar invite. Thanks Dana, enjoy your lunch.
+CLIENT: Thanks, bye.

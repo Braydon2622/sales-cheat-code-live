@@ -1,0 +1,169 @@
+{
+  "id": "call-08",
+  "title": "Co-borrower partner has to sign off",
+  "scenario": "Jamal and his partner are buying together; Jamal is interested but says his partner is the co-borrower and needs to be on board. The rep stays compliant and schedules a joint call.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 6.2,
+      "text": "Hey Jamal, it's Erin from Copperleaf Home Loans. You and your partner were looking at duplexes?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 6.7,
+      "end": 10.5,
+      "text": "Yeah, that's right. Live in one side, rent the other.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 11.1,
+      "end": 14.9,
+      "text": "Love that strategy. Have you found anything you like yet?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 15.6,
+      "end": 22.1,
+      "text": "There's one on Maple we toured Sunday. It needs work but the numbers kind of make sense.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 22.9,
+      "end": 26,
+      "text": "Nice. What kind of work are we talking?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 26.9,
+      "end": 32.3,
+      "text": "Mostly cosmetic. The upstairs tenant has like eleven cats though, so, carpet's gotta go.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 33.3,
+      "end": 36,
+      "text": "Oh no. Yeah, that's a full replacement.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 37.1,
+      "end": 47.1,
+      "text": "Ha, yeah. Anyway, I'm into it, but Tasha's the co-borrower and she's way more cautious than me. I can't move on anything until she's on board.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 48.3,
+      "end": 54.1,
+      "text": "Smart, you both need to be comfortable. What are her main concerns, do you know?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 54.5,
+      "end": 59.5,
+      "text": "Mostly whether we can actually afford it if the rental side sits empty.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 60,
+      "end": 70,
+      "text": "That's a really good question, and it's something we can walk through with real numbers. Do you know if you'd want rental income counted toward qualifying?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 70.6,
+      "end": 75.2,
+      "text": "I don't even know how that works. Can you count the rent?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 75.9,
+      "end": 89,
+      "text": "In a lot of cases a portion of the expected rent can be considered, but the specifics depend on the loan type and the property. I'd rather walk you both through it than guess.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 89.8,
+      "end": 92.5,
+      "text": "Yeah, she'll want to hear that directly.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 93.4,
+      "end": 100.7,
+      "text": "Then let's get her on. Would tomorrow at lunch or Thursday evening be better for the two of you?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 101.7,
+      "end": 103.2,
+      "text": "Thursday evening, like six-thirty.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 104.3,
+      "end": 114.3,
+      "text": "Thursday at six-thirty. I'll send a link to both of you. If you can bring the listing and any rent info from the seller, that'd help.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 115.5,
+      "end": 116.7,
+      "text": "Cool, will do.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 117.1,
+      "end": 118.6,
+      "text": "Thanks Jamal, talk Thursday.",
+      "labels": []
+    }
+  ]
+}

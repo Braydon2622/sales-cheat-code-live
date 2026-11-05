@@ -1,0 +1,184 @@
+{
+  "id": "call-14",
+  "title": "Ready-to-move rate-and-term refinance",
+  "scenario": "Paul and his wife already decided to refinance and Paul calls back to get moving. He asks about documents, appraisal and closing timeline; the rep stays compliant on payment questions.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 2.3,
+      "text": "Copperleaf Home Loans, this is Lauren.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 2.8,
+      "end": 11.6,
+      "text": "Hi Lauren, it's Paul. We spoke last week about refinancing. My wife and I talked it over and we want to go ahead.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 12.2,
+      "end": 17.6,
+      "text": "Great to hear from you, Paul. Glad you two had a chance to talk.",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 18.3,
+      "end": 24.5,
+      "text": "Yeah, we went back and forth, but we're in. So what do you need from me?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 25.3,
+      "end": 34.9,
+      "text": "Let's start the application. I'll need your current mortgage statement, two recent pay stubs for each of you, and your last two years of W-2s.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 35.8,
+      "end": 42.7,
+      "text": "Easy. My wife's a teacher, so hers are pretty simple. Mine might be messier, I get quarterly bonuses.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 43.7,
+      "end": 49.9,
+      "text": "That's fine, we'll just want your year-end pay stub or the bonus history so it's documented.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 51,
+      "end": 54.1,
+      "text": "Okay. Will you need to do an appraisal?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 55.3,
+      "end": 62.6,
+      "text": "Most likely yes, though occasionally it can be waived depending on the loan. We'll know once the application's in.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 63,
+      "end": 68.4,
+      "text": "Got it. And how long does the whole thing usually take, start to finish?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 68.9,
+      "end": 76.2,
+      "text": "Typically somewhere around thirty to forty-five days, depending mostly on the appraisal scheduling and how fast documents come in.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 76.8,
+      "end": 80.6,
+      "text": "Okay. And what will my new payment end up being?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 81.3,
+      "end": 95.9,
+      "text": "I want to give you a real number, not a guess, so I'll have that in your official loan estimate once we pull credit and verify everything. You'll get it in writing within a few days of applying.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 96.7,
+      "end": 97.5,
+      "text": "Fair enough.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 98.4,
+      "end": 104.9,
+      "text": "By the way, how was the anniversary trip? You mentioned you were heading up to the lake.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 105.9,
+      "end": 110.9,
+      "text": "Oh, it was great. Cold, but great. We didn't catch a single fish.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 112,
+      "end": 125.5,
+      "text": "Ha, that's still a good trip. Okay, I'll send the application link to both of your emails. Would you rather go through it together tonight, or should I walk you through it tomorrow at lunch?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 126.7,
+      "end": 131.3,
+      "text": "Tomorrow at lunch, if that works. Then we can both ask questions.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 131.7,
+      "end": 134.8,
+      "text": "Tomorrow at twelve-fifteen. Talk to you both then.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 135.3,
+      "end": 136.1,
+      "text": "Thanks Lauren.",
+      "labels": []
+    }
+  ]
+}

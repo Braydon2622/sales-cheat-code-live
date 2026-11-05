@@ -1,0 +1,143 @@
+{
+  "id": "holdout-19",
+  "title": "Rep keeps pitching after opt-out",
+  "scenario": "Irritated homeowner says he never asked for a call and wants to be removed. The rep keeps pushing a refinance pitch and quotes a rate after the opt-out.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Dale? This is Trent with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 5.5,
+      "text": "Who?",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 6.1,
+      "end": 10.3,
+      "text": "Trent, with Copperleaf Home Loans. I'm calling about refinancing your home.",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 11,
+      "end": 13.3,
+      "text": "I didn't ask about any refinance.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 14.1,
+      "end": 18.3,
+      "text": "I understand. Do you currently have a mortgage on your home?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 19.2,
+      "end": 25,
+      "text": "That's none of your business. Take me off your list. Do not call me again.",
+      "labels": [
+        {
+          "type": "opt_out"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 26,
+      "end": 33.7,
+      "text": "Totally, I just want to mention we're doing some amazing things right now, folks are cutting their payments by hundreds.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 34.8,
+      "end": 39,
+      "text": "Did you hear me? I said take me off your list.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 40.2,
+      "end": 47.9,
+      "text": "I hear you, Dale. Just one quick thing, rates are down to around five and three-quarters for people like you.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        },
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 48.3,
+      "end": 50.6,
+      "text": "I don't care. Stop calling me.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 51.1,
+      "end": 56.5,
+      "text": "Okay, but if you change your mind, it only takes fifteen minutes to apply.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 57.1,
+      "end": 58.6,
+      "text": "I'm hanging up now.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 59.3,
+      "end": 61.2,
+      "text": "Understood. Have a good day.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 62,
+      "end": 62.8,
+      "text": "Unbelievable.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# id: call-03
+# title: Retiree waiting for rates to drop before cash-out
+# scenario: Walt, a retiree, wants a cash-out refinance to fund a kitchen remodel but says he'll wait until rates come down. The rep explores the goal and timing without predicting rates or quoting numbers.
+# synthetic: true
+REP: Good morning, is this Walt? This is Tasha with Copperleaf Home Loans.
+CLIENT: Speaking. You're the mortgage folks.
+REP: That's us. You'd asked about a cash-out refinance for some home improvements?
+CLIENT: Yes, the kitchen. It's original to the house, nineteen eighty-six. My wife has been after me for years.
+REP: Oh I bet. Eighty-six, that's some vintage cabinetry.
+CLIENT: You have no idea. Harvest gold. Anyway, I looked into it, and frankly the rates right now are too high. I think I'll just wait until they come down.  [objection:rate_too_high]
+REP: That's a reasonable instinct. Can I ask, when are you hoping to actually start the remodel?
+CLIENT: Contractor said he could start in February. After that he's booked into the fall.
+REP: So if you wait, you're really choosing between the February slot or pushing to next fall at the earliest.
+CLIENT: Well, yes. I hadn't thought about the contractor side.
+REP: I can't tell you where rates are headed, and honestly nobody can. What I can do is look at your whole situation and show you a couple options, maybe cash-out, maybe a home equity line, and you decide if it makes sense now or later.
+CLIENT: What would a home equity line even run me right now?  [question]
+REP: It really depends on your equity, credit and income, including retirement income, so I don't want to throw out a number that isn't yours. That's exactly what a review would tell us.
+CLIENT: Fair enough. I don't like guesses anyway.
+REP: Me either. Do you have your Social Security and pension statements handy, or would it be easier to gather those and talk again?
+CLIENT: I'd need to find them. Martha keeps all that.
+REP: No problem. Would Monday morning or Tuesday afternoon be better for a quick review once you've got them?
+CLIENT: Tuesday afternoon. After my golf.
+REP: Tuesday at two then. I'll send a short checklist so you know exactly what to grab.
+CLIENT: Good. Thank you, Tasha.

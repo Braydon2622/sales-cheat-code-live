@@ -1,0 +1,26 @@
+# id: call-07
+# title: Needs to talk to her husband first
+# scenario: Mia is looking at a move-up purchase but says her husband handles the finances and she needs to talk to him. The rep tries to get both on one call with a two-option close.
+# synthetic: true
+REP: Hi, is this Mia? This is Carlos with Copperleaf Home Loans.
+CLIENT: Yes, hi, sorry, the kids are being loud, give me one sec.
+REP: No rush at all.
+CLIENT: Okay. Sorry. Hi.
+REP: Ha, no worries. How many kids do you have?
+CLIENT: Three, and a fourth on the way, which is exactly why we need a bigger house.
+REP: Congratulations! That'll do it. So are you thinking of selling your current place and buying?
+CLIENT: Yeah, that's the plan. We've been looking at four bedrooms out by the new elementary school.
+REP: Great area. Do you have a sense of what you'd want your budget to be?
+CLIENT: Honestly my husband does all the money stuff. I really need to talk to him before I say anything.  [objection:spouse]
+REP: That makes total sense, it's a big decision and you should both be in it. Rather than you having to relay everything, would it be easier if I hopped on a quick call with both of you?
+CLIENT: Maybe. He works pretty long days though.
+REP: Understood. Would this evening around seven or Saturday morning around ten work better for both of you?
+CLIENT: Saturday morning would probably be better. He's wiped out on weeknights.
+REP: Saturday at ten it is. It'll be about twenty minutes. It'd help if he has your current mortgage statement handy.
+CLIENT: Okay. Do we have to sell our house before we can buy the new one?  [question]
+REP: Not necessarily, there are a few ways to handle that, and it depends on your equity and income. That's a great one to dig into Saturday with both of you.
+CLIENT: Okay, good, because that's the thing that stresses me out.
+REP: Totally understandable. I'll send a calendar invite to you, and if you give me his email I'll include him too.
+CLIENT: Yeah, I'll text it to you.
+REP: Perfect. Thanks Mia, good luck with the chaos.
+CLIENT: Ha, thanks. Bye.

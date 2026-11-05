@@ -1,0 +1,25 @@
+# id: call-15
+# title: Self-employed contractor ready to buy fast
+# scenario: Dominic, a self-employed electrician, has found land with a house on it and wants to move quickly. He asks lots of next-step and document questions; the rep is careful about approval and rate questions.
+# synthetic: true
+REP: Hey Dominic, it's Chris from Copperleaf Home Loans. Got your message, sounds like you found something?
+CLIENT: Yeah man, five acres with a little ranch house. It's exactly what I want. The seller wants to close before the end of the year.
+REP: That's awesome. Five acres, what are you going to do with all that room?
+CLIENT: Shop for my trucks, finally. Right now everything's crammed in my mom's garage.
+REP: Ha, I bet she'll be happy about that.
+CLIENT: She's thrilled. So, look, I'm ready. What do you need from me to get this going?  [buying_signal]
+REP: Since you're self-employed, the big one is your last two years of personal and business tax returns. Plus a year-to-date profit and loss and a couple months of bank statements.
+CLIENT: My CPA has all that. I can have her send it today. Can she email it straight to you?  [buying_signal]
+REP: Yes, I'll give you a secure upload link she can use, better than email for tax documents.
+CLIENT: Perfect. Am I going to have trouble getting approved since I'm self-employed?  [question]
+REP: Being self-employed doesn't disqualify you, it just means the income review is based on your returns. I can't say yes or no until I see them, but once your CPA sends them I'll give you a straight answer quickly.
+CLIENT: Okay, cool. And the land, does five acres change anything?
+REP: It can, depending on the property and how it appraises. Do you know if there's a well and septic?
+CLIENT: Both. And a pole barn that's half falling down.
+REP: Good to know, the appraiser will note all of that. What's the closing date the seller's asking for?
+CLIENT: December twentieth. Can you hit that?  [buying_signal]
+REP: That's tight but workable if we get documents this week and get the appraisal ordered fast. I'll build a timeline backwards from that date and send it to you tonight.
+CLIENT: Great. Do I need to do anything else today?
+REP: Just get your CPA the link and send me the listing. Can we touch base tomorrow at eight before you're on a job, or would five work better?
+CLIENT: Eight. I'm on a job site by nine.
+REP: Eight it is. Talk then.

@@ -1,0 +1,24 @@
+# id: holdout-22
+# title: Partner co-borrower and payment anxiety
+# scenario: Same-sex couple buying a starter home; one partner calls but says the other is the co-borrower and must weigh in. He also worries the payment will be too high. Rep stays compliant.
+# synthetic: true
+REP: Hi, is this Nikolai? This is Tamsin with Copperleaf Home Loans.
+CLIENT: Hey Tamsin, yes. Good timing, I just got home.
+REP: Great. You and your partner are looking to buy?
+CLIENT: Yeah, me and Sam. We've been renting a duplex for four years.
+REP: Exciting. What area are you looking in?
+CLIENT: East side, near the brewery district. Little bungalows over there.
+REP: Love that neighborhood. What price range?
+CLIENT: Like three-twenty to three-fifty. But honestly, with rates where they are, I'm worried the payment would just be too much for us.  [objection:rate_too_high]
+REP: That's a really fair concern. The best way to know what's comfortable is to look at your full budget together rather than guess.
+CLIENT: Yeah. And Sam's going to be the co-borrower, so I really need him in on this before we go any further.  [objection:spouse]
+REP: Absolutely. Would it help to set up a call with both of you?
+CLIENT: Yeah. He works nights though.
+REP: How about a weekend? Saturday morning?
+CLIENT: Saturday at ten works.
+REP: Perfect. Before then, could you each pull together a rough monthly budget? That'll help us talk about a comfortable payment.
+CLIENT: Sure. I'm still nervous it'll be too high, though.
+REP: Totally understood. We'll go at your pace and look at different price points.
+CLIENT: Okay. Thanks, that helps.
+REP: Talk to you both Saturday.
+CLIENT: Sounds good.

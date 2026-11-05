@@ -1,0 +1,60 @@
+{
+  "mode": "live",
+  "startedAt": "2026-11-05T16:52:48.609Z",
+  "models": {
+    "detector": "claude:claude-haiku-5-5",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "guard": "claude:claude-haiku-5-5"
+  },
+  "calls": 20,
+  "detection": {
+    "precision": 0.5887850467289719,
+    "recall": 0.9545454545454546,
+    "f1": 0.7283236994219653
+  },
+  "baseline": {
+    "precision": 0.8947368421052632,
+    "recall": 0.5151515151515151,
+    "f1": 0.6538461538461537
+  },
+  "repViolations": {
+    "labeled": 11,
+    "caught": 11,
+    "byRules": 5,
+    "byModel": 11,
+    "falseAlarms": 5
+  },
+  "cards": {
+    "total": 85,
+    "coached": 81,
+    "blockedByRules": 2,
+    "retractedByModel": 1,
+    "coachErrors": 0,
+    "shownWithViolations": 0
+  },
+  "latencyMs": {
+    "detectorP50": 1401.774,
+    "detectorP95": 2848.7903750000405,
+    "firstTokenP50": 3080.604833999998,
+    "firstTokenP95": 6324.739417000004,
+    "firstLineP50": 3394.2734579999815,
+    "firstLineP95": 6662.367792000005,
+    "fullCardP50": 4927.915000000008,
+    "fullCardP95": 8159.2146250000005,
+    "withinBudgetRate": 0
+  },
+  "costUsd": {
+    "total": 0.25143729,
+    "perCall": 0.012571864499999998,
+    "coach": 0.2299138
+  },
+  "coachQuality": {
+    "cardsDrafted": 81,
+    "shownAsDraftedRate": 0.9629629629629629,
+    "stoppedByGuardRate": 0.037037037037037035,
+    "coachErrorRate": 0,
+    "twoOptionCloseRate": 0.9230769230769231,
+    "homeNotLoanRate": 0.9615384615384616,
+    "outputTokensPerCard": 197.44444444444446
+  }
+}

@@ -1,0 +1,26 @@
+# id: holdout-07
+# title: Investor comparing DSCR lenders
+# scenario: Experienced landlord with four rentals is comparing lenders for a fifth property using a rental-income loan. He is curt and openly shopping around.
+# synthetic: true
+REP: Hi, is this Abe? This is Simone with Copperleaf Home Loans.
+CLIENT: Yeah. Go ahead.
+REP: I saw you inquired about an investment property loan. Is this a purchase?
+CLIENT: Purchase. Duplex. I'm talking to three or four lenders, just comparing terms right now.  [objection:just_shopping]
+REP: Makes sense, you should compare. How many properties do you own currently?
+CLIENT: Four. All long-term rentals.
+REP: Are you looking to qualify on the property's rental income rather than your personal income?
+CLIENT: Yeah, DSCR. My tax returns look terrible on purpose.
+REP: Ha, I hear that from a lot of investors. Do you know what the duplex will rent for?
+CLIENT: Twenty-eight hundred combined, both units leased.
+REP: And the purchase price?
+CLIENT: Three-ninety. What's your minimum down on these?  [question]
+REP: It varies by program and by how the rent covers the payment, so I'd want to look at the actual leases and your reserves before giving you a number.
+CLIENT: Everybody says that.
+REP: Fair. I'd rather give you something accurate than something that changes later. Can you send me the leases?
+CLIENT: I can. I'm still just comparing, though. Not committing to anybody.
+REP: Understood, no commitment. I'll send a secure upload link and a short list of what we need.
+CLIENT: Fine.
+REP: When's your inspection period up?
+CLIENT: Ten days.
+REP: Okay, I'll turn this around quickly. Thanks, Abe.
+CLIENT: Yep.

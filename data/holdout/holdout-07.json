@@ -1,0 +1,193 @@
+{
+  "id": "holdout-07",
+  "title": "Investor comparing DSCR lenders",
+  "scenario": "Experienced landlord with four rentals is comparing lenders for a fifth property using a rental-income loan. He is curt and openly shopping around.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Abe? This is Simone with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 5.9,
+      "text": "Yeah. Go ahead.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 6.5,
+      "end": 11.5,
+      "text": "I saw you inquired about an investment property loan. Is this a purchase?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.2,
+      "end": 17.6,
+      "text": "Purchase. Duplex. I'm talking to three or four lenders, just comparing terms right now.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "just_shopping"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 18.4,
+      "end": 23,
+      "text": "Makes sense, you should compare. How many properties do you own currently?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 23.9,
+      "end": 25.4,
+      "text": "Four. All long-term rentals.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 26.4,
+      "end": 32.2,
+      "text": "Are you looking to qualify on the property's rental income rather than your personal income?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 33.3,
+      "end": 36.8,
+      "text": "Yeah, DSCR. My tax returns look terrible on purpose.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 38,
+      "end": 44.9,
+      "text": "Ha, I hear that from a lot of investors. Do you know what the duplex will rent for?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 45.3,
+      "end": 47.6,
+      "text": "Twenty-eight hundred combined, both units leased.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 48.1,
+      "end": 49.6,
+      "text": "And the purchase price?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 50.2,
+      "end": 52.9,
+      "text": "Three-ninety. What's your minimum down on these?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 53.6,
+      "end": 64.8,
+      "text": "It varies by program and by how the rent covers the payment, so I'd want to look at the actual leases and your reserves before giving you a number.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 65.6,
+      "end": 66.8,
+      "text": "Everybody says that.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 67.7,
+      "end": 74.6,
+      "text": "Fair. I'd rather give you something accurate than something that changes later. Can you send me the leases?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 75.6,
+      "end": 79.8,
+      "text": "I can. I'm still just comparing, though. Not committing to anybody.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 80.9,
+      "end": 87.4,
+      "text": "Understood, no commitment. I'll send a secure upload link and a short list of what we need.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 88.6,
+      "end": 89.4,
+      "text": "Fine.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 89.8,
+      "end": 91.7,
+      "text": "When's your inspection period up?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 92.2,
+      "end": 93,
+      "text": "Ten days.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 93.6,
+      "end": 96.7,
+      "text": "Okay, I'll turn this around quickly. Thanks, Abe.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 97.4,
+      "end": 98.2,
+      "text": "Yep.",
+      "labels": []
+    }
+  ]
+}

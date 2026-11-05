@@ -1,0 +1,166 @@
+{
+  "call_id": "9000000102",
+  "lines": [
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Hi Priya, it's Jordan from Copperleaf Home Loans. You were looking at condos over on the east side, right?",
+      "time": "2026-11-03T15:00:02.000000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Yeah, hey Jordan. Yeah, we put in an offer on one actually, we're waiting to hear back.",
+      "time": "2026-11-03T15:00:07.800000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Oh exciting! How many offers have you put in so far?",
+      "time": "2026-11-03T15:00:14.900000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Sure, it's dana.sample@example.com, and I was born 04/12/1991 if you need that.",
+      "time": "2026-11-03T15:00:16.900000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "This is the third. The first two went way over asking. It's been kind of brutal.",
+      "time": "2026-11-03T15:00:19.800000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "That market is no joke. So where are you at on the financing side?",
+      "time": "2026-11-03T15:00:26.800000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Well, I got a payment estimate from the online calculator and it's just way more than I want to pay every month. Like, I don't know how anyone affords this.",
+      "time": "2026-11-03T15:00:33.100000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "I hear that a lot. A lot of that calculator stuff uses generic assumptions, taxes, insurance, HOA. Did you put your actual HOA in?",
+      "time": "2026-11-03T15:00:45.600000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "No, I think I just used the defaults.",
+      "time": "2026-11-03T15:00:55.900000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Okay, so that number could be off in either direction. That's worth checking with real numbers.",
+      "time": "2026-11-03T15:01:00.200000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Also, to be honest, my credit union already pre-approved me. I'll probably just go with them since I've banked there forever.",
+      "time": "2026-11-03T15:01:06.800000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Look, credit unions are fine for checking accounts, but they're slow and they're going to bury you in fees. You'll lose this condo waiting on them.",
+      "time": "2026-11-03T15:01:15.400000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Hm. I mean, they've been pretty good to me so far.",
+      "time": "2026-11-03T15:01:26.000000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Fair enough. What I'd really like to do is just be a second look. Do you have their loan estimate yet?",
+      "time": "2026-11-03T15:01:30.900000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "I have the pre-approval letter, not like a full estimate.",
+      "time": "2026-11-03T15:01:39.800000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Got it. Once your offer's accepted you'll get a formal loan estimate from them. If you want, send me the details and I can show you what ours looks like side by side.",
+      "time": "2026-11-03T15:01:44.500000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Maybe. How long does it usually take you guys to close?",
+      "time": "2026-11-03T15:01:58.200000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Typically we can close within the contract window, usually around thirty days, depending on the appraisal and how fast we get documents.",
+      "time": "2026-11-03T15:02:03.500000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Okay. Let me see if the offer even gets accepted first.",
+      "time": "2026-11-03T15:02:13.200000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Totally makes sense. Can I check back in with you Thursday afternoon or Friday morning?",
+      "time": "2026-11-03T15:02:17.800000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Friday's fine.",
+      "time": "2026-11-03T15:02:24.100000",
+      "type": "transcript"
+    },
+    {
+      "user_id": "4512",
+      "name": "Loan Officer (Copperleaf Home Loans)",
+      "content": "Great, talk to you Friday, fingers crossed on the offer.",
+      "time": "2026-11-03T15:02:26.100000",
+      "type": "transcript"
+    },
+    {
+      "contact_id": "ag5kZXZ-sample-contact",
+      "name": "(555) 010-0199",
+      "content": "Thanks, bye.",
+      "time": "2026-11-03T15:02:30.000000",
+      "type": "transcript"
+    }
+  ]
+}

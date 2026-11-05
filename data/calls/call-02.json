@@ -1,0 +1,203 @@
+{
+  "id": "call-02",
+  "title": "Payment too high plus my bank already offered",
+  "scenario": "Priya is buying her first condo and thinks the payment she was shown is too high; she also says her credit union already pre-approved her. The rep slips by trashing the credit union.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 7.3,
+      "text": "Hi Priya, it's Jordan from Copperleaf Home Loans. You were looking at condos over on the east side, right?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 7.8,
+      "end": 14.3,
+      "text": "Yeah, hey Jordan. Yeah, we put in an offer on one actually, we're waiting to hear back.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 14.9,
+      "end": 19.1,
+      "text": "Oh exciting! How many offers have you put in so far?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 19.8,
+      "end": 26,
+      "text": "This is the third. The first two went way over asking. It's been kind of brutal.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 26.8,
+      "end": 32.2,
+      "text": "That market is no joke. So where are you at on the financing side?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 33.1,
+      "end": 44.6,
+      "text": "Well, I got a payment estimate from the online calculator and it's just way more than I want to pay every month. Like, I don't know how anyone affords this.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 45.6,
+      "end": 54.8,
+      "text": "I hear that a lot. A lot of that calculator stuff uses generic assumptions, taxes, insurance, HOA. Did you put your actual HOA in?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 55.9,
+      "end": 59,
+      "text": "No, I think I just used the defaults.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 60.2,
+      "end": 66.4,
+      "text": "Okay, so that number could be off in either direction. That's worth checking with real numbers.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 66.8,
+      "end": 74.9,
+      "text": "Also, to be honest, my credit union already pre-approved me. I'll probably just go with them since I've banked there forever.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "bank_loyalty"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 75.4,
+      "end": 85.4,
+      "text": "Look, credit unions are fine for checking accounts, but they're slow and they're going to bury you in fees. You'll lose this condo waiting on them.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 86,
+      "end": 90.2,
+      "text": "Hm. I mean, they've been pretty good to me so far.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 90.9,
+      "end": 99,
+      "text": "Fair enough. What I'd really like to do is just be a second look. Do you have their loan estimate yet?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 99.8,
+      "end": 103.6,
+      "text": "I have the pre-approval letter, not like a full estimate.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 104.5,
+      "end": 117.2,
+      "text": "Got it. Once your offer's accepted you'll get a formal loan estimate from them. If you want, send me the details and I can show you what ours looks like side by side.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 118.2,
+      "end": 122.4,
+      "text": "Maybe. How long does it usually take you guys to close?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 123.5,
+      "end": 132,
+      "text": "Typically we can close within the contract window, usually around thirty days, depending on the appraisal and how fast we get documents.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 133.2,
+      "end": 137.4,
+      "text": "Okay. Let me see if the offer even gets accepted first.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 137.8,
+      "end": 143.6,
+      "text": "Totally makes sense. Can I check back in with you Thursday afternoon or Friday morning?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 144.1,
+      "end": 144.9,
+      "text": "Friday's fine.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 145.5,
+      "end": 149.3,
+      "text": "Great, talk to you Friday, fingers crossed on the offer.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 150,
+      "end": 150.8,
+      "text": "Thanks, bye.",
+      "labels": []
+    }
+  ]
+}

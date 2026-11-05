@@ -1,0 +1,25 @@
+# id: call-13
+# title: First-time buyer under contract and ready to go
+# scenario: Sofia just had an offer accepted on her first home and calls ready to move fast. Multiple buying signals about documents, timeline and appraisal; the rep stays compliant on rate questions.
+# synthetic: true
+CLIENT: Hi, is this Megan? Sofia, I talked to you last month. Our offer got accepted!
+REP: Sofia! Congratulations! That's huge.
+CLIENT: Thank you! I'm freaking out a little. So what do I do now? What are the next steps?  [buying_signal]
+REP: Okay, deep breath, this is the fun part. First, can you send me the signed purchase contract?
+CLIENT: Yes, my agent just emailed it to me. I'll forward it.
+REP: Perfect. Then I'll need your last two pay stubs, two months of bank statements and last year's W-2.
+CLIENT: Okay, I have all of that. Do you need it today?  [buying_signal]
+REP: The sooner the better, since your contract has deadlines. What's your closing date on the contract?
+CLIENT: December twelfth. Is that enough time? How fast can you close?  [buying_signal]
+REP: That's a reasonable window. The main thing that drives timing is the appraisal and how fast documents come in, so if you get me everything this week we'll be in good shape.
+CLIENT: Okay, I'll do it tonight. Oh, and do I lock my rate now? What's the rate going to be?  [question]
+REP: Good question. I can't give you a number until we have the contract and your file reviewed, but once we do, we'll talk through locking options and I'll show you exactly what's available that day.
+CLIENT: Okay, that makes sense.
+REP: Also, have you picked a homeowners insurance company yet?
+CLIENT: No! Do I need that already?  [question]
+REP: You'll need it before closing, so it's worth getting a couple quotes this week.
+CLIENT: Okay, adding it to my list. My list is getting long.
+REP: Ha, it'll get shorter fast. Is the house the blue one with the porch you sent me?
+CLIENT: Yes! With the lemon tree in the back.
+REP: Love it. Okay, I'll send you the upload link right now. Can we do a quick check-in Thursday or Friday to make sure everything came through?
+CLIENT: Friday. Thank you so much, Megan.

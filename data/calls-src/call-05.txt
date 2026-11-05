@@ -1,0 +1,24 @@
+# id: call-05
+# title: Comparison shopper gets a rate quoted to keep her on the line
+# scenario: Renee is comparing three lenders for a purchase and says she's just collecting numbers. The rep panics and quotes a specific rate to keep her interested.
+# synthetic: true
+REP: Hi Renee, Derek with Copperleaf Home Loans. Thanks for picking up.
+CLIENT: Hi. Yeah, so, full disclosure, I'm talking to like three lenders. I'm just comparing right now.  [objection:just_shopping]
+REP: Smart, you should compare. What are you buying, if you don't mind me asking?
+CLIENT: A townhouse, it's a new build. They say it'll be done in the spring.
+REP: Oh nice, new construction. Are you working with the builder's lender too?
+CLIENT: They pushed theirs, yeah. That's one of the three.
+REP: Okay. And what's most important to you in picking one, rate, fees, service?
+CLIENT: Honestly, rate. That's all anyone talks about. So what's your rate today?  [question]
+REP: For a townhouse purchase like that, I can get you six and an eighth today, easy.  [rep_violation:rate_quote]
+CLIENT: Huh. The builder's guy said something a little higher than that.
+REP: Yeah, we're usually pretty sharp.
+CLIENT: Does that include points or whatever?
+REP: Well, it depends on the full scenario, credit and down payment and all that.
+CLIENT: Okay, so it's not really six and an eighth then.
+REP: It could be. I'd need to run your full picture to say for sure.
+CLIENT: Right. Okay. I've got a meeting in a few, so I'm going to have to go.
+REP: Totally. Can I send you a quick application link?
+CLIENT: Sure, send it over, I'll look at it.  [objection:stall]
+REP: Will do. Thanks Renee.
+CLIENT: Bye.

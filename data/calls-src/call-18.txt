@@ -1,0 +1,24 @@
+# id: call-18
+# title: Client fishes for rate and approval, rep slips on both
+# scenario: Alex, a nurse buying her first home with a modest down payment, keeps pressing for a specific rate and whether she'll be approved. The rep caves on both.
+# synthetic: true
+REP: Hi Alex, Shawn with Copperleaf Home Loans. Thanks for calling back.
+CLIENT: Hi, yeah, sorry, I just got off a twelve-hour shift.
+REP: Oh wow, where do you work?
+CLIENT: I'm a nurse at the regional hospital. ICU.
+REP: That's intense. Thank you for doing that.
+CLIENT: Ha, thanks. Okay so I've been looking at houses around three hundred thousand. I've got maybe five percent down.
+REP: Great, that's a very doable starting point for a lot of buyers.
+CLIENT: So what kind of rate would I get with that?  [question]
+REP: With five down and a nurse's income, you're probably looking at about six and a quarter.  [rep_violation:rate_quote]
+CLIENT: Okay. And my credit's like six-eighty, is that going to be a problem? Will I get approved?  [question]
+REP: Six-eighty with your job? Oh, you're approved, don't even worry about it.  [rep_violation:approval_promise]
+CLIENT: Seriously? That's way easier than I thought.
+REP: Yeah, nurses are great borrowers. Stable job.
+CLIENT: So what's the next step, do I fill something out?  [buying_signal]
+REP: Yep, I'll send you the application. Pay stubs, W-2s and bank statements.
+CLIENT: Okay. I work nights so I'll do it on my day off.
+REP: Works for me. Would Wednesday or Thursday be better for a follow-up?
+CLIENT: Thursday.
+REP: Thursday then. Get some sleep, Alex.
+CLIENT: Ha, I'll try. Bye.

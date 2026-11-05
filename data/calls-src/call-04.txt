@@ -1,0 +1,24 @@
+# id: call-04
+# title: First-time buyer just looking
+# scenario: Kevin, a first-time buyer, clicked an ad and insists he's just looking. The rep stays low-pressure, educates, and sets a soft next step without quoting numbers.
+# synthetic: true
+REP: Hey, is this Kevin? This is Alyssa with Copperleaf Home Loans, you'd clicked on our first-time buyer guide?
+CLIENT: Oh, uh, yeah. I did. But I'm really just looking, I'm not buying anything right now.  [objection:just_shopping]
+REP: Totally get it, most people I talk to are at the looking stage. Is it okay if I ask a couple questions just so the guide is actually useful to you?
+CLIENT: I guess, sure.
+REP: Are you renting right now?
+CLIENT: Yeah, with a roommate. Lease is up in like August.
+REP: Okay, so there's kind of a natural window there. What area are you looking at?
+CLIENT: Probably near downtown, close to work. I bike in.
+REP: Love that. Do you ride all year?
+CLIENT: Pretty much, unless it's icy. Then I take the bus and complain about it.
+REP: Ha, fair. So one thing a lot of first-time buyers don't realize is how much the down payment options vary. Have you looked into that at all?
+CLIENT: I figured I needed like twenty percent, which, yeah, that's not happening.
+REP: A lot of people think that. There are programs with much lower down payment requirements, depending on your situation. That's something we'd go over if and when you want to.
+CLIENT: Huh. Okay, so what would I even need to get pre-approved?  [buying_signal]
+REP: Usually a couple pay stubs, W-2s, bank statements and a credit check. No pressure on timing though. Would it help if I sent you a checklist and we talked again in a few weeks?
+CLIENT: Yeah, that would actually be helpful.
+REP: Great. Early next week or later in the month better for a follow-up?
+CLIENT: Later in the month I guess.
+REP: Perfect. I'll email the checklist today. Thanks Kevin.
+CLIENT: Cool, thanks.

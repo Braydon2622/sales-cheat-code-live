@@ -1,0 +1,27 @@
+# id: call-20
+# title: Borrower with a 640 score fishes for approval
+# scenario: Tanya is a single mom with a 640 credit score hoping to buy a starter home. She asks directly whether she'll be approved and what her payment would be; the rep guarantees approval and quotes a payment.
+# synthetic: true
+REP: Hi Tanya, Kyle with Copperleaf Home Loans. Is this still a good time?
+CLIENT: Yeah, the kids are at practice, so I've got like twenty minutes.
+REP: Perfect. What sport?
+CLIENT: Soccer, both of them. I spend my whole life at that field.
+REP: Ha, I know the feeling. So you're looking at starter homes?
+CLIENT: Yeah, something small, two or three bedrooms, around two-fifty. I'm tired of renting.
+REP: That makes sense. Can I ask where your credit is right now?
+CLIENT: That's the thing, it's like a six-forty. Will I get approved with a six-forty?  [question]
+REP: Oh yeah, I guarantee you'll get approved with a six-forty, no problem.  [rep_violation:approval_promise]
+CLIENT: Really? Every other place made it sound iffy.
+REP: Nah, we do these all the time.
+CLIENT: Okay. And how much would my payment be on a two-fifty house?  [question]
+REP: With taxes and insurance, you'd be about nineteen hundred a month.  [rep_violation:rate_quote]
+CLIENT: Ooh, that's more than my rent. I'm paying sixteen hundred now. I don't know if I can do that.  [objection:rate_too_high]
+REP: Well, you'd be building equity instead of paying a landlord.
+CLIENT: I know, I know. I need to think about it.  [objection:stall]
+REP: Sure. What if we got the application started so you'd have it ready?
+CLIENT: What would I need to send you?  [buying_signal]
+REP: Pay stubs, W-2s, bank statements, and any child support documentation if you'd like that counted.
+CLIENT: Okay. Oh, they're done, I have to go grab them.
+REP: No problem. Would Saturday morning or Monday evening be better to talk again?
+CLIENT: Monday evening.
+REP: Monday at seven. Talk to you then, Tanya.

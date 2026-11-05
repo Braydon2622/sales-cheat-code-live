@@ -1,0 +1,207 @@
+{
+  "id": "holdout-21",
+  "title": "Eager rate-and-term refi, rep promises approval",
+  "scenario": "Pharmacist with an adjustable-rate loan about to reset wants to lock into a fixed rate quickly. She is ready to go, and the rep promises approval and quotes a rate and payment.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Adaeze? This is Colby with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 11.6,
+      "text": "Hi Colby, yes. Thanks for getting back to me. My ARM resets in February and I want out.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 12.2,
+      "end": 15.3,
+      "text": "Totally understandable. What's the balance on it now?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 16,
+      "end": 19.8,
+      "text": "About two-ninety-five. The house is probably worth around five hundred.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 20.6,
+      "end": 22.9,
+      "text": "Great equity. And your income situation?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 23.8,
+      "end": 28,
+      "text": "I'm a pharmacist at the hospital, W-2, been there six years.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 29,
+      "end": 30.2,
+      "text": "Perfect. Credit score?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 31.3,
+      "end": 32.1,
+      "text": "Around seven-seventy.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 33.3,
+      "end": 37.5,
+      "text": "Honestly, with those numbers you're approved, this is an easy file.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "approval_promise"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 37.9,
+      "end": 43.7,
+      "text": "Oh good. So what's the next step? I want to get this going this week.",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 44.2,
+      "end": 50.4,
+      "text": "We'll get the application started. You'd probably land right around six percent on a thirty-year fixed.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 51,
+      "end": 54.1,
+      "text": "And what would my payment be on that?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 54.8,
+      "end": 58.3,
+      "text": "Principal and interest would be about seventeen-seventy a month.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 59.1,
+      "end": 65.3,
+      "text": "Okay. That's close to what I pay now before the reset. How fast can we close?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 66.2,
+      "end": 70.8,
+      "text": "Usually we can close within about a month, depending on the appraisal.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 71.8,
+      "end": 74.9,
+      "text": "Great. What documents do you need from me?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 76,
+      "end": 81.8,
+      "text": "Two pay stubs, two years of W-2s, your current mortgage statement, and homeowners insurance info.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 83,
+      "end": 85.7,
+      "text": "I'll have those to you tomorrow morning.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 86.1,
+      "end": 88.8,
+      "text": "Perfect. I'll send the application link now.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 89.3,
+      "end": 90.8,
+      "text": "Thanks so much, Colby.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 91.4,
+      "end": 93.3,
+      "text": "My pleasure, Adaeze. Talk tomorrow.",
+      "labels": []
+    }
+  ]
+}

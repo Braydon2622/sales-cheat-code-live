@@ -1,0 +1,29 @@
+# id: holdout-01
+# title: Skeptical refi shopper pushes on rate, rep quotes numbers
+# scenario: Homeowner who bought in 2023 at a high rate is curious about refinancing but thinks everything is still too expensive. The rep slips and quotes a rate and a payment.
+# synthetic: true
+REP: Hi, is this Corinne? This is Desmond with Copperleaf Home Loans, you'd filled out a little refinance form on our site last week.
+CLIENT: Oh. Yeah, I did. I kind of forgot about that, honestly.
+REP: No worries at all, happens to everybody. Do you have a few minutes to chat about what you were hoping to accomplish?
+CLIENT: I mean, a few minutes. I'm making dinner.
+REP: Totally fair. So what got you looking at a refinance in the first place?
+CLIENT: We bought in late 2023 and our rate is just, ugh, it's painful. I keep seeing ads saying refinance now, but every time I look it seems like it's barely any better.
+REP: Got it. And roughly what's your current balance, ballpark?
+CLIENT: Around three-ten, I think. Maybe three-oh-five.
+REP: Okay. And is it a thirty-year fixed right now?
+CLIENT: Yeah. Look, honestly, I think rates are still way too high to bother. I'd rather wait till they come down more.  [objection:rate_too_high]
+REP: I hear that a lot, and it's a reasonable instinct. Right now we're seeing folks in your range land around six and an eighth on a thirty-year.  [rep_violation:rate_quote]
+CLIENT: Six and an eighth? That's not that much lower than what I've got.
+REP: Well, on three-ten that'd put your principal and interest at about eighteen-eighty a month.  [rep_violation:rate_quote]
+CLIENT: Hm. What would the closing costs be on something like that, though?  [question]
+REP: That really depends on your credit, the title work, and whether you buy down the rate, so I wouldn't want to guess without running it properly.
+CLIENT: See, this is the thing. It always ends up being too expensive to be worth it.
+REP: Can I ask what your credit's looking like, just roughly?
+CLIENT: Last I checked it was like seven-forty.
+REP: That's strong. What I'd suggest is letting me do a soft review so we can see real numbers instead of guessing.
+CLIENT: I don't know. I still think I'm going to wait for rates to drop.
+REP: That's okay. Would it help if I set up a rate watch and called you if things move meaningfully?
+CLIENT: Sure, that's fine, I guess.
+REP: Great. I'll note seven-forty, about three-ten balance, thirty-year fixed. I'll reach out if we see a real change.
+CLIENT: Okay. Thanks. I really gotta get back to the stove.
+REP: Of course. Enjoy your dinner, Corinne.

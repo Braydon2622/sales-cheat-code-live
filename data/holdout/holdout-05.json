@@ -1,0 +1,223 @@
+{
+  "id": "holdout-05",
+  "title": "Cash-out for kitchen remodel, payment worries, rep overpromises",
+  "scenario": "Chatty homeowner wants about sixty thousand cash out for a kitchen remodel but worries the new payment will be too high. The rep quotes a payment and promises approval.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 5,
+      "text": "Good afternoon, is this Bev? Hi Bev, it's Tomas with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 5.5,
+      "end": 13.2,
+      "text": "Oh, hi Tomas! Yes, I was hoping someone would call. My kitchen is from nineteen eighty-eight, I'm not even kidding.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 13.8,
+      "end": 18.4,
+      "text": "Ha, oh no. So you're thinking cash-out refinance to fund a remodel?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 19.1,
+      "end": 24.9,
+      "text": "That's the idea. My neighbor did one and her kitchen is gorgeous now. Absolutely gorgeous.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 25.7,
+      "end": 29.2,
+      "text": "Love it. How much are you thinking you'd need?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 30.1,
+      "end": 35.9,
+      "text": "The contractor said around sixty thousand. Maybe sixty-five if I go with the nicer countertops.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 36.9,
+      "end": 40.7,
+      "text": "And what do you think the home's worth these days?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 41.8,
+      "end": 44.9,
+      "text": "Zillow says four-forty, but who knows with Zillow.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 46.1,
+      "end": 49.9,
+      "text": "Right, we'd confirm with an appraisal. And the current balance?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 50.3,
+      "end": 62.2,
+      "text": "About two-twenty. But here's my worry, my payment is fine right now. I don't want it to jump to something crazy. Rates are so high now compared to when I bought.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 62.7,
+      "end": 70.4,
+      "text": "That's a really common concern. Honestly, for a cash-out like that you'd probably be looking at about nineteen-fifty a month.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 71,
+      "end": 74.8,
+      "text": "Nineteen-fifty? I pay fourteen hundred now. That's a big jump.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 75.5,
+      "end": 79.7,
+      "text": "It's a jump, but you're getting sixty-five thousand for the kitchen.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 80.5,
+      "end": 87.4,
+      "text": "I suppose. Do you think I'd even qualify? I retired from teaching last year, it's mostly pension now.",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 88.3,
+      "end": 92.9,
+      "text": "Oh, with that much equity you'll definitely qualify, don't worry about that.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "approval_promise"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 93.9,
+      "end": 97.7,
+      "text": "Well, that's a relief. What would you need from me?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 98.8,
+      "end": 104.6,
+      "text": "Your pension award letter, a couple of bank statements, and your mortgage statement to start.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 105.8,
+      "end": 113.9,
+      "text": "I have all of that in a folder somewhere. I'm very organized, my late husband used to tease me about it.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 114.3,
+      "end": 120.1,
+      "text": "That'll make this easy. Can I set up a time to go through everything properly?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 120.6,
+      "end": 125.6,
+      "text": "Sure. But still, that payment makes me nervous. It's just a lot higher.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 126.2,
+      "end": 132,
+      "text": "Totally understandable. We can look at options when we sit down. How's Monday at eleven?",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 132.7,
+      "end": 134.6,
+      "text": "Monday at eleven is fine.",
+      "labels": []
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 135.4,
+      "end": 136.9,
+      "text": "Wonderful. Talk Monday, Bev.",
+      "labels": []
+    },
+    {
+      "index": 23,
+      "speaker": "client",
+      "start": 137.8,
+      "end": 139,
+      "text": "Bye now, Tomas!",
+      "labels": []
+    }
+  ]
+}

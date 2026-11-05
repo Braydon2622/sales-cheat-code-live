@@ -1,0 +1,193 @@
+{
+  "id": "call-01",
+  "title": "Rate shopper who thinks 6% is too high",
+  "scenario": "Dana submitted an online refinance inquiry and already has a competing quote around 6%. She opens by saying rates are too high; the rep stays compliant and works discovery instead of quoting numbers.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 9.2,
+      "text": "Hi, is this Dana? This is Marcus with Copperleaf Home Loans, you'd filled out a form about refinancing your home a couple days ago?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 9.7,
+      "end": 15.1,
+      "text": "Oh, yeah, hi. I remember. I'm actually in the middle of making lunch, so...",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 15.7,
+      "end": 21.1,
+      "text": "No problem, I'll keep it quick. Is now still okay for like five minutes?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 21.8,
+      "end": 23.7,
+      "text": "Sure, five minutes is fine.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 24.5,
+      "end": 28.7,
+      "text": "Great. So what got you looking into a refinance right now?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 29.6,
+      "end": 40.4,
+      "text": "Honestly I already got a quote from another lender and it was right around six percent, and that just feels way too high. I'm not refinancing at six.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 41.4,
+      "end": 51.4,
+      "text": "That's totally fair, nobody wants to pay more than they have to. Can I ask what your current rate is on the loan you have now?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 52.5,
+      "end": 58.7,
+      "text": "It's an ARM, it's about to adjust next spring. That's kind of why I'm even looking.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 59.9,
+      "end": 69.9,
+      "text": "Got it, so part of this is about getting ahead of that adjustment, not just chasing a number. Do you know roughly what it adjusts to?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 70.3,
+      "end": 77.2,
+      "text": "Something like, uh, they said it could go up a couple points. I'd have to check the letter.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 77.7,
+      "end": 86.5,
+      "text": "Okay. So the comparison isn't really six versus some magic lower number, it's six-ish versus wherever that ARM lands. Does that make sense?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 87.1,
+      "end": 90.6,
+      "text": "I mean, yeah, when you put it that way.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 91.3,
+      "end": 107.5,
+      "text": "I'm not going to throw a rate at you on the phone, because honestly rates depend on your full picture, credit, equity, loan size, and that's exactly what I'd check. Do you have a sense of what the house is worth today?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 108.3,
+      "end": 111.8,
+      "text": "Zillow says something like four-ten? We bought for three-forty.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 112.7,
+      "end": 119.2,
+      "text": "Nice, that's good equity. And how's the weather out there today, are you guys getting that rain?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 120.2,
+      "end": 124.8,
+      "text": "Ugh, it's been pouring all morning. The dog refuses to go outside.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 125.9,
+      "end": 140.1,
+      "text": "Ha, mine too. Okay, so here's what I'd suggest. Let me run an actual review with your real numbers and put it side by side with the quote you got. If theirs is better, I'll tell you.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 141.3,
+      "end": 145.1,
+      "text": "So what would you need from me to do that?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 145.5,
+      "end": 158.2,
+      "text": "Just a couple of things, a recent mortgage statement and permission to do a credit check. Would it be easier to go over that this afternoon at three, or tomorrow morning around ten?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 158.7,
+      "end": 162.9,
+      "text": "Tomorrow at ten works. I'll dig up that ARM letter too.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 163.5,
+      "end": 167.7,
+      "text": "Perfect, I'll send a calendar invite. Thanks Dana, enjoy your lunch.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 168.4,
+      "end": 169.2,
+      "text": "Thanks, bye.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# id: holdout-09
+# title: Retiree asking about HELOC, rep quotes HELOC rate
+# scenario: Retired couple's husband wants a HELOC as an emergency fund and to help a grandchild with tuition but thinks borrowing costs are too high. The rep gives specific rate and payment numbers.
+# synthetic: true
+REP: Good morning, may I speak with Walter?
+CLIENT: This is Walter.
+REP: Hi Walter, this is Anya with Copperleaf Home Loans. You'd asked about a home equity line of credit?
+CLIENT: I did. My granddaughter starts college next fall and I'd like a cushion. But I'm not sure. These rates are awful compared to what I'm used to.  [objection:rate_too_high]
+REP: I understand. Is the house paid off?
+CLIENT: Paid it off in two thousand fifteen. Proudest day of my life.
+REP: Congratulations, that's wonderful. What do you think it's worth now?
+CLIENT: Oh, maybe three-fifty. It's a modest place.
+REP: And how much of a line were you thinking?
+CLIENT: Fifty thousand, maybe. I may never touch it.
+REP: Okay. Right now our HELOCs are running around eight and a quarter.  [rep_violation:rate_quote]
+CLIENT: Eight and a quarter! When I bought this house it was nine, so I suppose I've seen worse. But still.
+REP: And if you drew the full fifty, interest-only would be roughly three-forty a month.  [rep_violation:rate_quote]
+CLIENT: Hm. Is there a fee just to open it?  [question]
+REP: There can be, and it varies with the appraisal and the title work, so let me pull that together properly.
+CLIENT: I just think it's a lot of money to pay a bank.
+REP: That's fair, and you'd only pay interest on what you use. Are you and your wife both on the title?
+CLIENT: We are. Margaret's in the garden right now.
+REP: Got it. Would you like me to mail you a written summary you can look over together?
+CLIENT: Yes, mail is better. I don't trust email.
+REP: Absolutely. I'll send it to the address you listed.
+CLIENT: Thank you, young lady.

@@ -1,0 +1,1281 @@
+[
+  {
+    "callId": "call-01",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "too high",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 302.301583,
+    "firstPartialAt": 302.105167,
+    "speechEndAt": 302.243,
+    "detectorIssuedAt": 302.232208,
+    "detectorAnsweredAt": 302.253167,
+    "draft": {
+      "read": "Rate-anchored; worried about the monthly cost.",
+      "sendThis": "Totally fair. The rate is one piece; let me look at your whole picture so we find what actually fits.",
+      "backup": "What matters most: lowest payment, or lowest total cost?"
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked: text same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "banned_word",
+        "severity": "block",
+        "quote": "lowest",
+        "where": "backup",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 832.912417,
+    "firstTokenAt": 753.609,
+    "fullCardAt": 1249.828917
+  },
+  {
+    "callId": "call-01",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 17,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what would you need",
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 303.04225,
+    "firstPartialAt": 303.02325,
+    "speechEndAt": 303.033792,
+    "detectorIssuedAt": 303.03,
+    "detectorAnsweredAt": 303.036667,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 860.220833,
+    "firstTokenAt": 753.765125,
+    "fullCardAt": 1723.049667,
+    "guardAt": 1724.045042
+  },
+  {
+    "callId": "call-02",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "credit union",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 1728.137375,
+    "firstPartialAt": 1727.984,
+    "speechEndAt": 1728.242833,
+    "detectorIssuedAt": 1728.01525,
+    "detectorAnsweredAt": 1728.077875,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 2285.041583,
+    "firstTokenAt": 2178.878875,
+    "fullCardAt": 3146.83725,
+    "guardAt": 3147.023708
+  },
+  {
+    "callId": "call-02",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "How long",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 1728.852042,
+    "firstPartialAt": 1728.818458,
+    "speechEndAt": 1728.888792,
+    "detectorIssuedAt": 1728.82275,
+    "detectorAnsweredAt": 1728.833833,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 2285.1615,
+    "firstTokenAt": 2179.132458,
+    "fullCardAt": 3147.075458,
+    "guardAt": 3147.10525
+  },
+  {
+    "callId": "call-03",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 3,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "My wife",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 3147.645667,
+    "firstPartialAt": 3147.582625,
+    "speechEndAt": 3147.618167,
+    "detectorIssuedAt": 3147.609542,
+    "detectorAnsweredAt": 3147.627125,
+    "draft": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "shown": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 3688.946125,
+    "firstTokenAt": 3598.844583,
+    "fullCardAt": 4535.573792,
+    "guardAt": 4535.990292
+  },
+  {
+    "callId": "call-03",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "too high",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 3147.7765,
+    "firstPartialAt": 3147.724583,
+    "speechEndAt": 3147.804875,
+    "detectorIssuedAt": 3147.758167,
+    "detectorAnsweredAt": 3147.767917,
+    "draft": {
+      "read": "Rate-anchored; worried about the monthly cost.",
+      "sendThis": "Totally fair. The rate is one piece; let me look at your whole picture so we find what actually fits.",
+      "backup": "What matters most: lowest payment, or lowest total cost?"
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked: text same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "banned_word",
+        "severity": "block",
+        "quote": "lowest",
+        "where": "backup",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 3675.493,
+    "firstTokenAt": 3599.015042,
+    "fullCardAt": 4093.350958
+  },
+  {
+    "callId": "call-04",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "just looking",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 4536.816375,
+    "firstPartialAt": 4536.640583,
+    "speechEndAt": 4536.754875,
+    "detectorIssuedAt": 4536.735583,
+    "detectorAnsweredAt": 4536.7625,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 5093.154625,
+    "firstTokenAt": 4987.604333,
+    "fullCardAt": 5973.777583,
+    "guardAt": 5973.919667
+  },
+  {
+    "callId": "call-05",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "just comparing",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 5974.329458,
+    "firstPartialAt": 5974.231417,
+    "speechEndAt": 5974.302458,
+    "detectorIssuedAt": 5974.283042,
+    "detectorAnsweredAt": 5974.306333,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 6530.896792,
+    "firstTokenAt": 6426.394125,
+    "fullCardAt": 7392.712583,
+    "guardAt": 7392.786542
+  },
+  {
+    "callId": "call-05",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "question",
+      "evidence": "what's your rate",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 5975.116667,
+    "firstPartialAt": 5974.901917,
+    "speechEndAt": 5974.922708,
+    "detectorIssuedAt": 5974.955583,
+    "detectorAnsweredAt": 5974.975958,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 6530.957333,
+    "firstTokenAt": 6426.528417,
+    "fullCardAt": 7392.984917,
+    "guardAt": 7393.043625
+  },
+  {
+    "callId": "call-06",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "not ready",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 7393.63075,
+    "firstPartialAt": 7393.548792,
+    "speechEndAt": 7393.716042,
+    "detectorIssuedAt": 7393.575625,
+    "detectorAnsweredAt": 7393.590583,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 7952.069,
+    "firstTokenAt": 7845.381,
+    "fullCardAt": 8827.067083,
+    "guardAt": 8827.193625
+  },
+  {
+    "callId": "call-07",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "my husband",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 8828.997167,
+    "firstPartialAt": 8828.961542,
+    "speechEndAt": 8829.034458,
+    "detectorIssuedAt": 8828.964625,
+    "detectorAnsweredAt": 8828.982875,
+    "draft": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "shown": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 9373.404417,
+    "firstTokenAt": 9279.442208,
+    "fullCardAt": 10236.080292,
+    "guardAt": 10236.216
+  },
+  {
+    "callId": "call-09",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "my wife",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 10240.521042,
+    "firstPartialAt": 10240.46225,
+    "speechEndAt": 10240.553333,
+    "detectorIssuedAt": 10240.483625,
+    "detectorAnsweredAt": 10240.504583,
+    "draft": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "shown": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 10782.930542,
+    "firstTokenAt": 10691.181667,
+    "fullCardAt": 11629.58675,
+    "guardAt": 11629.669708
+  },
+  {
+    "callId": "call-09",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "how fast",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 10240.753375,
+    "firstPartialAt": 10240.699083,
+    "speechEndAt": 10240.779375,
+    "detectorIssuedAt": 10240.711417,
+    "detectorAnsweredAt": 10240.719417,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 10795.935875,
+    "firstTokenAt": 10691.435458,
+    "fullCardAt": 11656.055125,
+    "guardAt": 11656.135625
+  },
+  {
+    "callId": "call-11",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "call me next",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 11659.616375,
+    "firstPartialAt": 11659.559542,
+    "speechEndAt": 11659.596792,
+    "detectorIssuedAt": 11659.581958,
+    "detectorAnsweredAt": 11659.601958,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 12214.0985,
+    "firstTokenAt": 12109.418083,
+    "fullCardAt": 13081.925042,
+    "guardAt": 13081.994042
+  },
+  {
+    "callId": "call-12",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 3,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "think about it",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 13082.876667,
+    "firstPartialAt": 13082.712042,
+    "speechEndAt": 13082.76025,
+    "detectorIssuedAt": 13082.8245,
+    "detectorAnsweredAt": 13082.854583,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 13636.701292,
+    "firstTokenAt": 13533.924417,
+    "fullCardAt": 14500.314542,
+    "guardAt": 14500.362167
+  },
+  {
+    "callId": "call-13",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "next steps",
+      "utteranceIndex": 2
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 14500.860667,
+    "firstPartialAt": 14500.728417,
+    "speechEndAt": 14500.790792,
+    "detectorIssuedAt": 14500.832,
+    "detectorAnsweredAt": 14500.85175,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 15055.196833,
+    "firstTokenAt": 14951.544708,
+    "fullCardAt": 15918.800208,
+    "guardAt": 15918.890958
+  },
+  {
+    "callId": "call-13",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 8,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "How fast",
+      "utteranceIndex": 8
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 14501.189,
+    "firstPartialAt": 14501.157667,
+    "speechEndAt": 14501.182167,
+    "detectorIssuedAt": 14501.175583,
+    "detectorAnsweredAt": 14501.184708,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 15055.241,
+    "firstTokenAt": 14951.614083,
+    "fullCardAt": 15918.961,
+    "guardAt": 15918.988792
+  },
+  {
+    "callId": "call-13",
+    "coach": "mock-template",
+    "id": 3,
+    "utteranceIndex": 10,
+    "moment": {
+      "type": "question",
+      "evidence": "What's the rate",
+      "utteranceIndex": 10
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 14501.368167,
+    "firstPartialAt": 14501.28075,
+    "speechEndAt": 14501.318208,
+    "detectorIssuedAt": 14501.344458,
+    "detectorAnsweredAt": 14501.358208,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 15055.265667,
+    "firstTokenAt": 14951.648083,
+    "fullCardAt": 15919.046708,
+    "guardAt": 15919.075167
+  },
+  {
+    "callId": "call-14",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "My wife",
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 15919.515667,
+    "firstPartialAt": 15919.432,
+    "speechEndAt": 15919.6325,
+    "detectorIssuedAt": 15919.482125,
+    "detectorAnsweredAt": 15919.5015,
+    "draft": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "shown": {
+      "read": "Shared decision; partner needs to hear it.",
+      "sendThis": "Makes total sense. Let's set a quick call with both of you so nobody's relaying details.",
+      "backup": "What do you think their biggest question will be?",
+      "nextStep": "Three-way call: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "Text both of them tomorrow with two times.",
+      "watchOut": "Don't pitch one to sell the other."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 16463.521292,
+    "firstTokenAt": 16371.179417,
+    "fullCardAt": 17320.012583,
+    "guardAt": 17320.070375
+  },
+  {
+    "callId": "call-14",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what do you need",
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 15919.705958,
+    "firstPartialAt": 15919.673583,
+    "speechEndAt": 15919.697917,
+    "detectorIssuedAt": 15919.691958,
+    "detectorAnsweredAt": 15919.700125,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 16477.085625,
+    "firstTokenAt": 16371.298792,
+    "fullCardAt": 17346.005833,
+    "guardAt": 17346.057792
+  },
+  {
+    "callId": "call-14",
+    "coach": "mock-template",
+    "id": 3,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "how long",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 15920.129125,
+    "firstPartialAt": 15920.110042,
+    "speechEndAt": 15920.143792,
+    "detectorIssuedAt": 15920.119042,
+    "detectorAnsweredAt": 15920.126167,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 16477.139583,
+    "firstTokenAt": 16371.359875,
+    "fullCardAt": 17346.104708,
+    "guardAt": 17346.11425
+  },
+  {
+    "callId": "call-15",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "What do you need",
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 17346.900583,
+    "firstPartialAt": 17346.871042,
+    "speechEndAt": 17346.890167,
+    "detectorIssuedAt": 17346.885792,
+    "detectorAnsweredAt": 17346.89225,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 17902.828458,
+    "firstTokenAt": 17797.826667,
+    "fullCardAt": 18770.947542,
+    "guardAt": 18771.02125
+  },
+  {
+    "callId": "call-16",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "take me off",
+      "utteranceIndex": 9
+    },
+    "kind": "fixed_opt_out",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 18772.039833,
+    "firstPartialAt": 18771.979375,
+    "speechEndAt": 18772.019958,
+    "detectorIssuedAt": 18772.002833,
+    "detectorAnsweredAt": 18772.025542,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark them Do Not Contact.",
+      "followUp": "None. They are Do Not Contact.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 18772.115917,
+    "guardAt": 18772.115917,
+    "fullCardAt": 18772.115917,
+    "firstTokenAt": 18772.115917
+  },
+  {
+    "callId": "call-17",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "Stop calling",
+      "utteranceIndex": 7
+    },
+    "kind": "fixed_opt_out",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 18772.788208,
+    "firstPartialAt": 18772.768125,
+    "speechEndAt": 18772.793792,
+    "detectorIssuedAt": 18772.7775,
+    "detectorAnsweredAt": 18772.784042,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark them Do Not Contact.",
+      "followUp": "None. They are Do Not Contact.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 18772.79125,
+    "guardAt": 18772.79125,
+    "fullCardAt": 18772.79125,
+    "firstTokenAt": 18772.79125
+  },
+  {
+    "callId": "call-18",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "Will I get approved",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 18774.1155,
+    "firstPartialAt": 18774.065792,
+    "speechEndAt": 18774.087458,
+    "detectorIssuedAt": 18774.102125,
+    "detectorAnsweredAt": 18774.111,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 19328.711083,
+    "firstTokenAt": 19224.441417,
+    "fullCardAt": 20190.001667,
+    "guardAt": 20190.066792
+  },
+  {
+    "callId": "call-18",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "next step",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 18774.217958,
+    "firstPartialAt": 18774.199042,
+    "speechEndAt": 18774.213833,
+    "detectorIssuedAt": 18774.208958,
+    "detectorAnsweredAt": 18774.215417,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 19328.831208,
+    "firstTokenAt": 19225.071833,
+    "fullCardAt": 20190.133208,
+    "guardAt": 20190.146833
+  },
+  {
+    "callId": "call-19",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "What rate",
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 20191.070667,
+    "firstPartialAt": 20191.033917,
+    "speechEndAt": 20191.054875,
+    "detectorIssuedAt": 20191.046917,
+    "detectorAnsweredAt": 20191.058958,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 20745.163708,
+    "firstTokenAt": 20642.277917,
+    "fullCardAt": 21610.862958,
+    "guardAt": 21610.932
+  },
+  {
+    "callId": "call-19",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "My bank",
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 20191.2345,
+    "firstPartialAt": 20191.220875,
+    "speechEndAt": 20191.253667,
+    "detectorIssuedAt": 20191.223708,
+    "detectorAnsweredAt": 20191.231083,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 20745.250542,
+    "firstTokenAt": 20642.380875,
+    "fullCardAt": 21610.997042,
+    "guardAt": 21611.009625
+  },
+  {
+    "callId": "call-20",
+    "coach": "mock-template",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "question",
+      "evidence": "Will I get approved",
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 21611.970958,
+    "firstPartialAt": 21611.822083,
+    "speechEndAt": 21611.892042,
+    "detectorIssuedAt": 21611.936542,
+    "detectorAnsweredAt": 21611.955875,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 22168.868,
+    "firstTokenAt": 22062.984875,
+    "fullCardAt": 23034.744208,
+    "guardAt": 23034.773083
+  },
+  {
+    "callId": "call-20",
+    "coach": "mock-template",
+    "id": 2,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "how much would",
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 21612.182417,
+    "firstPartialAt": 21612.155333,
+    "speechEndAt": 21612.175333,
+    "detectorIssuedAt": 21612.169542,
+    "detectorAnsweredAt": 21612.1775,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 22168.973208,
+    "firstTokenAt": 22063.151583,
+    "fullCardAt": 23034.789917,
+    "guardAt": 23034.797375
+  },
+  {
+    "callId": "call-20",
+    "coach": "mock-template",
+    "id": 3,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "think about it",
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 21612.389,
+    "firstPartialAt": 21612.331875,
+    "speechEndAt": 21612.347542,
+    "detectorIssuedAt": 21612.371042,
+    "detectorAnsweredAt": 21612.38325,
+    "draft": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "shown": {
+      "read": "They need to feel heard before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What would make this worth your time?",
+      "nextStep": "Short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 22169.021458,
+    "firstTokenAt": 22063.203708,
+    "fullCardAt": 23034.811833,
+    "guardAt": 23034.817375
+  }
+]

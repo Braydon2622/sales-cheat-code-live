@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Call Review</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --ink: #1b1f24; --muted: #5f6b7a; --line: #e2e6ea;
+    --accent: #2457d6; --accent-soft: #e8eefc; --good: #1e7a46; --good-soft: #e6f4ec;
+    --warn: #9a6200; --warn-soft: #fdf3e1; --bad: #b42318; --bad-soft: #fdecea; --chip: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111418; --panel: #1a1e24; --ink: #e8ebef; --muted: #9aa5b1; --line: #2b313a;
+      --accent: #7aa2ff; --accent-soft: #1f2a44; --good: #5fd08c; --good-soft: #15291e;
+      --warn: #f0b552; --warn-soft: #2d2410; --bad: #ff7b6e; --bad-soft: #321a18; --chip: #252b33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 14px 20px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  header h1 { font-size: 18px; margin: 0; }
+  header .sub { color: var(--muted); font-size: 13px; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip { background: var(--chip); border-radius: 999px; padding: 2px 10px; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+  .chip.good { background: var(--good-soft); color: var(--good); }
+  .chip.warn { background: var(--warn-soft); color: var(--warn); }
+  .chip.bad { background: var(--bad-soft); color: var(--bad); }
+  main { display: grid; grid-template-columns: 340px 1fr; gap: 16px; padding: 16px 20px; max-width: 1400px; margin: 0 auto; }
+  main > * { min-width: 0; } /* let grid columns shrink instead of overflowing the window */
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; padding: 12px 16px; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+  .panel h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 10px; }
+  #drop { border: 2px dashed var(--line); border-radius: 12px; padding: 28px 16px; text-align: center; cursor: pointer; transition: .15s; }
+  #drop.over { border-color: var(--accent); background: var(--accent-soft); }
+  #drop strong { display: block; font-size: 16px; margin-bottom: 4px; }
+  #drop span { color: var(--muted); font-size: 13px; }
+  label.toggle { display: flex; gap: 8px; align-items: center; margin-top: 12px; font-size: 14px; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.danger { color: var(--bad); }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  .samples button { display: block; width: 100%; text-align: left; margin-bottom: 6px; }
+  .samples small { display: block; color: var(--muted); font-size: 12px; }
+  .row { display: flex; gap: 8px; }
+  input[type=text], textarea { font: inherit; width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; background: var(--panel); color: var(--ink); }
+  .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .job { padding: 8px 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .bar { height: 6px; background: var(--chip); border-radius: 3px; margin-top: 6px; overflow: hidden; }
+  .bar > div { height: 100%; background: var(--accent); width: 0; transition: width .2s; }
+  .err { color: var(--bad); font-size: 13px; }
+  #history .item { display: block; width: 100%; text-align: left; margin-bottom: 6px; padding: 8px 10px; }
+  #history .item.active { border-color: var(--accent); background: var(--accent-soft); }
+  #history .name { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+  #history .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+  .empty { color: var(--muted); text-align: center; padding: 60px 20px; }
+  .detail-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
+  .detail-head h2 { font-size: 20px; text-transform: none; letter-spacing: 0; color: var(--ink); margin: 0 0 6px; overflow-wrap: anywhere; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+  @media (max-width: 1100px) { .grid { grid-template-columns: 1fr; } }
+  .kv { background: var(--bg); border-radius: 8px; padding: 8px 10px; }
+  .kv b { display: block; font-size: 12px; color: var(--muted); font-weight: 600; }
+  .note { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 10px 12px; border-radius: 6px; margin-top: 12px; }
+  .text-box { background: var(--bg); border-radius: 8px; padding: 12px; font-size: 15px; white-space: pre-wrap; }
+  .slip { border-left: 4px solid var(--bad); background: var(--bad-soft); padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; }
+  .moment { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+  .moment .tag { font-weight: 700; }
+  .quote { color: var(--muted); margin: 6px 0; }
+  .quote b { color: var(--ink); }
+  .card { background: var(--bg); border-radius: 8px; padding: 10px 12px; margin-top: 8px; }
+  .card div { margin: 2px 0; }
+  .card b { display: inline-block; min-width: 92px; color: var(--muted); font-size: 12px; text-transform: uppercase; }
+  .card .send { font-weight: 600; }
+  .rate { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; }
+  .rate button { padding: 4px 10px; }
+  .rate button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .rate input { flex: 1; min-width: 160px; }
+  details summary { cursor: pointer; color: var(--muted); }
+  .tline { font-size: 14px; padding: 2px 0; }
+  .tline .who { display: inline-block; width: 64px; font-weight: 600; font-size: 12px; }
+  .tline .rep { color: var(--accent); } .tline .client { color: var(--warn); }
+  dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); max-width: 420px; }
+  dialog::backdrop { background: rgba(0,0,0,.4); }
+  dialog .row { flex-wrap: wrap; margin-top: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Call Review</h1>
+    <div class="sub">Sales Cheat Code Live · drop in a call transcript, get coaching feedback</div>
+  </div>
+  <div class="chips" id="status"></div>
+</header>
+
+<main>
+  <aside>
+    <section class="panel">
+      <h2>Add calls</h2>
+      <div id="drop" tabindex="0" role="button" aria-label="Choose transcript files">
+        <strong>Drop transcript files here</strong>
+        <span>or click to choose · Dialpad .json or "Speaker: text" .txt · several at once is fine</span>
+      </div>
+      <input id="file" type="file" accept=".json,.txt" multiple hidden>
+      <label class="toggle"><input type="checkbox" id="mock"> Mock mode (free, canned feedback, to test the flow)</label>
+      <div id="jobs"></div>
+    </section>
+
+    <section class="panel samples">
+      <h2>Try a sample call</h2>
+      <div id="samples"></div>
+      <div class="hint">Synthetic role-play calls with fake personal details, so you can see the redaction work.</div>
+    </section>
+
+    <section class="panel">
+      <h2>From Dialpad</h2>
+      <div class="row">
+        <input type="text" id="callId" placeholder="Dialpad call ID" inputmode="numeric">
+        <button id="fetchCall">Review</button>
+      </div>
+      <div class="hint" id="dialpadHint"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Reviews</h2>
+      <div id="history"></div>
+    </section>
+  </aside>
+
+  <section id="detail">
+    <div class="panel empty">Drop a call on the left, or try a sample, to see its coaching report here.</div>
+  </section>
+</main>
+
+<dialog id="repDialog">
+  <strong>Which speaker is the loan officer?</strong>
+  <div class="hint" id="repFile"></div>
+  <div class="row" id="repChoices"></div>
+  <div class="row"><button id="repCancel">Cancel</button></div>
+</dialog>
+
+<script>
+"use strict";
+// Every value from the server or a transcript goes in through textContent (never innerHTML).
+function el(tag, attrs, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === "class") n.className = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+    else if (v !== false && v != null) n.setAttribute(k, v === true ? "" : v);
+  }
+  for (const kid of kids.flat()) if (kid != null && kid !== false) n.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+  return n;
+}
+const $ = (id) => document.getElementById(id);
+const api = async (path, opts) => {
+  const res = await fetch(path, { headers: { "content-type": "application/json" }, ...opts });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw Object.assign(new Error(body.error || res.statusText), { status: res.status, body });
+  return body;
+};
+const usd = (n) => "$" + Number(n || 0).toFixed(n < 0.1 ? 4 : 2);
+const label = (s) => String(s || "").replace(/_/g, " ");
+const tempClass = { Hot: "bad", Warm: "warn", Cold: "" };
+let status = {};
+let current = null;
+
+async function refreshStatus() {
+  status = await api("/api/status");
+  const s = $("status");
+  s.replaceChildren(
+    el("span", { class: "chip " + (status.liveAvailable ? "good" : "warn") }, status.liveAvailable ? "Live AI" : "Mock only (no API key)"),
+    status.liveAvailable ? el("span", { class: "chip" }, `Spent ${usd(status.spentUsd)} of ${usd(status.maxUsd)} this session`) : null,
+    el("span", { class: "chip" }, status.dialpadAvailable ? "Dialpad connected" : "Dialpad not connected"),
+  );
+  if (!status.liveAvailable) { $("mock").checked = true; $("mock").disabled = true; }
+  $("fetchCall").disabled = !status.dialpadAvailable;
+  $("callId").disabled = !status.dialpadAvailable;
+  $("dialpadHint").textContent = status.dialpadAvailable
+    ? "Pulls the transcript from Dialpad, redacts it, and reviews it."
+    : "Needs DIALPAD_API_KEY (after approval). Until then, upload transcript files.";
+}
+
+// ---------------------------------------------------------------- uploads
+const drop = $("drop");
+drop.addEventListener("click", () => $("file").click());
+drop.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); $("file").click(); } });
+drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
+drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); handleFiles(e.dataTransfer.files); });
+$("file").addEventListener("change", (e) => { handleFiles(e.target.files); e.target.value = ""; });
+
+async function handleFiles(files) {
+  for (const f of files) {
+    if (!/\.(json|txt)$/i.test(f.name)) { jobRow(f.name).fail("Only .json (Dialpad) or .txt transcripts."); continue; }
+    if (f.size > 5 * 1024 * 1024) { jobRow(f.name).fail("File is over 5 MB."); continue; }
+    submit(f.name, await f.text());
+  }
+}
+
+async function submit(fileName, content, repName) {
+  const row = jobRow(fileName);
+  try {
+    const r = await api("/api/reviews", { method: "POST", body: JSON.stringify({ fileName, content, repName, mock: $("mock").checked }) });
+    follow(r.jobId, r.reviewId, row);
+  } catch (err) {
+    if (err.status === 422 && err.body.speakers) {
+      row.remove();
+      const choice = await askRep(fileName, err.body.speakers);
+      if (choice) submit(fileName, content, choice);
+      return;
+    }
+    row.fail(err.message);
+  }
+}
+
+function askRep(fileName, speakers) {
+  return new Promise((resolve) => {
+    const d = $("repDialog");
+    $("repFile").textContent = fileName;
+    $("repChoices").replaceChildren(...speakers.map((s) => el("button", { class: "primary", onclick: () => { d.close(); resolve(s); } }, s)));
+    $("repCancel").onclick = () => { d.close(); resolve(null); };
+    d.showModal();
+  });
+}
+
+function jobRow(name) {
+  const msg = el("div", { class: "hint" }, "Uploading…");
+  const fill = el("div");
+  const row = el("div", { class: "job" }, el("div", {}, name), el("div", { class: "bar" }, fill), msg);
+  $("jobs").prepend(row);
+  return {
+    set(text, pct) { msg.textContent = text; if (pct != null) fill.style.width = pct + "%"; },
+    fail(text) { msg.className = "err"; msg.textContent = text; fill.style.width = "0"; },
+    remove() { row.remove(); },
+    done(text) { msg.textContent = text; fill.style.width = "100%"; setTimeout(() => row.remove(), 6000); },
+  };
+}
+
+function follow(jobId, reviewId, row) {
+  const es = new EventSource(`/api/jobs/${encodeURIComponent(jobId)}/events`);
+  es.addEventListener("queued", (e) => {
+    const d = JSON.parse(e.data);
+    const red = Object.entries(d.redactions || {}).map(([k, v]) => `${v} ${k}`).join(", ");
+    row.set(`Queued · ${d.lines} lines${red ? ` · removed ${red}` : ""}`, 2);
+  });
+  es.addEventListener("progress", (e) => {
+    const d = JSON.parse(e.data);
+    if (d.step === "lines") row.set(`Reading the call: line ${d.done} of ${d.total}`, Math.round((d.done / d.total) * 90));
+    else row.set("Writing the summary and follow-up text…", 95);
+  });
+  es.addEventListener("done", async (e) => {
+    es.close();
+    const d = JSON.parse(e.data);
+    row.done(`Done · ${usd(d.costUsd)}`);
+    await Promise.all([refreshStatus(), refreshHistory()]);
+    show(d.reviewId);
+  });
+  es.addEventListener("failed", (e) => { es.close(); row.fail(JSON.parse(e.data).error); });
+  es.onerror = () => { if (es.readyState === EventSource.CLOSED) return; };
+}
+
+// ---------------------------------------------------------------- samples and Dialpad
+async function loadSamples() {
+  const list = await api("/api/samples");
+  $("samples").replaceChildren(...list.map((s) =>
+    el("button", { onclick: async () => { const f = await api(`/api/samples/${encodeURIComponent(s.file)}`); submit(f.fileName, f.content); } },
+      s.title, el("small", {}, `${s.format} · ${s.note}`))));
+}
+$("fetchCall").addEventListener("click", async () => {
+  const callId = $("callId").value.trim();
+  const row = jobRow(`Dialpad call ${callId}`);
+  try {
+    const r = await api("/api/dialpad", { method: "POST", body: JSON.stringify({ callId, mock: $("mock").checked }) });
+    follow(r.jobId, null, row);
+  } catch (err) { row.fail(err.message); }
+});
+
+// ---------------------------------------------------------------- history
+async function refreshHistory() {
+  const list = await api("/api/reviews");
+  const h = $("history");
+  if (!list.length) { h.replaceChildren(el("div", { class: "hint" }, "No reviews yet.")); return; }
+  h.replaceChildren(...list.map((r) => el("button", { class: "item" + (current === r.id ? " active" : ""), onclick: () => show(r.id) },
+    el("div", { class: "name" }, r.fileName),
+    el("div", { class: "hint" }, new Date(r.createdAt).toLocaleString()),
+    el("div", { class: "meta" },
+      r.temperature ? el("span", { class: "chip " + (tempClass[r.temperature] || "") }, r.temperature) : null,
+      r.stage ? el("span", { class: "chip" }, r.stage) : null,
+      el("span", { class: "chip " + (r.slips ? "bad" : "good") }, `${r.slips} compliance flag${r.slips === 1 ? "" : "s"}`),
+      el("span", { class: "chip" }, `${r.rated}/${r.moments} rated`),
+      r.mode === "mock" ? el("span", { class: "chip warn" }, "mock") : null))));
+}
+
+// ---------------------------------------------------------------- one review
+async function show(id) {
+  if (!id) return;
+  current = id;
+  if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + encodeURIComponent(id));
+  const r = await api(`/api/reviews/${encodeURIComponent(id)}`);
+  refreshHistory();
+  const a = r.analysis;
+  const red = Object.entries(r.redactions || {});
+  const sections = [];
+
+  sections.push(el("section", { class: "panel" },
+    el("div", { class: "detail-head" },
+      el("div", {},
+        el("h2", {}, r.fileName),
+        el("div", { class: "chips" },
+          el("span", { class: "chip" }, new Date(r.createdAt).toLocaleString()),
+          el("span", { class: "chip" }, `${r.lines} lines · ${Math.round(r.durationSec / 60)} min`),
+          a ? el("span", { class: "chip " + (tempClass[a.temperature] || "") }, a.temperature) : null,
+          a ? el("span", { class: "chip" }, a.stage) : null,
+          el("span", { class: "chip " + (r.mode === "mock" ? "warn" : "") }, r.mode === "mock" ? "mock feedback" : `AI cost ${usd(r.costUsd)}`),
+          el("span", { class: "chip good" }, red.length ? "Removed: " + red.map(([k, v]) => `${v} ${label(k)}`).join(", ") : "No personal details found"))),
+      el("button", { class: "danger", onclick: async () => {
+        if (!confirm("Delete this review and its saved transcript?")) return;
+        await api(`/api/reviews/${encodeURIComponent(r.id)}`, { method: "DELETE" });
+        current = null;
+        $("detail").replaceChildren(el("div", { class: "panel empty" }, "Review deleted."));
+        refreshHistory();
+      } }, "Delete")),
+    a ? [
+      el("p", {}, a.summary),
+      el("div", { class: "grid" },
+        kv("Objections", a.objections), kv("Next step", a.next_step), kv("Follow up", a.follow_up)),
+      el("div", { class: "note" }, el("b", {}, "Coaching note: "), a.coaching_note),
+    ] : el("p", { class: "err" }, "The call summary didn't complete. See errors below.")));
+
+  if (r.followUp) {
+    const f = r.followUp;
+    const style = f.violations.filter((v) => v.severity === "style");
+    sections.push(el("section", { class: "panel" },
+      el("h2", {}, "Follow-up text"),
+      el("div", { class: "text-box" }, f.final),
+      el("div", { class: "row", style: "margin-top:8px;align-items:center;flex-wrap:wrap" },
+        el("button", { class: "primary", onclick: (e) => { navigator.clipboard.writeText(f.final); e.target.textContent = "Copied"; setTimeout(() => (e.target.textContent = "Copy text"), 1500); } }, "Copy text"),
+        f.replaced
+          ? el("span", { class: "chip bad" }, "The draft broke a compliance rule and was replaced with a safe text")
+          : style.length
+            ? el("span", { class: "chip warn" }, "Style: " + style.map((v) => label(v.rule)).join(", "))
+            : el("span", { class: "chip good" }, "Passes the text rules: under 300 characters, \"home\" wording, two-option close, no rates or approval")),
+      f.replaced ? el("div", { class: "hint" }, "Blocked draft: " + f.original) : null));
+  }
+
+  sections.push(el("section", { class: "panel" },
+    el("h2", {}, "Compliance: the loan officer's own words"),
+    r.slips.length
+      ? r.slips.map((s) => el("div", { class: "slip" }, el("b", {}, `${s.time} · ${s.rules.map(label).join(", ")}`), el("div", {}, `"${s.text}"`)))
+      : el("div", { class: "chip good" }, "No compliance slips flagged")));
+
+  sections.push(el("section", { class: "panel" },
+    el("h2", {}, `Coaching moments (${r.moments.length})`),
+    el("div", { class: "hint", style: "margin:-4px 0 10px" }, "Rate each card 1–5: would you want your loan officer to see it? Your ratings are saved with the review."),
+    r.moments.length ? r.moments.map((m) => momentCard(r, m)) : el("div", { class: "hint" }, "No coaching moments found in this call.")));
+
+  sections.push(el("section", { class: "panel" },
+    el("details", {}, el("summary", {}, `Transcript (redacted, ${r.transcript.length} lines)`),
+      r.transcript.map((l) => el("div", { class: "tline" }, el("span", { class: "who " + l.speaker }, l.speaker === "rep" ? "LO" : "CLIENT"), ` ${l.time}  ${l.text}`)))));
+
+  if (r.errors.length) sections.push(el("section", { class: "panel" }, el("h2", {}, "Errors"), r.errors.map((e) => el("div", { class: "err" }, e))));
+  $("detail").replaceChildren(...sections);
+  // On narrow screens the report sits below the upload panels: bring it into view.
+  if (window.matchMedia("(max-width: 860px)").matches) $("detail").scrollIntoView({ behavior: "smooth", block: "start" });
+  else window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function kv(k, v) { return el("div", { class: "kv" }, el("b", {}, k), v); }
+
+function momentCard(r, m) {
+  const saved = r.ratings[String(m.cardId)];
+  const note = el("input", { type: "text", placeholder: "Optional note: what would make it better?", value: saved ? saved.note : "" });
+  const state = el("span", { class: "hint" }, saved ? "Saved" : "");
+  const buttons = [1, 2, 3, 4, 5].map((n) => el("button", { class: saved && saved.rating === n ? "on" : "", onclick: () => save(n) }, String(n)));
+  async function save(n) {
+    await api(`/api/reviews/${encodeURIComponent(r.id)}/ratings/${m.cardId}`, { method: "PUT", body: JSON.stringify({ rating: n, note: note.value }) });
+    buttons.forEach((b, i) => b.classList.toggle("on", i + 1 === n));
+    r.ratings[String(m.cardId)] = { rating: n, note: note.value };
+    state.textContent = "Saved";
+    refreshHistory();
+  }
+  note.addEventListener("change", () => { const cur = r.ratings[String(m.cardId)]; if (cur) save(cur.rating); });
+  const c = m.card;
+  return el("div", { class: "moment" },
+    el("div", {}, el("span", { class: "tag" }, `${m.time} · ${label(m.subtype ? `${m.type}: ${m.subtype}` : m.type)}`),
+      m.stoppedByGuard ? el("span", { class: "chip warn", style: "margin-left:8px" }, "safe fallback card") : null),
+    el("div", { class: "quote" }, el("b", {}, "Client: "), m.clientText),
+    el("div", { class: "quote" }, el("b", {}, "LO said next: "), m.repNext || "(nothing)"),
+    el("div", { class: "card" },
+      el("div", {}, el("b", {}, "Read"), c.read),
+      el("div", { class: "send" }, el("b", {}, "Send this"), c.sendThis),
+      el("div", {}, el("b", {}, "Backup"), c.backup),
+      el("div", {}, el("b", {}, "Next step"), c.nextStep),
+      el("div", {}, el("b", {}, "Watch out"), c.watchOut)),
+    el("div", { class: "rate" }, el("span", { class: "hint" }, "Rate:"), buttons, note, state));
+}
+
+// Each review has its own address (#review-id), so it can be bookmarked or reopened directly.
+refreshStatus()
+  .then(() => Promise.all([loadSamples(), refreshHistory()]))
+  .then(() => { const id = decodeURIComponent(location.hash.slice(1)); if (id) show(id).catch(() => {}); });
+</script>
+</body>
+</html>

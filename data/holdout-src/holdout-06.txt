@@ -1,0 +1,26 @@
+# id: holdout-06
+# title: Loyal bank customer, rep trashes the bank
+# scenario: Long-time customer of a regional bank plans to get her purchase loan there. The rep disparages the bank and quotes a rate to win her over.
+# synthetic: true
+REP: Hi, is this Mireille? This is Kofi from Copperleaf Home Loans.
+CLIENT: Speaking. What's this about?
+REP: You requested info on a purchase loan, I think you're under contract on a condo?
+CLIENT: Not under contract yet, but close. We made an offer yesterday.
+REP: Exciting. Have you gotten pre-approved anywhere yet?
+CLIENT: Not formally. To be honest I'll probably just go with my bank. I've been with them twenty years.  [objection:bank_loyalty]
+REP: I get it, but honestly, banks like that are slow and they bury you in fees. Most of my clients regret going with their bank.  [rep_violation:other]
+CLIENT: Hm. I've never had a problem with them.
+REP: Sure, for checking accounts. Mortgages are a different animal. We could probably get you around five and seven-eighths.  [rep_violation:rate_quote]
+CLIENT: Is that a real number or a teaser?  [question]
+REP: It would depend on your full file, of course.
+CLIENT: Right. Well, my bank gives me a relationship discount, so I'm inclined to stay put.
+REP: Understood. What's the purchase price on the condo?
+CLIENT: Two-eighty-five.
+REP: And how much are you putting down?
+CLIENT: Twenty percent.
+REP: That's a great position to be in. Would you be open to letting us put a competing estimate together so you can compare side by side?
+CLIENT: Maybe. Just email me something in writing and I'll look at it.  [objection:stall]
+REP: I can do that. What's the best email?
+CLIENT: The one on the form is fine.
+REP: Perfect. I'll get that over today.
+CLIENT: Okay. Thanks.

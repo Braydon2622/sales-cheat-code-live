@@ -1,0 +1,26 @@
+# id: holdout-18
+# title: Engineer with a spreadsheet of lenders
+# scenario: Analytical engineer is comparing lenders for a purchase in the spring and wants a breakdown of costs. He is polite but makes clear he is only gathering data.
+# synthetic: true
+REP: Hi, is this Viktor? This is Celeste with Copperleaf Home Loans.
+CLIENT: Yes, hello. Thanks for calling.
+REP: Of course. I see you're looking at a purchase?
+CLIENT: Eventually. I'm building a spreadsheet of lenders right now, comparing fees and terms. Just collecting data, nothing serious yet.  [objection:just_shopping]
+REP: Love that you're doing your homework. What's your timeline looking like?
+CLIENT: Probably April or May. Our lease ends in June.
+REP: Okay. And what price range?
+CLIENT: Five hundred to five-fifty.
+REP: Got it. Do you know your credit score?
+CLIENT: Seven-ninety-something, last I checked.
+REP: Excellent. Are you planning on twenty percent down?
+CLIENT: Yes. So what are your lender fees, specifically? Origination, underwriting, that kind of thing?  [question]
+REP: Those depend on the loan program and whether you choose to buy down a rate, so the cleanest comparison is an official Loan Estimate. I can explain each line once you have it.
+CLIENT: Every lender says that.
+REP: It's because the estimate is the only apples-to-apples document. You can line them up line by line in your spreadsheet.
+CLIENT: Hm. That's actually a good point.
+REP: Would you like me to send you a short guide on how to read a Loan Estimate?
+CLIENT: Sure. But again, I'm just gathering info. I won't decide anything until spring.
+REP: Totally understood. Mind if I check back in February?
+CLIENT: February's okay.
+REP: Great. I'll send that guide today. Thanks, Viktor.
+CLIENT: Thank you.

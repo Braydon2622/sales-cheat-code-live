@@ -1,0 +1,23 @@
+# id: call-08
+# title: Co-borrower partner has to sign off
+# scenario: Jamal and his partner are buying together; Jamal is interested but says his partner is the co-borrower and needs to be on board. The rep stays compliant and schedules a joint call.
+# synthetic: true
+REP: Hey Jamal, it's Erin from Copperleaf Home Loans. You and your partner were looking at duplexes?
+CLIENT: Yeah, that's right. Live in one side, rent the other.
+REP: Love that strategy. Have you found anything you like yet?
+CLIENT: There's one on Maple we toured Sunday. It needs work but the numbers kind of make sense.
+REP: Nice. What kind of work are we talking?
+CLIENT: Mostly cosmetic. The upstairs tenant has like eleven cats though, so, carpet's gotta go.
+REP: Oh no. Yeah, that's a full replacement.
+CLIENT: Ha, yeah. Anyway, I'm into it, but Tasha's the co-borrower and she's way more cautious than me. I can't move on anything until she's on board.  [objection:spouse]
+REP: Smart, you both need to be comfortable. What are her main concerns, do you know?
+CLIENT: Mostly whether we can actually afford it if the rental side sits empty.
+REP: That's a really good question, and it's something we can walk through with real numbers. Do you know if you'd want rental income counted toward qualifying?
+CLIENT: I don't even know how that works. Can you count the rent?  [question]
+REP: In a lot of cases a portion of the expected rent can be considered, but the specifics depend on the loan type and the property. I'd rather walk you both through it than guess.
+CLIENT: Yeah, she'll want to hear that directly.
+REP: Then let's get her on. Would tomorrow at lunch or Thursday evening be better for the two of you?
+CLIENT: Thursday evening, like six-thirty.
+REP: Thursday at six-thirty. I'll send a link to both of you. If you can bring the listing and any rent info from the seller, that'd help.
+CLIENT: Cool, will do.
+REP: Thanks Jamal, talk Thursday.

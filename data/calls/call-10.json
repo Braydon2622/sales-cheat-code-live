@@ -1,0 +1,166 @@
+{
+  "id": "call-10",
+  "title": "Ghosted lead says been busy, send me an email",
+  "scenario": "Tyler started a refinance application three weeks ago and stopped responding. The rep calls back; Tyler brushes it off as busy and asks for an email, and the rep tries to secure a specific next step.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 8.8,
+      "text": "Hi Tyler, it's Grace with Copperleaf Home Loans. We started your refinance application a few weeks back, I just wanted to check in.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 9.3,
+      "end": 13.9,
+      "text": "Oh, hey. Yeah, sorry, I've just been super busy. Work's been crazy.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 14.5,
+      "end": 17.2,
+      "text": "Totally understand. What do you do again?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 17.9,
+      "end": 21.7,
+      "text": "Logistics. It's peak season, everything's on fire until like January.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 22.5,
+      "end": 25.2,
+      "text": "Oh, that tracks. Holidays must be wild.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 26.1,
+      "end": 31.5,
+      "text": "You have no idea. I've eaten dinner in my car four nights this week.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 32.5,
+      "end": 41.3,
+      "text": "Oof. Okay, I'll be quick then. Last time we talked you were hoping to lower your monthly payment. Is that still the goal?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 42.4,
+      "end": 51.2,
+      "text": "Yeah, I mean, eventually. Can you just send me something in an email and I'll look at it when I get a chance?",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 52.4,
+      "end": 65.9,
+      "text": "Happy to send an email. The only thing is, the application's just missing two items, so an email probably won't move it forward on its own. Can I tell you what they are? Thirty seconds.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 66.3,
+      "end": 67.5,
+      "text": "Sure, go ahead.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 68,
+      "end": 73,
+      "text": "Your most recent pay stub and your homeowners insurance declarations page. That's it.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 73.6,
+      "end": 77.4,
+      "text": "Oh. That's it? I thought it was a whole thing.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 78.1,
+      "end": 82.7,
+      "text": "That's it. You could probably snap photos of both on your phone.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 83.5,
+      "end": 87.7,
+      "text": "Okay, yeah, I can do that. Where do I send them?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 88.6,
+      "end": 97.4,
+      "text": "I'll text you a secure upload link right after this call. Would tonight or tomorrow morning be easier for you to send them?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 98.4,
+      "end": 100.3,
+      "text": "Tomorrow morning, before my shift.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 101.4,
+      "end": 106.4,
+      "text": "Perfect. I'll text you a reminder at seven. Thanks Tyler, hang in there.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 107.6,
+      "end": 108.8,
+      "text": "Thanks, appreciate it.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "id": "call-20",
+  "title": "Borrower with a 640 score fishes for approval",
+  "scenario": "Tanya is a single mom with a 640 credit score hoping to buy a starter home. She asks directly whether she'll be approved and what her payment would be; the rep guarantees approval and quotes a payment.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 5,
+      "text": "Hi Tanya, Kyle with Copperleaf Home Loans. Is this still a good time?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 5.5,
+      "end": 10.1,
+      "text": "Yeah, the kids are at practice, so I've got like twenty minutes.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 10.7,
+      "end": 11.9,
+      "text": "Perfect. What sport?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.6,
+      "end": 17.2,
+      "text": "Soccer, both of them. I spend my whole life at that field.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 18,
+      "end": 22.2,
+      "text": "Ha, I know the feeling. So you're looking at starter homes?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 23.1,
+      "end": 28.1,
+      "text": "Yeah, something small, two or three bedrooms, around two-fifty. I'm tired of renting.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 29.1,
+      "end": 33.7,
+      "text": "That makes sense. Can I ask where your credit is right now?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 34.8,
+      "end": 40.2,
+      "text": "That's the thing, it's like a six-forty. Will I get approved with a six-forty?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 41.4,
+      "end": 46,
+      "text": "Oh yeah, I guarantee you'll get approved with a six-forty, no problem.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "approval_promise"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 46.4,
+      "end": 49.5,
+      "text": "Really? Every other place made it sound iffy.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 50,
+      "end": 52.7,
+      "text": "Nah, we do these all the time.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 53.3,
+      "end": 57.9,
+      "text": "Okay. And how much would my payment be on a two-fifty house?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 58.6,
+      "end": 62.8,
+      "text": "With taxes and insurance, you'd be about nineteen hundred a month.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 63.6,
+      "end": 70.9,
+      "text": "Ooh, that's more than my rent. I'm paying sixteen hundred now. I don't know if I can do that.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "rate_too_high"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 71.8,
+      "end": 75.6,
+      "text": "Well, you'd be building equity instead of paying a landlord.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 76.6,
+      "end": 80.4,
+      "text": "I know, I know. I need to think about it.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 81.5,
+      "end": 86.5,
+      "text": "Sure. What if we got the application started so you'd have it ready?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 87.7,
+      "end": 90.4,
+      "text": "What would I need to send you?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 90.8,
+      "end": 96.6,
+      "text": "Pay stubs, W-2s, bank statements, and any child support documentation if you'd like that counted.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 97.1,
+      "end": 100.9,
+      "text": "Okay. Oh, they're done, I have to go grab them.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 101.5,
+      "end": 106.5,
+      "text": "No problem. Would Saturday morning or Monday evening be better to talk again?",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 107.2,
+      "end": 108,
+      "text": "Monday evening.",
+      "labels": []
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 108.8,
+      "end": 111.9,
+      "text": "Monday at seven. Talk to you then, Tanya.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# id: holdout-12
+# title: Chatty empty-nester curious about downsizing
+# scenario: Talkative woman whose kids moved out is curious whether downsizing to a condo makes sense. She is clearly just curious and drifts into small talk.
+# synthetic: true
+REP: Hi, is this Lorraine? This is Felix with Copperleaf Home Loans.
+CLIENT: Felix! Yes, hi, hello. Oh, I'm so glad it's a real person. I hate those robot calls.
+REP: Ha, me too. How's your day going?
+CLIENT: Oh, it's lovely. I just got back from water aerobics. Have you ever tried it? It's wonderful for the knees.
+REP: I haven't, but now I'm tempted. So I saw you were asking about a condo purchase?
+CLIENT: Well, I was curious, that's all. My youngest just moved to Denver and the house feels enormous. I'm not ready to do anything, I'm just wondering what's out there.  [objection:just_shopping]
+REP: That's a great reason to start thinking about it. How long have you been in the house?
+CLIENT: Twenty-six years. We raised all four kids there.
+REP: Wow. Is there still a mortgage on it?
+CLIENT: A tiny one. Maybe forty thousand left.
+REP: So you'd likely have quite a bit of equity to put toward a condo.
+CLIENT: I'd think so. My friend Dot sold hers and bought a place by the lake. She has a balcony. I'm a little jealous.
+REP: Ha, a balcony is hard to beat. Would you plan to sell first and then buy?
+CLIENT: I suppose I'd have to. But honestly, I'm only curious at this point. My daughter thinks I'm being impulsive.
+REP: Totally fair, it's a big decision. Would it help if I put together a simple overview of how a sell-then-buy usually works, no strings attached?
+CLIENT: Oh, that would be nice. Could you mail it? My printer's broken.
+REP: Of course. And would you like me to check back in a couple months?
+CLIENT: That would be fine.
+REP: Great. Enjoy the rest of your day, Lorraine.
+CLIENT: You too, Felix. Try the water aerobics!

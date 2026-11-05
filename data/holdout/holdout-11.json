@@ -1,0 +1,224 @@
+{
+  "id": "holdout-11",
+  "title": "Veteran ready to buy with VA loan",
+  "scenario": "Recently separated Army veteran has found a house and wants to move fast with a VA loan. He asks about documents, timeline and costs; the rep answers without quoting numbers.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Jamal? This is Renee with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 7.8,
+      "text": "Yes ma'am, thanks for calling back so quick.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 8.4,
+      "end": 12.6,
+      "text": "Of course. I see you're interested in a VA purchase loan?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 13.3,
+      "end": 24.1,
+      "text": "Yes. I got out of the Army in June and I've got a job lined up with the county. My wife and I found a house we love.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 24.9,
+      "end": 31.8,
+      "text": "Thank you for your service. Congratulations on the job and the house. Have you made an offer yet?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 32.7,
+      "end": 38.9,
+      "text": "Not yet, our agent wants a pre-approval letter first. How fast can you get me one?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 39.9,
+      "end": 47.2,
+      "text": "If you get me the documents today, we can usually turn around a pre-approval quickly once I've reviewed everything.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 48.3,
+      "end": 51,
+      "text": "Okay, what do you need from me?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 52.2,
+      "end": 61,
+      "text": "Your DD-214, your Certificate of Eligibility if you have it, the offer letter from the county, and a couple months of bank statements.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 61.4,
+      "end": 65.6,
+      "text": "I've got the DD-214 right here. Not sure about the certificate.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 66.1,
+      "end": 69.2,
+      "text": "No problem, we can request that for you.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 69.8,
+      "end": 74,
+      "text": "Great. Will I have to put any money down with VA?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 74.7,
+      "end": 84.7,
+      "text": "Many VA buyers don't need a down payment, but it depends on your entitlement and the price, so I'll confirm that once I see your eligibility.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 85.5,
+      "end": 90.1,
+      "text": "Got it. And what about the funding fee, how much is that?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 91,
+      "end": 101.4,
+      "text": "It depends on whether it's your first use and on any disability rating, so I'll lay out the exact figure in your loan estimate rather than guess.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 102.4,
+      "end": 105.5,
+      "text": "Makes sense. I do have a rating, actually.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 106.6,
+      "end": 111.6,
+      "text": "That could make a difference, so include your VA award letter as well.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 112.8,
+      "end": 117.4,
+      "text": "Will do. Once we're under contract, how long until we can close?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 117.8,
+      "end": 126.3,
+      "text": "It depends on the appraisal and the seller, but I'll give you a realistic timeline as soon as we have a contract.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 126.8,
+      "end": 129.9,
+      "text": "Perfect. How do I send all this stuff?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 130.5,
+      "end": 135.1,
+      "text": "I'll text you a secure upload link right after we hang up.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 135.8,
+      "end": 138.9,
+      "text": "Sounds good. My wife's going to be thrilled.",
+      "labels": []
+    },
+    {
+      "index": 22,
+      "speaker": "rep",
+      "start": 139.7,
+      "end": 142.8,
+      "text": "Let's get you that letter. Talk soon, Jamal.",
+      "labels": []
+    },
+    {
+      "index": 23,
+      "speaker": "client",
+      "start": 143.7,
+      "end": 144.5,
+      "text": "Thanks, Renee.",
+      "labels": []
+    }
+  ]
+}

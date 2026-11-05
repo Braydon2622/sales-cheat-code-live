@@ -1,0 +1,2867 @@
+[
+  {
+    "callId": "call-01",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "it was right around six percent, and that just feels way",
+      "confidence": 0.9,
+      "utteranceIndex": 5,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 21350.857208,
+    "firstPartialAt": 13494.14125,
+    "speechEndAt": 23137.209333,
+    "draft": {
+      "read": "Dana has a quote in hand and is already feeling the rate is too high. She's comparing, not closed. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I hear you, that's a real frustration. Before I say anything about numbers, what's the main goal for your home here, a lower monthly payment, pulling cash out, or paying off other debt?",
+      "backup": "Totally fair. I'd welcome the comparison. Can I ask what you were hoping to get out of this so I know what to look at?",
+      "nextStep": "After she answers, offer a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times, then day 2 with an angle tied to her stated goal, then day 4, day 7.",
+      "watchOut": "Don't quote, match, or beat a rate, and don't knock the other lender. Let her finish the sentence first. Ask what the quote covered (loan type, points, fees) before comparing."
+    },
+    "shown": {
+      "read": "Dana has a quote in hand and is already feeling the rate is too high. She's comparing, not closed. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I hear you, that's a real frustration. Before I say anything about numbers, what's the main goal for your home here, a lower monthly payment, pulling cash out, or paying off other debt?",
+      "backup": "Totally fair. I'd welcome the comparison. Can I ask what you were hoping to get out of this so I know what to look at?",
+      "nextStep": "After she answers, offer a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times, then day 2 with an angle tied to her stated goal, then day 4, day 7.",
+      "watchOut": "Don't quote, match, or beat a rate, and don't knock the other lender. Let her finish the sentence first. Ask what the quote covered (loan type, points, fees) before comparing."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 22703.029083,
+    "firstTokenAt": 22358.37425,
+    "fullCardAt": 24975.095,
+    "guardAt": 26479.310083
+  },
+  {
+    "callId": "call-01",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 17,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "So what would you need from",
+      "confidence": 0.9,
+      "utteranceIndex": 17,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 59071.313333,
+    "firstPartialAt": 56596.341667,
+    "speechEndAt": 59256.100708,
+    "draft": {
+      "read": "Client is leaning in and about to ask what you need to run the review. Buying signal, a bit of ARM worry. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Just a few things. Your latest statement, that letter from your bank, and your best email so I can send a secure link to get your info in. About 10 minutes and I'll put it side by side for you.",
+      "backup": "Mostly your current statement and that letter. I can walk you through the rest while we're on the phone, no pressure.",
+      "nextStep": "Book the review now: \"Does today at 4 or tomorrow at 10 work better for the side by side?\" Then get the letter and statement lined up before that time.",
+      "followUp": "If not booked, text same day with the two times and a short reminder to grab that letter, then day 2, day 4, day 7.",
+      "watchOut": "Don't quote a rate or promise a result. The ARM adjustment details come from their letter, so don't guess at them. Zillow value is an estimate, so don't treat it as a real appraisal."
+    },
+    "shown": {
+      "read": "Client is leaning in and about to ask what you need to run the review. Buying signal, a bit of ARM worry. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Just a few things. Your latest statement, that letter from your bank, and your best email so I can send a secure link to get your info in. About 10 minutes and I'll put it side by side for you.",
+      "backup": "Mostly your current statement and that letter. I can walk you through the rest while we're on the phone, no pressure.",
+      "nextStep": "Book the review now: \"Does today at 4 or tomorrow at 10 work better for the side by side?\" Then get the letter and statement lined up before that time.",
+      "followUp": "If not booked, text same day with the two times and a short reminder to grab that letter, then day 2, day 4, day 7.",
+      "watchOut": "Don't quote a rate or promise a result. The ARM adjustment details come from their letter, so don't guess at them. Zillow value is an estimate, so don't treat it as a real appraisal."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 60499.771292,
+    "firstTokenAt": 60104.5685,
+    "fullCardAt": 63002.06925,
+    "guardAt": 64605.958292
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "it's just way more ...",
+      "confidence": 0.8,
+      "utteranceIndex": 5,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 88211.937958,
+    "firstPartialAt": 82738.49375,
+    "speechEndAt": 93088.841583,
+    "draft": {
+      "read": "Sticker shock from a generic online calculator, and she has an offer pending, so the clock is real. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I hear you, those calculators are generic and miss your actual picture. Let me run it properly so you know where you really stand before you hear back on that offer. Takes about 10 minutes.",
+      "backup": "What number were you hoping to land at? Let's see how close we can get for your home.",
+      "nextStep": "Let her finish, then book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with an angle on being ready before the seller responds.",
+      "watchOut": "Don't quote or react to her calculator numbers, and don't promise a lower payment. Ask if she has a down payment amount and budget in mind."
+    },
+    "shown": {
+      "read": "Sticker shock from a generic online calculator, and she has an offer pending, so the clock is real. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I hear you, those calculators are generic and miss your actual picture. Let me run it properly so you know where you really stand before you hear back on that offer. Takes about 10 minutes.",
+      "backup": "What number were you hoping to land at? Let's see how close we can get for your home.",
+      "nextStep": "Let her finish, then book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with an angle on being ready before the seller responds.",
+      "watchOut": "Don't quote or react to her calculator numbers, and don't promise a lower payment. Ask if she has a down payment amount and budget in mind."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 90183.8015,
+    "firstTokenAt": 89816.698875,
+    "fullCardAt": 92266.871292,
+    "guardAt": 94118.244458
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "my credit union already pre-approved",
+      "confidence": 0.9,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 103627.26125,
+    "firstPartialAt": 99256.246333,
+    "speechEndAt": 106212.17325,
+    "draft": {
+      "read": "Offer is already in, so timing matters, and they're anchored on a generic calculator number plus a credit union letter. Not hostile, just comparing. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "That's smart, and good to have in your pocket. I'd love to be a second set of eyes. Let's run your real taxes and HOA so you know what the monthly looks like for this home, and compare it side by side.",
+      "backup": "Good to have a starting point. What did they tell you about how it all pencils out for this home?",
+      "nextStep": "Offer a 10-minute side by side using the real property numbers: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with an angle on having real numbers ready if the offer is accepted.",
+      "watchOut": "Don't knock the credit union or quote a payment. Let them finish the sentence first. Ask whether the credit union's letter is a full approval or just a pre-qualification, and what the property address and HOA are."
+    },
+    "shown": {
+      "read": "Offer is already in, so timing matters, and they're anchored on a generic calculator number plus a credit union letter. Not hostile, just comparing. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "That's smart, and good to have in your pocket. I'd love to be a second set of eyes. Let's run your real taxes and HOA so you know what the monthly looks like for this home, and compare it side by side.",
+      "backup": "Good to have a starting point. What did they tell you about how it all pencils out for this home?",
+      "nextStep": "Offer a 10-minute side by side using the real property numbers: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with an angle on having real numbers ready if the offer is accepted.",
+      "watchOut": "Don't knock the credit union or quote a payment. Let them finish the sentence first. Ask whether the credit union's letter is a full approval or just a pre-qualification, and what the property address and HOA are."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 105333.60875,
+    "firstTokenAt": 104634.463625,
+    "fullCardAt": 107338.411667,
+    "guardAt": 108679.919667
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "question",
+      "evidence": "How long does it usually take you guys to close?",
+      "confidence": 0.8,
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 122906.084042,
+    "firstPartialAt": 118875.282042,
+    "speechEndAt": 121928.597958,
+    "draft": {
+      "read": "Client is mildly interested but loyal to the credit union, and the earlier jab at them backfired. Closing time is a real buying signal, probably tied to a condo deadline. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "First, I got ahead of myself on the credit union. They've treated you well, and I shouldn't have said that. Closing time depends on your file and the condo's timeline. When does your contract need to close?",
+      "backup": "Good question. The timeline really depends on your file and the condo, so I'd want to see both. Do you have a closing date in your contract?",
+      "nextStep": "Get their closing date, then book a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times. Day 2, ask for the pre-approval letter details so you can compare. Day 4, check their closing date timeline. Day 7, a light check-in."
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "Great question. The honest answer depends on your full picture, and that's exactly what I'd check for you.",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked: text same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "banned_word",
+        "severity": "block",
+        "quote": "pre-approval",
+        "where": "followUp",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 124271.416875,
+    "firstTokenAt": 123602.388833,
+    "fullCardAt": 126018.785708
+  },
+  {
+    "callId": "call-02",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 17,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "Let me see if the offer even gets accepted first.",
+      "confidence": 0.6,
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 128054.824958,
+    "firstPartialAt": 124155.426458,
+    "speechEndAt": 127210.786417,
+    "draft": {
+      "read": "Soft stall tied to the offer; the rep earlier trashed the credit union and said they'll \"lose the condo,\" which hurt trust and is a compliance problem. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Smart plan. And I was too harsh on the credit union earlier, they sound like they've treated you well. Since offers move fast, can we do a quick side by side first so you're covered either way?",
+      "backup": "Totally fair. Want to send me their letter now so if the offer lands, you're not starting from scratch?",
+      "nextStep": "Get a small commitment before hanging up: \"Does a 10-minute review today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text asking how the offer is going and offering the two times. Day 2, check in on the offer status. Day 4, remind them the side by side takes 10 minutes. Day 7, then every 2 weeks.",
+      "watchOut": "Walk back the credit union bashing and the \"you'll lose this condo\" claim. The 30 day close was framed as typical, so don't let it sound promised. Don't compare fees or quote numbers until you see their full picture. They may be a pre-approved shopper, so the goal is a second look, not a switch."
+    },
+    "shown": {
+      "read": "Soft stall tied to the offer; the rep earlier trashed the credit union and said they'll \"lose the condo,\" which hurt trust and is a compliance problem. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Smart plan. And I was too harsh on the credit union earlier, they sound like they've treated you well. Since offers move fast, can we do a quick side by side first so you're covered either way?",
+      "backup": "Totally fair. Want to send me their letter now so if the offer lands, you're not starting from scratch?",
+      "nextStep": "Get a small commitment before hanging up: \"Does a 10-minute review today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text asking how the offer is going and offering the two times. Day 2, check in on the offer status. Day 4, remind them the side by side takes 10 minutes. Day 7, then every 2 weeks.",
+      "watchOut": "Walk back the credit union bashing and the \"you'll lose this condo\" claim. The 30 day close was framed as typical, so don't let it sound promised. Don't compare fees or quote numbers until you see their full picture. They may be a pre-approved shopper, so the goal is a second look, not a switch."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 129712.577708,
+    "firstTokenAt": 129003.693792,
+    "fullCardAt": 132337.070708,
+    "guardAt": 133610.418875
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "the rates right now are ...",
+      "confidence": 0.6,
+      "utteranceIndex": 5,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 151651.5935,
+    "firstPartialAt": 145070.80525,
+    "speechEndAt": 155111.554208,
+    "draft": {
+      "read": "Walt is warm and motivated (kitchen, wife pushing) but anchored on rates and still mid-sentence. Let him finish, then reframe to his goal. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I hear you, rates are a real factor. Honestly, what matters is what the kitchen project needs and what works for your budget. Can I take a quick look at your full picture, no obligation?",
+      "backup": "Totally fair. Let's not guess. Want me to run your situation properly so you're deciding on real numbers, not headlines?",
+      "nextStep": "Ask what budget he has in mind for the kitchen, then book a 10-minute review: \"Does today at 2 or tomorrow at 10 work better? Bring your wife if she's free.\"",
+      "followUp": "If not booked, text same day about your home project options with two times, then day 2 with a kitchen-timeline angle, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't interrupt him or quote any rate, payment, or savings. Missing: what the rest of his sentence says. If he's comparing lenders, welcome it and don't knock anyone."
+    },
+    "shown": {
+      "read": "Walt is warm and motivated (kitchen, wife pushing) but anchored on rates and still mid-sentence. Let him finish, then reframe to his goal. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I hear you, rates are a real factor. Honestly, what matters is what the kitchen project needs and what works for your budget. Can I take a quick look at your full picture, no obligation?",
+      "backup": "Totally fair. Let's not guess. Want me to run your situation properly so you're deciding on real numbers, not headlines?",
+      "nextStep": "Ask what budget he has in mind for the kitchen, then book a 10-minute review: \"Does today at 2 or tomorrow at 10 work better? Bring your wife if she's free.\"",
+      "followUp": "If not booked, text same day about your home project options with two times, then day 2 with a kitchen-timeline angle, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't interrupt him or quote any rate, payment, or savings. Missing: what the rest of his sentence says. If he's comparing lenders, welcome it and don't knock anyone."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 153131.609917,
+    "firstTokenAt": 152487.439625,
+    "fullCardAt": 155576.348792,
+    "guardAt": 156902.140917
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Contractor said he could start in February",
+      "confidence": 0.6,
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 162640.84775,
+    "firstPartialAt": 157098.894458,
+    "speechEndAt": 161341.729042,
+    "draft": {
+      "read": "Walt's rate worry is real, but the February contractor slot is a hard deadline that makes waiting costly: miss it and the kitchen slides to fall. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "February's closer than it sounds, and after that he's booked into fall. I can't know your real numbers until I see your full picture, so let's look at your options now. No obligation, and you stay in control.",
+      "backup": "If the timing matters this much, it's worth knowing where you stand before you decide to wait. A quick look costs nothing.",
+      "nextStep": "Offer a short review that includes his wife: \"Does today at 4 or tomorrow at 10 work better for a quick call with you and your wife?\"",
+      "followUp": "If not booked, same day text about his home options and the February start, then day 2 with a reminder that the contractor slot is the deadline, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Do not quote or predict rates, or say they will come down. Don't argue the rate objection; shift to his goal and deadline. Is his wife a co-borrower? If so, get her on the call."
+    },
+    "shown": {
+      "read": "Walt's rate worry is real, but the February contractor slot is a hard deadline that makes waiting costly: miss it and the kitchen slides to fall. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "February's closer than it sounds, and after that he's booked into fall. I can't know your real numbers until I see your full picture, so let's look at your options now. No obligation, and you stay in control.",
+      "backup": "If the timing matters this much, it's worth knowing where you stand before you decide to wait. A quick look costs nothing.",
+      "nextStep": "Offer a short review that includes his wife: \"Does today at 4 or tomorrow at 10 work better for a quick call with you and your wife?\"",
+      "followUp": "If not booked, same day text about his home options and the February start, then day 2 with a reminder that the contractor slot is the deadline, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Do not quote or predict rates, or say they will come down. Don't argue the rate objection; shift to his goal and deadline. Is his wife a co-borrower? If so, get her on the call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 163424.920708,
+    "firstTokenAt": 162694.342042,
+    "fullCardAt": 166154.974583,
+    "guardAt": 166847.133583
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "What would a ...",
+      "confidence": 0.95,
+      "utteranceIndex": 11,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 170687.947,
+    "firstPartialAt": 168717.142667,
+    "speechEndAt": 171771.876833,
+    "draft": {
+      "read": "Client is leaning toward waiting but just realized the contractor timeline matters, and he's about to ask a number question (payment or rate). Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Great question, and I want to give you a real answer, not a guess. It depends on your full picture, so let me look at your situation and show you actual options side by side. Then you decide.",
+      "backup": "I don't want to throw out a number that's wrong for you. Give me 10 minutes with your details and I'll show you what's realistic for your home.",
+      "nextStep": "Book a 10-minute review before the February start: \"Does today at 4 or tomorrow at 10 work better?\" Ask if his wife can join.",
+      "followUp": "If not booked, same day text with the two times, then day 2 tied to the contractor's February window and the fall gap, then day 4, day 7.",
+      "watchOut": "Do not quote any rate or payment, even a ballpark, however hard he pushes. Wait for the full question before answering; he hasn't finished it. Wife is the one driving the remodel, so get her on the call."
+    },
+    "shown": {
+      "read": "Client is leaning toward waiting but just realized the contractor timeline matters, and he's about to ask a number question (payment or rate). Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Great question, and I want to give you a real answer, not a guess. It depends on your full picture, so let me look at your situation and show you actual options side by side. Then you decide.",
+      "backup": "I don't want to throw out a number that's wrong for you. Give me 10 minutes with your details and I'll show you what's realistic for your home.",
+      "nextStep": "Book a 10-minute review before the February start: \"Does today at 4 or tomorrow at 10 work better?\" Ask if his wife can join.",
+      "followUp": "If not booked, same day text with the two times, then day 2 tied to the contractor's February window and the fall gap, then day 4, day 7.",
+      "watchOut": "Do not quote any rate or payment, even a ballpark, however hard he pushes. Wait for the full question before answering; he hasn't finished it. Wife is the one driving the remodel, so get her on the call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 172346.675792,
+    "firstTokenAt": 171670.552875,
+    "fullCardAt": 174679.901458,
+    "guardAt": 175823.012083
+  },
+  {
+    "callId": "call-03",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "Martha keeps all that",
+      "confidence": 0.8,
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 181300.085625,
+    "firstPartialAt": 178089.062,
+    "speechEndAt": 180423.439708,
+    "draft": {
+      "read": "Real interest, and the contractor deadline is giving him a reason to move. Martha holds the documents, so she's a second decision maker. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "No problem at all. Why don't we get Martha on a quick call with you? She knows where everything is, and she hears the options firsthand. Does tomorrow at 4 or Thursday at 10 work better for you both?",
+      "backup": "Sounds like Martha's the keeper of the paperwork. Would it be easier if I sent you a short checklist of what to gather, and we picked a time once she has it?",
+      "nextStep": "Book a short call with both of them and have Martha gather the Social Security and pension statements: \"Does tomorrow at 4 or Thursday at 10 work better?\"",
+      "followUp": "If not booked, text them both same day with the two times and the short document checklist. Day 2: mention the February start date as the reason timing matters. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't ask him to dig through papers alone, since that stalls it. Get Martha on the call and don't pitch him to sell her. Keep numbers out until the full review. Question: is Martha also on the title or income?"
+    },
+    "shown": {
+      "read": "Real interest, and the contractor deadline is giving him a reason to move. Martha holds the documents, so she's a second decision maker. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "No problem at all. Why don't we get Martha on a quick call with you? She knows where everything is, and she hears the options firsthand. Does tomorrow at 4 or Thursday at 10 work better for you both?",
+      "backup": "Sounds like Martha's the keeper of the paperwork. Would it be easier if I sent you a short checklist of what to gather, and we picked a time once she has it?",
+      "nextStep": "Book a short call with both of them and have Martha gather the Social Security and pension statements: \"Does tomorrow at 4 or Thursday at 10 work better?\"",
+      "followUp": "If not booked, text them both same day with the two times and the short document checklist. Day 2: mention the February start date as the reason timing matters. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't ask him to dig through papers alone, since that stalls it. Get Martha on the call and don't pitch him to sell her. Keep numbers out until the full review. Question: is Martha also on the title or income?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 181961.244375,
+    "firstTokenAt": 181290.017833,
+    "fullCardAt": 184588.048667,
+    "guardAt": 187826.622083
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "I'm really just ...",
+      "confidence": 0.9,
+      "utteranceIndex": 1,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 193017.9565,
+    "firstPartialAt": 189660.718875,
+    "speechEndAt": 194698.003708,
+    "draft": {
+      "read": "Kevin is likely about to say he's just looking. He's early, curious, and clicked the guide, so he's open but guarded. Temperature: Warm. Stage: New lead.",
+      "sendThis": "Totally fair, that's exactly what the guide is for. No pressure at all. Are you thinking about buying soon, or still getting a feel for how it all works?",
+      "backup": "Good to hear you're doing your homework. What made you grab the guide, is a first home on your radar this year?",
+      "nextStep": "Let him finish, then use his answer to offer a 10-minute no-obligation walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the guide link and the two times, then day 2 with one helpful first-time buyer tip, day 4, day 7, then every 2 weeks.",
+      "watchOut": "He's still talking, so don't cut in; confirm what he actually said. Don't quote rates, payments, or approval. Light touch only."
+    },
+    "shown": {
+      "read": "Kevin is likely about to say he's just looking. He's early, curious, and clicked the guide, so he's open but guarded. Temperature: Warm. Stage: New lead.",
+      "sendThis": "Totally fair, that's exactly what the guide is for. No pressure at all. Are you thinking about buying soon, or still getting a feel for how it all works?",
+      "backup": "Good to hear you're doing your homework. What made you grab the guide, is a first home on your radar this year?",
+      "nextStep": "Let him finish, then use his answer to offer a 10-minute no-obligation walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the guide link and the two times, then day 2 with one helpful first-time buyer tip, day 4, day 7, then every 2 weeks.",
+      "watchOut": "He's still talking, so don't cut in; confirm what he actually said. Don't quote rates, payments, or approval. Light touch only."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 195016.813208,
+    "firstTokenAt": 194328.773042,
+    "fullCardAt": 197826.023,
+    "guardAt": 199057.629667
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "question",
+      "evidence": "what would I ...",
+      "confidence": 0.6,
+      "utteranceIndex": 13,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 221606.54475,
+    "firstPartialAt": 219726.615042,
+    "speechEndAt": 222749.134667,
+    "draft": {
+      "read": "First-time buyer with an August lease deadline, just learned 20% down isn't required, and is about to ask what it would take. Real curiosity, so go to a personalized review instead of numbers. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Great question. The honest answer depends on your income, credit, and savings, so I don't want to guess and steer you wrong. A quick look at your full picture and I can show you what you qualify for.",
+      "backup": "Let's find out together. A short chat about your income and savings gets you a real answer instead of a guess.",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times, then day 2 with an August timeline angle: working backward from the lease end, getting the picture early keeps your options open.",
+      "watchOut": "Don't name a down payment percentage or program amount, and don't say they'd qualify. Let the client finish the question first. Open question: does the roommate plan to buy with them or just share the lease?"
+    },
+    "shown": {
+      "read": "First-time buyer with an August lease deadline, just learned 20% down isn't required, and is about to ask what it would take. Real curiosity, so go to a personalized review instead of numbers. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Great question. The honest answer depends on your income, credit, and savings, so I don't want to guess and steer you wrong. A quick look at your full picture and I can show you what you qualify for.",
+      "backup": "Let's find out together. A short chat about your income and savings gets you a real answer instead of a guess.",
+      "nextStep": "Book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times, then day 2 with an August timeline angle: working backward from the lease end, getting the picture early keeps your options open.",
+      "watchOut": "Don't name a down payment percentage or program amount, and don't say they'd qualify. Let the client finish the question first. Open question: does the roommate plan to buy with them or just share the lease?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 223181.58875,
+    "firstTokenAt": 222377.564333,
+    "fullCardAt": 225592.548458,
+    "guardAt": 226709.897542
+  },
+  {
+    "callId": "call-04",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what would I even need to get pre-approved?",
+      "confidence": 0.6,
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 228496.8715,
+    "firstPartialAt": 225398.280708,
+    "speechEndAt": 226548.996792,
+    "draft": {
+      "read": "Client asked what they'd need, so they're leaning in, but the rep's \"few weeks\" offer is letting a warm lead cool off. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Great, I'll send the checklist right after we hang up. Most of it's easy to pull together. Let's put 15 minutes on the calendar to go through it together. Does Thursday at 4 or Friday at 10 work better?",
+      "backup": "Happy to send it today. Want to grab a quick 15 minutes this week so you're not guessing on any of it?",
+      "nextStep": "Book a 15-minute walkthrough this week with a two option close, and send the checklist immediately after the call.",
+      "followUp": "If no time is booked, text same day with the checklist and two time options (say \"home options,\" not mortgage or loan). Then day 2 with a \"how's the document gathering going?\" check, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Rep said \"pre-approved\" and offered a check-in in \"a few weeks\"; don't repeat that wording, say \"see what you qualify for.\" Don't promise any down payment program fits; it depends on their full picture. Client hasn't shared income, credit, or timeline yet."
+    },
+    "shown": {
+      "read": "Client asked what they'd need, so they're leaning in, but the rep's \"few weeks\" offer is letting a warm lead cool off. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Great, I'll send the checklist right after we hang up. Most of it's easy to pull together. Let's put 15 minutes on the calendar to go through it together. Does Thursday at 4 or Friday at 10 work better?",
+      "backup": "Happy to send it today. Want to grab a quick 15 minutes this week so you're not guessing on any of it?",
+      "nextStep": "Book a 15-minute walkthrough this week with a two option close, and send the checklist immediately after the call.",
+      "followUp": "If no time is booked, text same day with the checklist and two time options (say \"home options,\" not mortgage or loan). Then day 2 with a \"how's the document gathering going?\" check, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Rep said \"pre-approved\" and offered a check-in in \"a few weeks\"; don't repeat that wording, say \"see what you qualify for.\" Don't promise any down payment program fits; it depends on their full picture. Client hasn't shared income, credit, or timeline yet."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "two_option_close",
+        "severity": "style",
+        "where": "nextStep",
+        "quote": "Book a 15-minute walkthrough this week with a two option close, and send the checklist immediately after the call.",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 228496.890583,
+    "firstTokenAt": 227211.996042,
+    "fullCardAt": 230959.447125,
+    "guardAt": 232697.811792
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "I'm talking to like three lenders",
+      "confidence": 0.9,
+      "utteranceIndex": 1,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 238628.223875,
+    "firstPartialAt": 234262.525875,
+    "speechEndAt": 239300.324792,
+    "draft": {
+      "read": "Renee is upfront that she's comparing three lenders and hasn't finished her point yet, so she's guarded, not hostile. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I appreciate you being upfront, and I'd do the same. Compare away. I just want to be a second set of eyes so you know you're getting the best fit for your home.",
+      "backup": "Totally fair. What's the main thing you're hoping to get out of your home options?",
+      "nextStep": "Let her finish, then offer a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times, then day 2 with a reason to compare now, day 4, day 7, then every 2 weeks.",
+      "watchOut": "She's mid-sentence, so don't cut in. Don't quote a rate or knock the other lenders. Question: what does she say she's \"I'm...\" about to say (her goal or timeline)? Listen for it."
+    },
+    "shown": {
+      "read": "Renee is upfront that she's comparing three lenders and hasn't finished her point yet, so she's guarded, not hostile. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I appreciate you being upfront, and I'd do the same. Compare away. I just want to be a second set of eyes so you know you're getting the best fit for your home.",
+      "backup": "Totally fair. What's the main thing you're hoping to get out of your home options?",
+      "nextStep": "Let her finish, then offer a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times, then day 2 with a reason to compare now, day 4, day 7, then every 2 weeks.",
+      "watchOut": "She's mid-sentence, so don't cut in. Don't quote a rate or knock the other lenders. Question: what does she say she's \"I'm...\" about to say (her goal or timeline)? Listen for it."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 239844.633292,
+    "firstTokenAt": 239494.641167,
+    "fullCardAt": 241984.178083,
+    "guardAt": 242740.74475
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "question",
+      "evidence": "So what's your rate today?",
+      "confidence": 0.95,
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 256190.643167,
+    "firstPartialAt": 251360.137292,
+    "speechEndAt": 254809.551458,
+    "draft": {
+      "read": "Direct rate question from a three-lender shopper, and a real answer needs her full picture. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Fair question, and I won't throw out a number that's only good for someone else. Rates move with your full picture and a spring close. Give me 10 minutes and I'll show you exactly where you'd land, side by side with the others.",
+      "backup": "Everyone's number depends on credit, down payment, and timing, so any rate I give you cold wouldn't be real. Let me look at your actual picture so you can compare apples to apples.",
+      "nextStep": "Book a 10-minute side-by-side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text: \"Renee, Derek here. Happy to run your home options so you can compare. Does 4 today or 10 tomorrow work?\" Then day 2 with the spring timeline angle, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't quote a rate or a range, and don't knock the builder's lender. Ask her when she'd need to lock, since a spring close affects how rate protection works. Also ask whether the builder offers incentives tied to using their lender, so she's comparing the whole offer."
+    },
+    "shown": {
+      "read": "Direct rate question from a three-lender shopper, and a real answer needs her full picture. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Fair question, and I won't throw out a number that's only good for someone else. Rates move with your full picture and a spring close. Give me 10 minutes and I'll show you exactly where you'd land, side by side with the others.",
+      "backup": "Everyone's number depends on credit, down payment, and timing, so any rate I give you cold wouldn't be real. Let me look at your actual picture so you can compare apples to apples.",
+      "nextStep": "Book a 10-minute side-by-side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text: \"Renee, Derek here. Happy to run your home options so you can compare. Does 4 today or 10 tomorrow work?\" Then day 2 with the spring timeline angle, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't quote a rate or a range, and don't knock the builder's lender. Ask her when she'd need to lock, since a spring close affects how rate protection works. Also ask whether the builder offers incentives tied to using their lender, so she's comparing the whole offer."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 256650.893542,
+    "firstTokenAt": 256307.484458,
+    "fullCardAt": 259670.689,
+    "guardAt": 260803.860917
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "Does that include ...",
+      "confidence": 0.95,
+      "utteranceIndex": 11,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 262112.219708,
+    "firstPartialAt": 261269.023917,
+    "speechEndAt": 262389.014375,
+    "draft": {
+      "read": "Client is rate-driven, comparing three lenders, and about to test the number you already quoted. That quote has to be walked back before anything else. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Let me run it properly so you can compare us side by side with the other two.",
+      "backup": "Good question, and honestly I shouldn't have thrown a number out first. Let's look at your full picture so what I show you is real and easy to compare.",
+      "nextStep": "Book a 10-minute side by side, and ask them to bring the builder lender's written estimate: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times (\"your home options\"), then day 2 on why comparing before the builder's timeline tightens helps, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't repeat the earlier number, and don't say \"sharp\" or knock the builder's lender. Quoted rate was premature, so keep it out of any follow-up text. Let them finish the question first; it may be about fees or points. Ask what rate lock terms the builder offers for a spring close."
+    },
+    "shown": {
+      "read": "Client is rate-driven, comparing three lenders, and about to test the number you already quoted. That quote has to be walked back before anything else. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Let me run it properly so you can compare us side by side with the other two.",
+      "backup": "Good question, and honestly I shouldn't have thrown a number out first. Let's look at your full picture so what I show you is real and easy to compare.",
+      "nextStep": "Book a 10-minute side by side, and ask them to bring the builder lender's written estimate: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times (\"your home options\"), then day 2 on why comparing before the builder's timeline tightens helps, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't repeat the earlier number, and don't say \"sharp\" or knock the builder's lender. Quoted rate was premature, so keep it out of any follow-up text. Let them finish the question first; it may be about fees or points. Ask what rate lock terms the builder offers for a spring close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 265178.586,
+    "firstTokenAt": 264525.680208,
+    "fullCardAt": 267709.131667,
+    "guardAt": 268466.878708
+  },
+  {
+    "callId": "call-05",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I've got a meeting in a few, so I'm going to have to go",
+      "confidence": 0.6,
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 274749.987958,
+    "firstPartialAt": 268772.434083,
+    "speechEndAt": 273808.481417,
+    "draft": {
+      "read": "Rep quoted a rate before seeing any picture, client caught it and trust is slipping while they wrap up. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Before you go, I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Give me ten minutes to run it properly so you can compare it side by side with the builder's.",
+      "backup": "Totally understand, go to your meeting. I'd rather show you real numbers than a guess. Can I send two times to look at your full picture?",
+      "nextStep": "Walk back the quote, then book a 10-minute review: \"Does today at 5 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times and no numbers. Day 2: offer the side-by-side with the builder's lender. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "The earlier quote broke compliance and the client noticed. Do not repeat it or hint at it. Welcome the builder lender comparison, never knock it. In any text, say \"home options\" instead of \"mortgage\" or \"loan\"."
+    },
+    "shown": {
+      "read": "Rep quoted a rate before seeing any picture, client caught it and trust is slipping while they wrap up. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Before you go, I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Give me ten minutes to run it properly so you can compare it side by side with the builder's.",
+      "backup": "Totally understand, go to your meeting. I'd rather show you real numbers than a guess. Can I send two times to look at your full picture?",
+      "nextStep": "Walk back the quote, then book a 10-minute review: \"Does today at 5 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times and no numbers. Day 2: offer the side-by-side with the builder's lender. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "The earlier quote broke compliance and the client noticed. Do not repeat it or hint at it. Welcome the builder lender comparison, never knock it. In any text, say \"home options\" instead of \"mortgage\" or \"loan\"."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 277331.469542,
+    "firstTokenAt": 276611.601458,
+    "fullCardAt": 279736.120417,
+    "guardAt": 281218.096958
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "just_shopping",
+      "evidence": "I'm not ready to buy or anything, I was just curious",
+      "confidence": 0.85,
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 289046.854708,
+    "firstPartialAt": 283081.369333,
+    "speechEndAt": 287722.944167,
+    "draft": {
+      "read": "Early soft brush-off, but he reached out himself, so there's real curiosity underneath. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "No pressure at all, that's what this call is for. What got you curious about self-employed options, is that you, or someone you know?",
+      "backup": "Totally fine to just be curious. Want a quick rundown of how this works for self-employed folks so you know what to expect down the road?",
+      "nextStep": "Find out his timeline and situation, then offer a 10-minute walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with a helpful self-employed home options tip, then day 2 check-in, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't push an application yet or quote any rate or approval. Missing info: how long he's been self-employed and his rough timeline."
+    },
+    "shown": {
+      "read": "Early soft brush-off, but he reached out himself, so there's real curiosity underneath. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "No pressure at all, that's what this call is for. What got you curious about self-employed options, is that you, or someone you know?",
+      "backup": "Totally fine to just be curious. Want a quick rundown of how this works for self-employed folks so you know what to expect down the road?",
+      "nextStep": "Find out his timeline and situation, then offer a 10-minute walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with a helpful self-employed home options tip, then day 2 check-in, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't push an application yet or quote any rate or approval. Missing info: how long he's been self-employed and his rough timeline."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 289046.861833,
+    "firstTokenAt": 288453.099583,
+    "fullCardAt": 290894.765042,
+    "guardAt": 292311.273417
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "question",
+      "evidence": "Is that true? Would ...",
+      "confidence": 0.9,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 308285.6905,
+    "firstPartialAt": 301568.713958,
+    "speechEndAt": 308910.620125,
+    "draft": {
+      "read": "Rent hike is the real motivator, and he's half-believing the myth that self-employed can't qualify. He's still mid-question and likely about to ask if he'd qualify. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Short answer, no, that's a myth. Self-employed folks get home financing all the time. It just gets looked at differently, mostly your tax returns. Whether you'd qualify depends on your full picture, so let's look at yours.",
+      "backup": "Plenty of freelancers buy homes. The process is just different for self-employed income. Two quick questions and I can tell you what it'd take for you.",
+      "nextStep": "Ask two quick questions (two years of tax returns filed? roughly how much saved for a down payment?), then book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same-day text about \"your home options as a freelancer\" with two time slots, then day 2 with a short note on what paperwork freelancers should start gathering.",
+      "watchOut": "He may ask \"would I get approved?\" or \"what rate?\" Don't answer either; say it takes his full picture and offer to run it. Let him finish his question first. Missing: whether he's filed three years of returns."
+    },
+    "shown": {
+      "read": "Rent hike is the real motivator, and he's half-believing the myth that self-employed can't qualify. He's still mid-question and likely about to ask if he'd qualify. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Short answer, no, that's a myth. Self-employed folks get home financing all the time. It just gets looked at differently, mostly your tax returns. Whether you'd qualify depends on your full picture, so let's look at yours.",
+      "backup": "Plenty of freelancers buy homes. The process is just different for self-employed income. Two quick questions and I can tell you what it'd take for you.",
+      "nextStep": "Ask two quick questions (two years of tax returns filed? roughly how much saved for a down payment?), then book a 15-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same-day text about \"your home options as a freelancer\" with two time slots, then day 2 with a short note on what paperwork freelancers should start gathering.",
+      "watchOut": "He may ask \"would I get approved?\" or \"what rate?\" Don't answer either; say it takes his full picture and offer to run it. Let him finish his question first. Missing: whether he's filed three years of returns."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 310606.897625,
+    "firstTokenAt": 309857.253167,
+    "fullCardAt": 313783.929958,
+    "guardAt": 316465.212417
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Would you need anything else?",
+      "confidence": 0.85,
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 323056.136792,
+    "firstPartialAt": 319040.182875,
+    "speechEndAt": 321700.045875,
+    "draft": {
+      "read": "Client said yes and is asking what you need. Buying signal, so lock in the review with a time and stop selling. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Great. Last two years of personal returns, plus your most recent two months of bank statements. Let's set a quick call to go through them together so I can give you an honest picture of where you stand.",
+      "backup": "Mainly the last two years of returns to start. We can sort out anything else on the call. When's a good time to walk through them together?",
+      "nextStep": "Book the review call: \"Does today at 4 or tomorrow at 10 work better?\" Then text the document list right after you hang up.",
+      "followUp": "If no time is booked, text the same day with the document list and two time options. Day 2: nudge that earlier review leaves more room to adjust things this tax year. Then day 4, day 7, every 2 weeks.",
+      "watchOut": "Don't promise approval or hint at what the returns will show. Earlier you mentioned changing how they file; make clear that is a conversation for their accountant, not advice from you. Ask if they have a partner who'd be on the loan and should join the call."
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked: text same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "retracted_by_model",
+    "violations": [
+      {
+        "rule": "advice",
+        "quote": "Day 2: nudge that earlier review leaves more room to adjust things this tax year.",
+        "where": "followUp",
+        "source": "model",
+        "severity": "block"
+      }
+    ],
+    "firstLineAt": 323409.5475,
+    "firstTokenAt": 322986.878042,
+    "fullCardAt": 326190.8245,
+    "guardAt": 327587.968583
+  },
+  {
+    "callId": "call-06",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "This week. I'll ...",
+      "confidence": 0.85,
+      "utteranceIndex": 15,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 325433.3085,
+    "firstPartialAt": 324097.152417,
+    "speechEndAt": 326429.727417,
+    "draft": {
+      "read": "Motivated by rent hikes, agreed to share returns and picked this week. Ready to move, so lock the date and stop selling. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Perfect, this week works. I'll send you a secure link right after we hang up. Does tomorrow or Thursday work better for getting those returns uploaded?",
+      "backup": "Great. Once you send those, I'll go through them and walk you through where you stand, honestly, no pressure.",
+      "nextStep": "Send the secure upload link right after the call, then book the review: \"Does Friday at 10 or Monday at 2 work better for a quick call after I've looked at everything?\"",
+      "followUp": "If nothing uploaded by tomorrow evening, text a quick reminder with the link. Then day 2 with a \"need any help finding the files?\" angle, then day 4, day 7.",
+      "watchOut": "Don't promise an outcome or hint that a filing change helps their qualifying; tax strategy is for their accountant. Let the client finish speaking before you jump in. Missing: does the client have a year-to-date P&L ready?"
+    },
+    "shown": {
+      "read": "Motivated by rent hikes, agreed to share returns and picked this week. Ready to move, so lock the date and stop selling. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Perfect, this week works. I'll send you a secure link right after we hang up. Does tomorrow or Thursday work better for getting those returns uploaded?",
+      "backup": "Great. Once you send those, I'll go through them and walk you through where you stand, honestly, no pressure.",
+      "nextStep": "Send the secure upload link right after the call, then book the review: \"Does Friday at 10 or Monday at 2 work better for a quick call after I've looked at everything?\"",
+      "followUp": "If nothing uploaded by tomorrow evening, text a quick reminder with the link. Then day 2 with a \"need any help finding the files?\" angle, then day 4, day 7.",
+      "watchOut": "Don't promise an outcome or hint that a filing change helps their qualifying; tax strategy is for their accountant. Let the client finish speaking before you jump in. Missing: does the client have a year-to-date P&L ready?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 327356.437833,
+    "firstTokenAt": 326630.807167,
+    "fullCardAt": 329971.046625,
+    "guardAt": 330867.884458
+  },
+  {
+    "callId": "call-07",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "my husband does all the money stuff",
+      "confidence": 0.95,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 357468.545917,
+    "firstPartialAt": 352952.796917,
+    "speechEndAt": 359099.578,
+    "draft": {
+      "read": "Warm, motivated buyer with a real timeline (fourth baby coming), but her husband owns the money side. She's still talking, so let her finish. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "That's really common, and it's a big decision for both of you. Let's get you both on one short call so he hears it firsthand and you both get your questions answered.",
+      "backup": "Totally fine. What do you think his first question will be about the move?",
+      "nextStep": "Book a short call with both of them: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "If not booked, text both of them tomorrow about home options near the new school with the same two times, then day 2 and day 4 around the baby timeline.",
+      "watchOut": "Don't pitch her to sell him, and don't ask for budget numbers she can't speak to. Let her finish her sentence first. Ask if she knows their current home's rough value or timeline, but quote no rates or payments."
+    },
+    "shown": {
+      "read": "Warm, motivated buyer with a real timeline (fourth baby coming), but her husband owns the money side. She's still talking, so let her finish. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "That's really common, and it's a big decision for both of you. Let's get you both on one short call so he hears it firsthand and you both get your questions answered.",
+      "backup": "Totally fine. What do you think his first question will be about the move?",
+      "nextStep": "Book a short call with both of them: \"Does tonight at 7 or Saturday at 10 work better for you both?\"",
+      "followUp": "If not booked, text both of them tomorrow about home options near the new school with the same two times, then day 2 and day 4 around the baby timeline.",
+      "watchOut": "Don't pitch her to sell him, and don't ask for budget numbers she can't speak to. Let her finish her sentence first. Ask if she knows their current home's rough value or timeline, but quote no rates or payments."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 360151.432958,
+    "firstTokenAt": 359440.02025,
+    "fullCardAt": 362240.664042,
+    "guardAt": 363631.79475
+  },
+  {
+    "callId": "call-07",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "question",
+      "evidence": "Do we have to sell our house before we can buy the new one?",
+      "confidence": 0.85,
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 376712.483792,
+    "firstPartialAt": 370449.792708,
+    "speechEndAt": 375090.111625,
+    "draft": {
+      "read": "Real planning question and a sign she's thinking seriously. The answer depends on their equity, finances and goals, so it belongs on Saturday's call. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Good question, and it depends on your full picture, so I don't want to guess. It's something we can map out together Saturday with your husband. Is it timing or the stress of two homes that worries you more?",
+      "backup": "You're not the first to ask that. There are a few ways families handle it, and which fits depends on your situation. Let's walk through your options together on Saturday.",
+      "nextStep": "Lock in Saturday at 10 with both of them. Confirm the best number and send a calendar invite or text today. Ask her to note any questions for the call, plus the mortgage statement.",
+      "followUp": "Text her Friday afternoon to confirm Saturday at 10 and remind her about the statement. If Saturday falls through, reach out the same day to rebook, then day 2 and day 4.",
+      "watchOut": "Don't promise they can buy without selling, and don't quote numbers or approval. Don't give advice on selling timing or on their equity. Also confirm her husband will actually be on the call, since he handles the finances."
+    },
+    "shown": {
+      "read": "Real planning question and a sign she's thinking seriously. The answer depends on their equity, finances and goals, so it belongs on Saturday's call. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Good question, and it depends on your full picture, so I don't want to guess. It's something we can map out together Saturday with your husband. Is it timing or the stress of two homes that worries you more?",
+      "backup": "You're not the first to ask that. There are a few ways families handle it, and which fits depends on your situation. Let's walk through your options together on Saturday.",
+      "nextStep": "Lock in Saturday at 10 with both of them. Confirm the best number and send a calendar invite or text today. Ask her to note any questions for the call, plus the mortgage statement.",
+      "followUp": "Text her Friday afternoon to confirm Saturday at 10 and remind her about the statement. If Saturday falls through, reach out the same day to rebook, then day 2 and day 4.",
+      "watchOut": "Don't promise they can buy without selling, and don't quote numbers or approval. Don't give advice on selling timing or on their equity. Also confirm her husband will actually be on the call, since he handles the finances."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "two_option_close",
+        "severity": "style",
+        "where": "nextStep",
+        "quote": "Lock in Saturday at 10 with both of them. Confirm the best number and send a calendar invite or text today. Ask her to note any questions for the call, plus the mortgage statement.",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 377519.665167,
+    "firstTokenAt": 376808.755125,
+    "fullCardAt": 380274.752583,
+    "guardAt": 382791.499833
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "Tasha's the co-borrower and she's ...",
+      "confidence": 0.9,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 410542.345333,
+    "firstPartialAt": 405724.296625,
+    "speechEndAt": 414570.107083,
+    "draft": {
+      "read": "Jamal is interested and has a specific property, but he's about to defer to Tasha, who's not on the call. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Sounds like a solid find. Let's get Tasha on a quick call too, so she hears it firsthand and we answer her questions together. Does tonight at 7 or tomorrow at noon work for you both?",
+      "backup": "Totally get it, it's a joint decision. What do you think Tasha's biggest question will be?",
+      "nextStep": "Let Jamal finish, then book a three-way call with both of them: \"Does tonight at 7 or tomorrow at noon work better?\"",
+      "followUp": "If not booked, text both of them same day with the two times, then day 2 with a reason to move while Maple is still available.",
+      "watchOut": "Let him finish before jumping in. Don't pitch Jamal to sell Tasha. Her actual concern is unknown, so find it before assuming. Don't quote numbers or talk approval on the Maple duplex yet."
+    },
+    "shown": {
+      "read": "Jamal is interested and has a specific property, but he's about to defer to Tasha, who's not on the call. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Sounds like a solid find. Let's get Tasha on a quick call too, so she hears it firsthand and we answer her questions together. Does tonight at 7 or tomorrow at noon work for you both?",
+      "backup": "Totally get it, it's a joint decision. What do you think Tasha's biggest question will be?",
+      "nextStep": "Let Jamal finish, then book a three-way call with both of them: \"Does tonight at 7 or tomorrow at noon work better?\"",
+      "followUp": "If not booked, text both of them same day with the two times, then day 2 with a reason to move while Maple is still available.",
+      "watchOut": "Let him finish before jumping in. Don't pitch Jamal to sell Tasha. Her actual concern is unknown, so find it before assuming. Don't quote numbers or talk approval on the Maple duplex yet."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 412041.012708,
+    "firstTokenAt": 411676.537875,
+    "fullCardAt": 414081.464125,
+    "guardAt": 415398.510292
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "whether we can actually afford it if the rental side sits empty",
+      "confidence": 0.8,
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 421775.476167,
+    "firstPartialAt": 416464.109167,
+    "speechEndAt": 420309.663417,
+    "draft": {
+      "read": "Tasha's real worry is vacancy risk, and it's a fair one. He's interested but can't move without her. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "That's the right question to ask. I can't know your real numbers until I see your full picture, but I can walk you both through the empty-unit scenario so Tasha sees it with her own eyes.",
+      "backup": "Smart of her to stress test it. Would it help if we looked at the worst case together, with both of you on the line?",
+      "nextStep": "Book a short call with both of them to run the vacancy scenario: \"Does tonight at 7 or tomorrow at 12 work better for you both?\"",
+      "followUp": "If not booked, text both of them tomorrow with the two times, then day 2 with a note about the Maple property timing.",
+      "watchOut": "Don't promise they'll qualify or quote any payment or rent figure. Don't pitch him to sell Tasha. Ask early whether the lender will count rental income, since that may shape her comfort level."
+    },
+    "shown": {
+      "read": "Tasha's real worry is vacancy risk, and it's a fair one. He's interested but can't move without her. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "That's the right question to ask. I can't know your real numbers until I see your full picture, but I can walk you both through the empty-unit scenario so Tasha sees it with her own eyes.",
+      "backup": "Smart of her to stress test it. Would it help if we looked at the worst case together, with both of you on the line?",
+      "nextStep": "Book a short call with both of them to run the vacancy scenario: \"Does tonight at 7 or tomorrow at 12 work better for you both?\"",
+      "followUp": "If not booked, text both of them tomorrow with the two times, then day 2 with a note about the Maple property timing.",
+      "watchOut": "Don't promise they'll qualify or quote any payment or rent figure. Don't pitch him to sell Tasha. Ask early whether the lender will count rental income, since that may shape her comfort level."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 422052.475375,
+    "firstTokenAt": 421375.207708,
+    "fullCardAt": 424351.818625,
+    "guardAt": 425003.261333
+  },
+  {
+    "callId": "call-08",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "I don't even know how that works. Can you ...",
+      "confidence": 0.9,
+      "utteranceIndex": 11,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "speculative",
+    "chipAt": 426588.145167,
+    "firstPartialAt": 422570.901417,
+    "speechEndAt": 426019.919542,
+    "draft": {
+      "read": "Genuine question, and a chance to get Tasha on the call. Rental income can sometimes count, but how depends on the lender and their full picture. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Sometimes it can, and the rules depend on the property and your situation, so I won't guess. I'd rather walk you and Tasha through it with your real picture, including the empty rental scenario she's worried about.",
+      "backup": "Good question. There are specific ways it gets counted, and I'd want to look at your full picture first. Easiest is a short call with both of you.",
+      "nextStep": "Book a three-way call with Tasha: \"Does tonight at 7 or tomorrow at noon work better for you both?\"",
+      "followUp": "If not booked, text both of them tomorrow with the two times and mention covering the vacancy question. Then day 2, day 4, day 7.",
+      "watchOut": "Don't say how much rent counts or promise it will qualify. Ask about the property: is it a multi-unit, and are they living in one unit? That changes the answer."
+    },
+    "shown": {
+      "read": "Genuine question, and a chance to get Tasha on the call. Rental income can sometimes count, but how depends on the lender and their full picture. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Sometimes it can, and the rules depend on the property and your situation, so I won't guess. I'd rather walk you and Tasha through it with your real picture, including the empty rental scenario she's worried about.",
+      "backup": "Good question. There are specific ways it gets counted, and I'd want to look at your full picture first. Easiest is a short call with both of you.",
+      "nextStep": "Book a three-way call with Tasha: \"Does tonight at 7 or tomorrow at noon work better for you both?\"",
+      "followUp": "If not booked, text both of them tomorrow with the two times and mention covering the vacancy question. Then day 2, day 4, day 7.",
+      "watchOut": "Don't say how much rent counts or promise it will qualify. Ask about the property: is it a multi-unit, and are they living in one unit? That changes the answer."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 428365.086792,
+    "firstTokenAt": 427642.976125,
+    "fullCardAt": 430504.929333,
+    "guardAt": 431906.354083
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "We need to find a place before then, ideally.",
+      "confidence": 0.8,
+      "utteranceIndex": 5
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 452818.289375,
+    "firstPartialAt": 447308.311042,
+    "speechEndAt": 451153.61825,
+    "draft": {
+      "read": "Real deadline, and he's opening up about the move. Good moment to deepen rapport and uncover his situation. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "January, so you've got a real window. Are you looking to buy right away, or renting first while you get settled? And is it just you and the kids, or a spouse in the mix too?",
+      "backup": "Congrats on the new job. What's the area you're looking at, and is the home search already underway?",
+      "nextStep": "Uncover timeline, location, and decision makers, then book a 15-minute review of his home options: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with two times, then day 2 tied to the January deadline, then day 4.",
+      "watchOut": "Don't quote a rate or promise what he'll qualify for. He's a veteran, so ask if he has used a VA benefit before, but don't promise eligibility or terms. Confirm whether a spouse is involved so both decision makers join the next call."
+    },
+    "shown": {
+      "read": "Real deadline, and he's opening up about the move. Good moment to deepen rapport and uncover his situation. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "January, so you've got a real window. Are you looking to buy right away, or renting first while you get settled? And is it just you and the kids, or a spouse in the mix too?",
+      "backup": "Congrats on the new job. What's the area you're looking at, and is the home search already underway?",
+      "nextStep": "Uncover timeline, location, and decision makers, then book a 15-minute review of his home options: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with two times, then day 2 tied to the January deadline, then day 4.",
+      "watchOut": "Don't quote a rate or promise what he'll qualify for. He's a veteran, so ask if he has used a VA benefit before, but don't promise eligibility or terms. Confirm whether a spouse is involved so both decision makers join the next call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 453066.360583,
+    "firstTokenAt": 452413.457875,
+    "fullCardAt": 455181.780417,
+    "guardAt": 456443.106833
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "What do I need to get that?",
+      "confidence": 0.85,
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 461637.947792,
+    "firstPartialAt": 457251.415875,
+    "speechEndAt": 458794.425917,
+    "draft": {
+      "read": "Client is engaged and asking a practical question, which is a buying signal. They have a January deadline. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Good news, it's usually quick. We can pull your certificate of eligibility for you, I just need a few details from you. Do you have your DD-214 handy, or know where it is?",
+      "backup": "It's a simple step and I can walk you through it. Want to knock it out together on a quick call so we know exactly where you stand?",
+      "nextStep": "Get the COE started and lock a time to gather details: \"Does today at 4 or tomorrow at 10 work better to get that going?\"",
+      "followUp": "If not booked, text same day with the two times and the January timeline angle, then day 2 checking if they found their DD-214.",
+      "watchOut": "Don't say anything about entitlement amounts or what they'll qualify for. The prior VA use means entitlement needs verifying. Confirm whether they're still on active duty or separated, since that changes which documents they need."
+    },
+    "shown": {
+      "read": "Client is engaged and asking a practical question, which is a buying signal. They have a January deadline. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Good news, it's usually quick. We can pull your certificate of eligibility for you, I just need a few details from you. Do you have your DD-214 handy, or know where it is?",
+      "backup": "It's a simple step and I can walk you through it. Want to knock it out together on a quick call so we know exactly where you stand?",
+      "nextStep": "Get the COE started and lock a time to gather details: \"Does today at 4 or tomorrow at 10 work better to get that going?\"",
+      "followUp": "If not booked, text same day with the two times and the January timeline angle, then day 2 checking if they found their DD-214.",
+      "watchOut": "Don't say anything about entitlement amounts or what they'll qualify for. The prior VA use means entitlement needs verifying. Confirm whether they're still on active duty or separated, since that changes which documents they need."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 461637.962125,
+    "firstTokenAt": 460469.865542,
+    "fullCardAt": 463513.328542,
+    "guardAt": 464336.210333
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "objection",
+      "subtype": "spouse",
+      "evidence": "my wife really should",
+      "confidence": 0.9,
+      "utteranceIndex": 11,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 465467.7115,
+    "firstPartialAt": 460826.240958,
+    "speechEndAt": 469275.447542,
+    "draft": {
+      "read": "Spouse stall is coming, but this is a decision-maker check, not a no. He's engaged, has a January deadline, and just agreed to pull docs. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Absolutely, she should be part of this. Let's get you both on one quick call so she hears it firsthand and we can sort out the paperwork together.",
+      "backup": "Sounds good. What do you think her biggest question will be? I can make sure we cover it.",
+      "nextStep": "Book a call with both of them: \"Does tonight at 7 or tomorrow at 12 work better for you both?\" Ask him to find the DD-214 before then.",
+      "followUp": "If not booked, text both of them same day with the two times and the DD-214 reminder. Then day 2, tying it to the January timeline.",
+      "watchOut": "Let him finish his sentence first. Don't pitch him to sell her; get both on one call. No rate, payment, or approval talk. Say \"let's see what you qualify for.\" Ask: is she on the military side too, or on the buying decision only?"
+    },
+    "shown": {
+      "read": "Spouse stall is coming, but this is a decision-maker check, not a no. He's engaged, has a January deadline, and just agreed to pull docs. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Absolutely, she should be part of this. Let's get you both on one quick call so she hears it firsthand and we can sort out the paperwork together.",
+      "backup": "Sounds good. What do you think her biggest question will be? I can make sure we cover it.",
+      "nextStep": "Book a call with both of them: \"Does tonight at 7 or tomorrow at 12 work better for you both?\" Ask him to find the DD-214 before then.",
+      "followUp": "If not booked, text both of them same day with the two times and the DD-214 reminder. Then day 2, tying it to the January timeline.",
+      "watchOut": "Let him finish his sentence first. Don't pitch him to sell her; get both on one call. No rate, payment, or approval talk. Say \"let's see what you qualify for.\" Ask: is she on the military side too, or on the buying decision only?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 467799.271708,
+    "firstTokenAt": 467146.867917,
+    "fullCardAt": 469813.61075,
+    "guardAt": 471024.860083
+  },
+  {
+    "callId": "call-09",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "how fast can you close a",
+      "confidence": 0.85,
+      "utteranceIndex": 15,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 477950.758583,
+    "firstPartialAt": 474873.50325,
+    "speechEndAt": 480624.000083,
+    "draft": {
+      "read": "Booked and engaged, now probing timeline mid-sentence. Closing speed depends on his full picture, so don't promise a timeline. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Good question. It depends on a few things we'll map out together, so I won't guess. Tomorrow at noon we'll lay out the steps with a realistic timeline for you both.",
+      "backup": "Let me hear the rest of your question first. Is there a move-in date you're working toward?",
+      "nextStep": "Let him finish, ask his target date, confirm tomorrow at noon with both on the line, and send the invite right now.",
+      "followUp": "Text tonight: reminder of noon tomorrow plus a nudge to find the DD-214. If no confirmation by 10 tomorrow, text a quick check-in. If missed, same day reschedule offer, then day 2.",
+      "watchOut": "Don't quote a closing timeline, rate, or approval. His question is cut off, so confirm what he meant (closing time or process) before answering. Verify the certificate of eligibility before discussing VA benefits."
+    },
+    "shown": {
+      "read": "Booked and engaged, now probing timeline mid-sentence. Closing speed depends on his full picture, so don't promise a timeline. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Good question. It depends on a few things we'll map out together, so I won't guess. Tomorrow at noon we'll lay out the steps with a realistic timeline for you both.",
+      "backup": "Let me hear the rest of your question first. Is there a move-in date you're working toward?",
+      "nextStep": "Let him finish, ask his target date, confirm tomorrow at noon with both on the line, and send the invite right now.",
+      "followUp": "Text tonight: reminder of noon tomorrow plus a nudge to find the DD-214. If no confirmation by 10 tomorrow, text a quick check-in. If missed, same day reschedule offer, then day 2.",
+      "watchOut": "Don't quote a closing timeline, rate, or approval. His question is cut off, so confirm what he meant (closing time or process) before answering. Verify the certificate of eligibility before discussing VA benefits."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "two_option_close",
+        "severity": "style",
+        "where": "nextStep",
+        "quote": "Let him finish, ask his target date, confirm tomorrow at noon with both on the line, and send the invite right now.",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 480044.501958,
+    "firstTokenAt": 479333.474208,
+    "fullCardAt": 482820.368708,
+    "guardAt": 483512.732375
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I've just been super busy. Work's been crazy.",
+      "confidence": 0.8,
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 500627.060125,
+    "firstPartialAt": 496211.230333,
+    "speechEndAt": 499660.609542,
+    "draft": {
+      "read": "Soft stall with a polite excuse, not a no. He's still reachable, just deprioritizing. Temperature: Warm. Stage: App out.",
+      "sendThis": "No apology needed, Tyler, work's work. I'll keep it easy. We're already part of the way in, so I just need ten minutes to wrap up your application. Does today at 4 or tomorrow at 10 work better?",
+      "backup": "Totally get it. What's the one thing that would make this easier on your end, a quick call or doing it by text?",
+      "nextStep": "Book a ten minute call to finish the application: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked, text same day with the two time options and a line like \"your home options are mostly set up, just need a few details.\" Then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't guilt him about the delay. Don't mention rates or savings. Ask lightly what he wanted from the refinance so you can tie the timing to his goal."
+    },
+    "shown": {
+      "read": "Soft stall with a polite excuse, not a no. He's still reachable, just deprioritizing. Temperature: Warm. Stage: App out.",
+      "sendThis": "No apology needed, Tyler, work's work. I'll keep it easy. We're already part of the way in, so I just need ten minutes to wrap up your application. Does today at 4 or tomorrow at 10 work better?",
+      "backup": "Totally get it. What's the one thing that would make this easier on your end, a quick call or doing it by text?",
+      "nextStep": "Book a ten minute call to finish the application: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked, text same day with the two time options and a line like \"your home options are mostly set up, just need a few details.\" Then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't guilt him about the delay. Don't mention rates or savings. Ask lightly what he wanted from the refinance so you can tie the timing to his goal."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 501135.056583,
+    "firstTokenAt": 500732.327042,
+    "fullCardAt": 503711.283208,
+    "guardAt": 504357.118375
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "That's it? I thought it was a whole thing.",
+      "confidence": 0.6,
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 527684.536208,
+    "firstPartialAt": 524051.526208,
+    "speechEndAt": 526710.860625,
+    "draft": {
+      "read": "The \"whole thing\" worry was the real brake, and it just dropped. He's surprised it's small, which is a soft opening. Temperature: Warm. Stage: App out.",
+      "sendThis": "That's it. Two documents. If you can snap a photo of each, you can text them to me straight from your phone, even between deliveries. Then I can see what your home options look like.",
+      "backup": "Yep, just those two. No big project. Whenever you get a quiet minute, a quick photo of each is all I need.",
+      "nextStep": "Lock a tiny window: \"Can you send them tonight after your shift or tomorrow at lunch?\" Then confirm the best text number.",
+      "followUp": "If nothing arrives, text same day at 8pm with \"just the two photos.\" Then day 2, day 4, day 7, then every 2 weeks. If it goes quiet, use a light pattern interrupt.",
+      "watchOut": "Don't promise a result or quote anything once docs arrive; say you'll see what he qualifies for. Keep pressure low. He's slammed until January, so make it feel like two minutes."
+    },
+    "shown": {
+      "read": "The \"whole thing\" worry was the real brake, and it just dropped. He's surprised it's small, which is a soft opening. Temperature: Warm. Stage: App out.",
+      "sendThis": "That's it. Two documents. If you can snap a photo of each, you can text them to me straight from your phone, even between deliveries. Then I can see what your home options look like.",
+      "backup": "Yep, just those two. No big project. Whenever you get a quiet minute, a quick photo of each is all I need.",
+      "nextStep": "Lock a tiny window: \"Can you send them tonight after your shift or tomorrow at lunch?\" Then confirm the best text number.",
+      "followUp": "If nothing arrives, text same day at 8pm with \"just the two photos.\" Then day 2, day 4, day 7, then every 2 weeks. If it goes quiet, use a light pattern interrupt.",
+      "watchOut": "Don't promise a result or quote anything once docs arrive; say you'll see what he qualifies for. Keep pressure low. He's slammed until January, so make it feel like two minutes."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 528749.497458,
+    "firstTokenAt": 528029.82825,
+    "fullCardAt": 531525.746833,
+    "guardAt": 532699.375417
+  },
+  {
+    "callId": "call-10",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Okay, yeah, I ...",
+      "confidence": 0.85,
+      "utteranceIndex": 13,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 529341.889292,
+    "firstPartialAt": 528466.459708,
+    "speechEndAt": 531520.445583,
+    "draft": {
+      "read": "Client is overwhelmed, not resistant. The \"that's it?\" shows relief, and he's about to agree. Temperature: Warm. Stage: App out.",
+      "sendThis": "Perfect. Text me photos of both right now, or tonight from your driveway. I'll check them as soon as they land so it keeps moving. Want to snap them after we hang up?",
+      "backup": "No rush on the details. Just those two photos whenever you get a minute today, and I'll handle everything else from there.",
+      "nextStep": "Let him finish, then lock a specific time to send the photos: \"Does right after this call or tonight around 7 work better?\" Confirm the number or email to send them to.",
+      "followUp": "If photos aren't in by tonight, text a same-day nudge: \"Just those two photos and we're moving.\" Then day 2 with a short reminder, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't oversell or restate savings; he's wiped out, so keep it light. His \"eventually\" on lowering the payment is a soft goal, so don't promise any result. Say a real answer comes once the file is complete."
+    },
+    "shown": {
+      "read": "Client is overwhelmed, not resistant. The \"that's it?\" shows relief, and he's about to agree. Temperature: Warm. Stage: App out.",
+      "sendThis": "Perfect. Text me photos of both right now, or tonight from your driveway. I'll check them as soon as they land so it keeps moving. Want to snap them after we hang up?",
+      "backup": "No rush on the details. Just those two photos whenever you get a minute today, and I'll handle everything else from there.",
+      "nextStep": "Let him finish, then lock a specific time to send the photos: \"Does right after this call or tonight around 7 work better?\" Confirm the number or email to send them to.",
+      "followUp": "If photos aren't in by tonight, text a same-day nudge: \"Just those two photos and we're moving.\" Then day 2 with a short reminder, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't oversell or restate savings; he's wiped out, so keep it light. His \"eventually\" on lowering the payment is a soft goal, so don't promise any result. Say a real answer comes once the file is complete."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 530691.610292,
+    "firstTokenAt": 529968.456875,
+    "fullCardAt": 533586.254958,
+    "guardAt": 535112.957083
+  },
+  {
+    "callId": "call-11",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "can you just call me next month?",
+      "confidence": 0.8,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 562165.035917,
+    "firstPartialAt": 557869.346042,
+    "speechEndAt": 563221.832708,
+    "draft": {
+      "read": "Soft stall, not a no. She's still moving, just swamped with a new grandson. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Of course, family first. Before I let you go, a quick 10-minute chat could save you time later, so when you're ready we're not starting from scratch. Does Thursday at 11 or Friday at 3 work better?",
+      "backup": "Totally understand, enjoy that baby. I'll check in next month. Can I send you a short text now with a couple of times that could work?",
+      "nextStep": "Let her finish, acknowledge the baby, then offer a small 10-minute step with a two option close: \"Does Thursday at 11 or Friday at 3 work better?\"",
+      "followUp": "If she declines, send a warm text today (\"congrats again, no rush on your home plans\"). Check in day 4, then at the one-month mark she asked for, with a light angle on getting set up before she's ready to look.",
+      "watchOut": "Don't push past her second \"no.\" Take the month gracefully and note the date. No rates or payment talk. Don't know her timeline, so ask when she'd ideally like to be in a new place."
+    },
+    "shown": {
+      "read": "Soft stall, not a no. She's still moving, just swamped with a new grandson. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Of course, family first. Before I let you go, a quick 10-minute chat could save you time later, so when you're ready we're not starting from scratch. Does Thursday at 11 or Friday at 3 work better?",
+      "backup": "Totally understand, enjoy that baby. I'll check in next month. Can I send you a short text now with a couple of times that could work?",
+      "nextStep": "Let her finish, acknowledge the baby, then offer a small 10-minute step with a two option close: \"Does Thursday at 11 or Friday at 3 work better?\"",
+      "followUp": "If she declines, send a warm text today (\"congrats again, no rush on your home plans\"). Check in day 4, then at the one-month mark she asked for, with a light angle on getting set up before she's ready to look.",
+      "watchOut": "Don't push past her second \"no.\" Take the month gracefully and note the date. No rates or payment talk. Don't know her timeline, so ask when she'd ideally like to be in a new place."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 564798.224292,
+    "firstTokenAt": 564437.691875,
+    "fullCardAt": 567974.237292,
+    "guardAt": 569948.767917
+  },
+  {
+    "callId": "call-11",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "Do you think I'd still get approved?",
+      "confidence": 0.95,
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 575977.257542,
+    "firstPartialAt": 565157.0785,
+    "speechEndAt": 574802.840167,
+    "draft": {
+      "read": "Real fear behind the stall: embarrassed about credit and afraid of a no, not truly about timing. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Medical bills hit a lot of people, so you're not alone in that. I can't say yes or no without seeing your full picture, but I can show you where you stand so there are no surprises. That helps when you're ready.",
+      "backup": "That's really common, and it doesn't automatically close the door. Let's look at the whole picture instead of guessing, and you'll know exactly where you stand.",
+      "nextStep": "Offer a quick, low-pressure credit review so she has a clear plan: \"Does Thursday at 11 or Friday at 2 work better for a 15-minute call?\"",
+      "followUp": "If not booked, text tomorrow warmly, check on the grandson, and offer the two times. Then day 4, then day 7 with the angle that knowing now means no surprises later.",
+      "watchOut": "Never say she'll qualify or won't, and don't minimize the credit hit. She's emotionally stretched with the new baby, so keep it gentle. If she says next month again, agree and lock a specific date to call."
+    },
+    "shown": {
+      "read": "Real fear behind the stall: embarrassed about credit and afraid of a no, not truly about timing. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Medical bills hit a lot of people, so you're not alone in that. I can't say yes or no without seeing your full picture, but I can show you where you stand so there are no surprises. That helps when you're ready.",
+      "backup": "That's really common, and it doesn't automatically close the door. Let's look at the whole picture instead of guessing, and you'll know exactly where you stand.",
+      "nextStep": "Offer a quick, low-pressure credit review so she has a clear plan: \"Does Thursday at 11 or Friday at 2 work better for a 15-minute call?\"",
+      "followUp": "If not booked, text tomorrow warmly, check on the grandson, and offer the two times. Then day 4, then day 7 with the angle that knowing now means no surprises later.",
+      "watchOut": "Never say she'll qualify or won't, and don't minimize the credit hit. She's emotionally stretched with the new baby, so keep it gentle. If she says next month again, agree and lock a specific date to call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 576641.396333,
+    "firstTokenAt": 575862.935,
+    "fullCardAt": 579662.752667,
+    "guardAt": 580889.262875
+  },
+  {
+    "callId": "call-12",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 3,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I think I just need to think",
+      "confidence": 0.7,
+      "utteranceIndex": 3,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 601785.1115,
+    "firstPartialAt": 598478.661083,
+    "speechEndAt": 602331.478958,
+    "draft": {
+      "read": "Classic soft stall: she's likely overwhelmed by the paperwork, not saying no. Temperature: Warm. Stage: Package back.",
+      "sendThis": "Totally fair, those estimates are a lot to read. How about I walk you through the two or three parts that matter most? Ten minutes, and you can keep thinking after.",
+      "backup": "No pressure at all. What part feels the most confusing, so I can start there?",
+      "nextStep": "Book a short walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text today with the two times. Day 2: offer a quick walkthrough of her estimate. Day 4: ask what questions came up.",
+      "watchOut": "Don't quote numbers or push her to decide on the call. Let her finish her sentence first. Question: has she mentioned a timeline, like a closing or lock date?"
+    },
+    "shown": {
+      "read": "Classic soft stall: she's likely overwhelmed by the paperwork, not saying no. Temperature: Warm. Stage: Package back.",
+      "sendThis": "Totally fair, those estimates are a lot to read. How about I walk you through the two or three parts that matter most? Ten minutes, and you can keep thinking after.",
+      "backup": "No pressure at all. What part feels the most confusing, so I can start there?",
+      "nextStep": "Book a short walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text today with the two times. Day 2: offer a quick walkthrough of her estimate. Day 4: ask what questions came up.",
+      "watchOut": "Don't quote numbers or push her to decide on the call. Let her finish her sentence first. Question: has she mentioned a timeline, like a closing or lock date?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 603303.157208,
+    "firstTokenAt": 602931.726833,
+    "fullCardAt": 605560.434125,
+    "guardAt": 606878.322208
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 2,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "So what do I do now?",
+      "confidence": 0.95,
+      "utteranceIndex": 2,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "speculative",
+    "chipAt": 649519.573292,
+    "firstPartialAt": 643612.748375,
+    "speechEndAt": 649362.771958,
+    "draft": {
+      "read": "Accepted offer, now on a clock and nervous, so she wants a clear plan from you. Temperature: Hot. Stage: New lead.",
+      "sendThis": "Deep breath, you've got this. First step is a quick application so we can see your full picture, plus a few documents. Your contract has deadlines, so let's get moving today. Do you have 15 minutes?",
+      "backup": "Totally normal to feel that way. I'll walk you through every step, starting with a short application so we can see what you qualify for. Want to knock it out together?",
+      "nextStep": "Get the application started now, or book it: \"Does today at 4 or tomorrow at 10 work better?\" Then ask for the contract date and closing date.",
+      "followUp": "If not booked, text same day with the application link and two times, then day 2 reminding her of contract deadlines.",
+      "watchOut": "Don't quote a rate, payment, or approval. Ask for her contract deadlines and whether she has already applied anywhere else."
+    },
+    "shown": {
+      "read": "Accepted offer, now on a clock and nervous, so she wants a clear plan from you. Temperature: Hot. Stage: New lead.",
+      "sendThis": "Deep breath, you've got this. First step is a quick application so we can see your full picture, plus a few documents. Your contract has deadlines, so let's get moving today. Do you have 15 minutes?",
+      "backup": "Totally normal to feel that way. I'll walk you through every step, starting with a short application so we can see what you qualify for. Want to knock it out together?",
+      "nextStep": "Get the application started now, or book it: \"Does today at 4 or tomorrow at 10 work better?\" Then ask for the contract date and closing date.",
+      "followUp": "If not booked, text same day with the application link and two times, then day 2 reminding her of contract deadlines.",
+      "watchOut": "Don't quote a rate, payment, or approval. Ask for her contract deadlines and whether she has already applied anywhere else."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 651353.375833,
+    "firstTokenAt": 651019.980583,
+    "fullCardAt": 653703.499,
+    "guardAt": 655300.535083
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 6,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "So what do I do now? What are the next steps?",
+      "confidence": 0.85,
+      "utteranceIndex": 6
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 660494.570167,
+    "firstPartialAt": 656388.073417,
+    "speechEndAt": 659441.769375,
+    "draft": {
+      "read": "Sofia is hot and ready to move, and she's asking for a deadline. Today is the right answer because the contract clock is already running. Temperature: Hot. Stage: App out.",
+      "sendThis": "Yes, today if you can. Your contract has deadlines, and the sooner I have everything, the sooner I can see exactly where you stand and keep you ahead of them. Forward the contract first, then the rest.",
+      "backup": "The sooner the better. Whatever you can send today puts us ahead of the clock, and I'll tell you if anything else is missing.",
+      "nextStep": "Lock in the send and a check-in: \"Can you send it all by 2 today, or by 5 tonight? I'll call you right after to confirm I got everything.\"",
+      "followUp": "If docs aren't in by end of day, text her tonight with a friendly nudge. Day 2: call, ask what's holding it up and offer to walk her through uploading. Day 4: flag the contract timeline.",
+      "watchOut": "Don't promise approval or any numbers. Ask her for the closing date and any contract deadlines (loan contingency, appraisal) so you can plan around them. Confirm she's already submitted an application, and if not, get it started on this call."
+    },
+    "shown": {
+      "read": "Sofia is hot and ready to move, and she's asking for a deadline. Today is the right answer because the contract clock is already running. Temperature: Hot. Stage: App out.",
+      "sendThis": "Yes, today if you can. Your contract has deadlines, and the sooner I have everything, the sooner I can see exactly where you stand and keep you ahead of them. Forward the contract first, then the rest.",
+      "backup": "The sooner the better. Whatever you can send today puts us ahead of the clock, and I'll tell you if anything else is missing.",
+      "nextStep": "Lock in the send and a check-in: \"Can you send it all by 2 today, or by 5 tonight? I'll call you right after to confirm I got everything.\"",
+      "followUp": "If docs aren't in by end of day, text her tonight with a friendly nudge. Day 2: call, ask what's holding it up and offer to walk her through uploading. Day 4: flag the contract timeline.",
+      "watchOut": "Don't promise approval or any numbers. Ask her for the closing date and any contract deadlines (loan contingency, appraisal) so you can plan around them. Confirm she's already submitted an application, and if not, get it started on this call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 660803.408708,
+    "firstTokenAt": 660464.803833,
+    "fullCardAt": 663952.874708,
+    "guardAt": 665282.405292
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 8,
+    "moment": {
+      "type": "question",
+      "evidence": "Is that enough time?",
+      "confidence": 0.8,
+      "utteranceIndex": 8,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 663414.545917,
+    "firstPartialAt": 661437.800542,
+    "speechEndAt": 664493.325333,
+    "draft": {
+      "read": "Excited but nervous first-time-feeling buyer, ready to move, asking if the timeline is safe. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question. Dec twelfth is workable if we move now. Send me the contract and your documents today, and I'll check your contract deadlines against our timeline so nothing sneaks up on us.",
+      "backup": "Let's get everything in this week and I'll map out each deadline between now and the twelfth. You won't have to track it alone.",
+      "nextStep": "Lock in a specific time to start the application and go over documents: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day for the contract and documents and the two times, then day 2 with a deadline reminder.",
+      "watchOut": "Don't promise she'll close on time. Appraisal, underwriting, and her contract's loan contingency date all affect it. Confirm that date and her other deadlines once you see the contract. Ask: has the application been started yet?"
+    },
+    "shown": {
+      "read": "Excited but nervous first-time-feeling buyer, ready to move, asking if the timeline is safe. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question. Dec twelfth is workable if we move now. Send me the contract and your documents today, and I'll check your contract deadlines against our timeline so nothing sneaks up on us.",
+      "backup": "Let's get everything in this week and I'll map out each deadline between now and the twelfth. You won't have to track it alone.",
+      "nextStep": "Lock in a specific time to start the application and go over documents: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day for the contract and documents and the two times, then day 2 with a deadline reminder.",
+      "watchOut": "Don't promise she'll close on time. Appraisal, underwriting, and her contract's loan contingency date all affect it. Confirm that date and her other deadlines once you see the contract. Ask: has the application been started yet?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 665618.314542,
+    "firstTokenAt": 664903.148417,
+    "fullCardAt": 667986.417375,
+    "guardAt": 669142.872583
+  },
+  {
+    "callId": "call-13",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 10,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Okay, I'll do ...",
+      "confidence": 0.9,
+      "utteranceIndex": 10,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 668783.178833,
+    "firstPartialAt": 666963.714917,
+    "speechEndAt": 673113.126,
+    "draft": {
+      "read": "Client is nervous but ready to move and will upload docs this week. Keep it calm, concrete, and get a specific time locked. Temperature: Hot. Stage: App out.",
+      "sendThis": "That's exactly what I need. Send the contract, pay stubs, bank statements and W-2 by tomorrow and I'll start working your file right away. You're doing everything right, and I'll walk you through each step.",
+      "backup": "You've got this. Once I have those four documents, I'll tell you exactly what happens next so nothing catches you off guard.",
+      "nextStep": "Lock the upload time: \"Can you get everything to me by tomorrow noon, or would tonight at 8 be easier?\"",
+      "followUp": "If docs aren't in by tomorrow, check in that afternoon with a short reminder listing what's missing. Then day 2, day 4, tying each to the December 12 deadline.",
+      "watchOut": "Don't promise closing will happen by December 12, and don't mention rates or approval. Say timing depends on the appraisal and how fast documents arrive. Have them upload through the secure portal, not regular email."
+    },
+    "shown": {
+      "read": "Client is nervous but ready to move and will upload docs this week. Keep it calm, concrete, and get a specific time locked. Temperature: Hot. Stage: App out.",
+      "sendThis": "That's exactly what I need. Send the contract, pay stubs, bank statements and W-2 by tomorrow and I'll start working your file right away. You're doing everything right, and I'll walk you through each step.",
+      "backup": "You've got this. Once I have those four documents, I'll tell you exactly what happens next so nothing catches you off guard.",
+      "nextStep": "Lock the upload time: \"Can you get everything to me by tomorrow noon, or would tonight at 8 be easier?\"",
+      "followUp": "If docs aren't in by tomorrow, check in that afternoon with a short reminder listing what's missing. Then day 2, day 4, tying each to the December 12 deadline.",
+      "watchOut": "Don't promise closing will happen by December 12, and don't mention rates or approval. Say timing depends on the appraisal and how fast documents arrive. Have them upload through the secure portal, not regular email."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 670115.692917,
+    "firstTokenAt": 669760.430292,
+    "fullCardAt": 672874.302708,
+    "guardAt": 674079.276042
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 1,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "we want to go ahead",
+      "confidence": 0.9,
+      "utteranceIndex": 1
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 703661.649708,
+    "firstPartialAt": 694813.991542,
+    "speechEndAt": 702467.170667,
+    "draft": {
+      "read": "Paul and his wife decided together and he's calling in ready to move. Stop selling and lock the application. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Paul, that's great to hear, and glad you both talked it over. Let's get your application going so I can see your full picture. Is your wife nearby, or should we find a time that works for both of you?",
+      "backup": "Thanks for calling me back, Paul. The next step is a short application, about 15 minutes. Want to knock it out right now?",
+      "nextStep": "Start the application on this call, or book it: \"Does today at 3 or tomorrow at 10 work better?\" Confirm both borrowers' info and docs needed.",
+      "followUp": "If not booked, text same day with the two times, then day 2 with a reminder of docs to gather.",
+      "watchOut": "Don't quote a rate, payment, or savings, and don't promise approval. If he asks for numbers, say a real answer needs the full application."
+    },
+    "shown": {
+      "read": "Paul and his wife decided together and he's calling in ready to move. Stop selling and lock the application. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Paul, that's great to hear, and glad you both talked it over. Let's get your application going so I can see your full picture. Is your wife nearby, or should we find a time that works for both of you?",
+      "backup": "Thanks for calling me back, Paul. The next step is a short application, about 15 minutes. Want to knock it out right now?",
+      "nextStep": "Start the application on this call, or book it: \"Does today at 3 or tomorrow at 10 work better?\" Confirm both borrowers' info and docs needed.",
+      "followUp": "If not booked, text same day with the two times, then day 2 with a reminder of docs to gather.",
+      "watchOut": "Don't quote a rate, payment, or savings, and don't promise approval. If he asks for numbers, say a real answer needs the full application."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 704178.8305,
+    "firstTokenAt": 703427.366333,
+    "fullCardAt": 706274.255417,
+    "guardAt": 707863.877667
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 3,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "we're in",
+      "confidence": 0.95,
+      "utteranceIndex": 3,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 708883.38875,
+    "firstPartialAt": 704298.782333,
+    "speechEndAt": 709336.095333,
+    "draft": {
+      "read": "Paul and his wife decided together and he's ready to move. Stop selling, start the application. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "That's great news, Paul. Let's get your application started so we can see what you qualify for. It only takes a few minutes, and we can do it together right now.",
+      "backup": "Glad you two are on the same page. Want to knock out the first part of the application together while we're on the phone?",
+      "nextStep": "Start the application now. If he can't do it right now, book it: \"Does today at 3 or tomorrow at 10 work better to finish it with your wife?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with a reminder to finish the application, then day 4.",
+      "watchOut": "Don't quote a rate, payment, or savings, and don't imply approval. Let him finish talking first. Confirm both borrowers will be on the application and have documents ready."
+    },
+    "shown": {
+      "read": "Paul and his wife decided together and he's ready to move. Stop selling, start the application. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "That's great news, Paul. Let's get your application started so we can see what you qualify for. It only takes a few minutes, and we can do it together right now.",
+      "backup": "Glad you two are on the same page. Want to knock out the first part of the application together while we're on the phone?",
+      "nextStep": "Start the application now. If he can't do it right now, book it: \"Does today at 3 or tomorrow at 10 work better to finish it with your wife?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with a reminder to finish the application, then day 4.",
+      "watchOut": "Don't quote a rate, payment, or savings, and don't imply approval. Let him finish talking first. Confirm both borrowers will be on the application and have documents ready."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 709918.49375,
+    "firstTokenAt": 709582.377083,
+    "fullCardAt": 711862.577708,
+    "guardAt": 713002.950583
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Okay. Will you need to do ...",
+      "confidence": 0.8,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "speculative",
+    "chipAt": 721496.191208,
+    "firstPartialAt": 719359.390542,
+    "speechEndAt": 721296.214583,
+    "draft": {
+      "read": "Ready to move and asking a logistics question; he's in, so keep momentum and don't oversell. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question. Whether you need one depends on your loan and your home's details, so I'll confirm that once I see your full picture. Let's get the application going now so I can tell you for sure.",
+      "backup": "It depends on a few things, and I'd rather give you a real answer than a guess. Let's start the application and I'll confirm it early.",
+      "nextStep": "Lock in the application time: \"Does today at 3 or tomorrow at 10 work better to knock it out together?\" Then get the documents in.",
+      "followUp": "If not booked, text today with the two times and the document checklist, then day 2 as a quick check-in.",
+      "watchOut": "Don't promise an appraisal waiver or quote any cost or timeline you can't back up. Confirm what's required after reviewing his file. Both spouses should be on the application."
+    },
+    "shown": {
+      "read": "Ready to move and asking a logistics question; he's in, so keep momentum and don't oversell. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question. Whether you need one depends on your loan and your home's details, so I'll confirm that once I see your full picture. Let's get the application going now so I can tell you for sure.",
+      "backup": "It depends on a few things, and I'd rather give you a real answer than a guess. Let's start the application and I'll confirm it early.",
+      "nextStep": "Lock in the application time: \"Does today at 3 or tomorrow at 10 work better to knock it out together?\" Then get the documents in.",
+      "followUp": "If not booked, text today with the two times and the document checklist, then day 2 as a quick check-in.",
+      "watchOut": "Don't promise an appraisal waiver or quote any cost or timeline you can't back up. Confirm what's required after reviewing his file. Both spouses should be on the application."
+    },
+    "outcome": "shown",
+    "violations": [
+      {
+        "rule": "say_home_not_loan",
+        "severity": "style",
+        "where": "sendThis",
+        "quote": "loan",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 724675.269542,
+    "firstTokenAt": 723944.483125,
+    "fullCardAt": 726823.939667,
+    "guardAt": 727567.420417
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "how long does the whole thing",
+      "confidence": 0.6,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 726537.672625,
+    "firstPartialAt": 723343.699833,
+    "speechEndAt": 727585.539833,
+    "draft": {
+      "read": "Paul and his wife decided together and he's asking process questions, so he's ready to move. Stop selling and lock in a time. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question, and the timeline depends on a few things we'll know once your documents are in. The fastest way to move is to get your application started today. Then I can give you a real picture.",
+      "backup": "I'll map out the steps with you as we go so there are no surprises. Let's get your application going first.",
+      "nextStep": "Book the application: \"Does today at 4 or tomorrow at 10 work better to knock it out together?\" Ask Paul to start gathering documents now.",
+      "followUp": "If not booked, text today with the two times and a document checklist. Day 2: check on documents. Day 4: offer to do the application over the phone.",
+      "watchOut": "Don't promise a closing date or timeline; it depends on appraisal, underwriting, and his bonus documentation. Don't confirm an appraisal waiver. Bonus income needs full history, so ask him to pull it now. Confirm his wife will be on the application."
+    },
+    "shown": {
+      "read": "Paul and his wife decided together and he's asking process questions, so he's ready to move. Stop selling and lock in a time. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question, and the timeline depends on a few things we'll know once your documents are in. The fastest way to move is to get your application started today. Then I can give you a real picture.",
+      "backup": "I'll map out the steps with you as we go so there are no surprises. Let's get your application going first.",
+      "nextStep": "Book the application: \"Does today at 4 or tomorrow at 10 work better to knock it out together?\" Ask Paul to start gathering documents now.",
+      "followUp": "If not booked, text today with the two times and a document checklist. Day 2: check on documents. Day 4: offer to do the application over the phone.",
+      "watchOut": "Don't promise a closing date or timeline; it depends on appraisal, underwriting, and his bonus documentation. Don't confirm an appraisal waiver. Bonus income needs full history, so ask him to pull it now. Confirm his wife will be on the application."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 729108.391875,
+    "firstTokenAt": 728393.537333,
+    "fullCardAt": 731394.416833,
+    "guardAt": 732311.764208
+  },
+  {
+    "callId": "call-14",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 5,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "what will my new payment end up being?",
+      "confidence": 0.9,
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 733246.383375,
+    "firstPartialAt": 729566.939542,
+    "speechEndAt": 732226.094958,
+    "draft": {
+      "read": "Client is committed and asking the payment question, which can't be answered until the application and full picture are in. Temperature: Hot. Stage: App out.",
+      "sendThis": "Great question, and I want to give you a real answer, not a guess. Your payment depends on your full picture, so once we get your documents in, I'll run your actual options. Can we start the application now?",
+      "backup": "I don't want to throw out a number that's off. Let's get your documents in, and then I'll walk you through exactly what your options look like.",
+      "nextStep": "Push to the application with a specific time: \"Does 30 minutes today at 3 or tomorrow at 9 work better to knock it out together?\"",
+      "followUp": "If the application isn't started, text today with the document checklist (statement, pay stubs, W-2s, bonus history), then check in day 2 on documents.",
+      "watchOut": "Do not quote a payment or range, even a rough one. Mention bonus income is reviewed as documented and don't promise how it's counted. Watch for payment anchoring; if he pushes for a number, repeat that you'll show real options once the application is in."
+    },
+    "shown": {
+      "read": "Client is committed and asking the payment question, which can't be answered until the application and full picture are in. Temperature: Hot. Stage: App out.",
+      "sendThis": "Great question, and I want to give you a real answer, not a guess. Your payment depends on your full picture, so once we get your documents in, I'll run your actual options. Can we start the application now?",
+      "backup": "I don't want to throw out a number that's off. Let's get your documents in, and then I'll walk you through exactly what your options look like.",
+      "nextStep": "Push to the application with a specific time: \"Does 30 minutes today at 3 or tomorrow at 9 work better to knock it out together?\"",
+      "followUp": "If the application isn't started, text today with the document checklist (statement, pay stubs, W-2s, bonus history), then check in day 2 on documents.",
+      "watchOut": "Do not quote a payment or range, even a rough one. Mention bonus income is reviewed as documented and don't promise how it's counted. Watch for payment anchoring; if he pushes for a number, repeat that you'll show real options once the application is in."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 734615.75225,
+    "firstTokenAt": 734279.551917,
+    "fullCardAt": 737197.85625,
+    "guardAt": 738907.342958
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 5,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "I'm ready. What do you ...",
+      "confidence": 0.95,
+      "utteranceIndex": 5,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 772763.554875,
+    "firstPartialAt": 768755.983667,
+    "speechEndAt": 773793.045958,
+    "draft": {
+      "read": "Dominic found his property, has a deadline, and just said \"I'm ready.\" He's about to ask what's needed or what happens next. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Love it, Dominic. Let's get you moving. I'll walk you through what I need, takes about 15 minutes, and then we'll see what you qualify for on that property. Let's lock in a time right now.",
+      "backup": "Great news. Let's get your details together so we can see where you stand and work backward from that year-end date.",
+      "nextStep": "Push to the application: \"Does today at 4 or tomorrow at 10 work better to knock it out?\" Then confirm the property address and the seller's exact close date.",
+      "followUp": "If not booked, text same day with the two times, then day 2 with the year-end timeline angle, day 4, day 7, then every 2 weeks.",
+      "watchOut": "If he asks about rate, payment, or approval, say a real answer needs his full picture and turn it into the app time. Five acres with a ranch house can mean land or appraisal wrinkles, so ask if there's a contract yet and who the seller's agent is. Let him finish his question before you jump in."
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "That makes sense. Can I ask a couple of quick questions so I give you a real answer?",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked: text same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "retracted_by_model",
+    "violations": [
+      {
+        "rule": "approval_promise",
+        "quote": "then we'll see what you qualify for on that property",
+        "where": "sendThis",
+        "source": "model",
+        "severity": "block"
+      }
+    ],
+    "firstLineAt": 774506.092792,
+    "firstTokenAt": 773816.903708,
+    "fullCardAt": 777024.10575,
+    "guardAt": 778551.950708
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "My CPA has all that. I can have her send it today.",
+      "confidence": 0.85,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 780630.889625,
+    "firstPartialAt": 776305.049917,
+    "speechEndAt": 782452.789292,
+    "draft": {
+      "read": "Dominic is ready to move, has a deadline, and his CPA can send docs today. Stop selling and lock the logistics. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Perfect, have her send it today. Once I have it, I can map out what you qualify for and what the timeline looks like for that year-end close. Let's get your application going now.",
+      "backup": "Great, that puts you way ahead. Send those over and I'll walk you through the application so we're moving while she pulls it together.",
+      "nextStep": "Book the application call and get the CPA's email: \"Does today at 3 or tomorrow at 10 work better to knock out the application?\"",
+      "followUp": "If docs don't land within 24 hours, text him and the CPA the checklist, then day 2 with a nudge tied to the year-end deadline.",
+      "watchOut": "Don't quote a rate, payment, or approval on land with a house. Self-employed income gets reviewed closely, so confirm the CPA sends everything complete. Ask whether the 5 acres is one parcel, since that can affect which options fit."
+    },
+    "shown": {
+      "read": "Dominic is ready to move, has a deadline, and his CPA can send docs today. Stop selling and lock the logistics. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Perfect, have her send it today. Once I have it, I can map out what you qualify for and what the timeline looks like for that year-end close. Let's get your application going now.",
+      "backup": "Great, that puts you way ahead. Send those over and I'll walk you through the application so we're moving while she pulls it together.",
+      "nextStep": "Book the application call and get the CPA's email: \"Does today at 3 or tomorrow at 10 work better to knock out the application?\"",
+      "followUp": "If docs don't land within 24 hours, text him and the CPA the checklist, then day 2 with a nudge tied to the year-end deadline.",
+      "watchOut": "Don't quote a rate, payment, or approval on land with a house. Self-employed income gets reviewed closely, so confirm the CPA sends everything complete. Ask whether the 5 acres is one parcel, since that can affect which options fit."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 781796.5345,
+    "firstTokenAt": 781432.80425,
+    "fullCardAt": 784752.882792,
+    "guardAt": 786833.265833
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "Am I going to have trouble getting approved",
+      "confidence": 0.85,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 787633.823708,
+    "firstPartialAt": 784413.074833,
+    "speechEndAt": 787863.152917,
+    "draft": {
+      "read": "Buying-ready and doc-ready, now asking if approval is at risk. He wants reassurance, but nobody can promise an outcome before the full file is reviewed. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question. I can't call it until I see your full picture, and that's why we get your CPA's docs in today. Once I have them, I can tell you exactly where you stand and what we need.",
+      "backup": "Self-employed files just need a closer look at the paperwork, and you're already ahead with your CPA ready. Let's get the real numbers in front of us.",
+      "nextStep": "Send the secure upload link right now, then lock a review: \"Does tomorrow at 2 or Thursday at 10 work better to go over what the docs show?\"",
+      "followUp": "If the CPA hasn't uploaded by end of day, text the CPA and client the link again. Day 2, check that the docs arrived and confirm the review time. Day 4, reach out if anything is missing.",
+      "watchOut": "Don't say he'll be fine, and don't hint at approval or numbers. Finish hearing his full question first, because he may be worried about something specific like income dips, write-offs, or credit. Ask what's behind it. Also confirm the property type and the year-end closing date, since a tight timeline may limit options."
+    },
+    "shown": {
+      "read": "Buying-ready and doc-ready, now asking if approval is at risk. He wants reassurance, but nobody can promise an outcome before the full file is reviewed. Temperature: Hot. Stage: App out.",
+      "sendThis": "Good question. I can't call it until I see your full picture, and that's why we get your CPA's docs in today. Once I have them, I can tell you exactly where you stand and what we need.",
+      "backup": "Self-employed files just need a closer look at the paperwork, and you're already ahead with your CPA ready. Let's get the real numbers in front of us.",
+      "nextStep": "Send the secure upload link right now, then lock a review: \"Does tomorrow at 2 or Thursday at 10 work better to go over what the docs show?\"",
+      "followUp": "If the CPA hasn't uploaded by end of day, text the CPA and client the link again. Day 2, check that the docs arrived and confirm the review time. Day 4, reach out if anything is missing.",
+      "watchOut": "Don't say he'll be fine, and don't hint at approval or numbers. Finish hearing his full question first, because he may be worried about something specific like income dips, write-offs, or credit. Ask what's behind it. Also confirm the property type and the year-end closing date, since a tight timeline may limit options."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 789045.301708,
+    "firstTokenAt": 788340.427542,
+    "fullCardAt": 792137.903083,
+    "guardAt": 792927.5495
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "does five acres change anything?",
+      "confidence": 0.8,
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 794067.424583,
+    "firstPartialAt": 790612.5065,
+    "speechEndAt": 793272.633542,
+    "draft": {
+      "read": "Client is ready and moving, now asking a real product question about five acres. Land and a shop build can change the loan type, but you need the details first. Temperature: Hot. Stage: App out.",
+      "sendThis": "It can, yes. Acreage and what you're building both shape which option fits. I need a few details from you, like whether the land is owned and what the shop will be. Then I can point you the right way.",
+      "backup": "Good question. Five acres isn't a problem by itself, but how you're using it matters. Tell me a bit about the plan for the land and the shop.",
+      "nextStep": "Get the land and build details, send the secure upload link today, then lock a time: \"Does tomorrow at 10 or 2 work better to go over everything?\"",
+      "followUp": "If no docs by end of day, text the link again with a quick check-in. Day 2: ask if the CPA needs anything. Day 4: offer a 10-minute call to get it moving.",
+      "watchOut": "Don't quote anything or say acreage is fine or not until you know more. Missing: does he own the land, is it a purchase or a build, and what is the shop's purpose (personal vs. business use)?"
+    },
+    "shown": {
+      "read": "Client is ready and moving, now asking a real product question about five acres. Land and a shop build can change the loan type, but you need the details first. Temperature: Hot. Stage: App out.",
+      "sendThis": "It can, yes. Acreage and what you're building both shape which option fits. I need a few details from you, like whether the land is owned and what the shop will be. Then I can point you the right way.",
+      "backup": "Good question. Five acres isn't a problem by itself, but how you're using it matters. Tell me a bit about the plan for the land and the shop.",
+      "nextStep": "Get the land and build details, send the secure upload link today, then lock a time: \"Does tomorrow at 10 or 2 work better to go over everything?\"",
+      "followUp": "If no docs by end of day, text the link again with a quick check-in. Day 2: ask if the CPA needs anything. Day 4: offer a 10-minute call to get it moving.",
+      "watchOut": "Don't quote anything or say acreage is fine or not until you know more. Missing: does he own the land, is it a purchase or a build, and what is the shop's purpose (personal vs. business use)?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 795412.266417,
+    "firstTokenAt": 794707.956625,
+    "fullCardAt": 798104.242042,
+    "guardAt": 798720.633042
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 5,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "question",
+      "evidence": "Can you hit that?",
+      "confidence": 0.6,
+      "utteranceIndex": 15
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 801657.911792,
+    "firstPartialAt": 799682.603083,
+    "speechEndAt": 800832.925,
+    "draft": {
+      "read": "Ready to move, but asking you to commit to a date before anyone has seen the income docs, the property, or the appraisal. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "I want to hit it, and I'll work backward from December twentieth. I can't promise a date until I see your returns and how the property appraises, so let's get your CPA's docs in today and start the clock.",
+      "backup": "That's doable to aim for. Once I see your returns today, I'll tell you straight whether that date looks realistic or if we need to talk to the seller about timing.",
+      "nextStep": "Lock in the doc upload and the application: \"Should I send the secure link now so your CPA can upload today, or tomorrow morning?\" Then book the application: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If docs don't arrive, text the CPA's upload reminder same day, then check in day 2 tied to the Dec 20 closing, then day 4 and day 7 with a timeline-risk angle.",
+      "watchOut": "Don't promise the closing date or approval; the half-fallen pole barn and five acres could affect the appraisal and timeline. Ask: is there a signed contract, and does it have a financing contingency date?"
+    },
+    "shown": {
+      "read": "Ready to move, but asking you to commit to a date before anyone has seen the income docs, the property, or the appraisal. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "I want to hit it, and I'll work backward from December twentieth. I can't promise a date until I see your returns and how the property appraises, so let's get your CPA's docs in today and start the clock.",
+      "backup": "That's doable to aim for. Once I see your returns today, I'll tell you straight whether that date looks realistic or if we need to talk to the seller about timing.",
+      "nextStep": "Lock in the doc upload and the application: \"Should I send the secure link now so your CPA can upload today, or tomorrow morning?\" Then book the application: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If docs don't arrive, text the CPA's upload reminder same day, then check in day 2 tied to the Dec 20 closing, then day 4 and day 7 with a timeline-risk angle.",
+      "watchOut": "Don't promise the closing date or approval; the half-fallen pole barn and five acres could affect the appraisal and timeline. Ask: is there a signed contract, and does it have a financing contingency date?"
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 802506.794875,
+    "firstTokenAt": 801806.381167,
+    "fullCardAt": 805354.707458,
+    "guardAt": 806645.356792
+  },
+  {
+    "callId": "call-15",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 6,
+    "utteranceIndex": 17,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Do I need to do anything else today?",
+      "confidence": 0.8,
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 806781.452667,
+    "firstPartialAt": 803379.91,
+    "speechEndAt": 805712.984417,
+    "draft": {
+      "read": "Client is engaged and asking what to do today. Ready to move, so stop selling and lock in actions. Temperature: Hot. Stage: App out.",
+      "sendThis": "Yes, three things today. Ask your CPA to send your last two years of returns, upload your ID and recent bank statements, and I'll start your timeline tonight so we protect that December twentieth date.",
+      "backup": "The biggest thing is getting your returns from your CPA. Can you reach out to them today? I'll handle the rest on my end.",
+      "nextStep": "Get a specific check-in booked: \"Does tomorrow at 10 or 2 work better to confirm your documents are in?\"",
+      "followUp": "If no documents by day 2, text a nudge tied to the closing date, then day 4 and day 7 with the appraisal order as the reason timing matters.",
+      "watchOut": "Don't promise the date is certain; the appraisal and underwriting aren't in your control. Confirm whether the application is submitted and whether a purchase contract is in hand."
+    },
+    "shown": {
+      "read": "Client is engaged and asking what to do today. Ready to move, so stop selling and lock in actions. Temperature: Hot. Stage: App out.",
+      "sendThis": "Yes, three things today. Ask your CPA to send your last two years of returns, upload your ID and recent bank statements, and I'll start your timeline tonight so we protect that December twentieth date.",
+      "backup": "The biggest thing is getting your returns from your CPA. Can you reach out to them today? I'll handle the rest on my end.",
+      "nextStep": "Get a specific check-in booked: \"Does tomorrow at 10 or 2 work better to confirm your documents are in?\"",
+      "followUp": "If no documents by day 2, text a nudge tied to the closing date, then day 4 and day 7 with the appraisal order as the reason timing matters.",
+      "watchOut": "Don't promise the date is certain; the appraisal and underwriting aren't in your control. Confirm whether the application is submitted and whether a purchase contract is in hand."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 807534.191458,
+    "firstTokenAt": 806785.427667,
+    "fullCardAt": 810134.673792,
+    "guardAt": 810877.108208
+  },
+  {
+    "callId": "call-16",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 3,
+    "moment": {
+      "type": "question",
+      "evidence": "Was it like a quiz thing?",
+      "confidence": 0.6,
+      "utteranceIndex": 3
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 821365.931875,
+    "firstPartialAt": 814159.690958,
+    "speechEndAt": 817610.849708,
+    "draft": {
+      "read": "Carla doesn't recall the form and is a bit guarded. She's asking a clarifying question, not hanging up. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Could've been a quiz, I'm not sure which one you saw. Either way, you looked into your home options earlier this year, so I'm just checking if that's still something on your mind. No pressure at all.",
+      "backup": "Fair enough, that was a while back. Is looking at your home options still on your radar, or has that changed?",
+      "nextStep": "Don't insist she filled it out. Ask if it's still on her radar. If yes, offer a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text about your home options with a quick opt-out line, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't claim she submitted it if you're unsure. If she asks not to be contacted, confirm politely and mark her do not contact. Confirm how the lead was sourced."
+    },
+    "shown": {
+      "read": "Carla doesn't recall the form and is a bit guarded. She's asking a clarifying question, not hanging up. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Could've been a quiz, I'm not sure which one you saw. Either way, you looked into your home options earlier this year, so I'm just checking if that's still something on your mind. No pressure at all.",
+      "backup": "Fair enough, that was a while back. Is looking at your home options still on your radar, or has that changed?",
+      "nextStep": "Don't insist she filled it out. Ask if it's still on her radar. If yes, offer a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text about your home options with a quick opt-out line, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't claim she submitted it if you're unsure. If she asks not to be contacted, confirm politely and mark her do not contact. Confirm how the lead was sourced."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 821365.938917,
+    "firstTokenAt": 820688.834792,
+    "fullCardAt": 823881.0885,
+    "guardAt": 825226.53525
+  },
+  {
+    "callId": "call-16",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "Honestly though, I'm not interested. Please take ...",
+      "confidence": 0.97,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "fixed_opt_out",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 831947.073125,
+    "firstPartialAt": 827497.591542,
+    "speechEndAt": 832889.744625,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark them Do Not Contact.",
+      "followUp": "None. They are Do Not Contact.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 831947.093625,
+    "guardAt": 831947.093625,
+    "fullCardAt": 831947.093625,
+    "firstTokenAt": 831947.093625
+  },
+  {
+    "callId": "call-17",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "opt_out",
+      "evidence": "Stop calling me.",
+      "confidence": 0.97,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "fixed_opt_out",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 851963.433333,
+    "firstPartialAt": 848191.266125,
+    "speechEndAt": 852830.608417,
+    "draft": {},
+    "shown": {
+      "read": "Borrower opted out. Honor it now. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Understood, I'm sorry for the bother. I'll take you off our list right now.",
+      "backup": "You won't hear from us again. Have a good day.",
+      "nextStep": "End the call politely and mark them Do Not Contact.",
+      "followUp": "None. They are Do Not Contact.",
+      "watchOut": "No pitch, no 'before you go', no close."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 851963.438667,
+    "guardAt": 851963.438667,
+    "fullCardAt": 851963.438667,
+    "firstTokenAt": 851963.438667
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "question",
+      "evidence": "So what kind of rate would ...",
+      "confidence": 0.95,
+      "utteranceIndex": 7,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 884518.153042,
+    "firstPartialAt": 882502.9045,
+    "speechEndAt": 885162.965208,
+    "draft": {
+      "read": "Likely about to ask for a rate. Real buyer, in the market, exhausted after a 12-hour shift. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Good question, and I want to give you a real answer, not a guess. It depends on your full picture, so let me see what you qualify for. Ten minutes and I can tell you where you actually stand.",
+      "backup": "I don't want to throw out a number that isn't real for you. Let me look at your full picture first, then you'll have something solid to plan around.",
+      "nextStep": "Book a 10-minute review to run her numbers: \"Does tomorrow at 4 or Thursday at 10 work better?\" Be easy on her after the shift, keep it short.",
+      "followUp": "If not booked, text same day with the two times and \"your home options\". Day 2: offer a quick call before her next shift. Day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't quote any rate or payment, even a range, and don't hint at approval. Her question isn't finished yet, so let her complete it before answering. Quick check: ask about her timeline for buying. Don't confirm 5% down works for any program until you've seen her full picture."
+    },
+    "shown": {
+      "read": "Likely about to ask for a rate. Real buyer, in the market, exhausted after a 12-hour shift. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Good question, and I want to give you a real answer, not a guess. It depends on your full picture, so let me see what you qualify for. Ten minutes and I can tell you where you actually stand.",
+      "backup": "I don't want to throw out a number that isn't real for you. Let me look at your full picture first, then you'll have something solid to plan around.",
+      "nextStep": "Book a 10-minute review to run her numbers: \"Does tomorrow at 4 or Thursday at 10 work better?\" Be easy on her after the shift, keep it short.",
+      "followUp": "If not booked, text same day with the two times and \"your home options\". Day 2: offer a quick call before her next shift. Day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't quote any rate or payment, even a range, and don't hint at approval. Her question isn't finished yet, so let her complete it before answering. Quick check: ask about her timeline for buying. Don't confirm 5% down works for any program until you've seen her full picture."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 885935.80175,
+    "firstTokenAt": 885599.261792,
+    "fullCardAt": 888856.101333,
+    "guardAt": 889536.933958
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "is that going to be a problem? Will I ...",
+      "confidence": 0.9,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "speculative",
+    "chipAt": 892610.919667,
+    "firstPartialAt": 887089.941667,
+    "speechEndAt": 892442.776042,
+    "draft": {
+      "read": "Client is a motivated first-time buyer asking about approval, and the rep already quoted a rate that has to be walked back. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "First, I got ahead of myself on that rate. I can't know your real numbers until I see your full picture. 680 isn't automatically a problem, so let's see what you qualify for. Quick review first?",
+      "backup": "Honestly I jumped the gun on that number earlier. Your credit is one piece of the picture, so let's look at everything together before I say anything else.",
+      "nextStep": "Book a 15-minute review of income, credit, and down payment: \"Does tomorrow at 10 or Thursday at 2 work better, since you're coming off shifts?\"",
+      "followUp": "If not booked, same day text about her home options with the two times, then day 2 with an angle on starting early so she knows her budget before house hunting.",
+      "watchOut": "Rate was quoted earlier, so walk it back first. Don't say she'll be approved or that 680 is fine. Don't repeat the number. Ask when she's off next to pick a time that fits ICU shifts."
+    },
+    "shown": {
+      "read": "Client is a motivated first-time buyer asking about approval, and the rep already quoted a rate that has to be walked back. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "First, I got ahead of myself on that rate. I can't know your real numbers until I see your full picture. 680 isn't automatically a problem, so let's see what you qualify for. Quick review first?",
+      "backup": "Honestly I jumped the gun on that number earlier. Your credit is one piece of the picture, so let's look at everything together before I say anything else.",
+      "nextStep": "Book a 15-minute review of income, credit, and down payment: \"Does tomorrow at 10 or Thursday at 2 work better, since you're coming off shifts?\"",
+      "followUp": "If not booked, same day text about her home options with the two times, then day 2 with an angle on starting early so she knows her budget before house hunting.",
+      "watchOut": "Rate was quoted earlier, so walk it back first. Don't say she'll be approved or that 680 is fine. Don't repeat the number. Ask when she's off next to pick a time that fits ICU shifts."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 893890.345375,
+    "firstTokenAt": 893487.289667,
+    "fullCardAt": 896648.708708,
+    "guardAt": 898131.736458
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "Seriously? That's way ...",
+      "confidence": 0.6,
+      "utteranceIndex": 11,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 895630.706208,
+    "firstPartialAt": 894169.727,
+    "speechEndAt": 895717.749917,
+    "draft": {
+      "read": "Rep quoted a rate and promised approval, and the client is now reacting to it. Walk it back before anything else. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers or what you qualify for until I see your full picture. That's what I'd like to do for you, no obligation.",
+      "backup": "Let me pull back on what I said. Your real answer depends on your full picture, and I'd rather give you the right one than a quick one.",
+      "nextStep": "Book a 15-minute review to look at her income, credit, and down payment: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times, using \"your home options\" wording. Day 2: offer to walk through her options. Then day 4, day 7, every 2 weeks.",
+      "watchOut": "Rep quoted a rate and said \"you're approved\". Retract both and don't repeat the number or the word. Don't argue the rate if she pushes back; acknowledge it and move to her goal. Ask: did she mean \"way too high\" or \"way better than expected\"? Let her finish first."
+    },
+    "shown": {
+      "read": "Rep quoted a rate and promised approval, and the client is now reacting to it. Walk it back before anything else. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers or what you qualify for until I see your full picture. That's what I'd like to do for you, no obligation.",
+      "backup": "Let me pull back on what I said. Your real answer depends on your full picture, and I'd rather give you the right one than a quick one.",
+      "nextStep": "Book a 15-minute review to look at her income, credit, and down payment: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times, using \"your home options\" wording. Day 2: offer to walk through her options. Then day 4, day 7, every 2 weeks.",
+      "watchOut": "Rep quoted a rate and said \"you're approved\". Retract both and don't repeat the number or the word. Don't argue the rate if she pushes back; acknowledge it and move to her goal. Ask: did she mean \"way too high\" or \"way better than expected\"? Let her finish first."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 902451.126375,
+    "firstTokenAt": 902113.890875,
+    "fullCardAt": 905079.3625,
+    "guardAt": 907432.573375
+  },
+  {
+    "callId": "call-18",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "what's the next step, do I fill something out?",
+      "confidence": 0.9,
+      "utteranceIndex": 13
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 901234.897167,
+    "firstPartialAt": 897273.422667,
+    "speechEndAt": 899934.495,
+    "draft": {
+      "read": "Client is ready to move, but is leaning on a rate estimate and an approval promise the rep can't back up. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Yes, we start with a short application. First, I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Let's see what you qualify for, and I'll walk you through it.",
+      "backup": "Quick correction first: I jumped ahead on a few things. The application is how we get you real answers. Want to knock it out together?",
+      "nextStep": "Book the application walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with a reminder that a real answer needs the full picture. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Rep quoted a rate and promised approval. Walk both back now, before any pull or paperwork, and don't repeat the number. Client now expects easy approval, so reset expectations gently. Document the correction."
+    },
+    "shown": {
+      "read": "Client is ready to move, but is leaning on a rate estimate and an approval promise the rep can't back up. Temperature: Hot. Stage: Contacted.",
+      "sendThis": "Yes, we start with a short application. First, I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Let's see what you qualify for, and I'll walk you through it.",
+      "backup": "Quick correction first: I jumped ahead on a few things. The application is how we get you real answers. Want to knock it out together?",
+      "nextStep": "Book the application walkthrough: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the two times, then day 2 with a reminder that a real answer needs the full picture. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Rep quoted a rate and promised approval. Walk both back now, before any pull or paperwork, and don't repeat the number. Client now expects easy approval, so reset expectations gently. Document the correction."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 903237.1415,
+    "firstTokenAt": 902876.38175,
+    "fullCardAt": 905992.0475,
+    "guardAt": 907426.919208
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "just give me a number. What rate",
+      "confidence": 0.95,
+      "utteranceIndex": 9,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 937299.488167,
+    "firstPartialAt": 933911.124042,
+    "speechEndAt": 937361.372417,
+    "draft": {
+      "read": "Experienced investor, impatient, wants a rate number before giving you anything. Goal is lower payment, with solid equity. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Straight answer: a real number depends on your full picture, and I won't throw out a guess that's wrong. Two quick things and I'll run it properly: is this your primary or a rental, and roughly where's your credit?",
+      "backup": "Since you've done this before, you know a number off the cuff is noise. Give me two minutes to run your actual situation and I'll show you what's possible.",
+      "nextStep": "Get occupancy and credit range, then book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times, then day 2 with a \"want me to run your home numbers side by side?\" angle.",
+      "watchOut": "Do not quote a rate, even a ballpark; he's fishing. Occupancy is unknown and changes everything (primary vs. investment), so confirm it. He may be comparing lenders, so welcome that and don't push back on it."
+    },
+    "shown": {
+      "read": "Experienced investor, impatient, wants a rate number before giving you anything. Goal is lower payment, with solid equity. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Straight answer: a real number depends on your full picture, and I won't throw out a guess that's wrong. Two quick things and I'll run it properly: is this your primary or a rental, and roughly where's your credit?",
+      "backup": "Since you've done this before, you know a number off the cuff is noise. Give me two minutes to run your actual situation and I'll show you what's possible.",
+      "nextStep": "Get occupancy and credit range, then book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times, then day 2 with a \"want me to run your home numbers side by side?\" angle.",
+      "watchOut": "Do not quote a rate, even a ballpark; he's fishing. Occupancy is unknown and changes everything (primary vs. investment), so confirm it. He may be comparing lenders, so welcome that and don't push back on it."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 938612.675708,
+    "firstTokenAt": 937944.656958,
+    "fullCardAt": 941033.598792,
+    "guardAt": 942741.304042
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "what's that make my payment, principal and interest?",
+      "confidence": 0.95,
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 942532.349375,
+    "firstPartialAt": 939137.599542,
+    "speechEndAt": 941472.246875,
+    "draft": {
+      "read": "Client is rate-focused and about to anchor on your number. You quoted a rate before seeing his full picture, so walk it back before any payment math. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself on that number. I can't know your real numbers until I see your full picture, so I won't give you a payment off a guess. Let me run it properly and show you real options on your home.",
+      "backup": "You asked for simple, and the simple truth is the number depends on a few things I haven't checked yet. Give me 10 minutes and you'll see real figures for your home, not a guess.",
+      "nextStep": "Book a quick review to pull his actual picture: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text about \"your home options\" with the two times. Day 2, offer the side by side if he's comparing. Day 4, check whether the hot tub tenant mess changed his priorities.",
+      "watchOut": "Don't repeat the quoted rate or calculate any payment. Rental or investment property could change the options, so ask which property this is and whether he lives in it. Expect him to push back with \"just give me a number\" and to compare you against others."
+    },
+    "shown": {
+      "read": "Client is rate-focused and about to anchor on your number. You quoted a rate before seeing his full picture, so walk it back before any payment math. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself on that number. I can't know your real numbers until I see your full picture, so I won't give you a payment off a guess. Let me run it properly and show you real options on your home.",
+      "backup": "You asked for simple, and the simple truth is the number depends on a few things I haven't checked yet. Give me 10 minutes and you'll see real figures for your home, not a guess.",
+      "nextStep": "Book a quick review to pull his actual picture: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text about \"your home options\" with the two times. Day 2, offer the side by side if he's comparing. Day 4, check whether the hot tub tenant mess changed his priorities.",
+      "watchOut": "Don't repeat the quoted rate or calculate any payment. Rental or investment property could change the options, so ask which property this is and whether he lives in it. Expect him to push back with \"just give me a number\" and to compare you against others."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 943984.460125,
+    "firstTokenAt": 943260.322208,
+    "fullCardAt": 946689.400417,
+    "guardAt": 948702.248875
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "objection",
+      "subtype": "bank_loyalty",
+      "evidence": "My bank said they'd match whatever anyone offers",
+      "confidence": 0.9,
+      "utteranceIndex": 13,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 946503.679042,
+    "firstPartialAt": 943244.231875,
+    "speechEndAt": 948281.113667,
+    "draft": {
+      "read": "Client is leveraging the bank's match offer, but you quoted a rate and payment before seeing their full picture, so you have to walk that back first. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers until I see your full picture, and I shouldn't have thrown those out. Matching is smart. Let me run it properly so you're comparing real to real.",
+      "backup": "Good that your bank will compete. Ignore what I said earlier, it was premature. Let me look at your full picture so any comparison is solid.",
+      "nextStep": "Book a 10-minute full-picture review, including the rentals, so you can build a real side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same-day text with the two times, then day 2 with the angle that a bank can only match a real, documented offer. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "You quoted a rate and payment earlier, so don't repeat or defend them. Don't knock the bank; welcome the comparison. Rentals and equity change the picture, so quote nothing until you see income, credit, and occupancy details. Let the client finish speaking before you start."
+    },
+    "shown": {
+      "read": "Client is leveraging the bank's match offer, but you quoted a rate and payment before seeing their full picture, so you have to walk that back first. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers until I see your full picture, and I shouldn't have thrown those out. Matching is smart. Let me run it properly so you're comparing real to real.",
+      "backup": "Good that your bank will compete. Ignore what I said earlier, it was premature. Let me look at your full picture so any comparison is solid.",
+      "nextStep": "Book a 10-minute full-picture review, including the rentals, so you can build a real side by side: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same-day text with the two times, then day 2 with the angle that a bank can only match a real, documented offer. Then day 4, day 7, then every 2 weeks.",
+      "watchOut": "You quoted a rate and payment earlier, so don't repeat or defend them. Don't knock the bank; welcome the comparison. Rentals and equity change the picture, so quote nothing until you see income, credit, and occupancy details. Let the client finish speaking before you start."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 947881.302583,
+    "firstTokenAt": 947305.063958,
+    "fullCardAt": 950290.410667,
+    "guardAt": 951777.978417
+  },
+  {
+    "callId": "call-19",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 17,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I'll look at it when I look at it",
+      "confidence": 0.7,
+      "utteranceIndex": 17
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 960469.669917,
+    "firstPartialAt": 955557.475417,
+    "speechEndAt": 958611.233792,
+    "draft": {
+      "read": "Client is lukewarm and leaning on their bank. You quoted a rate and payment you can't back up, and you knocked their bank, which put them on defense. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Before I send anything, I got ahead of myself earlier. I can't know your real numbers until I see your full picture. And I shouldn't have said that about your bank. Sounds like they've treated you well.",
+      "backup": "Fair enough, I'll send info over. And I got ahead of myself on numbers earlier. A real answer needs your full picture, so treat those as placeholders until we do that.",
+      "nextStep": "Walk back the numbers and bank comment first. Then offer a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\" Send only a general info note about your home options, no figures.",
+      "followUp": "Same day text with the two times. Day 2, offer to be a second set of eyes alongside their bank. Day 4, then day 7, then every 2 weeks.",
+      "watchOut": "Do not send any rate or payment figure in writing. Don't repeat the number or that line about the bank. In texts say \"home options,\" not \"mortgage,\" \"loan,\" or \"refinance.\" Mark that your earlier quote came before any credit or full review."
+    },
+    "shown": {
+      "read": "Client is lukewarm and leaning on their bank. You quoted a rate and payment you can't back up, and you knocked their bank, which put them on defense. Temperature: Cold. Stage: Contacted.",
+      "sendThis": "Before I send anything, I got ahead of myself earlier. I can't know your real numbers until I see your full picture. And I shouldn't have said that about your bank. Sounds like they've treated you well.",
+      "backup": "Fair enough, I'll send info over. And I got ahead of myself on numbers earlier. A real answer needs your full picture, so treat those as placeholders until we do that.",
+      "nextStep": "Walk back the numbers and bank comment first. Then offer a 10-minute side by side: \"Does today at 4 or tomorrow at 10 work better?\" Send only a general info note about your home options, no figures.",
+      "followUp": "Same day text with the two times. Day 2, offer to be a second set of eyes alongside their bank. Day 4, then day 7, then every 2 weeks.",
+      "watchOut": "Do not send any rate or payment figure in writing. Don't repeat the number or that line about the bank. In texts say \"home options,\" not \"mortgage,\" \"loan,\" or \"refinance.\" Mark that your earlier quote came before any credit or full review."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 960469.677042,
+    "firstTokenAt": 959404.585708,
+    "fullCardAt": 962776.579625,
+    "guardAt": 964239.093792
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 1,
+    "utteranceIndex": 7,
+    "moment": {
+      "type": "question",
+      "evidence": "Will I get approved with a six-forty?",
+      "confidence": 0.95,
+      "utteranceIndex": 7
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 986862.214958,
+    "firstPartialAt": 981576.944458,
+    "speechEndAt": 985821.943542,
+    "draft": {
+      "read": "Tanya is nervous about her score and is really asking if she even has a shot. She's motivated, has time right now, and is open. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Good news is a score is just one piece, and I can't say yes or no from one number. Let's look at your full picture together. I can take a few minutes right now and see what you qualify for.",
+      "backup": "Plenty of people in your spot are closer than they think. Let me ask a few quick questions so I can tell you what the real path looks like.",
+      "nextStep": "Use her twenty minutes now: ask about her income, monthly debts, and how much she has saved. If she's open, set the application: \"Does today at 4 or tomorrow at 10 work better to finish it?\"",
+      "followUp": "If the call ends without a booked time, text same day with the two time options, then day 2 with a short credit-readiness angle, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't promise approval or guess at programs, rates, or payments off the score alone. Confirm the 640 is current and not an estimate."
+    },
+    "shown": {
+      "read": "Tanya is nervous about her score and is really asking if she even has a shot. She's motivated, has time right now, and is open. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Good news is a score is just one piece, and I can't say yes or no from one number. Let's look at your full picture together. I can take a few minutes right now and see what you qualify for.",
+      "backup": "Plenty of people in your spot are closer than they think. Let me ask a few quick questions so I can tell you what the real path looks like.",
+      "nextStep": "Use her twenty minutes now: ask about her income, monthly debts, and how much she has saved. If she's open, set the application: \"Does today at 4 or tomorrow at 10 work better to finish it?\"",
+      "followUp": "If the call ends without a booked time, text same day with the two time options, then day 2 with a short credit-readiness angle, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Don't promise approval or guess at programs, rates, or payments off the score alone. Confirm the 640 is current and not an estimate."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 987456.790292,
+    "firstTokenAt": 986741.042708,
+    "fullCardAt": 989966.089083,
+    "guardAt": 991769.5405
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 2,
+    "utteranceIndex": 9,
+    "moment": {
+      "type": "question",
+      "evidence": "Really? Every other place made it sound iffy.",
+      "confidence": 0.85,
+      "utteranceIndex": 9
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 990945.051833,
+    "firstPartialAt": 987603.649583,
+    "speechEndAt": 989541.886667,
+    "draft": {
+      "read": "Rep promised approval, and the client is now leaning on that promise after hearing \"iffy\" elsewhere. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself there. I can't know that until I see your full picture. What I can do is look at it properly and show you what you qualify for and what to work on. Fair?",
+      "backup": "Let me slow down. Nobody can answer that honestly from one number. Give me ten minutes with your details and I'll tell you exactly where you stand.",
+      "nextStep": "Book a quick credit review while the kids are at practice: \"Do you want to start it today at 4 or tomorrow at 10?\"",
+      "followUp": "Same day text with the two times, day 2 with an angle on getting out of renting, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Walk back the guarantee first, with no approval words repeated. Don't quote a rate, payment, or price range. Don't knock the other places that said iffy. Ask them what income and down payment they're working with."
+    },
+    "shown": {
+      "read": "Rep promised approval, and the client is now leaning on that promise after hearing \"iffy\" elsewhere. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself there. I can't know that until I see your full picture. What I can do is look at it properly and show you what you qualify for and what to work on. Fair?",
+      "backup": "Let me slow down. Nobody can answer that honestly from one number. Give me ten minutes with your details and I'll tell you exactly where you stand.",
+      "nextStep": "Book a quick credit review while the kids are at practice: \"Do you want to start it today at 4 or tomorrow at 10?\"",
+      "followUp": "Same day text with the two times, day 2 with an angle on getting out of renting, day 4, day 7, then every 2 weeks.",
+      "watchOut": "Walk back the guarantee first, with no approval words repeated. Don't quote a rate, payment, or price range. Don't knock the other places that said iffy. Ask them what income and down payment they're working with."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 990945.062917,
+    "firstTokenAt": 990240.624708,
+    "fullCardAt": 992982.121208,
+    "guardAt": 994323.12325
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 3,
+    "utteranceIndex": 11,
+    "moment": {
+      "type": "question",
+      "evidence": "how much would my payment be on a two-fifty house?",
+      "confidence": 0.9,
+      "utteranceIndex": 11
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 995336.256542,
+    "firstPartialAt": 991072.195958,
+    "speechEndAt": 994522.22875,
+    "draft": {
+      "read": "Client is hopeful and anchoring on your approval guarantee, which you can't back up, and now wants a payment number you can't give yet. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real answer until I see your full picture, and that goes for any payment too. Let's see what you qualify for and build real numbers from there.",
+      "backup": "Good question, and I want you to get a real answer, not a guess. Let me look at your full picture first, then we'll know where you stand on a home around that price.",
+      "nextStep": "Walk back the guarantee first, then book a 15-minute review to go over income, debts, and credit: \"Does today at 4 or tomorrow at 10 work better?\""
+    },
+    "shown": {
+      "read": "Slow down; acknowledge before anything else.",
+      "sendThis": "Great question. The honest answer depends on your full picture, and that's exactly what I'd check for you.",
+      "backup": "What matters most to you in this decision?",
+      "nextStep": "Book a short review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If no time is booked: text same day, then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "No rates, payments, or approval promises."
+    },
+    "outcome": "blocked_by_rules",
+    "violations": [
+      {
+        "rule": "guarantee",
+        "severity": "block",
+        "quote": "guarantee",
+        "where": "nextStep",
+        "source": "rules"
+      }
+    ],
+    "firstLineAt": 996715.296333,
+    "firstTokenAt": 996012.331958,
+    "fullCardAt": 997943.59675
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 4,
+    "utteranceIndex": 13,
+    "moment": {
+      "type": "objection",
+      "subtype": "rate_too_high",
+      "evidence": "that's more ...",
+      "confidence": 0.85,
+      "utteranceIndex": 13,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "direct",
+    "chipAt": 1001210.346667,
+    "firstPartialAt": 996244.39075,
+    "speechEndAt": 1002389.030875,
+    "draft": {
+      "read": "Client is sticker-shocked after you promised approval and quoted a payment before seeing their full picture. Walk both back now. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier, and I'm sorry. I can't know your real numbers until I see your full picture. Let's look at it properly so you're working with real information, not a guess.",
+      "backup": "That's fair, and I shouldn't have thrown out numbers yet. What monthly range feels comfortable for you? Then we can see what fits.",
+      "nextStep": "Book a 15-minute review of their income, credit, and savings: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times and \"your home options.\" Day 2: ask what monthly range feels comfortable. Day 4: offer a quick call to map next steps toward owning. Then day 7, then every 2 weeks.",
+      "watchOut": "You quoted a payment and promised approval. Don't repeat either; correct it before anything else. Credit around 640 and the other places calling it iffy: keep expectations honest. Don't knock those other lenders. Missing: income, down payment, and debts. Ask about those on the review call."
+    },
+    "shown": {
+      "read": "Client is sticker-shocked after you promised approval and quoted a payment before seeing their full picture. Walk both back now. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier, and I'm sorry. I can't know your real numbers until I see your full picture. Let's look at it properly so you're working with real information, not a guess.",
+      "backup": "That's fair, and I shouldn't have thrown out numbers yet. What monthly range feels comfortable for you? Then we can see what fits.",
+      "nextStep": "Book a 15-minute review of their income, credit, and savings: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, same day text with the two times and \"your home options.\" Day 2: ask what monthly range feels comfortable. Day 4: offer a quick call to map next steps toward owning. Then day 7, then every 2 weeks.",
+      "watchOut": "You quoted a payment and promised approval. Don't repeat either; correct it before anything else. Credit around 640 and the other places calling it iffy: keep expectations honest. Don't knock those other lenders. Missing: income, down payment, and debts. Ask about those on the review call."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 1002640.186458,
+    "firstTokenAt": 1001922.277792,
+    "fullCardAt": 1005233.660417,
+    "guardAt": 1006653.10875
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 5,
+    "utteranceIndex": 15,
+    "moment": {
+      "type": "objection",
+      "subtype": "stall",
+      "evidence": "I need to think about",
+      "confidence": 0.8,
+      "utteranceIndex": 15,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "speculative",
+    "chipAt": 1007253.629625,
+    "firstPartialAt": 1004101.285625,
+    "speechEndAt": 1006761.223292,
+    "draft": {
+      "read": "Client is rattled on payment and is stalling, and the rep already guaranteed approval and quoted a payment, so trust is at risk if it doesn't hold. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Let me run it properly so you're deciding on real info, not my guesses.",
+      "backup": "Fair to think it over. Before you do, let me walk back what I said earlier so you're not working off bad info. Can I show you the real picture?",
+      "nextStep": "Book a 15-minute review of their full picture to see what they qualify for: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times, then day 2 with an angle on getting real numbers so the decision isn't based on guesses, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Rep guaranteed approval and quoted a payment, both non-compliant, so walk them back first and don't repeat either. Don't debate rent vs. owning or pitch equity. Ask the client what budget feels comfortable before the review."
+    },
+    "shown": {
+      "read": "Client is rattled on payment and is stalling, and the rep already guaranteed approval and quoted a payment, so trust is at risk if it doesn't hold. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "I got ahead of myself earlier. I can't know your real numbers until I see your full picture. Let me run it properly so you're deciding on real info, not my guesses.",
+      "backup": "Fair to think it over. Before you do, let me walk back what I said earlier so you're not working off bad info. Can I show you the real picture?",
+      "nextStep": "Book a 15-minute review of their full picture to see what they qualify for: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "Same day text with the two times, then day 2 with an angle on getting real numbers so the decision isn't based on guesses, then day 4, day 7, then every 2 weeks.",
+      "watchOut": "Rep guaranteed approval and quoted a payment, both non-compliant, so walk them back first and don't repeat either. Don't debate rent vs. owning or pitch equity. Ask the client what budget feels comfortable before the review."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 1009735.325292,
+    "firstTokenAt": 1009002.386583,
+    "fullCardAt": 1012480.110833,
+    "guardAt": 1013827.198
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 6,
+    "utteranceIndex": 17,
+    "moment": {
+      "type": "question",
+      "evidence": "What would I ...",
+      "confidence": 0.6,
+      "utteranceIndex": 17,
+      "fromPartial": true
+    },
+    "kind": "coach",
+    "trigger": "partial",
+    "path": "speculative",
+    "chipAt": 1010779.569167,
+    "firstPartialAt": 1008649.130333,
+    "speechEndAt": 1010192.340333,
+    "draft": {
+      "read": "Client is leaning in with a practical question after sticker shock on the number the rep gave. Buying signal, but the quoted payment is shaping their doubt. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Happy to walk you through it. First, I got ahead of myself earlier. I can't know your real numbers until I see your full picture, so that nineteen hundred was just a guess. Let's see what you actually qualify for.",
+      "backup": "Quick list is easy: ID, recent pay stubs, and bank statements. And that payment figure was a rough guess, your real picture could look different.",
+      "nextStep": "Give the short doc list (photo ID, last 30 days of pay stubs, last 2 months of bank statements), then book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the doc list and two times, then day 2 with a no-pressure check on how the gathering is going.",
+      "watchOut": "Rep quoted a payment and said \"we do these all the time,\" which sounds like an assurance. Walk the number back first, promise nothing, and don't repeat the figure. Client's rent worry is real, so don't push the application over it."
+    },
+    "shown": {
+      "read": "Client is leaning in with a practical question after sticker shock on the number the rep gave. Buying signal, but the quoted payment is shaping their doubt. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Happy to walk you through it. First, I got ahead of myself earlier. I can't know your real numbers until I see your full picture, so that nineteen hundred was just a guess. Let's see what you actually qualify for.",
+      "backup": "Quick list is easy: ID, recent pay stubs, and bank statements. And that payment figure was a rough guess, your real picture could look different.",
+      "nextStep": "Give the short doc list (photo ID, last 30 days of pay stubs, last 2 months of bank statements), then book a 10-minute review: \"Does today at 4 or tomorrow at 10 work better?\"",
+      "followUp": "If not booked, text same day with the doc list and two times, then day 2 with a no-pressure check on how the gathering is going.",
+      "watchOut": "Rep quoted a payment and said \"we do these all the time,\" which sounds like an assurance. Walk the number back first, promise nothing, and don't repeat the figure. Client's rent worry is real, so don't push the application over it."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 1012554.069375,
+    "firstTokenAt": 1011822.072833,
+    "fullCardAt": 1015193.191958,
+    "guardAt": 1015847.703667
+  },
+  {
+    "callId": "call-20",
+    "coach": "claude:claude-sonnet-5-5@low",
+    "id": 7,
+    "utteranceIndex": 19,
+    "moment": {
+      "type": "buying_signal",
+      "evidence": "Oh, they're done, I have to go grab them.",
+      "confidence": 0.8,
+      "utteranceIndex": 19
+    },
+    "kind": "coach",
+    "trigger": "final",
+    "path": "speculative",
+    "chipAt": 1015504.303042,
+    "firstPartialAt": 1012000.903833,
+    "speechEndAt": 1014660.687708,
+    "draft": {
+      "read": "Client is moving toward the application but just flinched at the payment, and the rep quoted a payment number earlier that has to be walked back. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Go grab them. Quick thing first: I got ahead of myself on that payment number. I can't know your real numbers until I see your full picture, so let's see what you qualify for and go from there.",
+      "backup": "Grab them, no rush. That payment figure was a rough guess on my end. Your real numbers depend on your full picture, and that's what we're about to look at.",
+      "nextStep": "Once they're back, walk the application with them live, then book the review: \"Does today at 4 or tomorrow at 10 work better to go over your real numbers?\"",
+      "followUp": "If they drift off before finishing, text same day: \"Still have your docs handy? We can finish in 5 minutes.\" Then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "The rep quoted a payment and said \"building equity\" as a counter; don't repeat the figure. Also note the client said \"I need to think about it\" but is still engaging, so don't over-sell. Child support: say it's the client's choice to include it, never imply they must. Don't claim any approval."
+    },
+    "shown": {
+      "read": "Client is moving toward the application but just flinched at the payment, and the rep quoted a payment number earlier that has to be walked back. Temperature: Warm. Stage: Contacted.",
+      "sendThis": "Go grab them. Quick thing first: I got ahead of myself on that payment number. I can't know your real numbers until I see your full picture, so let's see what you qualify for and go from there.",
+      "backup": "Grab them, no rush. That payment figure was a rough guess on my end. Your real numbers depend on your full picture, and that's what we're about to look at.",
+      "nextStep": "Once they're back, walk the application with them live, then book the review: \"Does today at 4 or tomorrow at 10 work better to go over your real numbers?\"",
+      "followUp": "If they drift off before finishing, text same day: \"Still have your docs handy? We can finish in 5 minutes.\" Then day 2, day 4, day 7, then every 2 weeks.",
+      "watchOut": "The rep quoted a payment and said \"building equity\" as a counter; don't repeat the figure. Also note the client said \"I need to think about it\" but is still engaging, so don't over-sell. Child support: say it's the client's choice to include it, never imply they must. Don't claim any approval."
+    },
+    "outcome": "shown",
+    "violations": [],
+    "firstLineAt": 1016479.147,
+    "firstTokenAt": 1015729.696208,
+    "fullCardAt": 1019301.159958,
+    "guardAt": 1021012.782833
+  }
+]

@@ -1,0 +1,196 @@
+{
+  "id": "holdout-17",
+  "title": "Weekend offer, needs pre-approval letter fast",
+  "scenario": "Software tester and her husband found a townhouse with multiple offers expected by Sunday. She is decisive and asks about speed, documents and rate; the rep stays compliant.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Keiko? This is Marlon with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 8.9,
+      "text": "Yes! Thank you for calling. We're kind of in a rush.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 9.5,
+      "end": 11.8,
+      "text": "Happy to help. What's going on?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.5,
+      "end": 20.2,
+      "text": "We found a townhouse yesterday and our agent says offers are due Sunday at noon. We need a pre-approval letter.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 21,
+      "end": 24.5,
+      "text": "Okay, let's move. Have you been pre-approved anywhere else?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 25.4,
+      "end": 32.3,
+      "text": "No. We've been renting and saving. What do you need from us to get the letter by Saturday?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 33.3,
+      "end": 42.9,
+      "text": "Both your last two pay stubs, last two years of W-2s, two months of bank statements, and IDs. Then I'll run credit with your permission.",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 44,
+      "end": 49.8,
+      "text": "Done, I can upload all of that tonight. Can we start the application right now?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 51,
+      "end": 57.2,
+      "text": "Absolutely. I'll text you the link as soon as we hang up. What's the list price?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 57.6,
+      "end": 60.3,
+      "text": "Three-sixty-five. We'd go up to maybe three-eighty.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 60.8,
+      "end": 63.5,
+      "text": "And how much are you putting down?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 64.1,
+      "end": 67.6,
+      "text": "Fifteen percent. What rate would we get with that?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 68.3,
+      "end": 79.1,
+      "text": "I can't give you a real number until I see credit and the full file, but once I do I'll walk you through the options the same day.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 79.9,
+      "end": 83.7,
+      "text": "Okay, fair. Is fifteen percent enough to avoid mortgage insurance?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 84.6,
+      "end": 94.6,
+      "text": "With less than twenty percent down on a conventional loan there's usually some mortgage insurance, but the cost varies, and I'll show it to you clearly.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 95.6,
+      "end": 99.8,
+      "text": "Got it. And if they accept, how quickly can we close?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 100.9,
+      "end": 109,
+      "text": "That depends on the appraisal and the contract terms. I'll give you a realistic date once we have a signed contract.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 110.2,
+      "end": 113.3,
+      "text": "Okay. Can you talk to our agent directly?",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 113.7,
+      "end": 117.2,
+      "text": "Sure, send me her contact and I'll reach out.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 117.7,
+      "end": 121.5,
+      "text": "I'll text it to you. Thank you so much, Marlon.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 122.1,
+      "end": 124.8,
+      "text": "You bet. Let's get you this house.",
+      "labels": []
+    }
+  ]
+}

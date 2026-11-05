@@ -1,0 +1,193 @@
+{
+  "id": "call-19",
+  "title": "Refi client pushes for a payment number and gets two",
+  "scenario": "Greg a landlord with a few rentals, wants to refinance his primary home and keeps asking for an exact rate and payment. The rep quotes both, and later disparages the client's bank.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 5.8,
+      "text": "Hey Greg, it's Melissa with Copperleaf Home Loans. You'd asked about refinancing your primary home?",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 6.3,
+      "end": 14.8,
+      "text": "Yeah. Look, I've done this a bunch of times, I own a few rentals. I don't need the whole song and dance.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 15.4,
+      "end": 21.6,
+      "text": "Ha, fair enough, I'll skip the song and dance. What's the main goal on this one?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 22.3,
+      "end": 25.8,
+      "text": "Lower payment. Simple. I owe about two-sixty on it.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 26.6,
+      "end": 29.7,
+      "text": "Got it. And roughly what's the house worth?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 30.6,
+      "end": 32.9,
+      "text": "Around four-fifty. Bought it in twenty-nineteen.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 33.9,
+      "end": 37.7,
+      "text": "Great equity. How are the rentals doing, by the way?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 38.8,
+      "end": 45,
+      "text": "Fine. One tenant just put a hot tub on the deck without asking, so that's fun.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 46.2,
+      "end": 48.5,
+      "text": "Oh no. That's a new one.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 48.9,
+      "end": 53.5,
+      "text": "Yeah. Anyway, just give me a number. What rate can you do?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 54,
+      "end": 59,
+      "text": "For you, with that equity, I can do five point eight seven five.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 59.6,
+      "end": 63.1,
+      "text": "And what's that make my payment, principal and interest?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 63.8,
+      "end": 68.4,
+      "text": "On two-sixty over thirty years, you'd be right around fifteen-forty a month.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "rate_quote"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 69.2,
+      "end": 75.4,
+      "text": "Hm. My bank said they'd match whatever anyone offers. I'll probably just run it through them.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "bank_loyalty"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 76.3,
+      "end": 83.2,
+      "text": "Honestly, banks say that and then hit you with junk fees at closing. They're not on your side.",
+      "labels": [
+        {
+          "type": "rep_violation",
+          "subtype": "other"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 84.2,
+      "end": 88.8,
+      "text": "I've used them for my last two refis and they were fine.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 89.9,
+      "end": 94.1,
+      "text": "Okay, well, at least let me send you something to compare.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 95.3,
+      "end": 99.5,
+      "text": "Send it. I'll look at it when I look at it.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "stall"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 99.9,
+      "end": 101.4,
+      "text": "Will do. Thanks Greg.",
+      "labels": []
+    }
+  ]
+}

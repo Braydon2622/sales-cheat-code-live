@@ -1,0 +1,26 @@
+# id: holdout-02
+# title: First-time buyer just browsing listings
+# scenario: Young renter who has been scrolling listing apps calls in to understand the basics. She is clear she is only looking and not ready to buy this year.
+# synthetic: true
+REP: Copperleaf Home Loans, this is Priya speaking, how can I help?
+CLIENT: Hi, um, I'm Talia. I'm not really sure I'm calling the right place. I've just been looking at houses online.
+REP: You're absolutely in the right place. Are you thinking about buying your first home?
+CLIENT: Maybe? Like, eventually. I'm honestly just looking right now, I'm not ready to do anything.  [objection:just_shopping]
+REP: That's a perfect time to call, actually. No pressure here, we can just get you oriented.
+CLIENT: Okay, cool, because I feel like I don't even know the words people use.
+REP: Ha, that's really common. Are you renting right now?
+CLIENT: Yeah, a one-bedroom. My lease is up next August.
+REP: Okay, so you've got some runway. And are you thinking you'd buy on your own?
+CLIENT: Yeah, just me. And my cat.
+REP: The cat gets a vote, obviously. Do you have a sense of what area you're looking in?
+CLIENT: Kind of the north side, near my job. Townhouses mostly.
+REP: Nice. Have you started saving anything toward a down payment?
+CLIENT: A little. Like eleven thousand-ish. Is that even enough to do anything with?  [question]
+REP: It can be a real start. There are programs with smaller down payment requirements, and some first-time buyer assistance, but what fits depends on your income, your credit, and the property. That's exactly what a pre-qualification conversation would sort out.
+CLIENT: Okay. I mean, I'm really just browsing for now, though.
+REP: Totally understood. Would it be helpful if I emailed you a short first-time buyer guide so you can read up at your own pace?
+CLIENT: Yeah, that'd actually be great.
+REP: And maybe we check back in around spring, before your lease decision?
+CLIENT: Spring works.
+REP: Perfect. I'll send that guide over today. Thanks for calling, Talia.
+CLIENT: Thanks, Priya. Bye.

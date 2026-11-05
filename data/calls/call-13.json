@@ -1,0 +1,196 @@
+{
+  "id": "call-13",
+  "title": "First-time buyer under contract and ready to go",
+  "scenario": "Sofia just had an offer accepted on her first home and calls ready to move fast. Multiple buying signals about documents, timeline and appraisal; the rep stays compliant on rate questions.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "client",
+      "start": 0,
+      "end": 5.8,
+      "text": "Hi, is this Megan? Sofia, I talked to you last month. Our offer got accepted!",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "rep",
+      "start": 6.3,
+      "end": 7.8,
+      "text": "Sofia! Congratulations! That's huge.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "client",
+      "start": 8.4,
+      "end": 15.3,
+      "text": "Thank you! I'm freaking out a little. So what do I do now? What are the next steps?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "speaker": "rep",
+      "start": 16,
+      "end": 22.5,
+      "text": "Okay, deep breath, this is the fun part. First, can you send me the signed purchase contract?",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "client",
+      "start": 23.3,
+      "end": 27.5,
+      "text": "Yes, my agent just emailed it to me. I'll forward it.",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "rep",
+      "start": 28.4,
+      "end": 35.3,
+      "text": "Perfect. Then I'll need your last two pay stubs, two months of bank statements and last year's W-2.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "client",
+      "start": 36.3,
+      "end": 40.5,
+      "text": "Okay, I have all of that. Do you need it today?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "speaker": "rep",
+      "start": 41.6,
+      "end": 47.8,
+      "text": "The sooner the better, since your contract has deadlines. What's your closing date on the contract?",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "client",
+      "start": 49,
+      "end": 53.2,
+      "text": "December twelfth. Is that enough time? How fast can you close?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "speaker": "rep",
+      "start": 53.6,
+      "end": 65.9,
+      "text": "That's a reasonable window. The main thing that drives timing is the appraisal and how fast documents come in, so if you get me everything this week we'll be in good shape.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "client",
+      "start": 66.4,
+      "end": 73.7,
+      "text": "Okay, I'll do it tonight. Oh, and do I lock my rate now? What's the rate going to be?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "speaker": "rep",
+      "start": 74.3,
+      "end": 87.8,
+      "text": "Good question. I can't give you a number until we have the contract and your file reviewed, but once we do, we'll talk through locking options and I'll show you exactly what's available that day.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "client",
+      "start": 88.5,
+      "end": 90,
+      "text": "Okay, that makes sense.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "rep",
+      "start": 90.8,
+      "end": 94.3,
+      "text": "Also, have you picked a homeowners insurance company yet?",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "client",
+      "start": 95.2,
+      "end": 97.5,
+      "text": "No! Do I need that already?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "speaker": "rep",
+      "start": 98.5,
+      "end": 103.9,
+      "text": "You'll need it before closing, so it's worth getting a couple quotes this week.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "client",
+      "start": 105,
+      "end": 109.2,
+      "text": "Okay, adding it to my list. My list is getting long.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "rep",
+      "start": 110.4,
+      "end": 116.9,
+      "text": "Ha, it'll get shorter fast. Is the house the blue one with the porch you sent me?",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "client",
+      "start": 117.3,
+      "end": 120.4,
+      "text": "Yes! With the lemon tree in the back.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "rep",
+      "start": 120.9,
+      "end": 130.9,
+      "text": "Love it. Okay, I'll send you the upload link right now. Can we do a quick check-in Thursday or Friday to make sure everything came through?",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "client",
+      "start": 131.5,
+      "end": 133.8,
+      "text": "Friday. Thank you so much, Megan.",
+      "labels": []
+    }
+  ]
+}

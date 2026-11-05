@@ -1,0 +1,189 @@
+{
+  "id": "holdout-03",
+  "title": "Move-up buyer won't proceed without wife",
+  "scenario": "Father of three wants a bigger house but repeatedly defers to his wife, who handles the family finances. The rep schedules a joint call.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.6,
+      "text": "Hey, is this Graham? This is Leon calling from Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 5.1,
+      "end": 7,
+      "text": "Yep, that's me. Hey Leon.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 7.6,
+      "end": 14.1,
+      "text": "Thanks for picking up. I saw you were asking about a purchase loan for a bigger place?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 14.8,
+      "end": 20.6,
+      "text": "Yeah, we've got three kids in a three-bedroom ranch. It's, uh, getting tight. Real tight.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 21.4,
+      "end": 27.6,
+      "text": "I bet. Are you planning to sell the current home first, or buy before you sell?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 28.5,
+      "end": 32.3,
+      "text": "That's the million-dollar question. Probably sell first? I don't know.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 33.3,
+      "end": 37.9,
+      "text": "Okay. Do you know roughly what you owe on the current place?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 39,
+      "end": 41.7,
+      "text": "Maybe one-sixty. We've been there nine years.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 42.9,
+      "end": 49.4,
+      "text": "So likely some good equity there. What price range are you looking at for the next house?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 49.8,
+      "end": 57.1,
+      "text": "Honestly, my wife Renata handles all the money stuff. I really can't go further without her on the call.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 57.6,
+      "end": 65.7,
+      "text": "That makes total sense, it's a big family decision. Would it work to set up a time when you're both available?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 66.3,
+      "end": 71.7,
+      "text": "Yeah, I think so. She'd kill me if I did this without her, ha.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 72.4,
+      "end": 77,
+      "text": "Ha, we definitely don't want that. Are evenings better for you two?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 77.8,
+      "end": 80.9,
+      "text": "Yeah, after the kids are down. Like eight-thirty?",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 81.8,
+      "end": 84.5,
+      "text": "I can do eight-thirty. How about Tuesday?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 85.5,
+      "end": 87,
+      "text": "Tuesday at eight-thirty works.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 88.1,
+      "end": 94.3,
+      "text": "Great. In the meantime, is there anything you're curious about that I can help with now?",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 95.5,
+      "end": 101.7,
+      "text": "Not really, I'd rather wait till Renata's on. She's going to have all the questions anyway.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 102.1,
+      "end": 110.6,
+      "text": "Fair enough. I'll send a calendar invite to the email on the form. Does that go to you or both of you?",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 111.1,
+      "end": 113.4,
+      "text": "Just me, but I'll forward it.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 114,
+      "end": 116.7,
+      "text": "Perfect. Talk to you both Tuesday, Graham.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 117.4,
+      "end": 118.9,
+      "text": "Sounds good. Thanks, Leon.",
+      "labels": []
+    }
+  ]
+}

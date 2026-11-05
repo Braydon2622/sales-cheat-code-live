@@ -1,0 +1,193 @@
+{
+  "id": "call-07",
+  "title": "Needs to talk to her husband first",
+  "scenario": "Mia is looking at a move-up purchase but says her husband handles the finances and she needs to talk to him. The rep tries to get both on one call with a two-option close.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 4.2,
+      "text": "Hi, is this Mia? This is Carlos with Copperleaf Home Loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 4.7,
+      "end": 9.3,
+      "text": "Yes, hi, sorry, the kids are being loud, give me one sec.",
+      "labels": []
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 9.9,
+      "end": 11.4,
+      "text": "No rush at all.",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 12.1,
+      "end": 13.3,
+      "text": "Okay. Sorry. Hi.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 14.1,
+      "end": 17.6,
+      "text": "Ha, no worries. How many kids do you have?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 18.5,
+      "end": 24.7,
+      "text": "Three, and a fourth on the way, which is exactly why we need a bigger house.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 25.7,
+      "end": 31.5,
+      "text": "Congratulations! That'll do it. So are you thinking of selling your current place and buying?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 32.6,
+      "end": 38.8,
+      "text": "Yeah, that's the plan. We've been looking at four bedrooms out by the new elementary school.",
+      "labels": []
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 40,
+      "end": 45.8,
+      "text": "Great area. Do you have a sense of what you'd want your budget to be?",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 46.2,
+      "end": 53.5,
+      "text": "Honestly my husband does all the money stuff. I really need to talk to him before I say anything.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "spouse"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 54,
+      "end": 68.2,
+      "text": "That makes total sense, it's a big decision and you should both be in it. Rather than you having to relay everything, would it be easier if I hopped on a quick call with both of you?",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 68.8,
+      "end": 71.5,
+      "text": "Maybe. He works pretty long days though.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 72.2,
+      "end": 78.7,
+      "text": "Understood. Would this evening around seven or Saturday morning around ten work better for both of you?",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 79.5,
+      "end": 83.7,
+      "text": "Saturday morning would probably be better. He's wiped out on weeknights.",
+      "labels": []
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 84.6,
+      "end": 92.3,
+      "text": "Saturday at ten it is. It'll be about twenty minutes. It'd help if he has your current mortgage statement handy.",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 93.3,
+      "end": 99.1,
+      "text": "Okay. Do we have to sell our house before we can buy the new one?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 100.2,
+      "end": 111.7,
+      "text": "Not necessarily, there are a few ways to handle that, and it depends on your equity and income. That's a great one to dig into Saturday with both of you.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 112.9,
+      "end": 116.7,
+      "text": "Okay, good, because that's the thing that stresses me out.",
+      "labels": []
+    },
+    {
+      "index": 18,
+      "speaker": "rep",
+      "start": 117.1,
+      "end": 124.8,
+      "text": "Totally understandable. I'll send a calendar invite to you, and if you give me his email I'll include him too.",
+      "labels": []
+    },
+    {
+      "index": 19,
+      "speaker": "client",
+      "start": 125.3,
+      "end": 127.6,
+      "text": "Yeah, I'll text it to you.",
+      "labels": []
+    },
+    {
+      "index": 20,
+      "speaker": "rep",
+      "start": 128.2,
+      "end": 131.3,
+      "text": "Perfect. Thanks Mia, good luck with the chaos.",
+      "labels": []
+    },
+    {
+      "index": 21,
+      "speaker": "client",
+      "start": 132,
+      "end": 133.2,
+      "text": "Ha, thanks. Bye.",
+      "labels": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# id: holdout-05
+# title: Cash-out for kitchen remodel, payment worries, rep overpromises
+# scenario: Chatty homeowner wants about sixty thousand cash out for a kitchen remodel but worries the new payment will be too high. The rep quotes a payment and promises approval.
+# synthetic: true
+REP: Good afternoon, is this Bev? Hi Bev, it's Tomas with Copperleaf Home Loans.
+CLIENT: Oh, hi Tomas! Yes, I was hoping someone would call. My kitchen is from nineteen eighty-eight, I'm not even kidding.
+REP: Ha, oh no. So you're thinking cash-out refinance to fund a remodel?
+CLIENT: That's the idea. My neighbor did one and her kitchen is gorgeous now. Absolutely gorgeous.
+REP: Love it. How much are you thinking you'd need?
+CLIENT: The contractor said around sixty thousand. Maybe sixty-five if I go with the nicer countertops.
+REP: And what do you think the home's worth these days?
+CLIENT: Zillow says four-forty, but who knows with Zillow.
+REP: Right, we'd confirm with an appraisal. And the current balance?
+CLIENT: About two-twenty. But here's my worry, my payment is fine right now. I don't want it to jump to something crazy. Rates are so high now compared to when I bought.  [objection:rate_too_high]
+REP: That's a really common concern. Honestly, for a cash-out like that you'd probably be looking at about nineteen-fifty a month.  [rep_violation:rate_quote]
+CLIENT: Nineteen-fifty? I pay fourteen hundred now. That's a big jump.
+REP: It's a jump, but you're getting sixty-five thousand for the kitchen.
+CLIENT: I suppose. Do you think I'd even qualify? I retired from teaching last year, it's mostly pension now.  [question]
+REP: Oh, with that much equity you'll definitely qualify, don't worry about that.  [rep_violation:approval_promise]
+CLIENT: Well, that's a relief. What would you need from me?  [buying_signal]
+REP: Your pension award letter, a couple of bank statements, and your mortgage statement to start.
+CLIENT: I have all of that in a folder somewhere. I'm very organized, my late husband used to tease me about it.
+REP: That'll make this easy. Can I set up a time to go through everything properly?
+CLIENT: Sure. But still, that payment makes me nervous. It's just a lot higher.
+REP: Totally understandable. We can look at options when we sit down. How's Monday at eleven?
+CLIENT: Monday at eleven is fine.
+REP: Wonderful. Talk Monday, Bev.
+CLIENT: Bye now, Tomas!

@@ -1,0 +1,165 @@
+{
+  "id": "call-06",
+  "title": "Self-employed designer just curious",
+  "scenario": "Leo is a self-employed graphic designer who says he's not ready, just curious whether he could ever qualify. The rep handles the approval question carefully and books a document review.",
+  "synthetic": true,
+  "utterances": [
+    {
+      "index": 0,
+      "speaker": "rep",
+      "start": 0,
+      "end": 7.3,
+      "text": "Hey Leo, it's Sam with Copperleaf Home Loans. You'd sent us a question through the website about self-employed loans.",
+      "labels": []
+    },
+    {
+      "index": 1,
+      "speaker": "client",
+      "start": 7.8,
+      "end": 13.6,
+      "text": "Oh yeah. Hey. Yeah, I'm not ready to buy or anything, I was just curious.",
+      "labels": [
+        {
+          "type": "objection",
+          "subtype": "just_shopping"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "speaker": "rep",
+      "start": 14.2,
+      "end": 21.1,
+      "text": "That's a great time to ask, honestly, before you're in a rush. How long have you been self-employed?",
+      "labels": []
+    },
+    {
+      "index": 3,
+      "speaker": "client",
+      "start": 21.8,
+      "end": 25.3,
+      "text": "About three years now. Freelance design, mostly branding work.",
+      "labels": []
+    },
+    {
+      "index": 4,
+      "speaker": "rep",
+      "start": 26.1,
+      "end": 28,
+      "text": "Very cool. Anyone I'd know?",
+      "labels": []
+    },
+    {
+      "index": 5,
+      "speaker": "client",
+      "start": 28.9,
+      "end": 36.2,
+      "text": "Mostly small stuff, a couple breweries, a coffee roaster. I did a taco truck logo I'm weirdly proud of.",
+      "labels": []
+    },
+    {
+      "index": 6,
+      "speaker": "rep",
+      "start": 37.2,
+      "end": 42.2,
+      "text": "Ha, those are the best ones. So what made you curious about buying?",
+      "labels": []
+    },
+    {
+      "index": 7,
+      "speaker": "client",
+      "start": 43.3,
+      "end": 51.8,
+      "text": "My rent went up again. And everyone keeps saying self-employed people can't get mortgages. Is that true? Would I even get approved?",
+      "labels": [
+        {
+          "type": "question"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "speaker": "rep",
+      "start": 53,
+      "end": 69.5,
+      "text": "It's definitely not true that you can't. It just looks different, we usually look at your tax returns rather than pay stubs. Whether you'd qualify really depends on what your returns show, so I can't say yes or no until I see them.",
+      "labels": []
+    },
+    {
+      "index": 9,
+      "speaker": "client",
+      "start": 69.9,
+      "end": 72.6,
+      "text": "Yeah, my accountant writes off basically everything.",
+      "labels": []
+    },
+    {
+      "index": 10,
+      "speaker": "rep",
+      "start": 73.1,
+      "end": 83.1,
+      "text": "That's really common, and it's exactly why it's worth looking early. Sometimes a small change in how you file this year makes a big difference later.",
+      "labels": []
+    },
+    {
+      "index": 11,
+      "speaker": "client",
+      "start": 83.7,
+      "end": 86,
+      "text": "Oh, interesting. I didn't know that.",
+      "labels": []
+    },
+    {
+      "index": 12,
+      "speaker": "rep",
+      "start": 86.7,
+      "end": 95.9,
+      "text": "If you're open to it, I could look at your last two years of returns and tell you honestly where you stand. No commitment.",
+      "labels": []
+    },
+    {
+      "index": 13,
+      "speaker": "client",
+      "start": 96.7,
+      "end": 100.5,
+      "text": "Sure, I can do that. Would you need anything else?",
+      "labels": [
+        {
+          "type": "buying_signal"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "speaker": "rep",
+      "start": 101.4,
+      "end": 111.8,
+      "text": "Maybe a year-to-date profit and loss if you have one, but returns are the main thing. Would it be easier to upload them this week or next?",
+      "labels": []
+    },
+    {
+      "index": 15,
+      "speaker": "client",
+      "start": 112.8,
+      "end": 116.3,
+      "text": "This week. I'll ask my accountant to send them.",
+      "labels": []
+    },
+    {
+      "index": 16,
+      "speaker": "rep",
+      "start": 117.4,
+      "end": 121.2,
+      "text": "Perfect. I'll text you a secure upload link. Thanks Leo.",
+      "labels": []
+    },
+    {
+      "index": 17,
+      "speaker": "client",
+      "start": 122.4,
+      "end": 123.2,
+      "text": "Thanks Sam.",
+      "labels": []
+    }
+  ]
+}
