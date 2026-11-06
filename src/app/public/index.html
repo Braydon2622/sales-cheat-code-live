@@ -84,13 +84,33 @@
   dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); max-width: 420px; }
   dialog::backdrop { background: rgba(0,0,0,.4); }
   dialog .row { flex-wrap: wrap; margin-top: 12px; }
+  dialog { max-width: 520px; }
+  #repChoices { flex-direction: column; }
+  #repChoices button { text-align: left; width: 100%; }
+  #repChoices button small { display: block; font-weight: 400; opacity: .9; margin-top: 2px; }
+  .hl { border-radius: 10px; padding: 12px; margin-bottom: 10px; border: 1px solid var(--line); }
+  .hl.good { border-left: 4px solid var(--good); }
+  .hl.better { border-left: 4px solid var(--warn); }
+  .hl .what { font-weight: 600; }
+  .hl .time { color: var(--muted); font-size: 13px; margin-right: 6px; font-variant-numeric: tabular-nums; }
+  .hl .why { margin-top: 2px; }
+  .hl .said { color: var(--muted); margin-top: 6px; font-size: 14px; }
+  .hl .try { background: var(--good-soft); border-radius: 8px; padding: 8px 10px; margin-top: 8px; }
+  .hl .try b { color: var(--good); font-size: 12px; text-transform: uppercase; letter-spacing: .03em; display: block; }
+  .fb { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; }
+  .fb button { padding: 3px 10px; }
+  .fb button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .fb input { flex: 1; min-width: 180px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 1100px) { .two { grid-template-columns: 1fr; } }
+  .two > .panel { margin-bottom: 0; }
 </style>
 </head>
 <body>
 <header>
   <div>
     <h1>Call Review</h1>
-    <div class="sub">Sales Cheat Code Live · drop in a call transcript, get coaching feedback</div>
+    <div class="sub">Sales Cheat Code Live · drop in a call recording or transcript, get coaching feedback</div>
   </div>
   <div class="chips" id="status"></div>
 </header>
@@ -99,11 +119,12 @@
   <aside>
     <section class="panel">
       <h2>Add calls</h2>
-      <div id="drop" tabindex="0" role="button" aria-label="Choose transcript files">
-        <strong>Drop transcript files here</strong>
-        <span>or click to choose · Dialpad .json or "Speaker: text" .txt · several at once is fine</span>
+      <div id="drop" tabindex="0" role="button" aria-label="Choose call recordings or transcript files">
+        <strong>Drop a call here</strong>
+        <span>or click to choose · a recording (.mp3, .wav, .m4a…) or a transcript (Dialpad .json, "Speaker: text" .txt) · several at once is fine</span>
       </div>
-      <input id="file" type="file" accept=".json,.txt" multiple hidden>
+      <input id="file" type="file" accept=".json,.txt,.mp3,.wav,.m4a,.mp4,.aac,.ogg,.oga,.opus,.webm,.flac,.amr,audio/*" multiple hidden>
+      <div class="hint" id="audioHint"></div>
       <label class="toggle"><input type="checkbox" id="mock"> Mock mode (free, canned feedback, to test the flow)</label>
       <div id="jobs"></div>
     </section>
@@ -135,7 +156,7 @@
 </main>
 
 <dialog id="repDialog">
-  <strong>Which speaker is the loan officer?</strong>
+  <strong>Which voice is the loan officer?</strong>
   <div class="hint" id="repFile"></div>
   <div class="row" id="repChoices"></div>
   <div class="row"><button id="repCancel">Cancel</button></div>
@@ -170,11 +191,15 @@ let current = null;
 async function refreshStatus() {
   status = await api("/api/status");
   const s = $("status");
-  s.replaceChildren(
+  s.replaceChildren(...[
     el("span", { class: "chip " + (status.liveAvailable ? "good" : "warn") }, status.liveAvailable ? "Live AI" : "Mock only (no API key)"),
     status.liveAvailable ? el("span", { class: "chip" }, `Spent ${usd(status.spentUsd)} of ${usd(status.maxUsd)} this session`) : null,
+    el("span", { class: "chip " + (status.audioAvailable ? "good" : "") }, status.audioAvailable ? "Audio upload on" : "Audio upload off"),
     el("span", { class: "chip" }, status.dialpadAvailable ? "Dialpad connected" : "Dialpad not connected"),
-  );
+  ].filter(Boolean));
+  $("audioHint").textContent = status.audioAvailable
+    ? "Recordings are transcribed by Deepgram (about half a cent per minute), redacted, then reviewed. The audio file isn't saved."
+    : "To drop in recordings, add DEEPGRAM_API_KEY to .env and restart the app. Transcripts work now.";
   if (!status.liveAvailable) { $("mock").checked = true; $("mock").disabled = true; }
   $("fetchCall").disabled = !status.dialpadAvailable;
   $("callId").disabled = !status.dialpadAvailable;
@@ -192,12 +217,35 @@ drop.addEventListener("dragleave", () => drop.classList.remove("over"));
 drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); handleFiles(e.dataTransfer.files); });
 $("file").addEventListener("change", (e) => { handleFiles(e.target.files); e.target.value = ""; });
 
+const AUDIO_RE = /\.(mp3|wav|m4a|mp4|aac|ogg|oga|opus|webm|flac|amr)$/i;
+
 async function handleFiles(files) {
   for (const f of files) {
-    if (!/\.(json|txt)$/i.test(f.name)) { jobRow(f.name).fail("Only .json (Dialpad) or .txt transcripts."); continue; }
-    if (f.size > 5 * 1024 * 1024) { jobRow(f.name).fail("File is over 5 MB."); continue; }
+    if (AUDIO_RE.test(f.name)) { submitAudio(f); continue; }
+    if (!/\.(json|txt)$/i.test(f.name)) { jobRow(f.name).fail("Use a recording (.mp3, .wav, .m4a…) or a transcript (.json from Dialpad, or .txt)."); continue; }
+    if (f.size > 5 * 1024 * 1024) { jobRow(f.name).fail("Transcript is over 5 MB."); continue; }
     submit(f.name, await f.text());
   }
+}
+
+// Audio: upload → transcribe → pick the loan officer's voice → review.
+async function submitAudio(file) {
+  const row = jobRow(file.name);
+  if (!status.audioAvailable) { row.fail("Audio upload is off: add DEEPGRAM_API_KEY to .env and restart the app."); return; }
+  if (file.size > 200 * 1024 * 1024) { row.fail("Recording is over 200 MB."); return; }
+  row.set("Uploading and transcribing… (about 10–30 seconds)", 10);
+  try {
+    const res = await fetch(`/api/audio?name=${encodeURIComponent(file.name)}`, { method: "POST", headers: { "content-type": "application/octet-stream" }, body: file });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(body.error || res.statusText);
+    const mins = Math.max(1, Math.round(body.durationSec / 60));
+    row.set(`Transcribed ${mins} min · ${usd(body.transcriptionUsd)} · waiting for you to pick the loan officer`, 40);
+    refreshStatus();
+    const choice = await askRep(file.name, body.speakers);
+    if (!choice) { row.fail("Cancelled. Upload it again to review."); return; }
+    const r = await api(`/api/audio/${encodeURIComponent(body.pendingId)}/review`, { method: "POST", body: JSON.stringify({ repSpeaker: choice, mock: $("mock").checked }) });
+    follow(r.jobId, r.reviewId, row);
+  } catch (err) { row.fail(err.message); }
 }
 
 async function submit(fileName, content, repName) {
@@ -220,7 +268,12 @@ function askRep(fileName, speakers) {
   return new Promise((resolve) => {
     const d = $("repDialog");
     $("repFile").textContent = fileName;
-    $("repChoices").replaceChildren(...speakers.map((s) => el("button", { class: "primary", onclick: () => { d.close(); resolve(s); } }, s)));
+    // Speakers are plain names (text transcripts) or { label, sample } (recordings).
+    $("repChoices").replaceChildren(...speakers.map((s) => {
+      const name = typeof s === "string" ? s : s.label;
+      return el("button", { class: "primary", onclick: () => { d.close(); resolve(name); } },
+        name, typeof s === "string" ? null : el("small", {}, `"${s.sample}"`));
+    }));
     $("repCancel").onclick = () => { d.close(); resolve(null); };
     d.showModal();
   });
@@ -248,8 +301,7 @@ function follow(jobId, reviewId, row) {
   });
   es.addEventListener("progress", (e) => {
     const d = JSON.parse(e.data);
-    if (d.step === "lines") row.set(`Reading the call: line ${d.done} of ${d.total}`, Math.round((d.done / d.total) * 90));
-    else row.set("Writing the summary and follow-up text…", 95);
+    row.set(d.done ? "Finishing…" : "Reviewing the call: highlights, compliance, follow-up text… (about 15–30 seconds)", d.done ? 95 : 60);
   });
   es.addEventListener("done", async (e) => {
     es.close();
@@ -290,7 +342,8 @@ async function refreshHistory() {
       r.temperature ? el("span", { class: "chip " + (tempClass[r.temperature] || "") }, r.temperature) : null,
       r.stage ? el("span", { class: "chip" }, r.stage) : null,
       el("span", { class: "chip " + (r.slips ? "bad" : "good") }, `${r.slips} compliance flag${r.slips === 1 ? "" : "s"}`),
-      el("span", { class: "chip" }, `${r.rated}/${r.moments} rated`),
+      r.source === "audio" ? el("span", { class: "chip" }, "recording") : null,
+      el("span", { class: "chip " + (r.feedbackGiven ? "good" : "") }, r.feedbackGiven ? `${r.feedbackGiven} feedback` : "no feedback yet"),
       r.mode === "mock" ? el("span", { class: "chip warn" }, "mock") : null))));
 }
 
@@ -315,6 +368,7 @@ async function show(id) {
           a ? el("span", { class: "chip " + (tempClass[a.temperature] || "") }, a.temperature) : null,
           a ? el("span", { class: "chip" }, a.stage) : null,
           el("span", { class: "chip " + (r.mode === "mock" ? "warn" : "") }, r.mode === "mock" ? "mock feedback" : `AI cost ${usd(r.costUsd)}`),
+          r.transcriptionUsd ? el("span", { class: "chip" }, `Transcription ${usd(r.transcriptionUsd)}`) : null,
           el("span", { class: "chip good" }, red.length ? "Removed: " + red.map(([k, v]) => `${v} ${label(k)}`).join(", ") : "No personal details found"))),
       el("button", { class: "danger", onclick: async () => {
         if (!confirm("Delete this review and its saved transcript?")) return;
@@ -327,8 +381,19 @@ async function show(id) {
       el("p", {}, a.summary),
       el("div", { class: "grid" },
         kv("Objections", a.objections), kv("Next step", a.next_step), kv("Follow up", a.follow_up)),
-      el("div", { class: "note" }, el("b", {}, "Coaching note: "), a.coaching_note),
+      el("div", { class: "note" }, el("b", {}, "Bottom line: "), a.coaching_note),
     ] : el("p", { class: "err" }, "The call summary didn't complete. See errors below.")));
+
+  if (r.didWell || r.doBetter) {
+    const none = (t) => el("div", { class: "hint" }, a ? t : "The review didn't complete. See errors below.");
+    sections.push(el("div", { class: "two" },
+      el("section", { class: "panel" },
+        el("h2", {}, "What you did well"),
+        (r.didWell || []).length ? r.didWell.map((h) => highlightCard(r, h, "good")) : none("Nothing specific stood out.")),
+      el("section", { class: "panel" },
+        el("h2", {}, "What to do better"),
+        (r.doBetter || []).length ? r.doBetter.map((h) => highlightCard(r, h, "better")) : none("Nothing major."))));
+  }
 
   if (r.followUp) {
     const f = r.followUp;
@@ -352,10 +417,14 @@ async function show(id) {
       ? r.slips.map((s) => el("div", { class: "slip" }, el("b", {}, `${s.time} · ${s.rules.map(label).join(", ")}`), el("div", {}, `"${s.text}"`)))
       : el("div", { class: "chip good" }, "No compliance slips flagged")));
 
-  sections.push(el("section", { class: "panel" },
-    el("h2", {}, `Coaching moments (${r.moments.length})`),
-    el("div", { class: "hint", style: "margin:-4px 0 10px" }, "Rate each card 1–5: would you want your loan officer to see it? Your ratings are saved with the review."),
-    r.moments.length ? r.moments.map((m) => momentCard(r, m)) : el("div", { class: "hint" }, "No coaching moments found in this call.")));
+  if (r.didWell || r.doBetter) sections.push(await overallFeedback(r));
+
+  // Reviews made before highlights existed have per-moment cards instead.
+  if (r.moments && r.moments.length) {
+    sections.push(el("section", { class: "panel" },
+      el("h2", {}, `Coaching moments (${r.moments.length}, older review format)`),
+      r.moments.map((m) => momentCard(r, m))));
+  }
 
   sections.push(el("section", { class: "panel" },
     el("details", {}, el("summary", {}, `Transcript (redacted, ${r.transcript.length} lines)`),
@@ -370,7 +439,71 @@ async function show(id) {
 
 function kv(k, v) { return el("div", { class: "kv" }, el("b", {}, k), v); }
 
+// One highlight, with thumbs up/down and a note for the AI.
+function highlightCard(r, h, kind) {
+  r.feedback = r.feedback || { items: {} };
+  const saved = r.feedback.items[h.key];
+  const note = el("input", { type: "text", placeholder: kind === "good" ? "Optional: why it's right or wrong" : "Optional: what would make this better?", value: saved ? saved.note : "" });
+  const state = el("span", { class: "hint" }, saved ? "Saved" : "");
+  const up = el("button", { class: saved && saved.vote === "up" ? "on" : "", title: "Helpful", onclick: () => vote("up") }, "👍");
+  const down = el("button", { class: saved && saved.vote === "down" ? "on" : "", title: "Not helpful", onclick: () => vote("down") }, "👎");
+  // Tracked locally and updated before the request, so a quick click-then-type can't race.
+  let currentVote = saved ? saved.vote : null;
+  async function vote(v) {
+    const next = currentVote === v && !note.value ? "none" : v; // clicking the same thumb again clears it
+    currentVote = next === "none" ? null : next;
+    up.classList.toggle("on", next === "up"); down.classList.toggle("on", next === "down");
+    try {
+      await api(`/api/reviews/${encodeURIComponent(r.id)}/feedback/${h.key}`, { method: "PUT", body: JSON.stringify({ vote: next, note: note.value }) });
+      if (next === "none") delete r.feedback.items[h.key]; else r.feedback.items[h.key] = { vote: next, note: note.value };
+      state.textContent = next === "none" ? "Cleared" : "Saved";
+      refreshHistory();
+    } catch (err) { state.textContent = err.message; }
+  }
+  // A note saves with the current vote; it never picks a vote by itself.
+  note.addEventListener("change", () => { if (currentVote) vote(currentVote); else state.textContent = "Pick 👍 or 👎 to save the note"; });
+  return el("div", { class: "hl " + kind },
+    el("div", {}, el("span", { class: "time" }, h.time), el("span", { class: "what" }, h.what)),
+    el("div", { class: "why" }, h.why),
+    el("div", { class: "said" }, `${h.speaker === "rep" ? "You said" : "Client said"}: "${h.quote}"`),
+    h.tryInstead ? el("div", { class: "try" }, el("b", {}, "Try instead"), h.tryInstead) : null,
+    el("div", { class: "fb" }, el("span", { class: "hint" }, "Useful?"), up, down, note, state));
+}
+
+// Overall rating + note, and what the AI is currently being told.
+async function overallFeedback(r) {
+  r.feedback = r.feedback || { items: {} };
+  const saved = r.feedback.overall;
+  const note = el("textarea", { rows: "2", placeholder: "Feedback for the AI coach: what should it focus on, say differently, or stop doing?" }, saved ? saved.note : "");
+  const state = el("span", { class: "hint" }, saved ? "Saved" : "");
+  let rating = saved ? saved.rating : 0;
+  const buttons = [1, 2, 3, 4, 5].map((n) => el("button", { class: rating === n ? "on" : "", onclick: () => { rating = n; buttons.forEach((b, i) => b.classList.toggle("on", i + 1 === n)); } }, String(n)));
+  const save = el("button", { class: "primary", onclick: async () => {
+    if (!rating) { state.textContent = "Pick 1–5 first."; return; }
+    try {
+      r.feedback.overall = await api(`/api/reviews/${encodeURIComponent(r.id)}/feedback/overall`, { method: "PUT", body: JSON.stringify({ rating, note: note.value }) });
+      state.textContent = "Saved. The AI will see this on the next review.";
+      refreshHistory();
+    } catch (err) { state.textContent = err.message; }
+  } }, "Save feedback");
+  const using = await api("/api/feedback").catch(() => []);
+  return el("section", { class: "panel" },
+    el("h2", {}, "Feedback for the AI coach"),
+    el("div", { class: "fb" }, el("span", { class: "hint" }, "How useful was this review?"), buttons),
+    el("div", { style: "margin-top:8px" }, note),
+    el("div", { class: "fb" }, save, state),
+    el("details", { style: "margin-top:10px" },
+      el("summary", {}, using.length
+        ? `What the AI reads before each new review (${using.length} feedback note${using.length === 1 ? "" : "s"})`
+        : "What the AI reads before each new review (no feedback yet)"),
+      r.mode === "mock" ? el("div", { class: "hint" }, "This is a mock review, so feedback here is saved but not given to the AI.") : null,
+      using.length
+        ? using.map((f) => el("div", { class: "tline" }, `• ${f.about}${f.item ? ` ("${f.item}")` : ""}: ${f.verdict}${f.note ? `. ${f.note}` : ""}`))
+        : el("div", { class: "hint" }, "Nothing yet. Thumbs-downs and written notes count most. Feedback on mock reviews isn't used.")));
+}
+
 function momentCard(r, m) {
+  r.ratings = r.ratings || {};
   const saved = r.ratings[String(m.cardId)];
   const note = el("input", { type: "text", placeholder: "Optional note: what would make it better?", value: saved ? saved.note : "" });
   const state = el("span", { class: "hint" }, saved ? "Saved" : "");

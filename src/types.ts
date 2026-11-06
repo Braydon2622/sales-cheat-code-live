@@ -48,7 +48,7 @@ export interface Transcript {
   scenario: string;
   /** Synthetic role-play (eval sets) or an imported real call. */
   synthetic: boolean;
-  source?: "synthetic" | "dialpad" | "text";
+  source?: "synthetic" | "dialpad" | "text" | "audio";
   /** Imported calls: PII redaction counts, e.g. { SSN: 1, PHONE: 2 }. */
   redactions?: Record<string, number>;
   utterances: LabeledUtterance[];

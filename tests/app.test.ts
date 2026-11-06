@@ -4,10 +4,10 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { createApp } from "../src/app/server.js";
-import { KeywordDetector, MockCallAnalyzer, NoopGuard, TemplateCoach } from "../src/pipeline/mock.js";
+import { MockCallAnalyzer } from "../src/pipeline/mock.js";
 
 const dir = mkdtempSync(join(tmpdir(), "scc-app-"));
-const components = () => ({ detector: new KeywordDetector(), coach: new TemplateCoach(0, 0), guard: new NoopGuard(), analyzer: new MockCallAnalyzer() });
+const components = () => ({ analyzer: new MockCallAnalyzer() });
 let base = "";
 let server: ReturnType<typeof createApp>;
 
@@ -44,7 +44,7 @@ describe("call review app", () => {
     const res = await fetch(base + "/");
     expect(res.status).toBe(200);
     expect(res.headers.get("content-security-policy")).toContain("default-src 'self'");
-    expect(await res.text()).toContain("Drop transcript files here");
+    expect(await res.text()).toContain("Drop a call here");
   });
 
   it("lists samples and refuses anything not in the list", async () => {
@@ -66,11 +66,11 @@ describe("call review app", () => {
     const { reviewId } = await waitForDone(jobId);
 
     const record = (await (await fetch(`${base}/api/reviews/${reviewId}`)).json()) as {
-      mode: string; redactions: Record<string, number>; moments: Array<{ cardId: number }>; followUp: { final: string };
+      mode: string; redactions: Record<string, number>; didWell: Array<{ key: string }>; doBetter: Array<{ key: string }>; followUp: { final: string };
     };
     expect(record.mode).toBe("mock");
     expect(record.redactions).toMatchObject({ ADDRESS: 1, NUMBER: 1 });
-    expect(record.moments.length).toBeGreaterThan(0);
+    expect(record.didWell.length + record.doBetter.length).toBeGreaterThan(0);
     expect(record.followUp.final).toContain("home");
 
     // Nothing written to disk contains the planted details.
@@ -80,14 +80,16 @@ describe("call review app", () => {
       }
     }
 
-    // Rate a card, then reject a bad rating and an unknown card.
-    const card = record.moments[0]!.cardId;
-    const rate = await fetch(`${base}/api/reviews/${reviewId}/ratings/${card}`, { method: "PUT", body: JSON.stringify({ rating: 4, note: "good" }) });
-    expect(rate.status).toBe(200);
-    expect((await fetch(`${base}/api/reviews/${reviewId}/ratings/${card}`, { method: "PUT", body: JSON.stringify({ rating: 9 }) })).status).toBe(400);
-    expect((await fetch(`${base}/api/reviews/${reviewId}/ratings/999`, { method: "PUT", body: JSON.stringify({ rating: 3 }) })).status).toBe(404);
-    const list = (await (await fetch(base + "/api/reviews")).json()) as Array<{ id: string; rated: number }>;
-    expect(list.find((r) => r.id === reviewId)?.rated).toBe(1);
+    // Feedback on a highlight and on the whole review; bad input is refused.
+    const key = record.doBetter[0]!.key;
+    const put = (path: string, body: unknown) => fetch(`${base}/api/reviews/${reviewId}/feedback/${path}`, { method: "PUT", body: JSON.stringify(body) });
+    expect((await put(key, { vote: "down", note: "too generic" })).status).toBe(200);
+    expect((await put(key, { vote: "maybe" })).status).toBe(400);
+    expect((await put("b9", { vote: "up" })).status).toBe(404);
+    expect((await put("overall", { rating: 4, note: "useful" })).status).toBe(200);
+    expect((await put("overall", { rating: 9 })).status).toBe(400);
+    const list = (await (await fetch(base + "/api/reviews")).json()) as Array<{ id: string; feedbackGiven: number }>;
+    expect(list.find((r) => r.id === reviewId)?.feedbackGiven).toBe(2);
 
     // Delete removes the review and its saved transcript.
     expect((await fetch(`${base}/api/reviews/${reviewId}`, { method: "DELETE" })).status).toBe(200);

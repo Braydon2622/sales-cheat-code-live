@@ -15,6 +15,7 @@ During a sales call, the tool shows the loan officer a short on-screen card at k
 ## What data it touches, and where it goes
 | Data | Where it goes | Kept |
 |---|---|---|
+| Uploaded call recordings (post-call review) | Loan officer's computer → Deepgram speech-to-text → transcript redacted before AI review | Audio **not stored** by us (held in memory only for the upload); redacted transcript and report kept locally **[OPEN: Deepgram retention terms]** |
 | Live call audio (loan officer's mic and the client's voice) | Our server → speech-to-text vendor **[OPEN: vendor, see STT_OPTIONS.md]** | Proposed: **not stored** by us; vendor retention set to zero or minimum by contract |
 | Call transcript text | Our server → **PII redaction** → Anthropic (Claude AI) for detection and coaching | Proposed: redacted transcripts kept **30 days** for quality review, then deleted **[OPEN: compliance to set]** |
 | Coaching cards, timing, usage counts | Our server's database | Kept for the pilot's measurement; no client identifiers |

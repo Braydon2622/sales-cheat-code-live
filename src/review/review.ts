@@ -1,13 +1,14 @@
-// Post-call review: runs a recorded (already transcribed, already redacted)
-// call through the same detector → coach → compliance pipeline used for live
-// calls, plus one call-level analysis, and renders a coaching report.
+// Post-call review: turns a recorded (already transcribed, already redacted)
+// call into a short coaching report for the loan officer:
+//   - highlights: 1–3 things they did well and 1–3 to do better, each tied to a line
+//   - compliance slips in their own words (deterministic rules + the model)
+//   - summary, stage, next step, and a rule-checked follow-up text
 //
-// No live audio and no latency budget here, so lines are processed one at a
-// time (each card sees the right context, and we never burst the API).
-import { CallSession, type CardTrace, type RepAlert } from "../pipeline/session.js";
-import type { CardGuard, Coach, Detector } from "../pipeline/components.js";
-import type { CallAnalysis, CallAnalyzer } from "../pipeline/claude.js";
-import { checkCard, checkCardLine, hasTwoOptionClose, MAX_SPOKEN_CHARS } from "../pipeline/rules.js";
+// One model request per call. The live pipeline's per-moment cards are built
+// for split-second help *during* a call; after the call, a rep learns more from
+// a few highlights than from a card for every moment.
+import type { CallAnalysis, CallAnalyzer, CoachFeedback } from "../pipeline/claude.js";
+import { checkCard, checkCardLine, checkRepSpeech, hasTwoOptionClose, MAX_SPOKEN_CHARS } from "../pipeline/rules.js";
 import { UsageMeter } from "../llm/usage.js";
 import type { ComplianceViolation, Transcript } from "../types.js";
 
@@ -36,47 +37,123 @@ export function checkFollowUpText(text: string): FollowUpCheck {
 }
 
 export interface ReviewComponents {
-  detector: Detector;
-  coach: Coach;
-  guard: CardGuard;
   analyzer: CallAnalyzer;
+}
+
+export interface Highlight {
+  /** Stable key for feedback: "w1".."w3" (did well), "b1".."b3" (do better). */
+  key: string;
+  line: number;
+  time: string;
+  speaker: "rep" | "client";
+  /** The transcript line it points at (taken from the transcript, not the model). */
+  quote: string;
+  what: string;
+  why: string;
+  /** Do-better only: wording to try next time, after the compliance rules. */
+  tryInstead?: string;
+  /** Rules the model's suggested wording broke (the wording is then withheld). */
+  tryInsteadBlocked?: string[];
+}
+
+export interface Slip {
+  line: number;
+  time: string;
+  text: string;
+  rules: string[];
+  /** "rules" if the deterministic rules caught it, else "model". */
+  source: "rules" | "model";
 }
 
 export interface ReviewResult {
   transcript: Transcript;
-  cards: CardTrace[];
-  repAlerts: RepAlert[];
   analysis?: CallAnalysis;
+  didWell: Highlight[];
+  doBetter: Highlight[];
+  slips: Slip[];
   followUp?: FollowUpCheck;
   errors: string[];
   meter: UsageMeter;
 }
 
-export type ReviewProgress = (step: "lines" | "analysis", done: number, total: number) => void;
+export type ReviewProgress = (step: "analysis", done: number, total: number) => void;
 
-export async function reviewCall(t: Transcript, c: ReviewComponents, onProgress?: ReviewProgress): Promise<ReviewResult> {
-  const session = new CallSession(c.detector, c.coach, c.guard, { mode: "serial" });
-  const errors: string[] = [];
-  session.on("stage_error", (stage, err) => errors.push(`${stage}: ${err.message}`));
-  for (const [i, u] of t.utterances.entries()) {
-    const { labels: _labels, ...line } = u;
-    session.push({ ...line, kind: "final", emittedAt: performance.now() });
-    await session.finish();
-    onProgress?.("lines", i + 1, t.utterances.length);
+const fmtTime = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+export const WITHHELD = "(Suggested wording withheld: it broke a compliance rule.)";
+
+/** The transcript as the analyzer sees it: "[index] REP: text". */
+export function numberedTranscript(t: Transcript): string {
+  return t.utterances.map((u) => `[${u.index}] ${u.speaker.toUpperCase()}: ${u.text}`).join("\n");
+}
+
+/** Ties the model's highlights to real transcript lines; drops any that point nowhere. */
+export function buildHighlights(t: Transcript, a: CallAnalysis): { didWell: Highlight[]; doBetter: Highlight[] } {
+  const at = (line: number) => t.utterances.find((u) => u.index === line);
+  const didWell: Highlight[] = [];
+  for (const h of a.did_well) {
+    const u = at(h.line);
+    if (!u || didWell.length >= 3) continue;
+    didWell.push({ key: `w${didWell.length + 1}`, line: u.index, time: fmtTime(u.start), speaker: u.speaker, quote: u.text, what: h.what, why: h.why });
   }
+  const doBetter: Highlight[] = [];
+  for (const h of a.do_better) {
+    const u = at(h.line);
+    if (!u || doBetter.length >= 3) continue;
+    // try_instead is words the rep will say: same hard rules as a live card.
+    const blocked = checkCardLine("sendThis", h.try_instead).filter((v) => v.severity === "block");
+    doBetter.push({
+      key: `b${doBetter.length + 1}`,
+      line: u.index,
+      time: fmtTime(u.start),
+      speaker: u.speaker,
+      quote: u.text,
+      what: h.what_happened,
+      why: h.why,
+      tryInstead: blocked.length ? WITHHELD : h.try_instead,
+      ...(blocked.length ? { tryInsteadBlocked: [...new Set(blocked.map((v) => v.rule))] } : {}),
+    });
+  }
+  return { didWell, doBetter };
+}
+
+/** Rep slips: the deterministic rules on every rep line, plus what the model found on rep lines. */
+export function findSlips(t: Transcript, a?: CallAnalysis): Slip[] {
+  const byLine = new Map<number, Slip>();
+  for (const u of t.utterances) {
+    if (u.speaker !== "rep") continue;
+    const v = checkRepSpeech(u.text);
+    if (v.length) byLine.set(u.index, { line: u.index, time: fmtTime(u.start), text: u.text, rules: [...new Set(v.map((x) => x.rule))], source: "rules" });
+  }
+  for (const s of a?.compliance_slips ?? []) {
+    const u = t.utterances.find((x) => x.index === s.line);
+    if (!u || u.speaker !== "rep") continue; // a client can't commit a rep slip
+    const existing = byLine.get(u.index);
+    if (existing) {
+      if (!existing.rules.includes(s.rule)) existing.rules.push(s.rule);
+    } else byLine.set(u.index, { line: u.index, time: fmtTime(u.start), text: u.text, rules: [s.rule], source: "model" });
+  }
+  return [...byLine.values()].sort((x, y) => x.line - y.line);
+}
+
+export async function reviewCall(t: Transcript, c: ReviewComponents, onProgress?: ReviewProgress, feedback: CoachFeedback[] = []): Promise<ReviewResult> {
+  const meter = new UsageMeter();
+  const errors: string[] = [];
   onProgress?.("analysis", 0, 1);
   let analysis: CallAnalysis | undefined;
   let followUp: FollowUpCheck | undefined;
+  let highlights: { didWell: Highlight[]; doBetter: Highlight[] } = { didWell: [], doBetter: [] };
   try {
-    analysis = await c.analyzer.analyze(t.utterances.map((u) => `${u.speaker.toUpperCase()}: ${u.text}`).join("\n"), session.meter);
+    analysis = await c.analyzer.analyze(numberedTranscript(t), meter, feedback);
     followUp = checkFollowUpText(analysis.text_to_send);
+    highlights = buildHighlights(t, analysis);
   } catch (err) {
     errors.push(`analysis: ${(err as Error).message}`);
   }
-  return { transcript: t, cards: session.cards, repAlerts: session.repAlerts, analysis, followUp, errors, meter: session.meter };
+  onProgress?.("analysis", 1, 1);
+  return { transcript: t, analysis, ...highlights, slips: findSlips(t, analysis), followUp, errors, meter };
 }
 
-const fmtTime = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+const pretty = (r: string) => r.replace(/_/g, " ");
 
 export function renderReview(r: ReviewResult): string {
   const t = r.transcript;
@@ -86,9 +163,8 @@ export function renderReview(r: ReviewResult): string {
     `${t.synthetic ? "**Synthetic call.**" : "**Real call. Contains customer information even after redaction: do not share outside the team.**"} ${t.utterances.length} lines, ${fmtTime(t.utterances.at(-1)?.end ?? 0)} long. PII redacted: ${red || "none found"}.`,
     "",
   );
-
-  if (r.analysis) {
-    const a = r.analysis;
+  const a = r.analysis;
+  if (a) {
     md.push(
       `## Summary`,
       "",
@@ -102,48 +178,30 @@ export function renderReview(r: ReviewResult): string {
       `| Next step | ${a.next_step} |`,
       `| Follow up | ${a.follow_up} |`,
       "",
-      `**Coaching note:** ${a.coaching_note}`,
-      "",
-      `## Follow-up text`,
+      `**Bottom line:** ${a.coaching_note}`,
       "",
     );
-    const f = r.followUp!;
-    md.push(`> ${f.final}`, "");
+  }
+  md.push(`## What you did well`, "");
+  if (!r.didWell.length) md.push(a ? `Nothing specific stood out.` : `(Analysis didn't complete.)`);
+  for (const h of r.didWell) md.push(`- **${h.time} · ${h.what}** ${h.why}`, `  > ${h.quote}`);
+  md.push("", `## What to do better`, "");
+  if (!r.doBetter.length) md.push(a ? `Nothing major.` : `(Analysis didn't complete.)`);
+  for (const h of r.doBetter) {
+    md.push(`- **${h.time} · ${h.what}** ${h.why}`, `  > ${h.speaker === "rep" ? "You" : "Client"}: ${h.quote}`, `  - **Try instead:** ${h.tryInstead}`);
+  }
+  md.push("", `## Compliance: the loan officer's own words`, "");
+  if (!r.slips.length) md.push(`No slips flagged.`);
+  for (const s of r.slips) md.push(`- **${s.time}** · ${s.rules.map(pretty).join(", ")} (${s.source === "rules" ? "rule" : "AI"}): "${s.text}"`);
+  md.push("");
+  if (r.followUp) {
+    const f = r.followUp;
+    md.push(`## Follow-up text`, "", `> ${f.final}`, "");
     if (f.replaced) {
       md.push(`⚠ The drafted text broke a compliance rule and was replaced with a safe one. Draft: "${f.original}" (${f.violations.filter((v) => v.severity === "block").map((v) => v.rule).join(", ")})`, "");
     }
     const style = f.violations.filter((v) => v.severity === "style");
-    md.push(style.length ? `Style notes: ${style.map((v) => v.rule.replace(/_/g, " ")).join(", ")}.` : `Passes the text rules: under 300 characters, "home" wording, two-option close, no rates or approval language.`, "");
-  }
-
-  md.push(`## Compliance: the loan officer's own words`, "");
-  if (!r.repAlerts.length) md.push(`No slips flagged.`, "");
-  for (const a of r.repAlerts) {
-    const u = t.utterances[a.utteranceIndex]!;
-    const what = a.violations.map((v) => v.rule.replace(/_/g, " ")).join(", ");
-    md.push(`- **${fmtTime(u.start)}** · ${what} (${a.source === "rules" ? "rule" : "AI"}): "${u.text}"`);
-  }
-  md.push("");
-
-  md.push(`## Coaching moments`, "");
-  const coached = r.cards.filter((c) => c.kind === "coach" || c.kind === "fixed_opt_out");
-  if (!coached.length) md.push(`No coaching moments detected.`, "");
-  for (const c of coached) {
-    const u = t.utterances[c.utteranceIndex]!;
-    const said = t.utterances.slice(c.utteranceIndex + 1).find((x) => x.speaker === "rep");
-    const tag = (c.moment.subtype ? `${c.moment.type}: ${c.moment.subtype}` : c.moment.type).replace(/_/g, " ");
-    md.push(`### ${fmtTime(u.start)} · ${tag}`, "", `> **Client:** ${u.text}`, ">");
-    md.push(`> **Loan officer said next:** ${said?.text ?? "(nothing)"}`, "");
-    md.push(
-      `**Card${c.outcome === "shown" ? "" : " (safe fallback, the draft was stopped by the compliance guard)"}:**`,
-      "",
-      `- **Read:** ${c.shown.read}`,
-      `- **Send this:** ${c.shown.sendThis}`,
-      `- **Backup:** ${c.shown.backup}`,
-      `- **Next step:** ${c.shown.nextStep}`,
-      `- **Watch out:** ${c.shown.watchOut}`,
-      "",
-    );
+    md.push(style.length ? `Style notes: ${style.map((v) => pretty(v.rule)).join(", ")}.` : `Passes the text rules: under 300 characters, "home" wording, two-option close, no rates or approval language.`, "");
   }
   if (r.errors.length) md.push(`## Errors`, "", ...r.errors.map((e) => `- ${e}`), "");
   md.push(`_AI cost for this review: $${r.meter.costUsd().toFixed(4)}_`, "");
@@ -151,6 +209,12 @@ export function renderReview(r: ReviewResult): string {
 }
 
 // ---------------------------------------------------------------- stored record
+
+export interface ReviewFeedback {
+  /** Per highlight, keyed by Highlight.key. */
+  items: Record<string, { vote: "up" | "down"; note: string; at: string }>;
+  overall?: { rating: number; note: string; at: string };
+}
 
 /** The JSON form of a review, saved next to the Markdown report and shown in the app. */
 export interface ReviewRecord {
@@ -164,26 +228,26 @@ export interface ReviewRecord {
   durationSec: number;
   redactions: Record<string, number>;
   analysis?: CallAnalysis;
+  didWell: Highlight[];
+  doBetter: Highlight[];
   followUp?: FollowUpCheck;
-  slips: Array<{ time: string; text: string; rules: string[]; source: "rules" | "model" }>;
-  moments: Array<{
-    cardId: number;
-    time: string;
-    type: string;
-    subtype?: string;
-    clientText: string;
-    repNext: string | null;
-    card: CardTrace["shown"];
-    stoppedByGuard: boolean;
-  }>;
+  slips: Slip[];
   transcript: Array<{ time: string; speaker: "rep" | "client"; text: string }>;
   errors: string[];
+  /** AI review cost. Transcription is separate. */
   costUsd: number;
-  /** Your 1–5 ratings of each card, keyed by cardId. */
-  ratings: Record<string, { rating: number; note: string; at: string }>;
+  /** Speech-to-text cost estimate, for audio uploads. */
+  transcriptionUsd?: number;
+  feedback: ReviewFeedback;
+  /** Reviews made before highlights existed had per-moment cards and 1–5 card ratings. Kept so old reviews still open. */
+  moments?: Array<{ cardId: number; time: string; type: string; subtype?: string; clientText: string; repNext: string | null; card: Record<string, string>; stoppedByGuard: boolean }>;
+  ratings?: Record<string, { rating: number; note: string; at: string }>;
 }
 
-export function toRecord(r: ReviewResult, meta: { id: string; fileName: string; mode: "live" | "mock"; createdAt?: string }): ReviewRecord {
+export function toRecord(
+  r: ReviewResult,
+  meta: { id: string; fileName: string; mode: "live" | "mock"; createdAt?: string; transcriptionUsd?: number },
+): ReviewRecord {
   const t = r.transcript;
   return {
     id: meta.id,
@@ -196,28 +260,49 @@ export function toRecord(r: ReviewResult, meta: { id: string; fileName: string; 
     durationSec: t.utterances.at(-1)?.end ?? 0,
     redactions: t.redactions ?? {},
     analysis: r.analysis,
+    didWell: r.didWell,
+    doBetter: r.doBetter,
     followUp: r.followUp,
-    slips: r.repAlerts.map((a) => {
-      const u = t.utterances[a.utteranceIndex]!;
-      return { time: fmtTime(u.start), text: u.text, rules: a.violations.map((v) => v.rule), source: a.source };
-    }),
-    moments: r.cards.map((c) => {
-      const u = t.utterances[c.utteranceIndex]!;
-      const next = t.utterances.slice(c.utteranceIndex + 1).find((x) => x.speaker === "rep");
-      return {
-        cardId: c.id,
-        time: fmtTime(u.start),
-        type: c.moment.type,
-        ...(c.moment.subtype ? { subtype: c.moment.subtype } : {}),
-        clientText: u.text,
-        repNext: next?.text ?? null,
-        card: c.shown,
-        stoppedByGuard: c.outcome !== "shown",
-      };
-    }),
+    slips: r.slips,
     transcript: t.utterances.map((u) => ({ time: fmtTime(u.start), speaker: u.speaker, text: u.text })),
     errors: r.errors,
     costUsd: r.meter.costUsd(),
-    ratings: {},
+    ...(meta.transcriptionUsd !== undefined ? { transcriptionUsd: meta.transcriptionUsd } : {}),
+    feedback: { items: {} },
   };
+}
+
+/** How many past feedback notes go into each new review's prompt. */
+export const FEEDBACK_IN_PROMPT = 12;
+
+/**
+ * Turns saved feedback into notes for the analyzer, so feedback changes later reviews.
+ * Thumbs-downs and anything with a written note rank first (most signal), then newest.
+ * Mock reviews are skipped: feedback on canned highlights teaches the AI nothing.
+ */
+export function collectFeedback(records: ReviewRecord[], limit = FEEDBACK_IN_PROMPT): CoachFeedback[] {
+  const out: Array<CoachFeedback & { at: string; weight: number }> = [];
+  for (const r of records) {
+    if (r.mode === "mock" || !r.feedback) continue;
+    const all = [...(r.didWell ?? []), ...(r.doBetter ?? [])];
+    for (const [key, v] of Object.entries(r.feedback.items ?? {})) {
+      const h = all.find((x) => x.key === key);
+      if (!h) continue;
+      const well = key.startsWith("w");
+      out.push({
+        about: well ? "a 'did well' highlight" : "a 'do better' highlight",
+        item: well ? h.what : `${h.what} / try instead: ${h.tryInstead ?? ""}`,
+        verdict: v.vote === "up" ? "helpful" : "not helpful",
+        note: v.note,
+        at: v.at,
+        weight: (v.vote === "down" ? 2 : 0) + (v.note ? 1 : 0),
+      });
+    }
+    const o = r.feedback.overall;
+    if (o) out.push({ about: "a whole review", verdict: `rated ${o.rating}/5`, note: o.note, at: o.at, weight: (o.rating <= 3 ? 2 : 0) + (o.note ? 1 : 0) });
+  }
+  return out
+    .sort((x, y) => y.weight - x.weight || y.at.localeCompare(x.at))
+    .slice(0, limit)
+    .map(({ at: _at, weight: _weight, ...f }) => f);
 }

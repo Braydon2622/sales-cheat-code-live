@@ -17,6 +17,16 @@ That's `call-18`, real-time speed, with a 3-second countdown so you can start re
 
 To try a different call: `npm run demo -- call-02 --intro`. Good alternatives are `call-02` (credit-union loyalty, rep talks it down) and `call-15` (ready-to-buy contractor, lots of buying signals).
 
+## Browser version (often looks better on video)
+
+```bash
+npm run live
+```
+
+Then open `http://127.0.0.1:4311/?call=call-18&speed=1&autostart=1`. It starts the replay as the page loads. The transcript scrolls on the left and cards stream in on the right, with rep compliance alerts in red under the line that caused them. A footer keeps a running count: moments, chips that fired before the client finished, rep alerts, and non-compliant cards shown (re-checked with the rules at the end). Same pipeline and cost as the terminal demo, about 2 cents per take. The server caps live spend at $0.25 per session (`LIVE_MAX_USD`) and runs one live replay at a time. Make the browser full screen, zoom to 125% if the text looks small, and leave **Mock** off for the real video.
+
+`docs/images/live-view.png` is a **mock-mode** screenshot (keyword detector, canned cards). Don't use it as an example of real AI output.
+
 ## Before you record
 
 - **Terminal:** dark theme, about 110 columns × 40 rows, font size 16+ so it's readable on a phone.

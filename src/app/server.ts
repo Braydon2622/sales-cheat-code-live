@@ -1,14 +1,18 @@
-// Local web app for post-call review: drop transcript files in, get coaching
-// reports out, rate the cards. Runs on your own machine only (127.0.0.1).
+// Local web app for post-call review: drop in a call recording or transcript,
+// get a highlights-style coaching report, and give the AI feedback that shapes
+// later reviews. Runs on your own machine only (127.0.0.1).
 //
 // Everything a user uploads is untrusted: transcripts are parsed as data,
 // redacted on import, and the page renders them as text (never as HTML).
 // File names never become paths: reviews are stored under generated IDs.
+// Audio is held in memory only long enough to send it to speech-to-text.
+import { randomUUID } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import http from "node:http";
 import { extname, join } from "node:path";
-import { fetchDialpadTranscript, importDialpad, importText, listSpeakers, NeedRepNameError, type DialpadTranscript } from "../ingest/dialpad.js";
-import { renderReview, reviewCall, toRecord, type ReviewComponents, type ReviewRecord } from "../review/review.js";
+import { fetchDialpadTranscript, importDialpad, importText, NeedRepNameError, type DialpadTranscript } from "../ingest/dialpad.js";
+import { audioMimeFor, audioToTranscript, splitSpeakers, type TranscribedAudio, type Transcriber } from "../ingest/audio.js";
+import { collectFeedback, renderReview, reviewCall, toRecord, type ReviewComponents, type ReviewRecord } from "../review/review.js";
 import type { Transcript } from "../types.js";
 
 export interface AppOptions {
@@ -22,6 +26,14 @@ export interface AppOptions {
   /** Stop accepting live reviews once this server session has spent this much. */
   maxUsd: number;
   models?: Record<string, string>;
+  /** Speech-to-text for audio uploads. Unset = audio upload disabled (no DEEPGRAM_API_KEY). */
+  transcriber?: Transcriber;
+}
+
+interface PendingAudio {
+  audio: TranscribedAudio;
+  fileName: string;
+  expires: number;
 }
 
 interface Job {
@@ -32,6 +44,10 @@ interface Job {
 }
 
 const MAX_BODY = 5 * 1024 * 1024;
+/** About 3.5 hours of 128 kbps MP3, or 20 minutes of uncompressed WAV. */
+const MAX_AUDIO = 200 * 1024 * 1024;
+/** How long a transcribed recording waits for "which voice is the loan officer?". */
+const PENDING_MS = 30 * 60 * 1000;
 const SAFE_ID = /^[A-Za-z0-9._-]{1,120}$/;
 
 export function createApp(opts: AppOptions): http.Server {
@@ -78,7 +94,14 @@ export function createApp(opts: AppOptions): http.Server {
     return importText(content, { id: base, repName });
   }
 
-  function startReview(t: Transcript, fileName: string, mock: boolean): Job {
+  const allRecords = (): ReviewRecord[] =>
+    readdirSync(opts.reviewsDir)
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => loadRecord(f.slice(0, -5)))
+      .filter((r): r is ReviewRecord => Boolean(r))
+      .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+
+  function startReview(t: Transcript, fileName: string, mock: boolean, transcriptionUsd?: number): Job {
     const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\..+/, "").replace("T", "-");
     const slug = t.id.replace(/[^A-Za-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "call";
     const id = `${slug}-${stamp}-${nextJob}`;
@@ -88,8 +111,10 @@ export function createApp(opts: AppOptions): http.Server {
     queue = queue.then(async () => {
       try {
         writeFileSync(join(opts.privateDir, `${id}.transcript.json`), JSON.stringify(t, null, 2) + "\n");
-        const result = await reviewCall(t, opts.components(mock), (step, done, total) => emit(job, "progress", { step, done, total }));
-        const record = toRecord(result, { id, fileName, mode: mock ? "mock" : "live" });
+        // Feedback left on earlier reviews goes into this one's prompt.
+        const feedback = collectFeedback(allRecords());
+        const result = await reviewCall(t, opts.components(mock), (step, done, total) => emit(job, "progress", { step, done, total }), feedback);
+        const record = toRecord(result, { id, fileName, mode: mock ? "mock" : "live", transcriptionUsd });
         if (!mock) spentUsd += record.costUsd;
         saveRecord(record);
         writeFileSync(join(opts.reviewsDir, `${id}.md`), renderReview(result));
@@ -99,6 +124,24 @@ export function createApp(opts: AppOptions): http.Server {
       }
     });
     return job;
+  }
+
+  const pendingAudio = new Map<string, PendingAudio>();
+  const prunePending = () => {
+    for (const [k, p] of pendingAudio) if (p.expires < Date.now()) pendingAudio.delete(k);
+  };
+
+  async function readBytes(req: http.IncomingMessage, max: number): Promise<Buffer> {
+    const declared = Number(req.headers["content-length"] ?? 0);
+    if (declared > max) throw Object.assign(new Error(`File too large (${Math.round(max / 1024 / 1024)} MB max).`), { status: 413 });
+    let size = 0;
+    const chunks: Buffer[] = [];
+    for await (const chunk of req) {
+      size += (chunk as Buffer).length;
+      if (size > max) throw Object.assign(new Error(`File too large (${Math.round(max / 1024 / 1024)} MB max).`), { status: 413 });
+      chunks.push(chunk as Buffer);
+    }
+    return Buffer.concat(chunks);
   }
 
   async function readJson(req: http.IncomingMessage): Promise<Record<string, unknown>> {
@@ -141,6 +184,7 @@ export function createApp(opts: AppOptions): http.Server {
         return send(res, 200, {
           liveAvailable: opts.liveAvailable,
           dialpadAvailable: Boolean(process.env.DIALPAD_API_KEY),
+          audioAvailable: Boolean(opts.transcriber),
           spentUsd,
           maxUsd: opts.maxUsd,
           models: opts.models ?? {},
@@ -180,6 +224,61 @@ export function createApp(opts: AppOptions): http.Server {
         const job = startReview(t, `dialpad-${callId}`, mock);
         return send(res, 202, { jobId: job.id, mock });
       }
+      // Audio step 1: upload → speech-to-text → redact. Returns the voices found;
+      // nothing is reviewed until someone says which voice is the loan officer.
+      if (req.method === "POST" && url.pathname === "/api/audio") {
+        if (!opts.transcriber) return send(res, 400, { error: "Audio upload needs DEEPGRAM_API_KEY. Add it to .env, then restart the app." });
+        const fileName = String(url.searchParams.get("name") ?? "call.mp3").slice(0, 200);
+        const mime = audioMimeFor(fileName);
+        if (!mime) return send(res, 400, { error: "Unsupported audio type. Use MP3, WAV, M4A, AAC, OGG, WEBM, FLAC or AMR." });
+        // Transcription is a real charge even in mock mode, so the cap always applies.
+        if (spentUsd >= opts.maxUsd) return send(res, 402, { error: `This session has spent $${spentUsd.toFixed(2)}, the $${opts.maxUsd.toFixed(2)} cap. Restart the app with a higher REVIEW_MAX_USD.` });
+        const audio = await readBytes(req, MAX_AUDIO);
+        if (!audio.length) return send(res, 400, { error: "The file is empty." });
+        let transcribed: TranscribedAudio;
+        try {
+          transcribed = splitSpeakers(await opts.transcriber(audio, mime));
+        } catch (err) {
+          return send(res, 502, { error: (err as Error).message });
+        }
+        spentUsd += transcribed.transcriptionUsd;
+        if (transcribed.speakers.length < 2) {
+          return send(res, 422, { error: "Only one voice was found, so the loan officer and client can't be told apart. Try a recording with both sides of the call." });
+        }
+        prunePending();
+        const pendingId = randomUUID();
+        pendingAudio.set(pendingId, { audio: transcribed, fileName, expires: Date.now() + PENDING_MS });
+        return send(res, 200, {
+          pendingId,
+          speakers: transcribed.speakers,
+          durationSec: transcribed.durationSec,
+          transcriptionUsd: transcribed.transcriptionUsd,
+          redactions: transcribed.redactions,
+        });
+      }
+      // Audio step 2: the loan officer's voice is picked → start the review.
+      if (req.method === "POST" && parts[0] === "api" && parts[1] === "audio" && parts[2] && parts[3] === "review") {
+        prunePending();
+        const pending = pendingAudio.get(parts[2]);
+        if (!pending) return send(res, 404, { error: "That recording expired. Upload it again." });
+        const body = await readJson(req);
+        const mock = wantsMock(body.mock);
+        if (overBudget(mock)) return send(res, 402, { error: `This session has spent $${spentUsd.toFixed(2)}, the $${opts.maxUsd.toFixed(2)} cap. Restart the app with a higher REVIEW_MAX_USD, or use Mock mode.` });
+        const id = pending.fileName.replace(/\.[^.]+$/, "");
+        let t: Transcript;
+        try {
+          t = audioToTranscript(pending.audio, String(body.repSpeaker ?? ""), id);
+        } catch (err) {
+          return send(res, 400, { error: (err as Error).message });
+        }
+        pendingAudio.delete(parts[2]);
+        const job = startReview(t, pending.fileName, mock, pending.audio.transcriptionUsd);
+        return send(res, 202, { jobId: job.id, reviewId: (job.events[0]!.data as { reviewId: string }).reviewId, mock });
+      }
+      // What the AI will be told on the next review (so it's never a black box).
+      if (req.method === "GET" && url.pathname === "/api/feedback") {
+        return send(res, 200, collectFeedback(allRecords()));
+      }
       if (req.method === "GET" && parts[0] === "api" && parts[1] === "jobs" && parts[2] && parts[3] === "events") {
         const job = jobs.get(parts[2]);
         if (!job) return send(res, 404, { error: "No such job." });
@@ -191,23 +290,19 @@ export function createApp(opts: AppOptions): http.Server {
         return;
       }
       if (req.method === "GET" && url.pathname === "/api/reviews") {
-        const list = readdirSync(opts.reviewsDir)
-          .filter((f) => f.endsWith(".json"))
-          .map((f) => loadRecord(f.slice(0, -5)))
-          .filter((r): r is ReviewRecord => Boolean(r))
-          .map((r) => ({
-            id: r.id,
-            createdAt: r.createdAt,
-            fileName: r.fileName,
-            mode: r.mode,
-            temperature: r.analysis?.temperature,
-            stage: r.analysis?.stage,
-            slips: r.slips.length,
-            moments: r.moments.length,
-            rated: Object.keys(r.ratings).length,
-            costUsd: r.costUsd,
-          }))
-          .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+        const list = allRecords().map((r) => ({
+          id: r.id,
+          createdAt: r.createdAt,
+          fileName: r.fileName,
+          mode: r.mode,
+          source: r.source,
+          temperature: r.analysis?.temperature,
+          stage: r.analysis?.stage,
+          slips: r.slips.length,
+          highlights: (r.didWell?.length ?? 0) + (r.doBetter?.length ?? 0),
+          feedbackGiven: Object.keys(r.feedback?.items ?? {}).length + (r.feedback?.overall ? 1 : 0),
+          costUsd: r.costUsd + (r.transcriptionUsd ?? 0),
+        }));
         return send(res, 200, list);
       }
       if (parts[0] === "api" && parts[1] === "reviews" && parts[2]) {
@@ -218,11 +313,38 @@ export function createApp(opts: AppOptions): http.Server {
           for (const f of [reviewPath(record.id), join(opts.reviewsDir, `${record.id}.md`), join(opts.privateDir, `${record.id}.transcript.json`)]) rmSync(f, { force: true });
           return send(res, 200, { deleted: record.id });
         }
+        // Feedback for the AI: PUT .../feedback/overall {rating 1–5, note} or .../feedback/<highlight key> {vote up|down|none, note}
+        if (req.method === "PUT" && parts[3] === "feedback" && parts[4] && parts.length === 5) {
+          const body = await readJson(req);
+          const note = String(body.note ?? "").trim().slice(0, 1000);
+          const at = new Date().toISOString();
+          record.feedback ??= { items: {} };
+          if (parts[4] === "overall") {
+            const rating = Number(body.rating);
+            if (!Number.isInteger(rating) || rating < 1 || rating > 5) return send(res, 400, { error: "Rating must be 1–5." });
+            record.feedback.overall = { rating, note, at };
+            saveRecord(record);
+            return send(res, 200, record.feedback.overall);
+          }
+          const key = parts[4];
+          if (![...(record.didWell ?? []), ...(record.doBetter ?? [])].some((h) => h.key === key)) return send(res, 404, { error: "No such highlight." });
+          if (body.vote === "none") {
+            delete record.feedback.items[key];
+            saveRecord(record);
+            return send(res, 200, { cleared: key });
+          }
+          if (body.vote !== "up" && body.vote !== "down") return send(res, 400, { error: "Vote must be up, down or none." });
+          record.feedback.items[key] = { vote: body.vote, note, at };
+          saveRecord(record);
+          return send(res, 200, record.feedback.items[key]);
+        }
+        // Older reviews (before highlights) still have per-card 1–5 ratings.
         if (req.method === "PUT" && parts[3] === "ratings" && parts[4]) {
           const body = await readJson(req);
           const rating = Number(body.rating);
-          if (!record.moments.some((m) => String(m.cardId) === parts[4])) return send(res, 404, { error: "No such card." });
+          if (!record.moments?.some((m) => String(m.cardId) === parts[4])) return send(res, 404, { error: "No such card." });
           if (!Number.isInteger(rating) || rating < 1 || rating > 5) return send(res, 400, { error: "Rating must be 1–5." });
+          record.ratings ??= {};
           record.ratings[parts[4]] = { rating, note: String(body.note ?? "").slice(0, 1000), at: new Date().toISOString() };
           saveRecord(record);
           return send(res, 200, record.ratings[parts[4]]);

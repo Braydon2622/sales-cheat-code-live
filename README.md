@@ -51,7 +51,7 @@ CLIENT  Honestly, your rates are probably higher than my credit union's.
                                           │             ─► guard (Haiku 5.5) reviews the finished card     │
                                           │      opt-out ─► fixed "honor it + Do Not Contact" card         │
                                           └──────────────────────────────────────────────────────────────┘
-                                             events ─► terminal demo · eval harness (same pipeline)
+                                             events ─► terminal demo · browser view · eval harness (same pipeline)
 ```
 
 In plain words:
@@ -69,23 +69,28 @@ In plain words:
 
 ### Post-call review of recorded calls (works today, no live audio)
 
-Live calls need streaming speech-to-text and a desktop app. Recorded calls don't: Dialpad already transcribes them. `npm run review` imports a transcript (a Dialpad API response, or plain "Speaker: text" lines), **redacts PII on import** (`src/privacy/redact.ts`), and runs it through the same detector, coach, and compliance pipeline. It also runs one call-level analysis adapted from my original call-analysis prompt.
+Live calls need streaming speech-to-text and a desktop app. Recorded calls don't. The review app takes a **call recording** (MP3, WAV, M4A and others) or a **transcript** (a Dialpad API response, or plain "Speaker: text" lines):
 
-The result is a coaching report per call:
-- summary, temperature, stage, next step, and follow-up timing
-- a coaching note for the loan officer
-- **every compliance slip the loan officer made**, with the exact words
-- each coaching moment showing what the client said, what the loan officer said next, and what the card would have suggested
-- **a follow-up text**, checked against my texting rules and replaced with a safe one if it breaks any
+1. **Recordings** go to Deepgram's speech-to-text (`src/ingest/audio.ts`), which labels the voices Speaker 1 and Speaker 2. A recording doesn't say who's who, so the app shows a line from each voice and you pick the loan officer. The audio is never saved.
+2. **PII is redacted on import** (`src/privacy/redact.ts`), before anything is stored or sent to the AI.
+3. **One AI call** reviews the whole call, using a prompt adapted from my original call-analysis prompt plus the coaching playbook.
 
-**Easiest way to use it: the app.** Run `npm run app` and open http://127.0.0.1:4310:
-- Drag call transcripts in (Dialpad `.json` or `.txt`), or click a sample call.
-- Watch progress, then read the report, copy the follow-up text, and rate each coaching card 1–5. Ratings are saved with the review and become the data for checking an AI judge later.
-- A Mock switch runs the whole flow for free.
-- It runs only on your computer, and caps live AI spend per session (`REVIEW_MAX_USD`, default $1).
+The result is a short coaching report the loan officer can read in a minute:
+- **What you did well:** the 1–3 best moments, each tied to the exact line, with why it worked.
+- **What to do better:** the 1–3 changes that would have helped most, each with **"try instead" wording**. That wording is rule-checked like a live card and withheld if it breaks a rule.
+- **Every compliance slip** in the loan officer's own words: the deterministic rules check every line, and the AI adds subtler ones. A client line can't count as a rep slip.
+- Summary, temperature, stage, next step, and follow-up timing.
+- **A follow-up text**, checked against my texting rules and replaced with a safe one if it breaks any.
+
+**Feedback goes back to the AI.** Each highlight has 👍/👎 and a note, and each review has a 1–5 rating and a note. Before every new review, the AI is given the most useful recent feedback (`collectFeedback` in `src/review/review.ts`: thumbs-downs and written notes rank first, mock reviews are skipped). The page shows exactly what it's being told, and the prompt states that feedback never overrides the compliance rules. This steers the AI with a prompt; it doesn't retrain the model.
+
+**Use it:** double-click `Start Call Review.command` in Finder (it starts the app and opens the browser), or run `npm run app` and open http://127.0.0.1:4310.
+- Drag in recordings or transcripts, or click a sample call. Recordings need `DEEPGRAM_API_KEY` in `.env`.
+- A Mock switch runs the AI part for free. Transcription is still a real charge, about half a cent per minute.
+- It runs only on your computer and caps spend per session (`REVIEW_MAX_USD`, default $1; transcription counts toward it).
 - Synthetic sample calls with planted fake personal details live in `samples/`.
 
-About $0.03 per call, roughly 30–45 seconds each. Imported transcripts (`data/private/`) and reviews (`reports/reviews/`) are gitignored, so real calls can never be committed.
+About 2–3 cents of AI per call plus transcription, roughly 15–30 seconds. Imported transcripts (`data/private/`) and reviews (`reports/reviews/`) are gitignored, so real calls can never be committed. `npm run review` does the same for transcript files from the command line.
 
 ### Design choices worth knowing
 
@@ -102,7 +107,7 @@ Requires Node 22+.
 
 ```bash
 npm install
-npm test                      # 116 tests, no API calls needed
+npm test                      # 136 tests, no API calls needed
 
 # Demo: replay a synthetic call with the chip and cards appearing live
 npm run demo:video                    # call-18, real time, countdown: ready to screen-record (docs/DEMO.md)
@@ -110,6 +115,10 @@ npm run demo -- call-02               # real time
 npm run demo -- call-18 --speed 3     # 3x speed
 npm run demo -- call-18 --mock        # no API key needed
 npm run demo -- call-18 --mode serial # the old one-step-at-a-time pipeline, for comparison
+
+# Same demo in the browser: transcript on the left, cards streaming in on the right
+npm run live                          # then open http://127.0.0.1:4311 (about 2 cents per live replay)
+#   http://127.0.0.1:4311/?call=call-18&speed=1&autostart=1   starts on load, handy for screen recording
 
 # Eval: writes reports/eval-<coach>-<mode>[-holdout].md (or eval-mock.md)
 npm run eval -- --mock --speed max                        # $0 harness check
@@ -228,12 +237,13 @@ My original format adds Temperature/Stage and a FOLLOW UP line, so cards are lon
 src/pipeline/     live pipeline: session (orchestrator), detector/coach/guard (claude.ts, mock.ts),
                   compliance rules, moment policy, playbook prompts, cards
 src/replay/       transcript parser + replay engine (simulates streaming speech-to-text)
-src/review/       post-call review and report        src/ingest/   Dialpad + text transcript import
+src/review/       post-call review and report        src/ingest/   Dialpad, text and audio (Deepgram) import
 src/privacy/      PII redaction                       src/app/      call-review web app (local)
-src/eval/         metrics, runner, report             src/cli/      demo, eval, review, app
+src/live/         browser view of a live replay (server-sent events)
+src/eval/         metrics, runner, report             src/cli/      demo, live, eval, review, app
 data/calls-src/   20 dev calls (labeled)              data/holdout-src/  25 held-out calls (labeled)
 samples/          synthetic calls to try in the app   reference/    my original prompts and n8n workflows
 docs/             demo guide, speech-to-text vendor comparison, outside-call test results
 reports/          eval reports, comparisons, one-page RESULTS.md
-tests/            vitest suites (116)
+tests/            vitest suites (136)
 ```

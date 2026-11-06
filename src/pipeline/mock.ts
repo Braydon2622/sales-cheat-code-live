@@ -98,15 +98,32 @@ export class NoopGuard implements CardGuard {
 /** Mock post-call analysis: a fixed, compliant answer so reviews run for $0. */
 export class MockCallAnalyzer {
   readonly name = "mock-analysis";
-  async analyze(): Promise<import("./claude.js").CallAnalysis> {
+  /** Feedback passed in on the last call (lets tests check the app sends it). */
+  lastFeedback: import("./claude.js").CoachFeedback[] = [];
+  async analyze(transcriptText: string, _meter?: unknown, feedback: import("./claude.js").CoachFeedback[] = []): Promise<import("./claude.js").CallAnalysis> {
+    this.lastFeedback = feedback;
+    // Point the canned highlights at real REP lines so the page can show them in context.
+    const repLines = [...transcriptText.matchAll(/^\[(\d+)\] REP:/gm)].map((m) => Number(m[1]));
+    const first = repLines[0] ?? 0;
+    const last = repLines.at(-1) ?? first;
     return {
-      summary: "MOCK: canned summary. Run without --mock for a real analysis.",
+      summary: "MOCK: canned summary. Run without mock mode for a real analysis.",
       temperature: "Warm",
       stage: "Contacted",
       objections: "None",
       next_step: "Book a 15-minute review.",
       follow_up: "Tomorrow at 10am",
       text_to_send: "Thanks for the chat today! Does today at 4 or tomorrow at 10 work better to go over your home options?",
+      did_well: [{ line: first, what: "MOCK: opened warmly and set an agenda.", why: "Canned highlight for testing the page." }],
+      do_better: [
+        {
+          line: last,
+          what_happened: "MOCK: ended without a specific next step.",
+          try_instead: "Does today at 4 or tomorrow at 10 work better for a quick review?",
+          why: "Canned highlight for testing the page.",
+        },
+      ],
+      compliance_slips: [],
       coaching_note: "MOCK: canned note.",
     };
   }

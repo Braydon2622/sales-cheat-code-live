@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales Cheat Code Live · replay</title>
+<style>
+  :root {
+    --bg: #0f1216; --panel: #171b21; --ink: #e8ebef; --muted: #8e99a6; --line: #262c35;
+    --rep: #6cc4ff; --client: #d59cff; --chip: #f0b552; --chip-soft: #2d2410;
+    --good: #5fd08c; --good-soft: #15291e; --bad: #ff7b6e; --bad-soft: #321a18; --accent: #7aa2ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; flex-direction: column; }
+  header { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 12px 20px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  header h1 { font-size: 18px; margin: 0; }
+  header .sub { color: var(--muted); font-size: 13px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; }
+  select, button { font: inherit; font-size: 14px; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+  select#call { max-width: 340px; }
+  button { cursor: pointer; }
+  button.primary { background: var(--accent); color: #0b1020; border-color: var(--accent); font-weight: 600; }
+  button:disabled { opacity: .5; cursor: default; }
+  label.toggle { display: flex; gap: 6px; align-items: center; color: var(--muted); }
+  #banner { padding: 8px 20px; font-size: 13px; color: var(--muted); border-bottom: 1px solid var(--line); }
+  #banner.error { color: var(--bad); background: var(--bad-soft); }
+  main { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px 20px; min-height: 0; }
+  main > section { min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+  .scroll { flex: 1; overflow-y: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .line { display: grid; grid-template-columns: 44px 62px 1fr; gap: 8px; padding: 4px 0; }
+  .line .t { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 13px; padding-top: 2px; }
+  .line .who { font-size: 12px; font-weight: 700; letter-spacing: .04em; padding-top: 3px; }
+  .line.rep .who { color: var(--rep); }
+  .line.client .who { color: var(--client); }
+  .line.speaking .text { color: var(--muted); }
+  .line.speaking .text::after { content: " …"; }
+  .line.flagged .text { text-decoration: underline wavy var(--bad); text-underline-offset: 4px; }
+  .alert { margin: 2px 0 8px 114px; padding: 6px 10px; border-radius: 8px; background: var(--bad-soft); color: var(--bad); font-size: 14px; }
+  .chipnote { margin: 2px 0 6px 114px; color: var(--chip); font-size: 13px; }
+  .card { border: 1px solid var(--line); border-left: 4px solid var(--chip); border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; background: var(--bg); animation: pop .25s ease-out; }
+  .card.done { border-left-color: var(--good); }
+  .card.blocked { border-left-color: var(--bad); }
+  @keyframes pop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  .card .head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-bottom: 6px; }
+  .tag { background: var(--chip-soft); color: var(--chip); border-radius: 999px; padding: 1px 10px; font-size: 13px; font-weight: 600; }
+  .card .timing { color: var(--muted); font-size: 12px; text-align: right; }
+  .field { display: grid; grid-template-columns: 92px 1fr; gap: 8px; padding: 2px 0; }
+  .field .k { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .05em; padding-top: 4px; }
+  .field.sendThis .v { font-weight: 600; font-size: 17px; }
+  .field.watchOut .v { color: var(--chip); }
+  .verdict { margin-top: 6px; font-size: 13px; }
+  .verdict.ok { color: var(--good); }
+  .verdict.bad { color: var(--bad); }
+  .empty { color: var(--muted); font-size: 14px; padding: 8px 0; }
+  footer { padding: 10px 20px; border-top: 1px solid var(--line); background: var(--panel); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+  footer b { font-variant-numeric: tabular-nums; }
+  footer .muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Sales Cheat Code Live</h1>
+    <div class="sub">Real-time AI call coach for loan officers · replaying a <b>synthetic</b> role-play call, no real borrower</div>
+  </div>
+  <div class="controls">
+    <select id="call" aria-label="Call"></select>
+    <select id="speed" aria-label="Speed"></select>
+    <label class="toggle"><input type="checkbox" id="mock"> Mock (no AI)</label>
+    <button id="start" class="primary">Start</button>
+    <button id="stop" disabled>Stop</button>
+  </div>
+</header>
+<div id="banner">Loading…</div>
+<main>
+  <section>
+    <h2>Call transcript (as it's spoken)</h2>
+    <div class="scroll" id="transcript"><div class="empty">Pick a call and press Start.</div></div>
+  </section>
+  <section>
+    <h2>Coaching cards (newest first)</h2>
+    <div class="scroll" id="cards"><div class="empty">Cards appear here when the detector spots a moment.</div></div>
+  </section>
+</main>
+<footer id="stats">
+  <span>Moments <b id="s-cards">0</b></span>
+  <span>Flagged before the client finished <b id="s-early">0</b></span>
+  <span>Rep compliance alerts <b id="s-alerts">0</b></span>
+  <span>Non-compliant cards shown <b id="s-bad">0</b></span>
+  <span class="muted">AI cost <b id="s-cost">–</b></span>
+</footer>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; };
+const LABEL = { read: "READ", sendThis: "SEND THIS", backup: "BACKUP", nextStep: "NEXT STEP", followUp: "FOLLOW UP", watchOut: "WATCH OUT" };
+const ORDER = ["read", "sendThis", "backup", "nextStep", "followUp", "watchOut"];
+const fmtTime = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+const pretty = (s) => String(s || "").replace(/_/g, " ");
+const ago = (ms) => ms === undefined || ms === null ? "while the client is still talking" : ms < 0 ? `${(-ms / 1000).toFixed(1)} s before they finished` : `${(ms / 1000).toFixed(1)} s after they finished`;
+
+let status = null;
+let controller = null;
+let lines = new Map();   // utterance index → line element
+let cards = new Map();   // card id → { box, fields }
+let counts = {};
+
+function banner(text, isError) { const b = $("banner"); b.textContent = text; b.className = isError ? "error" : ""; }
+
+async function init() {
+  try {
+    status = await (await fetch("/api/status")).json();
+    const calls = await (await fetch("/api/calls")).json();
+    for (const c of calls) { const o = el("option", "", `${c.id} · ${c.title}`); o.value = c.id; $("call").append(o); }
+    $("call").value = calls.some((c) => c.id === "call-18") ? "call-18" : (calls[0] && calls[0].id);
+    for (const s of status.speeds) { const o = el("option", "", `${s}x speed`); o.value = String(s); $("speed").append(o); }
+    if (!status.liveAvailable) { $("mock").checked = true; $("mock").disabled = true; }
+    const params = new URLSearchParams(location.search);
+    if (params.get("call")) $("call").value = params.get("call");
+    if (params.get("speed")) $("speed").value = params.get("speed");
+    if (params.get("mock") === "1") $("mock").checked = true;
+    idleBanner();
+    if (params.get("autostart") === "1") start();
+  } catch (err) { banner(`Couldn't reach the server: ${err.message}`, true); }
+}
+
+function idleBanner() {
+  banner(status.liveAvailable
+    ? `Live AI: detector ${status.models.detector} · coach ${status.models.coach} · guard ${status.models.guard} · about 2 cents per replay · spent $${status.spentUsd.toFixed(3)} of $${status.maxUsd.toFixed(2)} this session`
+    : "No API key on the server: mock mode only (keyword detector and canned cards).");
+}
+
+function reset() {
+  lines = new Map(); cards = new Map(); counts = { cards: 0, early: 0, alerts: 0 };
+  $("transcript").replaceChildren(); $("cards").replaceChildren();
+  for (const k of ["cards", "early", "alerts", "bad"]) $(`s-${k}`).textContent = "0";
+  $("s-cost").textContent = "–";
+}
+
+function scrollDown(box) { box.scrollTop = box.scrollHeight; }
+
+function lineFor(d) {
+  let row = lines.get(d.index);
+  if (!row) {
+    row = el("div", `line ${d.speaker}`);
+    row.append(el("span", "t", fmtTime(d.start)), el("span", "who", d.speaker === "rep" ? "REP" : "CLIENT"), el("span", "text"));
+    lines.set(d.index, row);
+    $("transcript").append(row);
+  }
+  return row;
+}
+
+const handlers = {
+  start(d) { banner(`Replaying ${d.id}: "${d.title}" · ${d.speed}x · ${d.mock ? "MOCK mode (keyword detector, canned cards)" : "live AI"}`); },
+  partial(d) {
+    const row = lineFor(d); row.classList.add("speaking");
+    row.querySelector(".text").textContent = d.text; scrollDown($("transcript"));
+  },
+  utterance(d) {
+    const row = lineFor(d); row.classList.remove("speaking");
+    row.querySelector(".text").textContent = d.text; scrollDown($("transcript"));
+  },
+  rep_alert(d) {
+    const row = lineFor({ index: d.utteranceIndex, speaker: "rep", start: 0 });
+    row.classList.add("flagged");
+    const text = d.violations.map((v) => `${pretty(v.rule)}: "${v.quote}"`).join("; ");
+    const note = el("div", "alert", `⚠ Rep compliance alert · ${text}`);
+    row.after(note);
+    $("s-alerts").textContent = String(++counts.alerts); scrollDown($("transcript"));
+  },
+  chip(d) {
+    const tag = pretty(d.subtype ? `${d.type}: ${d.subtype}` : d.type);
+    const box = el("div", "card");
+    const head = el("div", "head");
+    head.append(el("span", "tag", `◆ ${tag}`), el("span", "timing", `chip ${ago(d.chipMs)}`));
+    const body = el("div");
+    box.append(head, body);
+    cards.set(d.id, { box, body, fields: {} });
+    $("cards").prepend(box);
+    $("s-cards").textContent = String(++counts.cards);
+    // No chipMs yet = the speaker hasn't finished the line, so it's early too.
+    if (d.chipMs === undefined || d.chipMs === null || d.chipMs < 0) $("s-early").textContent = String(++counts.early);
+    const row = lines.get(d.utteranceIndex);
+    if (row) { row.after(el("div", "chipnote", `◆ moment detected: ${tag} → card #${d.id}`)); }
+  },
+  card_line(d) {
+    const c = cards.get(d.id); if (!c) return;
+    setField(c, d.field, d.text);
+  },
+  card_done(d) {
+    const c = cards.get(d.id); if (!c) return;
+    // Show exactly what the rep would see after the guard (a blocked draft is replaced).
+    c.body.replaceChildren(); c.fields = {};
+    for (const f of ORDER) if (d.shown && d.shown[f]) setField(c, f, d.shown[f]);
+    const ok = d.outcome === "shown";
+    c.box.classList.add(ok ? "done" : "blocked");
+    const what = ok ? (d.kind === "fixed_opt_out" ? "✓ fixed opt-out card (Do Not Contact)" : "✓ cleared by the compliance guard")
+      : d.outcome === "coach_error" ? "✗ coach error; safe card shown"
+      : `✗ draft ${pretty(d.outcome)} (${d.blocked.map(pretty).join(", ")}); safe card shown`;
+    c.body.append(el("div", `verdict ${ok ? "ok" : "bad"}`, what));
+    c.box.querySelector(".timing").textContent = `chip ${ago(d.chipMs)}` + (d.firstLineMs !== undefined && d.firstLineMs !== null ? ` · first line ${ago(d.firstLineMs)}` : "");
+  },
+  stage_error(d) { banner(`${d.stage} error: ${d.message}`, true); },
+  done(d) {
+    $("s-bad").textContent = String(d.nonCompliantShown);
+    $("s-early").textContent = String(d.earlyChips);
+    $("s-cost").textContent = d.costUsd ? `$${d.costUsd.toFixed(4)}` : "$0 (mock)";
+    banner(d.stopped ? "Stopped." : `Call over · ${d.cards} moments, ${d.earlyChips} flagged before the client finished, ${d.repAlerts} rep compliance alerts.`);
+  },
+  failed(d) { banner(`Replay failed: ${d.message}`, true); },
+};
+
+function setField(c, field, text) {
+  let f = c.fields[field];
+  if (!f) {
+    f = el("div", `field ${field}`);
+    f.append(el("span", "k", LABEL[field] || field), el("span", "v"));
+    c.fields[field] = f; c.body.append(f);
+  }
+  f.querySelector(".v").textContent = text;
+}
+
+// fetch + a stream reader instead of EventSource: we get real error messages
+// (spend cap, busy) and the browser never silently reconnects and re-runs a paid replay.
+async function start() {
+  reset();
+  controller = new AbortController();
+  $("start").disabled = true; $("stop").disabled = false;
+  const q = new URLSearchParams({ call: $("call").value, speed: $("speed").value, mock: $("mock").checked ? "1" : "0" });
+  try {
+    const res = await fetch(`/api/replay?${q}`, { signal: controller.signal });
+    if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e.error || `HTTP ${res.status}`); }
+    const reader = res.body.pipeThrough(new TextDecoderStream()).getReader();
+    let buf = "";
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += value;
+      let cut;
+      while ((cut = buf.indexOf("\n\n")) >= 0) {
+        const block = buf.slice(0, cut); buf = buf.slice(cut + 2);
+        const ev = /^event: (.*)$/m.exec(block), data = /^data: (.*)$/m.exec(block);
+        if (ev && data && handlers[ev[1]]) handlers[ev[1]](JSON.parse(data[1]));
+      }
+    }
+  } catch (err) {
+    if (err.name === "AbortError") banner("Stopped.");
+    else banner(err.message, true);
+  } finally {
+    $("start").disabled = false; $("stop").disabled = true; controller = null;
+    status = await fetch("/api/status").then((r) => r.json()).catch(() => status);
+  }
+}
+
+$("start").addEventListener("click", start);
+$("stop").addEventListener("click", () => controller && controller.abort());
+init();
+</script>
+</body>
+</html>

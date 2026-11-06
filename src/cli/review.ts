@@ -11,7 +11,6 @@ import { basename, extname } from "node:path";
 import { parseArgs } from "node:util";
 import { config, hasApiKey } from "../config.js";
 import { ClaudeCallAnalyzer } from "../pipeline/claude.js";
-import { makeComponents } from "../pipeline/factory.js";
 import { MockCallAnalyzer } from "../pipeline/mock.js";
 import { fetchDialpadTranscript, importDialpad, importText, type DialpadTranscript } from "../ingest/dialpad.js";
 import { renderReview, reviewCall, toRecord } from "../review/review.js";
@@ -46,7 +45,7 @@ async function load(): Promise<Transcript[]> {
 }
 
 const transcripts = await load();
-const components = { ...makeComponents(mock), analyzer: mock ? new MockCallAnalyzer() : new ClaudeCallAnalyzer(config.coachModel) };
+const components = { analyzer: mock ? new MockCallAnalyzer() : new ClaudeCallAnalyzer(config.coachModel) };
 mkdirSync(values.out!, { recursive: true });
 mkdirSync("data/private", { recursive: true });
 
@@ -67,6 +66,6 @@ for (const t of transcripts) {
   writeFileSync(out, renderReview(r));
   const fileName = values["dialpad-call-id"] && t.source === "dialpad" ? `dialpad-${values["dialpad-call-id"]}` : `${t.id}${t.source === "dialpad" ? ".json" : ".txt"}`;
   writeFileSync(`${values.out}/${id}.json`, JSON.stringify(toRecord(r, { id, fileName, mode: mock ? "mock" : "live" }), null, 2) + "\n");
-  console.log(`  ${r.cards.length} coaching moments, ${r.repAlerts.length} compliance flags, ${r.errors.length} errors · $${r.meter.costUsd().toFixed(4)} → ${out}`);
+  console.log(`  ${r.didWell.length + r.doBetter.length} highlights, ${r.slips.length} compliance flags, ${r.errors.length} errors · $${r.meter.costUsd().toFixed(4)} → ${out}`);
 }
 console.log(`\nDone. Total AI cost: $${spent.toFixed(4)}`);

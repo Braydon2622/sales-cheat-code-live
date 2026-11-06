@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { fetchDialpadTranscript, importDialpad, importText, type DialpadTranscript } from "../src/ingest/dialpad.js";
 import { checkFollowUpText, renderReview, reviewCall, SAFE_FOLLOW_UP_TEXT } from "../src/review/review.js";
-import { KeywordDetector, MockCallAnalyzer, NoopGuard, TemplateCoach } from "../src/pipeline/mock.js";
+import { MockCallAnalyzer } from "../src/pipeline/mock.js";
 
 const fixture = JSON.parse(readFileSync("tests/fixtures/dialpad-sample.json", "utf8")) as DialpadTranscript;
 
@@ -90,6 +90,12 @@ describe("follow-up text check", () => {
     expect(c.violations.map((v) => v.rule).sort()).toEqual(["say_home_not_loan", "two_option_close"]);
   });
 
+  it("doesn't flag the company's own name as \"loan\" wording", () => {
+    const c = checkFollowUpText("Hi, it's Mike with Copperleaf Home Loans. Does today at 4 or tomorrow at 10 work better to talk about your home options?");
+    expect(c.violations).toEqual([]);
+    expect(checkFollowUpText("Hi, let's talk about your loan. Does today at 4 or tomorrow at 10 work better?").violations.map((v) => v.rule)).toContain("say_home_not_loan");
+  });
+
   it("allows the opt-out confirmation without a two-option close", () => {
     expect(checkFollowUpText("Understood, we've removed you from our list. Take care.").violations).toEqual([]);
   });
@@ -98,15 +104,14 @@ describe("follow-up text check", () => {
 describe("post-call review", () => {
   it("reviews an imported call end to end and the report contains no PII", async () => {
     const t = importDialpad(fixture);
-    const r = await reviewCall(t, {
-      detector: new KeywordDetector(),
-      coach: new TemplateCoach(0, 0),
-      guard: new NoopGuard(),
-      analyzer: new MockCallAnalyzer(),
-    });
-    expect(r.repAlerts.length).toBeGreaterThanOrEqual(2); // rate quote + approval promise in call-18
-    expect(r.cards.length).toBeGreaterThan(0);
+    const r = await reviewCall(t, { analyzer: new MockCallAnalyzer() });
+    expect(r.slips.length).toBeGreaterThanOrEqual(2); // rate quote + approval promise in call-18
+    expect(r.didWell.length).toBe(1);
+    expect(r.doBetter.length).toBe(1);
+    expect(r.didWell[0]!.speaker).toBe("rep");
     const md = renderReview(r);
+    expect(md).toContain("## What you did well");
+    expect(md).toContain("## What to do better");
     expect(md).toContain("## Follow-up text");
     expect(md).toContain("approval promise");
     expect(md).not.toMatch(/078-05-1120|555-0142/);

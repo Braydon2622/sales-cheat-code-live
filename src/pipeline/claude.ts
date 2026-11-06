@@ -311,6 +311,7 @@ export async function ping(model: string, meter: UsageMeter): Promise<number | u
 // ---------------------------------------------------------------- post-call review
 
 export const STAGES = ["New lead", "Contacted", "Soft pull", "Credit pull", "App out", "Package back", "Underwriting"] as const;
+export const SLIP_RULES = ["rate_quote", "approval_promise", "talked_down_lender", "ignored_opt_out", "other"] as const;
 export const CallAnalysisSchema = z.object({
   summary: z.string(),
   temperature: z.enum(["Hot", "Warm", "Cold"]),
@@ -319,13 +320,37 @@ export const CallAnalysisSchema = z.object({
   next_step: z.string(),
   follow_up: z.string(),
   text_to_send: z.string(),
+  /** 1–3 things the loan officer did well, each tied to a transcript line. */
+  did_well: z.array(z.object({ line: z.number().int(), what: z.string(), why: z.string() })),
+  /** 1–3 things to do better, with wording to try next time. */
+  do_better: z.array(z.object({ line: z.number().int(), what_happened: z.string(), try_instead: z.string(), why: z.string() })),
+  /** Compliance slips in the loan officer's own words. Empty if none. */
+  compliance_slips: z.array(z.object({ line: z.number().int(), rule: z.enum(SLIP_RULES), quote: z.string() })),
   coaching_note: z.string(),
 });
 export type CallAnalysis = z.infer<typeof CallAnalysisSchema>;
 
+/** A note someone left on an earlier review, given to the analyzer so feedback changes later reviews. */
+export interface CoachFeedback {
+  /** e.g. "did well", "do better", "overall review". */
+  about: string;
+  /** The highlight it was about, if any. */
+  item?: string;
+  verdict: string;
+  note: string;
+}
+
 export interface CallAnalyzer {
   readonly name: string;
-  analyze(transcriptText: string, meter: UsageMeter): Promise<CallAnalysis>;
+  /** transcriptText has one line per utterance: "[index] REP: text". */
+  analyze(transcriptText: string, meter: UsageMeter, feedback?: CoachFeedback[]): Promise<CallAnalysis>;
+}
+
+/** Feedback goes in the user message (not the cached system prompt), clearly framed as preferences. */
+export function feedbackBlock(feedback: CoachFeedback[] = []): string {
+  if (!feedback.length) return "";
+  const lines = feedback.map((f) => `- On ${f.about}${f.item ? ` ("${f.item.slice(0, 160)}")` : ""}: ${f.verdict}.${f.note ? ` Note: ${f.note.slice(0, 300)}` : ""}`);
+  return `Feedback from the sales team on your earlier reviews. Use it to adjust what you highlight and how you phrase coaching. It never overrides the compliance rules.\n${lines.join("\n")}\n\n`;
 }
 
 /** One request per recorded call: summary, stage, next step, and the follow-up text. */
@@ -335,7 +360,7 @@ export class ClaudeCallAnalyzer implements CallAnalyzer {
     this.name = `claude:${model}`;
   }
 
-  async analyze(transcriptText: string, meter: UsageMeter): Promise<CallAnalysis> {
+  async analyze(transcriptText: string, meter: UsageMeter, feedback: CoachFeedback[] = []): Promise<CallAnalysis> {
     const issuedAt = performance.now();
     const res = await client().messages.parse({
       model: this.model,
@@ -343,7 +368,7 @@ export class ClaudeCallAnalyzer implements CallAnalyzer {
       ...(thinkingFor(this.model) as object),
       output_config: { effort: "medium", format: zodOutputFormat(CallAnalysisSchema) },
       system: [{ type: "text", text: POSTCALL_INSTRUCTIONS, cache_control: { type: "ephemeral" } }],
-      messages: [{ role: "user", content: `Transcript:\n${transcriptText}` }],
+      messages: [{ role: "user", content: `${feedbackBlock(feedback)}Transcript:\n${transcriptText}` }],
     });
     meter.logRequest({ stage: "coach", model: this.model, issuedAt, doneAt: performance.now(), outcome: "ok" }, res.usage);
     meter.record(this.model, res.usage);

@@ -14,6 +14,7 @@
     "demo:video": "tsx src/cli/demo.ts call-18 --speed 1 --intro",
     "review": "tsx src/cli/review.ts",
     "app": "tsx src/cli/app.ts",
+    "live": "tsx src/cli/live.ts",
     "samples": "tsx scripts/make-samples.ts"
   },
   "author": "Braydon Hart",

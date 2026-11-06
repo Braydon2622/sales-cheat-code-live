@@ -1,7 +1,14 @@
 // Deterministic compliance rules. These run in microseconds, so they check
 // every streamed line of every card AND every line the rep says. They are
 // the first line of defense; the model check (guard.ts) is the second.
+import { config } from "../config.js";
 import type { Card, CardField, ComplianceViolation, MomentType } from "../types.js";
+
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+/** Removes the company name before the "home not loan" style check. */
+export function withoutCompanyName(text: string, name = config.companyName): string {
+  return name ? text.replace(new RegExp(escapeRe(name), "gi"), "") : text;
+}
 
 interface Rule {
   rule: string;
@@ -78,7 +85,7 @@ export function checkCard(card: Partial<Card>, moment: MomentType): ComplianceVi
   }
   // Style: say "home", not "mortgage"/"loan"/"refinance", and stay under 300 characters.
   for (const field of ["sendThis", "backup"] as const) {
-    const m = card[field]?.match(/\b(?:mortgages?|loans?|refinanc\w*|refi)\b/i);
+    const m = card[field] && withoutCompanyName(card[field]!).match(/\b(?:mortgages?|loans?|refinanc\w*|refi)\b/i);
     if (m) out.push({ rule: "say_home_not_loan", severity: "style", where: field, quote: m[0], source: "rules" });
     const text = card[field];
     if (text && text.length > MAX_SPOKEN_CHARS) {

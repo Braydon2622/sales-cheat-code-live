@@ -19,6 +19,8 @@ export const config = {
   guardModel: process.env.GUARD_MODEL ?? "claude-haiku-5-5",
   /** How many prior lines of the call the detector and coach see. */
   contextLines: 8,
+  /** The company's own name is fine to say even if it contains "loan" or "mortgage". Fictional by default. */
+  companyName: process.env.COMPANY_NAME ?? "Copperleaf Home Loans",
 };
 
 export function hasApiKey(): boolean {
