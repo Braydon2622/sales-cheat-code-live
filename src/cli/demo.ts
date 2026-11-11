@@ -76,10 +76,6 @@ const ago = (ms: number | undefined) =>
   ms === undefined || Number.isNaN(ms) ? "while the client is still talking" : ms < 0 ? `${(-ms / 1000).toFixed(1)} s before they finished` : `${(ms / 1000).toFixed(1)} s after they finished`;
 
 session.on("utterance", (u) => say(`${c.dim(fmtTime(u.end))} ${who(u.speaker)} ${u.text}`));
-session.on("rep_alert", (a) => {
-  const v = a.violations.map((x) => `${x.rule.replace(/_/g, " ")}: "${x.quote}"`).join("; ");
-  say(c.red(`        ⚠ COMPLIANCE (rep) · ${v}`));
-});
 // The chip: shown the instant the detector fires, before any card text.
 session.on("chip", (t) => {
   const tag = (t.moment.subtype ? `${t.moment.type}: ${t.moment.subtype}` : t.moment.type).replace(/_/g, " ");
@@ -91,12 +87,8 @@ session.on("card_line", (id, field, text) => {
   say(`${c.yellow(`        │ #${id}`)} ${c.dim(LABEL[field])}${body}`);
 });
 session.on("card_done", (t) => {
-  const verdict =
-    t.outcome === "shown"
-      ? c.green(`✓ ${t.kind === "fixed_opt_out" ? "fixed opt-out card" : "cleared by compliance guard"}`)
-      : t.outcome === "coach_error"
-        ? c.red(`✗ coach error (${t.error}); safe card shown`)
-        : c.red(`✗ draft ${t.outcome.replace(/_/g, " ")}: ${t.violations.filter((v) => v.severity === "block").map((v) => v.rule).join(", ")}; safe card shown`);
+  // Blocked drafts are quietly replaced with a safe card; only a coach failure gets a note.
+  const verdict = t.outcome === "coach_error" ? c.red(`✗ coach error (${t.error}); backup card shown`) : c.green("✓");
   say(c.yellow(`        └─ #${t.id} `) + verdict + c.dim(` · first line ${ago(latencyOf(t, "firstLineAt", "speechEnd"))}`));
 });
 session.on("stage_error", (stage, err) => say(c.red(`        ! ${stage} error: ${err.message}`)));
@@ -108,7 +100,7 @@ process.on("SIGINT", () => {
 });
 
 if (values.intro && tty) process.stdout.write("\x1b[2J\x1b[H");
-say(c.bold(`\n Sales Cheat Code Live · real-time AI call coach for loan officers`));
+say(c.bold(`\n Sales Call Cheat Code · real-time AI call coach for loan officers`));
 say(c.dim(` Replaying ${transcript.id}: "${transcript.title}". SYNTHETIC role-play call, no real borrower.`));
 say(c.dim(` ${mock ? "MOCK mode: keyword detector + canned cards" : `detector ${components.detector.name} · coach ${components.coach.name} · guard ${components.guard.name}`}`));
 say(c.dim(` ${mode}${partials ? " + interim partials" : ""} · ${speed}x speed\n`));
@@ -136,6 +128,6 @@ const chips = session.cards.map((t) => latencyOf(t, "chipAt", "speechEnd")).filt
 const firstLines = coached.map((t) => latencyOf(t, "firstLineAt", "speechEnd")).filter((v): v is number => v !== undefined);
 const early = chips.filter((v) => v < 0).length;
 say(c.bold(`\n Call over`));
-say(` ${session.cards.length} coaching moments · ${early} flagged before the client finished talking · ${session.repAlerts.length} rep compliance alerts`);
+say(` ${session.cards.length} coaching moments · ${early} flagged before the client finished talking`);
 say(` Typical timing · chip: ${ago(percentile(chips, 50))} · card on screen: ${ago(percentile(firstLines, 50))}`);
 say(c.dim(` AI cost for this call: $${session.meter.costUsd().toFixed(4)}${mock ? " (mock mode: no AI calls)" : ""}\n`));

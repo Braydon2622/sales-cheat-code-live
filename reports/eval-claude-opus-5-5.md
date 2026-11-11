@@ -1,4 +1,4 @@
-# Eval report: Sales Cheat Code Live
+# Eval report: Sales Call Cheat Code
 
 - **Run:** 2026-11-05T16:46:10.760Z · 20 synthetic calls · 392 utterances · replay speed 10x
 - **Models:** detector `claude:claude-haiku-5-5` · coach `claude:claude-opus-5-5@low` · guard `claude:claude-haiku-5-5`

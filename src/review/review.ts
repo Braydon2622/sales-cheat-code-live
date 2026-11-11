@@ -7,7 +7,8 @@
 // One model request per call. The live pipeline's per-moment cards are built
 // for split-second help *during* a call; after the call, a rep learns more from
 // a few highlights than from a card for every moment.
-import type { CallAnalysis, CallAnalyzer, CoachFeedback } from "../pipeline/claude.js";
+import type { CallAnalysis, CallAnalyzer, CoachFeedback, MissCategory } from "../pipeline/claude.js";
+import { callStats, type CallStats } from "./insights.js";
 import { checkCard, checkCardLine, checkRepSpeech, hasTwoOptionClose, MAX_SPOKEN_CHARS } from "../pipeline/rules.js";
 import { UsageMeter } from "../llm/usage.js";
 import type { ComplianceViolation, Transcript } from "../types.js";
@@ -50,6 +51,8 @@ export interface Highlight {
   quote: string;
   what: string;
   why: string;
+  /** Do-better only: what kind of miss it was (counted across calls in Insights). */
+  category?: MissCategory;
   /** Do-better only: wording to try next time, after the compliance rules. */
   tryInstead?: string;
   /** Rules the model's suggested wording broke (the wording is then withheld). */
@@ -107,6 +110,7 @@ export function buildHighlights(t: Transcript, a: CallAnalysis): { didWell: High
       time: fmtTime(u.start),
       speaker: u.speaker,
       quote: u.text,
+      ...(h.category ? { category: h.category } : {}),
       what: h.what_happened,
       why: h.why,
       tryInstead: blocked.length ? WITHHELD : h.try_instead,
@@ -181,6 +185,16 @@ export function renderReview(r: ReviewResult): string {
       `**Bottom line:** ${a.coaching_note}`,
       "",
     );
+    const tp = turningPointFor(t, a).turningPoint;
+    const st = callStats(t.utterances);
+    md.push(
+      `## Where it went wrong`,
+      "",
+      tp ? `**Turning point, ${tp.time}:** ${tp.what}\n  > ${tp.speaker === "rep" ? "You" : "Client"}: ${tp.quote}` : `The call never went off track.`,
+      "",
+      `Next step booked: ${a.next_step_booked ? "yes" : "no"} · You talked ${Math.round(st.repTalkShare * 100)}% of the call · ${st.repQuestions} questions asked${st.longestRepStretchSec !== undefined ? ` · longest stretch without the client speaking: ${Math.round(st.longestRepStretchSec)}s` : ""}`,
+      "",
+    );
   }
   md.push(`## What you did well`, "");
   if (!r.didWell.length) md.push(a ? `Nothing specific stood out.` : `(Analysis didn't complete.)`);
@@ -188,7 +202,7 @@ export function renderReview(r: ReviewResult): string {
   md.push("", `## What to do better`, "");
   if (!r.doBetter.length) md.push(a ? `Nothing major.` : `(Analysis didn't complete.)`);
   for (const h of r.doBetter) {
-    md.push(`- **${h.time} · ${h.what}** ${h.why}`, `  > ${h.speaker === "rep" ? "You" : "Client"}: ${h.quote}`, `  - **Try instead:** ${h.tryInstead}`);
+    md.push(`- **${h.time} · ${h.category ? `[${h.category}] ` : ""}${h.what}** ${h.why}`, `  > ${h.speaker === "rep" ? "You" : "Client"}: ${h.quote}`, `  - **Try instead:** ${h.tryInstead}`);
   }
   md.push("", `## Compliance: the loan officer's own words`, "");
   if (!r.slips.length) md.push(`No slips flagged.`);
@@ -232,6 +246,10 @@ export interface ReviewRecord {
   doBetter: Highlight[];
   followUp?: FollowUpCheck;
   slips: Slip[];
+  /** Where the call went off track (from the AI review, tied to a real line). */
+  turningPoint?: { line: number; time: string; speaker: "rep" | "client"; quote: string; what: string };
+  /** Measured from the transcript, no AI. Missing on reviews saved before stats existed. */
+  stats?: CallStats;
   transcript: Array<{ time: string; speaker: "rep" | "client"; text: string }>;
   errors: string[];
   /** AI review cost. Transcription is separate. */
@@ -264,12 +282,22 @@ export function toRecord(
     doBetter: r.doBetter,
     followUp: r.followUp,
     slips: r.slips,
+    ...turningPointFor(t, r.analysis),
+    stats: callStats(t.utterances),
     transcript: t.utterances.map((u) => ({ time: fmtTime(u.start), speaker: u.speaker, text: u.text })),
     errors: r.errors,
     costUsd: r.meter.costUsd(),
     ...(meta.transcriptionUsd !== undefined ? { transcriptionUsd: meta.transcriptionUsd } : {}),
     feedback: { items: {} },
   };
+}
+
+/** Ties the AI's turning point to a real transcript line; dropped if it points nowhere. */
+function turningPointFor(t: Transcript, a?: CallAnalysis): Pick<ReviewRecord, "turningPoint"> {
+  const tp = a?.turning_point;
+  const u = tp ? t.utterances.find((x) => x.index === tp.line) : undefined;
+  if (!tp || !u) return {};
+  return { turningPoint: { line: u.index, time: fmtTime(u.start), speaker: u.speaker, quote: u.text, what: tp.what } };
 }
 
 /** How many past feedback notes go into each new review's prompt. */

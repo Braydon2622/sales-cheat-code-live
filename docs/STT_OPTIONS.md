@@ -1,6 +1,6 @@
 # Streaming Speech-to-Text Options for Phase 2
 
-This document compares four streaming speech-to-text (STT) vendors for Sales Cheat Code Live Phase 2. The desktop app sends two channels per call (the rep's mic and the client's phone audio, which is 8 kHz) to our server, and the server streams them to the STT vendor. We need fast interim (partial) results, fast finalization (STT plus the roughly 0.8 s Claude round trip has to fit in 1.5 s), and contract terms that are acceptable for GLBA-covered consumer financial data. The goal is to pick two vendors for a bake-off.
+This document compares four streaming speech-to-text (STT) vendors for Sales Call Cheat Code Phase 2. The desktop app sends two channels per call (the rep's mic and the client's phone audio, which is 8 kHz) to our server, and the server streams them to the STT vendor. We need fast interim (partial) results, fast finalization (STT plus the roughly 0.8 s Claude round trip has to fit in 1.5 s), and contract terms that are acceptable for GLBA-covered consumer financial data. The goal is to pick two vendors for a bake-off.
 
 **Researched 2026-11-05. Prices and terms change; re-check before signing.** All sources were accessed 2026-11-05.
 

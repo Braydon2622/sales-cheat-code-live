@@ -124,7 +124,7 @@ export function buildReport(input: ReportInput): { markdown: string; summary: Re
   const ms = (x: number) => (Number.isFinite(x) ? `${Math.round(x)} ms` : "–");
   const p = (xs: number[], q: number) => ms(percentile(xs, q));
 
-  md.push(`# Eval report: Sales Cheat Code Live`, "");
+  md.push(`# Eval report: Sales Call Cheat Code`, "");
   if (input.mode === "mock") {
     md.push(`> **MOCK RUN.** No AI models were called. Detection is the keyword baseline, cards are canned templates, and latencies are simulated. These numbers test the harness, not the product.`, "");
   }

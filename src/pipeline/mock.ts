@@ -118,11 +118,14 @@ export class MockCallAnalyzer {
       do_better: [
         {
           line: last,
+          category: "Next step / close",
           what_happened: "MOCK: ended without a specific next step.",
           try_instead: "Does today at 4 or tomorrow at 10 work better for a quick review?",
           why: "Canned highlight for testing the page.",
         },
       ],
+      turning_point: { line: last, what: "MOCK: the call ended without a booked next step." },
+      next_step_booked: false,
       compliance_slips: [],
       coaching_note: "MOCK: canned note.",
     };

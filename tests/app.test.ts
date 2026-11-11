@@ -91,6 +91,22 @@ describe("call review app", () => {
     const list = (await (await fetch(base + "/api/reviews")).json()) as Array<{ id: string; feedbackGiven: number }>;
     expect(list.find((r) => r.id === reviewId)?.feedbackGiven).toBe(2);
 
+    // Call analysis: stats, turning point, and the cross-call insights (mock reviews only when asked).
+    const full = (await (await fetch(`${base}/api/reviews/${reviewId}`)).json()) as {
+      stats: { repTalkShare: number; repQuestions: number; longestRepStretchSec?: number }; turningPoint: { what: string }; doBetter: Array<{ category: string }>;
+    };
+    expect(full.stats.repTalkShare).toBeGreaterThan(0);
+    expect(full.stats.repTalkShare).toBeLessThan(1);
+    expect(full.turningPoint.what).toContain("MOCK");
+    expect(full.doBetter[0]!.category).toBe("Next step / close");
+    const real = (await (await fetch(base + "/api/insights")).json()) as { calls: number; mockSkipped: number };
+    expect(real.calls).toBe(0);
+    expect(real.mockSkipped).toBeGreaterThan(0);
+    const ins = (await (await fetch(base + "/api/insights?mock=1")).json()) as { calls: number; misses: Array<{ category: string; count: number }>; turningPoints: unknown[] };
+    expect(ins.calls).toBeGreaterThan(0);
+    expect(ins.misses[0]!.category).toBe("Next step / close");
+    expect(ins.turningPoints.length).toBeGreaterThan(0);
+
     // Delete removes the review and its saved transcript.
     expect((await fetch(`${base}/api/reviews/${reviewId}`, { method: "DELETE" })).status).toBe(200);
     expect((await fetch(`${base}/api/reviews/${reviewId}`)).status).toBe(404);
@@ -123,5 +139,36 @@ describe("call review app", () => {
     const res = await post("/api/dialpad", { callId: "123" });
     expect(res.status).toBe(400);
     expect(((await res.json()) as { error: string }).error).toContain("DIALPAD_API_KEY");
+  });
+});
+
+describe("when the AI review fails", () => {
+  it("shows a plain message and saves nothing", async () => {
+    const failDir = mkdtempSync(join(tmpdir(), "scc-fail-"));
+    const broke = {
+      name: "broke",
+      analyze: async () => {
+        throw new Error('400 {"type":"error","error":{"message":"Your credit balance is too low to access the Anthropic API."}}');
+      },
+    };
+    const app = createApp({
+      reviewsDir: join(failDir, "reviews"), privateDir: join(failDir, "private"), samplesDir: "samples", publicDir: "src/app/public",
+      components: () => ({ analyzer: broke }), liveAvailable: true, maxUsd: 1,
+    });
+    await new Promise<void>((r) => app.listen(0, "127.0.0.1", r));
+    const url = `http://127.0.0.1:${(app.address() as AddressInfo).port}`;
+    try {
+      const content = readFileSync("samples/wife-handles-the-money.txt", "utf8");
+      const start = await fetch(url + "/api/reviews", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ fileName: "x.txt", content }) });
+      const { jobId } = (await start.json()) as { jobId: string };
+      const events = await (await fetch(`${url}/api/jobs/${jobId}/events`)).text();
+      expect(events).toContain("event: failed");
+      expect(events).toContain("out of API credits");
+      expect(events).not.toContain("invalid_request_error");
+      expect(readdirSync(join(failDir, "reviews"))).toEqual([]);
+    } finally {
+      app.close();
+      rmSync(failDir, { recursive: true, force: true });
+    }
   });
 });

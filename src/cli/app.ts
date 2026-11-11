@@ -23,7 +23,7 @@ const server = createApp({
 });
 
 server.listen(port, "127.0.0.1", () => {
-  console.log(`\n  Sales Cheat Code Live: call review`);
+  console.log(`\n  Sales Call Cheat Code: call review`);
   console.log(`  Open http://127.0.0.1:${port} in your browser\n`);
   console.log(`  AI: ${liveAvailable ? `live (spend cap $${maxUsd.toFixed(2)} this session)` : "no ANTHROPIC_API_KEY found: mock mode only"}`);
   console.log(`  Audio upload: ${process.env.DEEPGRAM_API_KEY ? "on (Deepgram, about $0.004 per minute of audio)" : "off: add DEEPGRAM_API_KEY to .env to drop in call recordings"}`);

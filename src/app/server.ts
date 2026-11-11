@@ -13,6 +13,7 @@ import { extname, join } from "node:path";
 import { fetchDialpadTranscript, importDialpad, importText, NeedRepNameError, type DialpadTranscript } from "../ingest/dialpad.js";
 import { audioMimeFor, audioToTranscript, splitSpeakers, type TranscribedAudio, type Transcriber } from "../ingest/audio.js";
 import { collectFeedback, renderReview, reviewCall, toRecord, type ReviewComponents, type ReviewRecord } from "../review/review.js";
+import { buildInsights } from "../review/insights.js";
 import type { Transcript } from "../types.js";
 
 export interface AppOptions {
@@ -49,6 +50,15 @@ const MAX_AUDIO = 200 * 1024 * 1024;
 /** How long a transcribed recording waits for "which voice is the loan officer?". */
 const PENDING_MS = 30 * 60 * 1000;
 const SAFE_ID = /^[A-Za-z0-9._-]{1,120}$/;
+
+/** Turns raw API errors into something a loan officer can act on. */
+export function friendlyError(raw: string): string {
+  if (/credit balance is too low/i.test(raw)) return "Your Anthropic account is out of API credits. Add credits at console.anthropic.com (Plans & Billing), then try again. Mock mode works without credits.";
+  if (/authentication|invalid x-api-key|401/i.test(raw)) return "The Anthropic API key was rejected. Check ANTHROPIC_API_KEY in .env, then restart the app.";
+  if (/overloaded|529|rate.?limit|429/i.test(raw)) return "The AI service is busy right now. Wait a minute and try again.";
+  if (/ENOTFOUND|ECONNREFUSED|ETIMEDOUT|fetch failed|network/i.test(raw)) return "Couldn't reach the AI service. Check your internet connection and try again.";
+  return `The review didn't finish: ${raw.replace(/^analysis:\s*/, "").slice(0, 300)}`;
+}
 
 export function createApp(opts: AppOptions): http.Server {
   mkdirSync(opts.reviewsDir, { recursive: true });
@@ -114,6 +124,11 @@ export function createApp(opts: AppOptions): http.Server {
         // Feedback left on earlier reviews goes into this one's prompt.
         const feedback = collectFeedback(allRecords());
         const result = await reviewCall(t, opts.components(mock), (step, done, total) => emit(job, "progress", { step, done, total }), feedback);
+        // A review without the AI analysis is just an error page: say why plainly and don't save it.
+        if (!result.analysis) {
+          emit(job, "failed", { error: friendlyError(result.errors.join("; ")) });
+          return;
+        }
         const record = toRecord(result, { id, fileName, mode: mock ? "mock" : "live", transcriptionUsd });
         if (!mock) spentUsd += record.costUsd;
         saveRecord(record);
@@ -274,6 +289,10 @@ export function createApp(opts: AppOptions): http.Server {
         pendingAudio.delete(parts[2]);
         const job = startReview(t, pending.fileName, mock, pending.audio.transcriptionUsd);
         return send(res, 202, { jobId: job.id, reviewId: (job.events[0]!.data as { reviewId: string }).reviewId, mock });
+      }
+      // Patterns across every saved review: where calls go wrong. ?mock=1 includes mock reviews.
+      if (req.method === "GET" && url.pathname === "/api/insights") {
+        return send(res, 200, buildInsights(allRecords(), { includeMock: url.searchParams.get("mock") === "1" }));
       }
       // What the AI will be told on the next review (so it's never a black box).
       if (req.method === "GET" && url.pathname === "/api/feedback") {

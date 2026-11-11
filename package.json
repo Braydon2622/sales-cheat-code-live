@@ -1,7 +1,7 @@
 {
-  "name": "sales-cheat-code-live",
+  "name": "sales-call-cheat-code",
   "version": "1.0.0",
-  "description": "Real-time AI call coach for loan officers: replay pipeline + eval harness",
+  "description": "AI call coach for loan officers: live coaching during calls, coaching reports on recordings, and call analysis across the team",
   "scripts": {
     "build:calls": "tsx scripts/build-calls.ts",
     "demo": "tsx src/cli/demo.ts",

@@ -1,4 +1,4 @@
-# Sales Cheat Code Live: results
+# Sales Call Cheat Code: results
 
 **What it is.** It's a real-time AI coach for mortgage loan officers. While a loan officer is on a sales call, it listens for the moments that matter, such as a "your rates are too high" objection, a client ready to move, a tricky question, or a request to stop calling. A short card then appears on screen telling the rep what's going on, what to say next, and what to avoid. Every suggestion passes compliance checks first, and it also catches the rep's own slips, like quoting a rate or promising approval.
 

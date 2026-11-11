@@ -91,7 +91,9 @@ const analysis = (over: Partial<CallAnalysis> = {}): CallAnalysis => ({
   follow_up: "",
   text_to_send: "",
   did_well: [{ line: 0, what: "Warm open", why: "Builds rapport" }],
-  do_better: [{ line: 2, what_happened: "Quoted a rate", try_instead: "It depends on your full picture. Does today at 4 or tomorrow at 10 work better?", why: "Compliance" }],
+  do_better: [{ line: 2, category: "Compliance", what_happened: "Quoted a rate", try_instead: "It depends on your full picture. Does today at 4 or tomorrow at 10 work better?", why: "Compliance" }],
+  turning_point: { line: 2, what: "Quoted a rate before a review" },
+  next_step_booked: false,
   compliance_slips: [],
   coaching_note: "",
   ...over,
@@ -112,7 +114,7 @@ describe("highlights", () => {
   });
 
   it("withholds suggested wording that breaks a compliance rule", () => {
-    const h = buildHighlights(transcript, analysis({ do_better: [{ line: 2, what_happened: "x", try_instead: "Tell them you're pre approved at 5.9%.", why: "" }] }));
+    const h = buildHighlights(transcript, analysis({ do_better: [{ line: 2, category: "Compliance", what_happened: "x", try_instead: "Tell them you're pre approved at 5.9%.", why: "" }] }));
     expect(h.doBetter[0]!.tryInstead).toBe(WITHHELD);
     expect(h.doBetter[0]!.tryInsteadBlocked!.length).toBeGreaterThan(0);
   });

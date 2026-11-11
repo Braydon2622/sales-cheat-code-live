@@ -1,4 +1,4 @@
-# Eval report: Sales Cheat Code Live
+# Eval report: Sales Call Cheat Code
 
 - **Run:** 2026-11-05T17:40:53.383Z · set `holdout` · 25 synthetic calls · 521 utterances
 - **Pipeline:** speculative + interim partials · replay 10x (client speech in real time, gaps and rep lines compressed)

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sales Cheat Code Live · replay</title>
+<title>Sales Call Cheat Code · replay</title>
 <style>
   :root {
     --bg: #0f1216; --panel: #171b21; --ink: #e8ebef; --muted: #8e99a6; --line: #262c35;
@@ -38,7 +38,6 @@
   .line.speaking .text { color: var(--muted); }
   .line.speaking .text::after { content: " …"; }
   .line.flagged .text { text-decoration: underline wavy var(--bad); text-underline-offset: 4px; }
-  .alert { margin: 2px 0 8px 114px; padding: 6px 10px; border-radius: 8px; background: var(--bad-soft); color: var(--bad); font-size: 14px; }
   .chipnote { margin: 2px 0 6px 114px; color: var(--chip); font-size: 13px; }
   .card { border: 1px solid var(--line); border-left: 4px solid var(--chip); border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; background: var(--bg); animation: pop .25s ease-out; }
   .card.done { border-left-color: var(--good); }
@@ -63,7 +62,7 @@
 <body>
 <header>
   <div>
-    <h1>Sales Cheat Code Live</h1>
+    <h1>Sales Call Cheat Code</h1>
     <div class="sub">Real-time AI call coach for loan officers · replaying a <b>synthetic</b> role-play call, no real borrower</div>
   </div>
   <div class="controls">
@@ -88,8 +87,6 @@
 <footer id="stats">
   <span>Moments <b id="s-cards">0</b></span>
   <span>Flagged before the client finished <b id="s-early">0</b></span>
-  <span>Rep compliance alerts <b id="s-alerts">0</b></span>
-  <span>Non-compliant cards shown <b id="s-bad">0</b></span>
   <span class="muted">AI cost <b id="s-cost">–</b></span>
 </footer>
 <script>
@@ -134,9 +131,9 @@ function idleBanner() {
 }
 
 function reset() {
-  lines = new Map(); cards = new Map(); counts = { cards: 0, early: 0, alerts: 0 };
+  lines = new Map(); cards = new Map(); counts = { cards: 0, early: 0 };
   $("transcript").replaceChildren(); $("cards").replaceChildren();
-  for (const k of ["cards", "early", "alerts", "bad"]) $(`s-${k}`).textContent = "0";
+  for (const k of ["cards", "early"]) $(`s-${k}`).textContent = "0";
   $("s-cost").textContent = "–";
 }
 
@@ -163,14 +160,8 @@ const handlers = {
     const row = lineFor(d); row.classList.remove("speaking");
     row.querySelector(".text").textContent = d.text; scrollDown($("transcript"));
   },
-  rep_alert(d) {
-    const row = lineFor({ index: d.utteranceIndex, speaker: "rep", start: 0 });
-    row.classList.add("flagged");
-    const text = d.violations.map((v) => `${pretty(v.rule)}: "${v.quote}"`).join("; ");
-    const note = el("div", "alert", `⚠ Rep compliance alert · ${text}`);
-    row.after(note);
-    $("s-alerts").textContent = String(++counts.alerts); scrollDown($("transcript"));
-  },
+  // Rep compliance checks still run on the server; the view doesn't show them.
+  rep_alert() {},
   chip(d) {
     const tag = pretty(d.subtype ? `${d.type}: ${d.subtype}` : d.type);
     const box = el("div", "card");
@@ -195,20 +186,16 @@ const handlers = {
     // Show exactly what the rep would see after the guard (a blocked draft is replaced).
     c.body.replaceChildren(); c.fields = {};
     for (const f of ORDER) if (d.shown && d.shown[f]) setField(c, f, d.shown[f]);
-    const ok = d.outcome === "shown";
-    c.box.classList.add(ok ? "done" : "blocked");
-    const what = ok ? (d.kind === "fixed_opt_out" ? "✓ fixed opt-out card (Do Not Contact)" : "✓ cleared by the compliance guard")
-      : d.outcome === "coach_error" ? "✗ coach error; safe card shown"
-      : `✗ draft ${pretty(d.outcome)} (${d.blocked.map(pretty).join(", ")}); safe card shown`;
-    c.body.append(el("div", `verdict ${ok ? "ok" : "bad"}`, what));
+    // A blocked draft is quietly replaced with a safe card; only a coach failure is worth a note.
+    c.box.classList.add("done");
+    if (d.outcome === "coach_error") c.body.append(el("div", "verdict bad", "✗ coach error; backup card shown"));
     c.box.querySelector(".timing").textContent = `chip ${ago(d.chipMs)}` + (d.firstLineMs !== undefined && d.firstLineMs !== null ? ` · first line ${ago(d.firstLineMs)}` : "");
   },
   stage_error(d) { banner(`${d.stage} error: ${d.message}`, true); },
   done(d) {
-    $("s-bad").textContent = String(d.nonCompliantShown);
     $("s-early").textContent = String(d.earlyChips);
     $("s-cost").textContent = d.costUsd ? `$${d.costUsd.toFixed(4)}` : "$0 (mock)";
-    banner(d.stopped ? "Stopped." : `Call over · ${d.cards} moments, ${d.earlyChips} flagged before the client finished, ${d.repAlerts} rep compliance alerts.`);
+    banner(d.stopped ? "Stopped." : `Call over · ${d.cards} moments, ${d.earlyChips} flagged before the client finished.`);
   },
   failed(d) { banner(`Replay failed: ${d.message}`, true); },
 };

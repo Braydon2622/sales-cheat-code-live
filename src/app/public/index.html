@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Call Review</title>
+<title>Sales Call Cheat Code</title>
 <style>
   :root {
     --bg: #f6f7f9; --panel: #ffffff; --ink: #1b1f24; --muted: #5f6b7a; --line: #e2e6ea;
@@ -104,15 +104,36 @@
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
   @media (max-width: 1100px) { .two { grid-template-columns: 1fr; } }
   .two > .panel { margin-bottom: 0; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+  .kpi { background: var(--bg); border-radius: 10px; padding: 12px; }
+  .kpi b { display: block; font-size: 24px; font-variant-numeric: tabular-nums; }
+  .kpi span { color: var(--muted); font-size: 13px; }
+  .kpi.flag b { color: var(--bad); }
+  .brow { margin-bottom: 12px; }
+  .brow .top { display: flex; justify-content: space-between; gap: 10px; font-weight: 600; }
+  .brow .top span { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 400; }
+  .hbar { height: 10px; background: var(--chip); border-radius: 5px; margin: 4px 0; overflow: hidden; }
+  .hbar > div { height: 100%; background: var(--warn); border-radius: 5px; }
+  .hbar.bad > div { background: var(--bad); }
+  .ex { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 2px 0; color: var(--muted); font-size: 13px; }
+  .ex:hover { color: var(--accent); }
+  table.stages { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+  table.stages th, table.stages td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  table.stages th { color: var(--muted); font-size: 12px; font-weight: 600; }
+  .tp { border-left: 4px solid var(--warn); background: var(--warn-soft); padding: 10px 12px; border-radius: 6px; }
+  .tp b { display: block; }
 </style>
 </head>
 <body>
 <header>
   <div>
-    <h1>Call Review</h1>
-    <div class="sub">Sales Cheat Code Live · drop in a call recording or transcript, get coaching feedback</div>
+    <h1>Sales Call Cheat Code</h1>
+    <div class="sub">Drop in a call recording or transcript for a coaching report · see where calls go wrong across the team</div>
   </div>
-  <div class="chips" id="status"></div>
+  <div class="row" style="align-items:center;flex-wrap:wrap">
+    <button class="primary" id="insightsBtn">Where calls go wrong</button>
+    <div class="chips" id="status"></div>
+  </div>
 </header>
 
 <main>
@@ -301,7 +322,7 @@ function follow(jobId, reviewId, row) {
   });
   es.addEventListener("progress", (e) => {
     const d = JSON.parse(e.data);
-    row.set(d.done ? "Finishing…" : "Reviewing the call: highlights, compliance, follow-up text… (about 15–30 seconds)", d.done ? 95 : 60);
+    row.set(d.done ? "Finishing…" : "Reviewing the call: highlights, where it went wrong, follow-up text… (about 15–30 seconds)", d.done ? 95 : 60);
   });
   es.addEventListener("done", async (e) => {
     es.close();
@@ -341,7 +362,6 @@ async function refreshHistory() {
     el("div", { class: "meta" },
       r.temperature ? el("span", { class: "chip " + (tempClass[r.temperature] || "") }, r.temperature) : null,
       r.stage ? el("span", { class: "chip" }, r.stage) : null,
-      el("span", { class: "chip " + (r.slips ? "bad" : "good") }, `${r.slips} compliance flag${r.slips === 1 ? "" : "s"}`),
       r.source === "audio" ? el("span", { class: "chip" }, "recording") : null,
       el("span", { class: "chip " + (r.feedbackGiven ? "good" : "") }, r.feedbackGiven ? `${r.feedbackGiven} feedback` : "no feedback yet"),
       r.mode === "mock" ? el("span", { class: "chip warn" }, "mock") : null))));
@@ -384,6 +404,8 @@ async function show(id) {
       el("div", { class: "note" }, el("b", {}, "Bottom line: "), a.coaching_note),
     ] : el("p", { class: "err" }, "The call summary didn't complete. See errors below.")));
 
+  if (a) sections.push(wentWrongPanel(r));
+
   if (r.didWell || r.doBetter) {
     const none = (t) => el("div", { class: "hint" }, a ? t : "The review didn't complete. See errors below.");
     sections.push(el("div", { class: "two" },
@@ -397,25 +419,13 @@ async function show(id) {
 
   if (r.followUp) {
     const f = r.followUp;
-    const style = f.violations.filter((v) => v.severity === "style");
     sections.push(el("section", { class: "panel" },
       el("h2", {}, "Follow-up text"),
       el("div", { class: "text-box" }, f.final),
       el("div", { class: "row", style: "margin-top:8px;align-items:center;flex-wrap:wrap" },
-        el("button", { class: "primary", onclick: (e) => { navigator.clipboard.writeText(f.final); e.target.textContent = "Copied"; setTimeout(() => (e.target.textContent = "Copy text"), 1500); } }, "Copy text"),
-        f.replaced
-          ? el("span", { class: "chip bad" }, "The draft broke a compliance rule and was replaced with a safe text")
-          : style.length
-            ? el("span", { class: "chip warn" }, "Style: " + style.map((v) => label(v.rule)).join(", "))
-            : el("span", { class: "chip good" }, "Passes the text rules: under 300 characters, \"home\" wording, two-option close, no rates or approval")),
-      f.replaced ? el("div", { class: "hint" }, "Blocked draft: " + f.original) : null));
+        el("button", { class: "primary", onclick: (e) => { navigator.clipboard.writeText(f.final); e.target.textContent = "Copied"; setTimeout(() => (e.target.textContent = "Copy text"), 1500); } }, "Copy text"))));
   }
 
-  sections.push(el("section", { class: "panel" },
-    el("h2", {}, "Compliance: the loan officer's own words"),
-    r.slips.length
-      ? r.slips.map((s) => el("div", { class: "slip" }, el("b", {}, `${s.time} · ${s.rules.map(label).join(", ")}`), el("div", {}, `"${s.text}"`)))
-      : el("div", { class: "chip good" }, "No compliance slips flagged")));
 
   if (r.didWell || r.doBetter) sections.push(await overallFeedback(r));
 
@@ -438,6 +448,72 @@ async function show(id) {
 }
 
 function kv(k, v) { return el("div", { class: "kv" }, el("b", {}, k), v); }
+
+// ---------------------------------------------------------------- where calls go wrong
+const TALK_FLAG = 0.6, STRETCH_FLAG = 60; // same thresholds as src/review/insights.ts
+const pct = (x) => Math.round(x * 100) + "%";
+
+function wentWrongPanel(r) {
+  const a = r.analysis, s = r.stats, tp = r.turningPoint;
+  const booked = typeof a.next_step_booked === "boolean" ? a.next_step_booked : null;
+  return el("section", { class: "panel" },
+    el("h2", {}, "Where it went wrong"),
+    tp
+      ? el("div", { class: "tp" }, el("b", {}, `Turning point · ${tp.time}`), el("div", {}, tp.what),
+          el("div", { class: "hint" }, `${tp.speaker === "rep" ? "LO" : "Client"}: "${tp.quote}"`))
+      : el("div", { class: "chip good" }, a.turning_point === undefined ? "No turning point (older review)" : "The call never went off track"),
+    el("div", { class: "kpis", style: "margin-top:12px" },
+      booked === null ? null : el("div", { class: "kpi" + (booked ? "" : " flag") }, el("b", {}, booked ? "Yes" : "No"), el("span", {}, "Next step booked on the call")),
+      s ? el("div", { class: "kpi" + (s.repTalkShare > TALK_FLAG ? " flag" : "") }, el("b", {}, pct(s.repTalkShare)), el("span", {}, "of the talking was the LO (aim for under 60%)")) : null,
+      s ? el("div", { class: "kpi" }, el("b", {}, String(s.repQuestions)), el("span", {}, "questions the LO asked")) : null,
+      s && s.longestRepStretchSec !== undefined ? el("div", { class: "kpi" + (s.longestRepStretchSec > STRETCH_FLAG ? " flag" : "") }, el("b", {}, Math.round(s.longestRepStretchSec) + "s"), el("span", {}, "longest stretch without the client speaking")) : null));
+}
+
+async function showInsights() {
+  current = null;
+  if (location.hash !== "#insights") history.replaceState(null, "", "#insights");
+  refreshHistory();
+  const includeMock = $("insMock") ? $("insMock").checked : false;
+  const d = await api("/api/insights" + (includeMock ? "?mock=1" : ""));
+  const mockToggle = el("label", { class: "toggle" }, el("input", { type: "checkbox", id: "insMock", checked: includeMock, onchange: showInsights }), "Include mock reviews (canned, for testing the page)");
+  const head = el("section", { class: "panel" },
+    el("div", { class: "detail-head" }, el("div", {}, el("h2", {}, "Where calls go wrong"),
+      el("div", { class: "hint" }, `Patterns across ${d.calls} reviewed call${d.calls === 1 ? "" : "s"}${d.mockSkipped && !includeMock ? ` (${d.mockSkipped} mock review${d.mockSkipped === 1 ? "" : "s"} left out)` : ""}. Click any example to open that call.`))),
+    mockToggle);
+  if (!d.calls) {
+    $("detail").replaceChildren(head, el("div", { class: "panel empty" }, "No reviewed calls yet. Review a few calls (or tick \"Include mock reviews\") to see patterns here."));
+    return;
+  }
+  const exBtn = (x) => el("button", { class: "ex", onclick: () => show(x.reviewId) }, `${x.fileName} · ${x.time} · ${x.text}`);
+  const bars = (rows, key, cls) => {
+    const max = Math.max(...rows.map((r) => r.count), 1);
+    return rows.map((r) => el("div", { class: "brow" },
+      el("div", { class: "top" }, label(r[key]), el("span", {}, `${r.count}`)),
+      el("div", { class: "hbar " + (cls || "") }, el("div", { style: `width:${(r.count / max) * 100}%` })),
+      r.examples.map(exBtn)));
+  };
+  const b = d.nextStepBooked;
+  const kpis = el("section", { class: "panel" }, el("div", { class: "kpis" },
+    el("div", { class: "kpi" }, el("b", {}, String(d.calls)), el("span", {}, "calls reviewed")),
+    b.known ? el("div", { class: "kpi" + (b.yes / b.known < 0.5 ? " flag" : "") }, el("b", {}, pct(b.yes / b.known)), el("span", {}, `ended with a booked next step (${b.yes} of ${b.known})`)) : null,
+    d.avgRepTalkShare != null ? el("div", { class: "kpi" + (d.avgRepTalkShare > TALK_FLAG ? " flag" : "") }, el("b", {}, pct(d.avgRepTalkShare)), el("span", {}, "average LO talk share")) : null,
+    el("div", { class: "kpi" + (d.talkHeavyCalls ? " flag" : "") }, el("b", {}, String(d.talkHeavyCalls)), el("span", {}, "calls where the LO talked too much (over 60%, or a 60s+ stretch)")),
+    d.avgRepQuestions != null ? el("div", { class: "kpi" }, el("b", {}, d.avgRepQuestions.toFixed(1)), el("span", {}, "questions asked per call")) : null));
+  const misses = el("section", { class: "panel" }, el("h2", {}, "Most common misses"),
+    d.misses.length ? bars(d.misses, "category") : el("div", { class: "hint" }, "No misses flagged."));
+  const stages = el("section", { class: "panel" }, el("h2", {}, "Where leads stand after the call"),
+    el("table", { class: "stages" },
+      el("thead", {}, el("tr", {}, el("th", {}, "Stage"), el("th", {}, "Hot"), el("th", {}, "Warm"), el("th", {}, "Cold"))),
+      el("tbody", {}, d.stages.map((s) => el("tr", {}, el("td", {}, s.stage), el("td", {}, String(s.Hot)), el("td", {}, String(s.Warm)), el("td", {}, String(s.Cold)))))));
+  const tps = el("section", { class: "panel" }, el("h2", {}, "Recent turning points"),
+    d.turningPoints.length
+      ? d.turningPoints.map((t) => el("button", { class: "ex", onclick: () => show(t.reviewId) },
+          el("b", { style: "color:var(--ink)" }, `${t.fileName} · ${t.time}`), ` ${t.stage ? `(${t.stage}, ${t.temperature}) ` : ""}${t.text}`))
+      : el("div", { class: "hint" }, "No turning points yet. Reviews made before this feature don't have them."));
+  $("detail").replaceChildren(head, kpis, misses, el("div", { class: "two" }, stages, tps));
+  if (window.matchMedia("(max-width: 860px)").matches) $("detail").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+$("insightsBtn").addEventListener("click", showInsights);
 
 // One highlight, with thumbs up/down and a note for the AI.
 function highlightCard(r, h, kind) {
@@ -463,7 +539,7 @@ function highlightCard(r, h, kind) {
   // A note saves with the current vote; it never picks a vote by itself.
   note.addEventListener("change", () => { if (currentVote) vote(currentVote); else state.textContent = "Pick 👍 or 👎 to save the note"; });
   return el("div", { class: "hl " + kind },
-    el("div", {}, el("span", { class: "time" }, h.time), el("span", { class: "what" }, h.what)),
+    el("div", {}, el("span", { class: "time" }, h.time), h.category ? el("span", { class: "chip warn", style: "margin-right:6px" }, h.category) : null, el("span", { class: "what" }, h.what)),
     el("div", { class: "why" }, h.why),
     el("div", { class: "said" }, `${h.speaker === "rep" ? "You said" : "Client said"}: "${h.quote}"`),
     h.tryInstead ? el("div", { class: "try" }, el("b", {}, "Try instead"), h.tryInstead) : null,
@@ -534,7 +610,11 @@ function momentCard(r, m) {
 // Each review has its own address (#review-id), so it can be bookmarked or reopened directly.
 refreshStatus()
   .then(() => Promise.all([loadSamples(), refreshHistory()]))
-  .then(() => { const id = decodeURIComponent(location.hash.slice(1)); if (id) show(id).catch(() => {}); });
+  .then(() => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id === "insights") showInsights().catch(() => {});
+    else if (id) show(id).catch(() => {});
+  });
 </script>
 </body>
 </html>

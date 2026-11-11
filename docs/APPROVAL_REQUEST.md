@@ -1,5 +1,3 @@
-> Example pilot proposal from this project. The company name is fictional; the real version went to my employer's leadership and compliance team.
-
 # Proposal: an 8-week pilot of a real-time call coach for the loan officer team
 
 **From:** Braydon Hart, Sales Director · **To:** Copperleaf Home Loans leadership and compliance · **Date:** [FILL IN]

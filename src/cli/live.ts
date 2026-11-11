@@ -19,7 +19,7 @@ const server = createLiveServer({
 });
 
 server.listen(port, "127.0.0.1", () => {
-  console.log(`\n  Sales Cheat Code Live: live replay view`);
+  console.log(`\n  Sales Call Cheat Code: live replay view`);
   console.log(`  Open http://127.0.0.1:${port} in your browser\n`);
   console.log(`  AI: ${liveAvailable ? `live (about 2 cents per replay; cap $${maxUsd.toFixed(2)} this session)` : "no ANTHROPIC_API_KEY found: mock mode only"}`);
   console.log(`  Only the bundled synthetic calls can be replayed. Ctrl+C to stop.\n`);

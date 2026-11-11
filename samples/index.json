@@ -1,5 +1,11 @@
 [
   {
+    "file": "demo-refi-shopper.txt",
+    "title": "Cash-out shopper cools off (demo call)",
+    "format": "text with names and times",
+    "note": "long pitch, rate quote, spouse stall, no next step"
+  },
+  {
     "file": "nurse-rate-and-approval.json",
     "title": "Nurse fishes for a rate and approval",
     "format": "Dialpad JSON",

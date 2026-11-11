@@ -4,7 +4,7 @@
 cd "$(dirname "$0")" || exit 1
 export PATH="$HOME/.local/node/bin:$PATH"
 if ! command -v npm >/dev/null 2>&1; then
-  echo "Node.js isn't installed. Install Node 20 or newer from https://nodejs.org and try again."
+  echo "Node isn't installed where expected (~/.local/node). Ask Claude to fix it."
   read -r -p "Press Enter to close."
   exit 1
 fi

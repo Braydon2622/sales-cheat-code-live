@@ -312,6 +312,9 @@ export async function ping(model: string, meter: UsageMeter): Promise<number | u
 
 export const STAGES = ["New lead", "Contacted", "Soft pull", "Credit pull", "App out", "Package back", "Underwriting"] as const;
 export const SLIP_RULES = ["rate_quote", "approval_promise", "talked_down_lender", "ignored_opt_out", "other"] as const;
+/** What kind of miss a "do better" item is, so misses can be counted across many calls. */
+export const MISS_CATEGORIES = ["Discovery", "Objection handling", "Next step / close", "Rapport", "Talked too much", "Explaining options", "Compliance"] as const;
+export type MissCategory = (typeof MISS_CATEGORIES)[number];
 export const CallAnalysisSchema = z.object({
   summary: z.string(),
   temperature: z.enum(["Hot", "Warm", "Cold"]),
@@ -323,7 +326,11 @@ export const CallAnalysisSchema = z.object({
   /** 1–3 things the loan officer did well, each tied to a transcript line. */
   did_well: z.array(z.object({ line: z.number().int(), what: z.string(), why: z.string() })),
   /** 1–3 things to do better, with wording to try next time. */
-  do_better: z.array(z.object({ line: z.number().int(), what_happened: z.string(), try_instead: z.string(), why: z.string() })),
+  do_better: z.array(z.object({ line: z.number().int(), category: z.enum(MISS_CATEGORIES), what_happened: z.string(), try_instead: z.string(), why: z.string() })),
+  /** The line where the call went off track or the lead cooled. Null if it never did. */
+  turning_point: z.object({ line: z.number().int(), what: z.string() }).nullable(),
+  /** True only if the client agreed to a specific next step with a time on this call. */
+  next_step_booked: z.boolean(),
   /** Compliance slips in the loan officer's own words. Empty if none. */
   compliance_slips: z.array(z.object({ line: z.number().int(), rule: z.enum(SLIP_RULES), quote: z.string() })),
   coaching_note: z.string(),
