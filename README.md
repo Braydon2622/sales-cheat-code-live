@@ -112,7 +112,7 @@ Requires Node 22+.
 
 ```bash
 npm install
-npm test                      # 136 tests, no API calls needed
+npm test                      # 141 tests, no API calls needed
 
 # Demo: replay a synthetic call with the chip and cards appearing live
 npm run demo:video                    # call-18, real time, countdown: ready to screen-record (docs/DEMO.md)
